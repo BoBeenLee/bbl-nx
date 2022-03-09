@@ -15,7 +15,13 @@ export type PostItem = {
 };
 
 // Add markdown files in `src/posts`
-const postsDirectory = join(process.cwd(), "src", "posts");
+const postsDirectory = join(
+  process.cwd(),
+  "apps",
+  "nx-next-bbl",
+  "src",
+  "posts"
+);
 
 export function getPostBySlug(slug: string): PostItem {
   const realSlug = slug.replace(/\.md$/, "");
@@ -26,13 +32,13 @@ export function getPostBySlug(slug: string): PostItem {
   return {
     slug: realSlug,
     frontmatter: data as any,
-    content
+    content,
   };
 }
 
 export function getAllPosts() {
   const slugs = fs.readdirSync(postsDirectory);
-  const posts = slugs.map(slug => getPostBySlug(slug));
+  const posts = slugs.map((slug) => getPostBySlug(slug));
 
   return posts;
 }
