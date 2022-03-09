@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "projects": {
+    "nx-next-bbl": "apps/nx-next-bbl",
+    "nx-next-bbl-e2e": "apps/nx-next-bbl-e2e",
+    "util": "libs/util"
+  }
+}

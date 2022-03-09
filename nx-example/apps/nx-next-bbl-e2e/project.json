@@ -1,0 +1,28 @@
+{
+  "root": "apps/nx-next-bbl-e2e",
+  "sourceRoot": "apps/nx-next-bbl-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/nx-next-bbl-e2e/cypress.json",
+        "devServerTarget": "nx-next-bbl:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "nx-next-bbl:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/nx-next-bbl-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["nx-next-bbl"]
+}
