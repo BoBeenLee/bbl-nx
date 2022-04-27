@@ -28,6 +28,18 @@
         "target": "build",
         "projects": "dependencies"
       }
+    ],
+    "dev": [
+      {
+        "target": "build",
+        "projects": "dependencies"
+      }
+    ],
+    "start": [
+      {
+        "target": "build",
+        "projects": "self"
+      }
     ]
   },
   "generators": {
