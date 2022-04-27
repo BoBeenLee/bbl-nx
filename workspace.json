@@ -1,7 +1,7 @@
 {
   "version": 2,
   "projects": {
-    "nx-next-bbl": "apps/nx-next-bbl",
+    "bbl-nextjs": "apps/bbl-nextjs",
     "util": "libs/util"
   }
 }
