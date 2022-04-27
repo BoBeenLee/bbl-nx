@@ -1,33 +1,27 @@
-# NxExample
+# bbl-nx
 
-This project was generated using [Nx](https://nx.dev).
+blog & homepage project based on monorepo(nx)
+- bbl-nextjs
+- bbl-remix
 
-<p style="text-align: center;"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
+## Feature
 
-🔎 **Smart, Fast and Extensible Build System**
+- Nextjs
+- [Web APIs You [Probably] Didn't Know Existed](https://www.youtube.com/watch?v=EZpdEljk5dY)
+- [Styled Component](https://github.com/styled-components/styled-components)
+- Layout - [CSS Grid Changes EVERYTHING - Amazing Presentation](https://www.youtube.com/watch?v=7kVeCqQCxlk)
+- Google Analystic support
+- [Storybook](https://github.com/storybooks/storybook) usage in development
 
-## Adding capabilities to your workspace
+#### Running in Development
 
-Nx supports many plugins which add capabilities for developing different types of applications and different tools.
+`npm run dev`
 
-These capabilities include generating applications, libraries, etc as well as the devtools to test, and build projects as well.
+## Deployment
 
-Below are our core plugins:
+- [Deploy to Storybook](https://github.com/storybooks/storybook-deployer)
+- Deploy to Zeit
 
-- [React](https://reactjs.org)
-  - `npm install --save-dev @nrwl/react`
-- Web (no framework frontends)
-  - `npm install --save-dev @nrwl/web`
-- [Angular](https://angular.io)
-  - `npm install --save-dev @nrwl/angular`
-- [Nest](https://nestjs.com)
-  - `npm install --save-dev @nrwl/nest`
-- [Express](https://expressjs.com)
-  - `npm install --save-dev @nrwl/express`
-- [Node](https://nodejs.org)
-  - `npm install --save-dev @nrwl/node`
-
-There are also many [community plugins](https://nx.dev/community) you could add.
 
 ## Generate an application
 
