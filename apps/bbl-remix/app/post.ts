@@ -1,6 +1,7 @@
 import path from "path";
 // Note: netlify doesn't support `import fs from "fs/promises";`
-import { promises as fs } from "fs";
+// import { promises as fs } from "fs";
+import fs from "fs/promises";
 import parseFrontMatter from "front-matter";
 import { marked } from "marked";
 

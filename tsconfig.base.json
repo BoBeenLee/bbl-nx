@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "~/*": ["./apps/bbl-remix/app/*"],
       "@nx-bbl/util": ["libs/util/src/index.ts"]
     }
   },
