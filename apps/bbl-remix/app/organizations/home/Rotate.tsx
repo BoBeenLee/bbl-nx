@@ -1,8 +1,8 @@
 import _ from "lodash";
 import React, { Component } from "react";
 import styled from "styled-components";
-import { Rotate as WindowRotate } from "~/faccs";
-import images from "~/images";
+import { Rotate as WindowRotate } from "@bbl-remix/faccs";
+import images from "@bbl-remix/images";
 
 const Root = styled.div`
   display: grid;

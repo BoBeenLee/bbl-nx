@@ -1,7 +1,7 @@
 import _ from "lodash";
 import React, { PureComponent } from "react";
 import styled from "styled-components";
-import { Avatar } from "~/components/Avatar";
+import { Avatar } from "@bbl-remix/components/Avatar";
 
 interface IProps {
   avatarUrl: string;

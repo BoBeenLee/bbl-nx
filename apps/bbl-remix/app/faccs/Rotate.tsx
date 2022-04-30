@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { isBrowser } from "~/utils/navigator";
+import { isBrowser } from "@bbl-remix/utils/navigator";
 
 interface IProps {
   children: ({

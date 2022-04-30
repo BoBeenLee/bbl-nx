@@ -6,8 +6,8 @@ import {
 import { MdContactMail as ContactMailIcon } from "react-icons/md";
 import styled from "styled-components";
 
-import { media } from "~/utils/media";
-import theme from "~/styles/theme";
+import { media } from "@bbl-remix/utils/media";
+import theme from "@bbl-remix/styles/theme";
 
 const Root = styled.div`
   display: grid;

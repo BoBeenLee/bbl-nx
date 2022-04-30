@@ -1,5 +1,5 @@
 import React from "react";
-import { Rotate } from "~/faccs";
+import { Rotate } from "@bbl-remix/faccs";
 
 function withRotate<P>(TargetComponent: any) {
   return function WithRotate(props: P) {

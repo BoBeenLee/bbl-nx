@@ -1,1 +1,1 @@
-export { default as Tag } from "~/components/Tag/Tag";
+export { default as Tag } from "@bbl-remix/components/Tag/Tag";

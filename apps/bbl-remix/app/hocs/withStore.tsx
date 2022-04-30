@@ -2,7 +2,7 @@
 import { Provider } from "mobx-react";
 import React, { Component } from "react";
 
-import { IStore } from "~/stores/Store";
+import { IStore } from "@bbl-remix/stores/Store";
 
 const withStore = (store: IStore) => (element: any): any => {
   return <Provider store={store}>{element}</Provider>;

@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-import Layout from "~/components/Layout";
-import { SubTitle } from "~/components/Title";
-import { Caption } from "~/organizations/post";
-import { media } from "~/utils/media";
-import theme from "~/styles/theme";
+import Layout from "@bbl-remix/components/Layout";
+import { SubTitle } from "@bbl-remix/components/Title";
+import { Caption } from "@bbl-remix/organizations/post";
+import { media } from "@bbl-remix/utils/media";
+import theme from "@bbl-remix/styles/theme";
 
 interface IProps {
   slug: string;

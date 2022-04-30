@@ -1,1 +1,1 @@
-export { default as Rotate } from "~/organizations/home/Rotate";
+export { default as Rotate } from "@bbl-remix/organizations/home/Rotate";

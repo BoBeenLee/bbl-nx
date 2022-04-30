@@ -1,7 +1,7 @@
 import { storiesOf } from "@storybook/react";
 import React from "react";
 import styled from "styled-components";
-import { GithubCard, PortfolioCard, PostCard } from "~/components/Card";
+import { GithubCard, PortfolioCard, PostCard } from "@bbl-remix/components/Card";
 
 const Root = styled.div`
   display: grid;

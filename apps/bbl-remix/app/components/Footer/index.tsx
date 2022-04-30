@@ -1,1 +1,1 @@
-export { default as Footer } from "~/components/Footer/Footer";
+export { default as Footer } from "@bbl-remix/components/Footer/Footer";

@@ -1,8 +1,8 @@
 import React, { PureComponent } from "react";
 import styled from "styled-components";
 
-import { companyPortfolios, teamPortfolios } from "~/constants/portfolio";
-import { Portfolio } from "~/organizations/portfolio";
+import { companyPortfolios, teamPortfolios } from "@bbl-remix/constants/portfolio";
+import { Portfolio } from "@bbl-remix/organizations/portfolio";
 
 const Root = styled.div`
   padding-top: 20px;

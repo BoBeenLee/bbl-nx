@@ -9,8 +9,8 @@ import {
 } from 'remix';
 import type { MetaFunction } from 'remix';
 import { getMetadata } from './constants/metadata';
-import Layout from '~/components/Layout';
-import globalStylesUrl from '~/styles/global.css';
+import Layout from '@bbl-remix/components/Layout';
+import globalStylesUrl from '@bbl-remix/styles/global.css';
 
 export const links: LinksFunction = () => {
   return [

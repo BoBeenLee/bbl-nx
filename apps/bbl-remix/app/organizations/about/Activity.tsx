@@ -1,11 +1,11 @@
 import _ from "lodash";
 import React, { PureComponent } from "react";
 import styled from "styled-components";
-import { Seperator } from "~/components/Seperator";
-import { LineText } from "~/components/Text";
-import { ContentTitle, SubTitle } from "~/components/Title";
-import { media } from "~/utils/media";
-import { IActivity, activity } from "~/constants/activity";
+import { Seperator } from "@bbl-remix/components/Seperator";
+import { LineText } from "@bbl-remix/components/Text";
+import { ContentTitle, SubTitle } from "@bbl-remix/components/Title";
+import { media } from "@bbl-remix/utils/media";
+import { IActivity, activity } from "@bbl-remix/constants/activity";
 
 const Root = styled.div``;
 

@@ -1,6 +1,6 @@
 import React, { PureComponent } from "react";
 import styled from "styled-components";
-import theme from "~/styles/theme";
+import theme from "@bbl-remix/styles/theme";
 
 interface IProps {
   title: string;

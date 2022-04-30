@@ -2,8 +2,8 @@ import _ from "lodash";
 import { Link, useLoaderData } from "remix";
 import styled from "styled-components";
 
-import { getPosts, PostItem } from "~/post";
-import { PostCard } from "~/components/Card";
+import { getPosts, PostItem } from "@bbl-remix/post";
+import { PostCard } from "@bbl-remix/components/Card";
 
 const Root = styled.div`
   padding-top: 20px;

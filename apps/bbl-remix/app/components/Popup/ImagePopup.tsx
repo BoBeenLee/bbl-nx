@@ -3,8 +3,8 @@ import React, { PureComponent } from "react";
 import ReactModal from "react-modal";
 import styled from "styled-components";
 
-import { dimension } from "~/styles/dimension";
-import images from "~/images";
+import { dimension } from "@bbl-remix/styles/dimension";
+import images from "@bbl-remix/images";
 
 interface IProps {
   showModal: boolean;
