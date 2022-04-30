@@ -21,6 +21,15 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "remix": "^1.4.1",
+    "moment": "^2.22.1",
+    "date-fns": "^2.25.0",
+    "react-icons": "^3.7.0",
+    "mobile-detect": "^1.4.1",
+    "react-share": "4.0.1",
+    "react-headroom": "^2.2.2",
+    "react-slick": "^0.29.0",
+    "react-burger-menu": "^2.6.12",
+    "react-modal": "^3.4.4",
     "styled-components": "^5.2.0"
   },
   "devDependencies": {
@@ -29,6 +38,12 @@
     "@types/react": "^17.0.24",
     "@types/react-dom": "^17.0.9",
     "@types/styled-components": "^5.1.4",
+    "@types/date-fns": "^2.6.0",
+    "@types/react-icons": "^3.0.0",
+    "@types/react-headroom": "^2.2.1",
+    "@types/react-slick": "^0.23.8",
+    "@types/react-burger-menu": "^2.2.5",
+    "@types/react-modal": "^3.10.4",
     "typescript": "^4.1.2"
   },
   "engines": {
