@@ -61,7 +61,7 @@ declare module 'react-virtualized-auto-sizer' {
       onResize: () => void;
       disableHeight: false;
       disableWidth: false;
-      style: {};
+      style: Record<string, unknown>;
     };
 
     constructor(props: AutoSizerProps);

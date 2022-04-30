@@ -1,5 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-expressions */
 import axios from 'axios';
-/* eslint-disable prefer-const */
 const feednami = {};
 
 (feednami.load = function (e, n) {
