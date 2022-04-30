@@ -14,7 +14,7 @@
     "forceConsistentCasingInFileNames": true,
     "allowJs": true,
     "paths": {
-      "~/*": ["./app/*"]
+      "@bbl-remix/*": ["./app/*"]
     },
     "isolatedModules": true
   }

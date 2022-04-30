@@ -1,8 +1,8 @@
 import _ from "lodash";
 import React, { Component } from "react";
 
-import { isBrowser } from "~/utils/navigator";
-import { getFeednamiTistories } from "~/configs/tistory";
+import { isBrowser } from "@bbl-remix/utils/navigator";
+import { getFeednamiTistories } from "@bbl-remix/configs/tistory";
 
 // tslint:disable:object-literal-sort-keys
 const withTistory = (TargetComponent: any) => {

@@ -1,11 +1,11 @@
 import _ from "lodash";
 import React, { Component } from "react";
 import styled from "styled-components";
-import { PortfolioCard } from "~/components/Card";
-import { ImagePopup } from "~/components/Popup";
-import { SubTitle } from "~/components/Title";
-import { callValue } from "~/utils/object";
-import { IProjectPortfolio } from "~/constants/portfolio";
+import { PortfolioCard } from "@bbl-remix/components/Card";
+import { ImagePopup } from "@bbl-remix/components/Popup";
+import { SubTitle } from "@bbl-remix/components/Title";
+import { callValue } from "@bbl-remix/utils/object";
+import { IProjectPortfolio } from "@bbl-remix/constants/portfolio";
 
 interface IProps {
   title: string;

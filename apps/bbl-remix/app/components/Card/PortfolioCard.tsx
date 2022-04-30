@@ -4,12 +4,12 @@ import { DiAndroid, DiApple } from "react-icons/di";
 import { GoLink as LinkIcon, GoMarkGithub as GithubIcon } from "react-icons/go";
 
 import styled from "styled-components";
-import { skillMap } from "~/constants/skill";
-import { media } from "~/utils/media";
-import PhotoGallery from "~/components/Gallery/PhotoGallery";
-import Seperator from "~/components/Seperator/Seperator";
-import theme from "~/styles/theme";
-import images from "~/images";
+import { skillMap } from "@bbl-remix/constants/skill";
+import { media } from "@bbl-remix/utils/media";
+import PhotoGallery from "@bbl-remix/components/Gallery/PhotoGallery";
+import Seperator from "@bbl-remix/components/Seperator/Seperator";
+import theme from "@bbl-remix/styles/theme";
+import images from "@bbl-remix/images";
 
 interface IProps {
   name: string;

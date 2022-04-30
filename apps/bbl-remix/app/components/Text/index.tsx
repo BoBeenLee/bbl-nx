@@ -1,1 +1,1 @@
-export { default as LineText } from "~/components/Text/LineText";
+export { default as LineText } from "@bbl-remix/components/Text/LineText";

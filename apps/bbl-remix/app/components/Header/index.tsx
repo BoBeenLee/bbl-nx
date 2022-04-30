@@ -2,14 +2,14 @@ import _ from "lodash";
 import React, { PureComponent } from "react";
 import Headroom from "react-headroom";
 import styled, { css } from "styled-components";
-import { menu as titles, theme } from "~/constants";
-import { media } from "~/utils/media";
-import { isIE } from "~/utils/navigator";
-import { Avatar } from "~/components/Avatar";
-import { Menu } from "~/components/Menu";
-import { Seperator } from "~/components/Seperator";
-import images from "~/images";
-import { dimension } from "~/styles/dimension";
+import { menu as titles, theme } from "@bbl-remix/constants";
+import { media } from "@bbl-remix/utils/media";
+import { isIE } from "@bbl-remix/utils/navigator";
+import { Avatar } from "@bbl-remix/components/Avatar";
+import { Menu } from "@bbl-remix/components/Menu";
+import { Seperator } from "@bbl-remix/components/Seperator";
+import images from "@bbl-remix/images";
+import { dimension } from "@bbl-remix/styles/dimension";
 
 interface IStates {
   isOpenHeader: boolean;

@@ -2,7 +2,7 @@ import { action } from "@storybook/addon-actions";
 import { storiesOf } from "@storybook/react";
 import React from "react";
 import styled from "styled-components";
-import { Tag } from "~/components/Tag";
+import { Tag } from "@bbl-remix/components/Tag";
 
 const Root = styled.div`
   display: grid;

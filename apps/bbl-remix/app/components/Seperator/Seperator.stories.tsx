@@ -2,7 +2,7 @@ import { action } from "@storybook/addon-actions";
 import { storiesOf } from "@storybook/react";
 import React from "react";
 import styled from "styled-components";
-import { Seperator } from "~/components/Seperator";
+import { Seperator } from "@bbl-remix/components/Seperator";
 
 const Root = styled.div`
   display: grid;

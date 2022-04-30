@@ -1,1 +1,1 @@
-export { default as PhotoGallery } from "~/components/Gallery/PhotoGallery";
+export { default as PhotoGallery } from "@bbl-remix/components/Gallery/PhotoGallery";

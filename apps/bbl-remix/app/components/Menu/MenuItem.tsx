@@ -1,7 +1,7 @@
 import _ from "lodash";
 import React, { Component } from "react";
 import styled from "styled-components";
-import { theme } from "~/constants";
+import { theme } from "@bbl-remix/constants";
 
 interface IProps {
   name: string;

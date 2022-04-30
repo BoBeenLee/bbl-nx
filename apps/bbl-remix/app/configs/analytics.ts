@@ -1,8 +1,8 @@
 import _ from "lodash";
 
-import { firebaseInstance } from "~/configs/firebase";
-import { createInjectDecorator } from "~/decorators/createInjectDecorator";
-import { traverseObjectKeys, traverseObjectSliceStr } from "~/utils/string";
+import { firebaseInstance } from "@bbl-remix/configs/firebase";
+import { createInjectDecorator } from "@bbl-remix/decorators/createInjectDecorator";
+import { traverseObjectKeys, traverseObjectSliceStr } from "@bbl-remix/utils/string";
 
 const EVENT_TYPE_MAX_LENGTH = 40;
 

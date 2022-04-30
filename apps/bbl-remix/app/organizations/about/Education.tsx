@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { Seperator } from "~/components/Seperator";
-import { LineText } from "~/components/Text";
-import { ContentTitle, SubTitle } from "~/components/Title";
+import { Seperator } from "@bbl-remix/components/Seperator";
+import { LineText } from "@bbl-remix/components/Text";
+import { ContentTitle, SubTitle } from "@bbl-remix/components/Title";
 
 const Root = styled.div``;
 

@@ -3,7 +3,7 @@ import { storiesOf } from "@storybook/react";
 import React from "react";
 import styled from "styled-components";
 
-import { Caption } from "~/organizations/post";
+import { Caption } from "@bbl-remix/organizations/post";
 
 const Root = styled.div`
   display: grid;

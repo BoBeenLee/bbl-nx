@@ -7,7 +7,7 @@ import {
   Education,
   Experience,
   Skill
-} from "~/organizations/about";
+} from "@bbl-remix/organizations/about";
 
 const Root = styled.div`
   display: grid;

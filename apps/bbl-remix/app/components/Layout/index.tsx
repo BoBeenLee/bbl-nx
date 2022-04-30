@@ -2,13 +2,13 @@ import _ from "lodash";
 import React, { Component } from "react";
 import styled from "styled-components";
 
-import { media } from "~/utils/media";
-import { isBrowser } from "~/utils/navigator";
-import { Footer } from "~/components/Footer";
-import Header from "~/components/Header";
-import { BottomPopup } from "~/components/Popup";
-import theme from "~/styles/theme";
-import { dimension } from "~/styles/dimension";
+import { media } from "@bbl-remix/utils/media";
+import { isBrowser } from "@bbl-remix/utils/navigator";
+import { Footer } from "@bbl-remix/components/Footer";
+import Header from "@bbl-remix/components/Header";
+import { BottomPopup } from "@bbl-remix/components/Popup";
+import theme from "@bbl-remix/styles/theme";
+import { dimension } from "@bbl-remix/styles/dimension";
 
 interface IProps {
   children: React.ReactNode;

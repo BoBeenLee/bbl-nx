@@ -2,12 +2,12 @@ import { format } from "date-fns";
 import React, { PureComponent } from "react";
 import { GoBook as GoBookIcon } from "react-icons/go";
 import styled, { css } from "styled-components";
-import { media } from "~/utils/media";
+import { media } from "@bbl-remix/utils/media";
 
-import { Seperator } from "~/components/Seperator";
-import { SubTitle } from "~/components/Title";
-import theme from "~/styles/theme";
-import { toDateTimeText } from "~/utils/datetime";
+import { Seperator } from "@bbl-remix/components/Seperator";
+import { SubTitle } from "@bbl-remix/components/Title";
+import theme from "@bbl-remix/styles/theme";
+import { toDateTimeText } from "@bbl-remix/utils/datetime";
 
 interface IProps {
   title: string;

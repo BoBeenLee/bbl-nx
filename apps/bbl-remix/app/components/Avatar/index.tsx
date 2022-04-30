@@ -1,1 +1,1 @@
-export { default as Avatar } from "~/components/Avatar/Avatar";
+export { default as Avatar } from "@bbl-remix/components/Avatar/Avatar";

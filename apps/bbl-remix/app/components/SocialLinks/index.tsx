@@ -1,1 +1,1 @@
-export { default as SocialLinks } from "~/components/SocialLinks/SocialLinks";
+export { default as SocialLinks } from "@bbl-remix/components/SocialLinks/SocialLinks";

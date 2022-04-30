@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { Seperator } from "~/components/Seperator";
-import { SocialLinks } from "~/components/SocialLinks";
+import { Seperator } from "@bbl-remix/components/Seperator";
+import { SocialLinks } from "@bbl-remix/components/SocialLinks";
 
 interface IProps {
   url: string;

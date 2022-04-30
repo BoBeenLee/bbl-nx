@@ -2,7 +2,7 @@ import { action } from "@storybook/addon-actions";
 import { storiesOf } from "@storybook/react";
 import React from "react";
 import styled from "styled-components";
-import { ContentTitle, SubTitle } from "~/components/Title";
+import { ContentTitle, SubTitle } from "@bbl-remix/components/Title";
 
 const Root = styled.div`
   display: grid;

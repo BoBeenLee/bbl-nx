@@ -1,1 +1,1 @@
-export { default as GithubProfile } from "~/components/Profile/GithubProfile";
+export { default as GithubProfile } from "@bbl-remix/components/Profile/GithubProfile";

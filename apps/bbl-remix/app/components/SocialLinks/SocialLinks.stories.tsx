@@ -2,7 +2,7 @@ import { action } from "@storybook/addon-actions";
 import { storiesOf } from "@storybook/react";
 import React from "react";
 import styled from "styled-components";
-import { SocialLinks } from "~/components/SocialLinks";
+import { SocialLinks } from "@bbl-remix/components/SocialLinks";
 
 const Root = styled.div`
   display: grid;
