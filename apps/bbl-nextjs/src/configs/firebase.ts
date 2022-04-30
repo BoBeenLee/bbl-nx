@@ -3,10 +3,10 @@ import 'firebase/analytics';
 import 'firebase/remote-config';
 import _ from 'lodash';
 
-import env from 'src/configs/env';
+import env from '@bbl-nextjs/configs/env';
 
 export const firebaseInstance = _.once(() => {
-  if (!Boolean(env.FIREBASE_CONFIG)) {
+  if (!env.FIREBASE_CONFIG) {
     throw new Error('not exists firebase configs');
   }
   const firebaseConfig = env.FIREBASE_CONFIG;

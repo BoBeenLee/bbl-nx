@@ -2,14 +2,14 @@ import _ from 'lodash';
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-import { media } from 'src/utils/media';
-import { isBrowser } from 'src/utils/navigator';
-import { Footer } from 'src/components/Footer';
-import Header from 'src/components/Header';
-import { BottomPopup } from 'src/components/Popup';
-import theme from 'src/styles/theme';
-import { dimension } from 'src/styles/dimension';
-import SEO from 'src/components/Layout/SEO';
+import { media } from '@bbl-nextjs/utils/media';
+import { isBrowser } from '@bbl-nextjs/utils/navigator';
+import { Footer } from '@bbl-nextjs/components/Footer';
+import Header from '@bbl-nextjs/components/Header';
+import { BottomPopup } from '@bbl-nextjs/components/Popup';
+import theme from '@bbl-nextjs/styles/theme';
+import { dimension } from '@bbl-nextjs/styles/dimension';
+import SEO from '@bbl-nextjs/components/Layout/SEO';
 
 interface IProps {
   children: React.ReactNode;

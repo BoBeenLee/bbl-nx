@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Footer } from 'src/components/Footer';
+import { Footer } from '@bbl-nextjs/components/Footer';
 
 test('Link renders correctly', () => {
   const tree = renderer.create(<Footer />).toJSON();

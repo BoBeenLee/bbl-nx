@@ -7,7 +7,7 @@ import {
   Education,
   Experience,
   Skill,
-} from 'src/organizations/about';
+} from '@bbl-nextjs/organizations/about';
 
 const Root = styled.div`
   display: grid;

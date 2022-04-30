@@ -1,11 +1,11 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { PortfolioCard } from 'src/components/Card';
-import { ImagePopup } from 'src/components/Popup';
-import { SubTitle } from 'src/components/Title';
-import { callValue } from 'src/utils/object';
-import { IProjectPortfolio } from 'src/constants/portfolio';
+import { PortfolioCard } from '@bbl-nextjs/components/Card';
+import { ImagePopup } from '@bbl-nextjs/components/Popup';
+import { SubTitle } from '@bbl-nextjs/components/Title';
+import { callValue } from '@bbl-nextjs/utils/object';
+import { IProjectPortfolio } from '@bbl-nextjs/constants/portfolio';
 
 interface IProps {
   title: string;

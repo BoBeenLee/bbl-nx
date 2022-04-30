@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-import Layout from 'src/components/Layout';
+import Layout from '@bbl-nextjs/components/Layout';
 import {
   Activity,
   Education,
   Experience,
   Skill,
-} from 'src/organizations/about';
+} from '@bbl-nextjs/organizations/about';
 
 const Root = styled.div`
   padding-top: 20px;

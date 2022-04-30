@@ -18,7 +18,7 @@ export type PostItem = {
 const postsDirectory = join(
   process.cwd(),
   'apps',
-  'nx-next-bbl',
+  'bbl-nextjs',
   'src',
   'posts'
 );

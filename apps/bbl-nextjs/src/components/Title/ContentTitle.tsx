@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React, { PureComponent } from 'react';
 import styled from 'styled-components';
-import theme from 'src/styles/theme';
+import theme from '@bbl-nextjs/styles/theme';
 
 interface IProps {
   className?: string;

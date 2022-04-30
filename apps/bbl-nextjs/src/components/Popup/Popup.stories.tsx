@@ -4,8 +4,8 @@ import { storiesOf } from '@storybook/react';
 import React from 'react';
 
 import styled from 'styled-components';
-import { BottomPopup, ImagePopup } from 'src/components/Popup';
-import images from 'src/images';
+import { BottomPopup, ImagePopup } from '@bbl-nextjs/components/Popup';
+import images from '@bbl-nextjs/images';
 
 const Root = styled.div``;
 

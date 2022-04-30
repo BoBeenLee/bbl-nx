@@ -3,12 +3,12 @@ import Link from 'next/link';
 import React, { PureComponent } from 'react';
 import { GoBook as GoBookIcon } from 'react-icons/go';
 import styled, { css } from 'styled-components';
-import { media } from 'src/utils/media';
+import { media } from '@bbl-nextjs/utils/media';
 
-import { Seperator } from 'src/components/Seperator';
-import { SubTitle } from 'src/components/Title';
-import theme from 'src/styles/theme';
-import { toDateTimeText } from 'src/utils/datetime';
+import { Seperator } from '@bbl-nextjs/components/Seperator';
+import { SubTitle } from '@bbl-nextjs/components/Title';
+import theme from '@bbl-nextjs/styles/theme';
+import { toDateTimeText } from '@bbl-nextjs/utils/datetime';
 
 interface IProps {
   title: string;

@@ -1,1 +1,1 @@
-export { default as Avatar } from 'src/components/Avatar/Avatar';
+export { default as Avatar } from '@bbl-nextjs/components/Avatar/Avatar';

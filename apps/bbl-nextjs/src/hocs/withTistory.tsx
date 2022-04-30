@@ -1,9 +1,9 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
 
-import { isBrowser } from 'src/utils/navigator';
-import feednami from 'src/apis/feednami';
-import { getFeednamiTistories } from 'src/configs/tistory';
+import { isBrowser } from '@bbl-nextjs/utils/navigator';
+import feednami from '@bbl-nextjs/apis/feednami';
+import { getFeednamiTistories } from '@bbl-nextjs/configs/tistory';
 
 // tslint:disable:object-literal-sort-keys
 const withTistory = (TargetComponent: any) => {

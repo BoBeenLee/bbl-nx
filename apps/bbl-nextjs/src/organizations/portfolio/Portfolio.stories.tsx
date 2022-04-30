@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import React from 'react';
 import styled from 'styled-components';
 
-import { Portfolio } from 'src/organizations/portfolio';
+import { Portfolio } from '@bbl-nextjs/organizations/portfolio';
 
 const Root = styled.div`
   display: grid;

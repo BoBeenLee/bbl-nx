@@ -1,1 +1,1 @@
-export { default as Seperator } from 'src/components/Seperator/Seperator';
+export { default as Seperator } from '@bbl-nextjs/components/Seperator/Seperator';

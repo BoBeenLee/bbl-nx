@@ -1,9 +1,9 @@
 import React, { PureComponent } from 'react';
 import styled from 'styled-components';
 
-import Layout from 'src/components/Layout';
-import { companyPortfolios, teamPortfolios } from 'src/constants/portfolio';
-import { Portfolio } from 'src/organizations/portfolio';
+import Layout from '@bbl-nextjs/components/Layout';
+import { companyPortfolios, teamPortfolios } from '@bbl-nextjs/constants/portfolio';
+import { Portfolio } from '@bbl-nextjs/organizations/portfolio';
 
 const Root = styled.div`
   padding-top: 20px;

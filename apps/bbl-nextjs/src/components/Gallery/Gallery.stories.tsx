@@ -2,9 +2,9 @@ import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 import styled from 'styled-components';
-import { PhotoGallery } from 'src/components/Gallery';
-import { media } from 'src/utils/media';
-import theme from 'src/styles/theme';
+import { PhotoGallery } from '@bbl-nextjs/components/Gallery';
+import { media } from '@bbl-nextjs/utils/media';
+import theme from '@bbl-nextjs/styles/theme';
 
 const Root = styled.div`
   display: grid;

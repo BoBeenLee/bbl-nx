@@ -1,1 +1,1 @@
-export { default as Portfolio } from 'src/organizations/portfolio/Portfolio';
+export { default as Portfolio } from '@bbl-nextjs/organizations/portfolio/Portfolio';

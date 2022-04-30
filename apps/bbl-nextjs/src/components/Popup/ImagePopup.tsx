@@ -3,8 +3,8 @@ import React, { PureComponent } from 'react';
 import ReactModal from 'react-modal';
 import styled from 'styled-components';
 
-import { dimension } from 'src/styles/dimension';
-import images from 'src/images';
+import { dimension } from '@bbl-nextjs/styles/dimension';
+import images from '@bbl-nextjs/images';
 
 interface IProps {
   showModal: boolean;

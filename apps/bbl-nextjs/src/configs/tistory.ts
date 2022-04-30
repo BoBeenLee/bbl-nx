@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import feednami from 'src/apis/feednami';
+import feednami from '@bbl-nextjs/apis/feednami';
 
 export interface TistoryItem {
   guid: string;

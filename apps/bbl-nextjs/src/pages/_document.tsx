@@ -3,7 +3,7 @@ import React from 'react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 
-import env from 'src/configs/env';
+import env from '@bbl-nextjs/configs/env';
 
 export default class MyDocument extends Document {
   public render() {

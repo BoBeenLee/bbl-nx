@@ -1,1 +1,1 @@
-export { default as GithubProfile } from 'src/components/Profile/GithubProfile';
+export { default as GithubProfile } from '@bbl-nextjs/components/Profile/GithubProfile';

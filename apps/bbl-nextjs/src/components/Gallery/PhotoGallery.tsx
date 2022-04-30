@@ -3,7 +3,7 @@ import _ from 'lodash';
 import React, { PureComponent } from 'react';
 import Slider from 'react-slick';
 import styled from 'styled-components';
-import { isMobile } from 'src/utils/navigator';
+import { isMobile } from '@bbl-nextjs/utils/navigator';
 
 interface IProps {
   images: string[];

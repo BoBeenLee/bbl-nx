@@ -1,6 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { metadata } from 'src/constants/metadata';
+import { metadata } from '@bbl-nextjs/constants/metadata';
 
 interface ISEOProps {
   description?: string;

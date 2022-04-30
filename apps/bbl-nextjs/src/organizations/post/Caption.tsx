@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { Seperator } from 'src/components/Seperator';
-import { SocialLinks } from 'src/components/SocialLinks';
+import { Seperator } from '@bbl-nextjs/components/Seperator';
+import { SocialLinks } from '@bbl-nextjs/components/SocialLinks';
 
 interface IProps {
   url: string;

@@ -1,1 +1,1 @@
-export { default as SocialLinks } from 'src/components/SocialLinks/SocialLinks';
+export { default as SocialLinks } from '@bbl-nextjs/components/SocialLinks/SocialLinks';
