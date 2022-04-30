@@ -1,8 +1,8 @@
 import _ from 'lodash';
 
-import { firebaseInstance } from 'src/configs/firebase';
-import { createInjectDecorator } from 'src/decorators/createInjectDecorator';
-import { traverseObjectKeys, traverseObjectSliceStr } from 'src/utils/string';
+import { firebaseInstance } from '@bbl-nextjs/configs/firebase';
+import { createInjectDecorator } from '@bbl-nextjs/decorators/createInjectDecorator';
+import { traverseObjectKeys, traverseObjectSliceStr } from '@bbl-nextjs/utils/string';
 
 const EVENT_TYPE_MAX_LENGTH = 40;
 

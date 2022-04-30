@@ -1,2 +1,2 @@
-export { default as BottomPopup } from 'src/components/Popup/BottomPopup';
-export { default as ImagePopup } from 'src/components/Popup/ImagePopup';
+export { default as BottomPopup } from '@bbl-nextjs/components/Popup/BottomPopup';
+export { default as ImagePopup } from '@bbl-nextjs/components/Popup/ImagePopup';

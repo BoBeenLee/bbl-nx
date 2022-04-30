@@ -1,8 +1,8 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { Rotate as WindowRotate } from 'src/faccs';
-import images from 'src/images';
+import { Rotate as WindowRotate } from '@bbl-nextjs/faccs';
+import images from '@bbl-nextjs/images';
 
 const Root = styled.div`
   display: grid;

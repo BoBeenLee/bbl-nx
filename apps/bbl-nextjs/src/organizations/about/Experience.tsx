@@ -1,11 +1,11 @@
 import _ from 'lodash';
 import React, { PureComponent } from 'react';
 import styled from 'styled-components';
-import { Seperator } from 'src/components/Seperator';
-import { LineText } from 'src/components/Text';
-import { ContentTitle, SubTitle } from 'src/components/Title';
-import { media } from 'src/utils/media';
-import { experiences, IExperience } from 'src/constants/experience';
+import { Seperator } from '@bbl-nextjs/components/Seperator';
+import { LineText } from '@bbl-nextjs/components/Text';
+import { ContentTitle, SubTitle } from '@bbl-nextjs/components/Title';
+import { media } from '@bbl-nextjs/utils/media';
+import { experiences, IExperience } from '@bbl-nextjs/constants/experience';
 
 const Root = styled.div``;
 

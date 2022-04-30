@@ -3,14 +3,14 @@ import _ from 'lodash';
 import React, { PureComponent } from 'react';
 import Headroom from 'react-headroom';
 import styled, { css } from 'styled-components';
-import { menu as titles, theme } from 'src/constants';
-import { media } from 'src/utils/media';
-import { isIE } from 'src/utils/navigator';
-import { Avatar } from 'src/components/Avatar';
-import { Menu } from 'src/components/Menu';
-import { Seperator } from 'src/components/Seperator';
-import images from 'src/images';
-import { dimension } from 'src/styles/dimension';
+import { menu as titles, theme } from '@bbl-nextjs/constants';
+import { media } from '@bbl-nextjs/utils/media';
+import { isIE } from '@bbl-nextjs/utils/navigator';
+import { Avatar } from '@bbl-nextjs/components/Avatar';
+import { Menu } from '@bbl-nextjs/components/Menu';
+import { Seperator } from '@bbl-nextjs/components/Seperator';
+import images from '@bbl-nextjs/images';
+import { dimension } from '@bbl-nextjs/styles/dimension';
 
 interface IStates {
   isOpenHeader: boolean;

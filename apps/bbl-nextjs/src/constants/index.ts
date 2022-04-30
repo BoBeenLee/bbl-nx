@@ -1,4 +1,4 @@
-import menu, { isHome } from 'src/constants/menu';
-import theme from 'src/styles/theme';
+import menu, { isHome } from '@bbl-nextjs/constants/menu';
+import theme from '@bbl-nextjs/styles/theme';
 
 export { theme, menu, isHome };

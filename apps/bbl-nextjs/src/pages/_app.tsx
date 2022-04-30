@@ -2,7 +2,7 @@ import { Provider } from 'mobx-react';
 import App from 'next/app';
 import React from 'react';
 
-import 'src/styles/global.css';
+import '@bbl-nextjs/styles/global.css';
 
 class MyApp extends App {
   public render() {

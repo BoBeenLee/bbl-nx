@@ -4,12 +4,12 @@ import { DiAndroid, DiApple } from 'react-icons/di';
 import { GoLink as LinkIcon, GoMarkGithub as GithubIcon } from 'react-icons/go';
 
 import styled from 'styled-components';
-import { skillMap } from 'src/constants/skill';
-import { media } from 'src/utils/media';
-import PhotoGallery from 'src/components/Gallery/PhotoGallery';
-import Seperator from 'src/components/Seperator/Seperator';
-import theme from 'src/styles/theme';
-import images from 'src/images';
+import { skillMap } from '@bbl-nextjs/constants/skill';
+import { media } from '@bbl-nextjs/utils/media';
+import PhotoGallery from '@bbl-nextjs/components/Gallery/PhotoGallery';
+import Seperator from '@bbl-nextjs/components/Seperator/Seperator';
+import theme from '@bbl-nextjs/styles/theme';
+import images from '@bbl-nextjs/images';
 
 interface IProps {
   name: string;

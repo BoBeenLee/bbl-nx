@@ -2,7 +2,7 @@ import Link from 'next/link';
 import _ from 'lodash';
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { theme } from 'src/constants';
+import { theme } from '@bbl-nextjs/constants';
 
 interface IProps {
   name: string;

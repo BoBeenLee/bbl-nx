@@ -2,9 +2,9 @@ import _ from 'lodash';
 import React, { PureComponent } from 'react';
 import { slide as BurgerMenu } from 'react-burger-menu';
 import styled from 'styled-components';
-import { MenuItem } from 'src/components/Menu';
-import { menu as menus, theme } from 'src/constants';
-import { Seperator } from 'src/components/Seperator';
+import { MenuItem } from '@bbl-nextjs/components/Menu';
+import { menu as menus, theme } from '@bbl-nextjs/constants';
+import { Seperator } from '@bbl-nextjs/components/Seperator';
 
 interface IProps {
   isOpen: boolean;

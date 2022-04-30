@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import React from 'react';
 import styled from 'styled-components';
 
-import Avatar from 'src/components/Avatar/Avatar';
+import Avatar from '@bbl-nextjs/components/Avatar/Avatar';
 
 const Root = styled.div`
   display: grid;

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { isBrowser } from 'src/utils/navigator';
+import { isBrowser } from '@bbl-nextjs/utils/navigator';
 
 interface IProps {
   children: ({

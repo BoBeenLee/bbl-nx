@@ -1,1 +1,1 @@
-export { default as Tag } from 'src/components/Tag/Tag';
+export { default as Tag } from '@bbl-nextjs/components/Tag/Tag';

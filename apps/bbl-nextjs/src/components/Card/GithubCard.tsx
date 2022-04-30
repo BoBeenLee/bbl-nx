@@ -1,7 +1,7 @@
 import distanceInWordsToNow from 'date-fns/formatDistanceToNow';
 import React, { PureComponent } from 'react';
 import styled from 'styled-components';
-import { isBrowser } from 'src/utils/navigator';
+import { isBrowser } from '@bbl-nextjs/utils/navigator';
 
 interface IProps {
   name: string;

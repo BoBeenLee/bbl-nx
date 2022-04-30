@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Layout from 'src/components/Layout';
-import { SubTitle } from 'src/components/Title';
-import { Caption } from 'src/organizations/post';
-import { media } from 'src/utils/media';
-import theme from 'src/styles/theme';
+import Layout from '@bbl-nextjs/components/Layout';
+import { SubTitle } from '@bbl-nextjs/components/Title';
+import { Caption } from '@bbl-nextjs/organizations/post';
+import { media } from '@bbl-nextjs/utils/media';
+import theme from '@bbl-nextjs/styles/theme';
 
 interface IMarkdownRemark {
   id: string;

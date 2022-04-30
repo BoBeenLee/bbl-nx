@@ -1,5 +1,5 @@
 import React from 'react';
-import { Rotate } from 'src/faccs';
+import { Rotate } from '@bbl-nextjs/faccs';
 
 function withRotate<P>(TargetComponent: any) {
   return function WithRotate(props: P) {

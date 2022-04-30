@@ -1,1 +1,1 @@
-export { default as PhotoGallery } from 'src/components/Gallery/PhotoGallery';
+export { default as PhotoGallery } from '@bbl-nextjs/components/Gallery/PhotoGallery';

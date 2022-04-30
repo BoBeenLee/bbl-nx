@@ -2,7 +2,7 @@
 import { Provider } from 'mobx-react';
 import React, { Component } from 'react';
 
-import { IStore } from 'src/stores/Store';
+import { IStore } from '@bbl-nextjs/stores/Store';
 
 const withStore =
   (store: IStore) =>

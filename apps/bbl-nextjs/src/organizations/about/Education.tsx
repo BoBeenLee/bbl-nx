@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Seperator } from 'src/components/Seperator';
-import { LineText } from 'src/components/Text';
-import { ContentTitle, SubTitle } from 'src/components/Title';
+import { Seperator } from '@bbl-nextjs/components/Seperator';
+import { LineText } from '@bbl-nextjs/components/Text';
+import { ContentTitle, SubTitle } from '@bbl-nextjs/components/Title';
 
 const Root = styled.div``;
 

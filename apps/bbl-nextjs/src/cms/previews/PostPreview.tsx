@@ -1,5 +1,5 @@
 import React from 'react';
-import PostTemplate from 'src/templates/post';
+import PostTemplate from '@bbl-nextjs/templates/post';
 
 const PostPreview = ({ entry, widgetFor }: any) => {
   const data = {

@@ -1,3 +1,3 @@
-export { default as GithubCard } from 'src/components/Card/GithubCard';
-export { default as PortfolioCard } from 'src/components/Card/PortfolioCard';
-export { default as PostCard } from 'src/components/Card/PostCard';
+export { default as GithubCard } from '@bbl-nextjs/components/Card/GithubCard';
+export { default as PortfolioCard } from '@bbl-nextjs/components/Card/PortfolioCard';
+export { default as PostCard } from '@bbl-nextjs/components/Card/PostCard';
