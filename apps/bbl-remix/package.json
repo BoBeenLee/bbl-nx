@@ -5,8 +5,8 @@
   "license": "",
   "scripts": {
     "build": "remix build",
-    "dev": "cross-env NODE_ENV=development netlify dev",
-    "remix:dev": "remix dev",
+    "dev": "remix dev",
+    "netlify:dev": "cross-env NODE_ENV=development netlify dev",
     "postinstall": "remix setup node",
     "start": "npx remix-serve build"
   },
