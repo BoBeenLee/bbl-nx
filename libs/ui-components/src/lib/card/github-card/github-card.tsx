@@ -1,7 +1,7 @@
 import { useCallback } from 'react';
 import distanceInWordsToNow from 'date-fns/formatDistanceToNow';
 import styled from 'styled-components';
-import { DATE_TIME_FORMAT4, isBrowser, parseDateTime } from '@nx-bbl/utils';
+import { DATE_TIME_FORMAT4, isBrowser, parseDateTime } from '@bbl-nx/utils';
 
 /* eslint-disable-next-line */
 export interface GithubCardProps {

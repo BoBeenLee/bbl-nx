@@ -1,12 +1,12 @@
 import _ from 'lodash';
-import { dimension, theme } from '@nx-bbl/styles';
-import { isIE, media } from '@nx-bbl/utils';
+import { dimension, theme } from '@bbl-nx/styles';
+import { isIE, media } from '@bbl-nx/utils';
 import styled, { css } from 'styled-components';
 import Seperator from '../seperator/seperator';
 import { useCallback, useState } from 'react';
 import Avatar from '../avatar/avatar';
 import Headroom from 'react-headroom';
-import { images } from '@nx-bbl/images';
+import { images } from '@bbl-nx/images';
 import Menu from '../menu/menu/menu';
 
 /* eslint-disable-next-line */

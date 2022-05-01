@@ -2,7 +2,7 @@ import _ from 'lodash';
 import styled from 'styled-components';
 import Slider from 'react-slick';
 import { useCallback } from 'react';
-import { isMobile } from '@nx-bbl/utils';
+import { isMobile } from '@bbl-nx/utils';
 
 /* eslint-disable-next-line */
 export interface PhotoGalleryProps {

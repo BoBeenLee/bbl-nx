@@ -1,5 +1,5 @@
 import _ from "lodash";
-import softhomeImages from "@bbl-remix/images/portfolio/softhome";
+import softhomeImages from "@bbl-nx/images";
 import competitionImages from "@bbl-remix/images/portfolio/competition";
 import skhualarmImages from "@bbl-remix/images/portfolio/skhualarm";
 import intersectionImages from "@bbl-remix/images/portfolio/intersection";

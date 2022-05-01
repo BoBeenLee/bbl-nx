@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { GoBook as GoBookIcon } from 'react-icons/go';
-import { media, toDateTimeText, today } from '@nx-bbl/utils';
-import { theme } from '@nx-bbl/styles';
+import { media, toDateTimeText, today } from '@bbl-nx/utils';
+import { theme } from '@bbl-nx/styles';
 import Seperator from '../../seperator/seperator';
 import SubTitle from '../../title/sub-title/sub-title';
 
