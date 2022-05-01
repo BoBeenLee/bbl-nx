@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import Components from './components';
+import UiComponents from './ui-components';
 
-describe('Components', () => {
+describe('UiComponents', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<Components />);
+    const { baseElement } = render(<UiComponents />);
     expect(baseElement).toBeTruthy();
   });
 });
