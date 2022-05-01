@@ -16,7 +16,7 @@ const StyledContentTitle = styled.div`
   line-height: 2;
 `;
 
-const RootLink = styled.a`
+const ContentTitleLink = styled.a`
   font-size: 18px;
   font-weight: 600;
   color: ${theme.primary};
@@ -31,9 +31,9 @@ export function ContentTitle(props: ContentTitleProps) {
   const { className, title, uri } = props;
   if (!_.isEmpty(uri)) {
     return (
-      <RootLink className={className} href={uri} target="_blank">
+      <ContentTitleLink className={className} href={uri} target="_blank">
         {title}
-      </RootLink>
+      </ContentTitleLink>
     );
   }
   return <StyledContentTitle className={className}>{title}</StyledContentTitle>;
