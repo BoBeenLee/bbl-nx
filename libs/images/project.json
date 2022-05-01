@@ -2,22 +2,13 @@
   "root": "libs/images",
   "sourceRoot": "libs/images/src",
   "projectType": "library",
+  "tags": [],
   "targets": {
-    "build": {
-      "executor": "@nrwl/js:tsc",
-      "outputs": ["{options.outputPath}"],
-      "options": {
-        "outputPath": "dist/libs/images",
-        "main": "libs/images/src/index.ts",
-        "tsConfig": "libs/images/tsconfig.lib.json",
-        "assets": ["libs/images/*.md"]
-      }
-    },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/images/**/*.ts"]
+        "lintFilePatterns": ["libs/images/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "test": {
@@ -28,6 +19,5 @@
         "passWithNoTests": true
       }
     }
-  },
-  "tags": []
+  }
 }
