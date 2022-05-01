@@ -1,3 +1,4 @@
+import { menus } from "@nx-bbl/constants";
 import { dimension, theme } from '@nx-bbl/styles';
 import { isBrowser, media } from '@nx-bbl/utils';
 import { useEffect } from '@storybook/addons';
@@ -80,7 +81,7 @@ export function Layout(props: LayoutProps) {
       </StatePopupBox>
       <ContainerBox>
         <HeaderBox>
-          <Header titles={[]} />
+          <Header titles={menus} />
         </HeaderBox>
         <ContentBox id="page-box">{children}</ContentBox>
         <FooterBox>
