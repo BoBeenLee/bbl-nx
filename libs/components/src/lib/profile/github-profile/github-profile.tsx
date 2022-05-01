@@ -24,7 +24,7 @@ const StyledGithubProfile = styled.div`
   grid-template-rows: 1fr 1fr 1fr;
 `;
 
-const AvatarBox = styled.div`
+const AvatarGroup = styled.div`
   grid-column: 1/2;
   grid-row: 1/3;
   display: flex;
@@ -32,7 +32,7 @@ const AvatarBox = styled.div`
   align-items: center;
 `;
 
-const ProfileBox = styled.div`
+const Profile = styled.div`
   grid-column: 2/5;
   grid-row: 1/3;
   display: flex;
@@ -40,9 +40,9 @@ const ProfileBox = styled.div`
   justify-content: space-around;
 `;
 
-const ProfileItemBox = styled.div``;
+const ProfileItem = styled.div``;
 
-const OrganizationBox = styled.div`
+const Organization = styled.div`
   grid-column: 1/5;
   grid-row: 3;
   /* background: green; */
@@ -52,7 +52,7 @@ const OrganizationBox = styled.div`
   justify-content: space-around;
 `;
 
-const OrganizationItemBox = styled.div``;
+const OrganizationItem = styled.div``;
 
 export function GithubProfile(props: GithubProfileProps) {
   const {
@@ -65,24 +65,24 @@ export function GithubProfile(props: GithubProfileProps) {
   } = props;
 
   const renderOranization = (item: GithubProfileOrganization) => (
-    <OrganizationItemBox>{item.name}</OrganizationItemBox>
+    <OrganizationItem>{item.name}</OrganizationItem>
   );
 
   return (
     <StyledGithubProfile>
-      <AvatarBox>
+      <AvatarGroup>
         <Avatar src={avatarUrl} width="80%" />
-      </AvatarBox>
-      <ProfileBox>
-        <ProfileItemBox>{email}</ProfileItemBox>
-        <ProfileItemBox>{location}</ProfileItemBox>
-        <ProfileItemBox>
+      </AvatarGroup>
+      <Profile>
+        <ProfileItem>{email}</ProfileItem>
+        <ProfileItem>{location}</ProfileItem>
+        <ProfileItem>
           follower {followerCount} following {followingCount}
-        </ProfileItemBox>
-      </ProfileBox>
-      <OrganizationBox>
+        </ProfileItem>
+      </Profile>
+      <Organization>
         {_.map(organizations, renderOranization)}
-      </OrganizationBox>
+      </Organization>
     </StyledGithubProfile>
   );
 }
