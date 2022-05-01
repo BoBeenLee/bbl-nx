@@ -1,0 +1,33 @@
+{
+  "root": "libs/images",
+  "sourceRoot": "libs/images/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/images",
+        "main": "libs/images/src/index.ts",
+        "tsConfig": "libs/images/tsconfig.lib.json",
+        "assets": ["libs/images/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/images/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/images"],
+      "options": {
+        "jestConfig": "libs/images/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
