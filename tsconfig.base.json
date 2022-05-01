@@ -17,7 +17,7 @@
     "paths": {
       "@bbl-nextjs/*": ["./apps/bbl-nextjs/src/*"],
       "@bbl-remix/*": ["./apps/bbl-remix/app/*"],
-      "@nx-bbl/util": ["libs/util/src/index.ts"]
+      "@nx-bbl/utils": ["libs/utils/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
