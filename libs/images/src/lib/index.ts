@@ -16,7 +16,7 @@ import instagram from './instagram.svg';
 import linkedin from './linkedin.svg';
 import storybook from './storybook.png';
 
-const images = {
+export const images = {
   mock: {
     board,
   },
@@ -39,5 +39,3 @@ const images = {
   linkedin,
   storybook,
 };
-
-export default images;
