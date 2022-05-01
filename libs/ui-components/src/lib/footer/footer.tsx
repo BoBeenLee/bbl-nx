@@ -1,5 +1,5 @@
-import { theme } from '@nx-bbl/styles';
-import { media } from '@nx-bbl/utils';
+import { theme } from '@bbl-nx/styles';
+import { media } from '@bbl-nx/utils';
 import {
   GoOctoface as OctofaceIcon,
   GoBook as GoBookIcon,

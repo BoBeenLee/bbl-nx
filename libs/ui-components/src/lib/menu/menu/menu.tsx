@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import { theme } from '@nx-bbl/styles';
+import { theme } from '@bbl-nx/styles';
 import { CSSProperties } from 'react';
 import { slide as BurgerMenu } from 'react-burger-menu';
 import styled from 'styled-components';

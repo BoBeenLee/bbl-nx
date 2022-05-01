@@ -1,5 +1,5 @@
 {
-  "npmScope": "nx-bbl",
+  "npmScope": "bbl-nx",
   "affected": {
     "defaultBase": "main"
   },

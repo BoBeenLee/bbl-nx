@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import { DiAndroid, DiApple } from 'react-icons/di';
 import { GoLink as LinkIcon, GoMarkGithub as GithubIcon } from 'react-icons/go';
 
-import { theme } from '@nx-bbl/styles';
-import { media } from '@nx-bbl/utils';
-import { images } from '@nx-bbl/images';
+import { theme } from '@bbl-nx/styles';
+import { media } from '@bbl-nx/utils';
+import { images } from '@bbl-nx/images';
 import Seperator from '../../seperator/seperator';
 import PhotoGallery from '../../photo-gallery/photo-gallery';
 import React from 'react';

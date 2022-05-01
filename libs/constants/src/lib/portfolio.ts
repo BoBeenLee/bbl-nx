@@ -1,9 +1,5 @@
 import _ from "lodash";
-import softhomeImages from "@bbl-remix/images/portfolio/softhome";
-import competitionImages from "@bbl-remix/images/portfolio/competition";
-import skhualarmImages from "@bbl-remix/images/portfolio/skhualarm";
-import intersectionImages from "@bbl-remix/images/portfolio/intersection";
-import houseImages from "@bbl-remix/images/portfolio/house";
+import { images } from "@bbl-nx/images";
 
 export interface PortfolioItem {
   id: string;
@@ -212,7 +208,7 @@ export const teamPortfolios: PortfolioItem[] = [
     summary: "셰프와 게스트 연결해주는 서비스",
     githubUrl: "https://github.com/Nexters/inhousekitchen",
     linkUrl: "",
-    images: _.values(houseImages)
+    images: _.values(images.portfolio.house)
   },
   {
     id: "flass",
@@ -271,7 +267,7 @@ export const teamPortfolios: PortfolioItem[] = [
     githubUrl: "https://github.com/BoBeenLee/map",
     linkUrl:
       "https://play.google.com/store/apps/details?id=com.nexters.intersection.intersectionapp",
-    images: _.values(intersectionImages)
+    images: _.values(images.portfolio.intersection)
   },
   {
     id: "skhualarm",
@@ -292,7 +288,7 @@ export const teamPortfolios: PortfolioItem[] = [
     githubUrl: "https://github.com/BoBeenLee/SkhuApp",
     linkUrl:
       "https://play.google.com/store/apps/details?id=com.skhu.bobinlee.skhuapp&hl=ko",
-    images: _.values(skhualarmImages)
+    images: _.values(images.portfolio.skhualarm)
   },
   {
     id: "competition",
@@ -312,7 +308,7 @@ export const teamPortfolios: PortfolioItem[] = [
     summary: "Sungkonghoe University Competition Site",
     githubUrl: "https://github.com/BoBeenLee/SkhuCompetition.Server",
     linkUrl: "",
-    images: _.values(competitionImages)
+    images: _.values(images.portfolio.competition)
   },
   {
     id: "softhome",
@@ -323,6 +319,6 @@ export const teamPortfolios: PortfolioItem[] = [
     summary: "Sungkonghoe University Software Engineering Department Site",
     githubUrl: "https://github.com/BoBeenLee/swhome",
     linkUrl: "",
-    images: _.values(softhomeImages)
+    images: _.values(images.portfolio.softhome)
   }
 ];

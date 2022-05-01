@@ -1,5 +1,5 @@
-import { images } from '@nx-bbl/images';
-import { dimension } from '@nx-bbl/styles';
+import { images } from '@bbl-nx/images';
+import { dimension } from '@bbl-nx/styles';
 import { CSSProperties } from 'react';
 import ReactModal from 'react-modal';
 import styled from 'styled-components';

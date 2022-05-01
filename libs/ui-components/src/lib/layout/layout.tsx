@@ -1,6 +1,6 @@
-import { menus } from "@nx-bbl/constants";
-import { dimension, theme } from '@nx-bbl/styles';
-import { isBrowser, media } from '@nx-bbl/utils';
+import { menus } from "@bbl-nx/constants";
+import { dimension, theme } from '@bbl-nx/styles';
+import { isBrowser, media } from '@bbl-nx/utils';
 import { useEffect } from '@storybook/addons';
 import { useState } from 'react';
 import styled from 'styled-components';
