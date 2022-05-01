@@ -7,13 +7,11 @@ import { useCallback, useState } from 'react';
 import Avatar from '../avatar/avatar';
 import Headroom from 'react-headroom';
 import { images } from '@nx-bbl/images';
-import Menu from "../menu/menu/menu";
+import Menu from '../menu/menu/menu';
 
 /* eslint-disable-next-line */
 export interface HeaderProps {
   titles: Array<{ url: string; name: string }>;
-  isOpenHeader: boolean;
-  isOpenMenu: boolean;
 }
 
 const StyledHeader = styled.div`
