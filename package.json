@@ -5,7 +5,9 @@
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
+    "build:affected:all": "nx affected --target=build --all",
     "test": "nx test",
+    "test:affected": "nx affected --target=test --base= origin/master~1 --head= origin/master",
     "postinstall": "remix setup node"
   },
   "private": true,
