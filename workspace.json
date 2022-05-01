@@ -3,6 +3,7 @@
   "projects": {
     "bbl-nextjs": "apps/bbl-nextjs",
     "bbl-remix": "apps/bbl-remix",
+    "components": "libs/components",
     "utils": "libs/utils"
   }
 }
