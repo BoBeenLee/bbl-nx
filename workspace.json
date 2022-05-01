@@ -3,7 +3,10 @@
   "projects": {
     "bbl-nextjs": "apps/bbl-nextjs",
     "bbl-remix": "apps/bbl-remix",
-    "components": "libs/components",
+    "constants": "libs/constants",
+    "images": "libs/images",
+    "styles": "libs/styles",
+    "ui-components": "libs/ui-components",
     "utils": "libs/utils"
   }
 }

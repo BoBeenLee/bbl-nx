@@ -1,0 +1,23 @@
+{
+  "root": "libs/images",
+  "sourceRoot": "libs/images/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/images/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/images"],
+      "options": {
+        "jestConfig": "libs/images/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

@@ -8,8 +8,8 @@
     "build:affected:all": "nx affected --target=build --all",
     "test": "nx test",
     "test:affected": "nx affected --target=test --base= origin/master~1 --head= origin/master",
-    "components:storybook": "nx run components:storybook",
-    "components:build-storybook": "nx run components:build-storybook",
+    "components:storybook": "nx run ui-components:storybook",
+    "components:build-storybook": "nx run ui-components:build-storybook",
     "postinstall": "remix setup node"
   },
   "private": true,

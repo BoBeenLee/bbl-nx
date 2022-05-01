@@ -16,8 +16,11 @@
     "baseUrl": ".",
     "paths": {
       "@bbl-nextjs/*": ["./apps/bbl-nextjs/src/*"],
+      "@bbl-nx/ui-components": ["libs/ui-components/src/index.ts"],
       "@bbl-remix/*": ["./apps/bbl-remix/app/*"],
-      "@nx-bbl/components": ["libs/components/src/index.ts"],
+      "@nx-bbl/constants": ["libs/constants/src/index.ts"],
+      "@nx-bbl/images": ["libs/images/src/index.ts"],
+      "@nx-bbl/styles": ["libs/styles/src/index.ts"],
       "@nx-bbl/utils": ["libs/utils/src/index.ts"]
     }
   },
