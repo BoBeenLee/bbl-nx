@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
+    "apis": "libs/apis",
     "bbl-nextjs": "apps/bbl-nextjs",
     "bbl-remix": "apps/bbl-remix",
     "constants": "libs/constants",
