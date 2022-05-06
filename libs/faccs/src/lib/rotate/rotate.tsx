@@ -21,15 +21,18 @@ interface RotateStates {
   orientation: number;
 }
 
-class Rotate extends Component<RotateProps, RotateStates> {
+export class Rotate extends Component<RotateProps, RotateStates> {
   public static defaultProps = {};
 
-  public override state = {
-    alpha: 0,
-    beta: 0,
-    gamma: 0,
-    orientation: 0,
-  };
+  constructor(props: RotateProps) {
+    super(props);
+    this.state = {
+      alpha: 0,
+      beta: 0,
+      gamma: 0,
+      orientation: 0,
+    };
+  }
 
   public override componentDidMount() {
     if (!this.hasDeviceOrientation()) {

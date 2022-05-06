@@ -1,0 +1,23 @@
+{
+  "root": "libs/hocs",
+  "sourceRoot": "libs/hocs/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/hocs/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/hocs"],
+      "options": {
+        "jestConfig": "libs/hocs/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}
