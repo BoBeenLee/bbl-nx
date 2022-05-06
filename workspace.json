@@ -5,6 +5,7 @@
     "bbl-nextjs": "apps/bbl-nextjs",
     "bbl-remix": "apps/bbl-remix",
     "constants": "libs/constants",
+    "decorators": "libs/decorators",
     "faccs": "libs/faccs",
     "hocs": "libs/hocs",
     "images": "libs/images",
