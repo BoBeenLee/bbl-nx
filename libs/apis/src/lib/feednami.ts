@@ -1,6 +1,14 @@
 import axios from "axios";
 /* eslint-disable prefer-const */
-const feednami: any = {};
+const feednami: {
+  load: (e: any, n: any) => void;
+  loadGoogleFormat: (e: any, n: any) => void;
+} = {
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  load: (e, n) => { },
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  loadGoogleFormat: (e, n) => { }
+};
 
 (feednami.load = function (e: any, n: any) {
   let o = "https://api.feednami.com/api/v1",
@@ -40,7 +48,7 @@ const feednami: any = {};
     n(result.data);
   });
 }),
-  ((feednami as any).loadGoogleFormat = function (e: any, n: any) {
+  ((feednami).loadGoogleFormat = function (e: any, n: any) {
     return feednami.load({ url: e, format: "google", includeXml: !0 }, n);
   });
 export const feednamiApi = feednami;
