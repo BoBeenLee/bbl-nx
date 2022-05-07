@@ -1,8 +1,7 @@
 import { menus } from "@bbl-nx/constants";
 import { dimension, theme } from '@bbl-nx/styles';
 import { isBrowser, media } from '@bbl-nx/utils';
-import { useEffect } from '@storybook/addons';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Footer from '../footer/footer';
 import Header from '../header/header';
