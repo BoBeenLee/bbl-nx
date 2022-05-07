@@ -2,8 +2,8 @@
 import remark from 'remark';
 import html from 'remark-html';
 import React from 'react';
-import { getPostBySlug, getAllPosts, PostItem } from '@bbl-nextjs/configs/post';
-import PostTemplate from '@bbl-nextjs/templates/post';
+import { getPostBySlug, getAllPosts, PostItem } from '../../configs/post';
+import { PostTemplate } from '@bbl-nx/ui-components';
 
 const PostById = (props: PostItem) => {
   const { slug, frontmatter, content } = props;

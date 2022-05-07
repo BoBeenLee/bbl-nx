@@ -2,11 +2,10 @@ import _ from 'lodash';
 import React, { PureComponent } from 'react';
 import styled from 'styled-components';
 
-import { PostCard } from '@bbl-nextjs/components/Card';
-import Layout from '@bbl-nextjs/components/Layout';
-import { TistoryItem } from '@bbl-nextjs/configs/tistory';
-import { getAllPosts, PostItem } from '@bbl-nextjs/configs/post';
-import { getFeednamiTistories } from '@bbl-nextjs/configs/tistory';
+import { PostCard, Layout } from '@bbl-nx/ui-components';
+import { TistoryItem } from '../../configs/tistory';
+import { getAllPosts, PostItem } from '../../configs/post';
+import { getFeednamiTistories } from '../../configs/tistory';
 
 interface IProps {
   tistories: TistoryItem[];
