@@ -18,3 +18,5 @@ export * from './lib/tag/tag';
 export * from './lib/text/line-text/line-text';
 export * from './lib/title/content-title/content-title';
 export * from './lib/title/sub-title/sub-title';
+export * from './lib/template/post/post';
+export * from './lib/template/post-caption/post-caption';
