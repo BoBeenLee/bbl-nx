@@ -2,21 +2,21 @@ import { theme } from '@bbl-nx/styles';
 import styled from 'styled-components';
 
 /* eslint-disable-next-line */
-export interface LinkTextProps {
+export interface LineTextProps {
   className?: string;
   children: React.ReactNode;
 }
 
-const StyledLinkText = styled.div`
+const StyledLineText = styled.div`
   font-size: 13px;
   font-weight: 400;
   color: ${theme.third};
   line-height: 1.5;
 `;
 
-export function LinkText(props: LinkTextProps) {
+export function LineText(props: LineTextProps) {
   const { className, children } = props;
-  return <StyledLinkText className={className}>{children}</StyledLinkText>;
+  return <StyledLineText className={className}>{children}</StyledLineText>;
 }
 
-export default LinkText;
+export default LineText;

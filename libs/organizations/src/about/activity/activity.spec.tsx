@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import LinkText from './link-text';
+import Activity from './activity';
 
-describe('LinkText', () => {
+describe('Activity', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<LinkText />);
+    const { baseElement } = render(<Activity />);
     expect(baseElement).toBeTruthy();
   });
 });

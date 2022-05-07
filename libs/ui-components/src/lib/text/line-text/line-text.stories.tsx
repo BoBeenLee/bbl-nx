@@ -1,12 +1,12 @@
 import { Story, Meta } from '@storybook/react';
-import { LinkText, LinkTextProps } from './link-text';
+import { LineText, LineTextProps } from './line-text';
 
 export default {
-  component: LinkText,
+  component: LineText,
   title: 'LinkText',
 } as Meta;
 
-const Template: Story<LinkTextProps> = (args) => <LinkText {...args} />;
+const Template: Story<LineTextProps> = (args) => <LineText {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
