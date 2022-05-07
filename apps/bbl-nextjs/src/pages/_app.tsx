@@ -1,7 +1,7 @@
 import App from 'next/app';
 import React from 'react';
 
-import '@bbl-nx/styles/lib/global.css';
+import '../styles/global.css';
 
 class MyApp extends App {
   public render() {
