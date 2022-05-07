@@ -3,7 +3,7 @@ import { media } from '@bbl-nx/utils';
 import styled from 'styled-components';
 import Layout from '../../layout/layout';
 import SubTitle from '../../title/sub-title/sub-title';
-import PostCaption from '../post-caption/post-caption';
+import PostCaptionTemplate from '../post-caption-template/post-caption-template';
 
 interface IMarkdownRemark {
   id: string;
@@ -21,11 +21,11 @@ interface IMarkdownRemarkFrontmatter {
 }
 
 /* eslint-disable-next-line */
-export interface PostProps {
+export interface PostTemplateProps {
   data: { markdownRemark: IMarkdownRemark };
 }
 
-const StyledPost = styled.div`
+const StyledPostTemplate = styled.div`
   padding: 60px 50px 70px 50px;
   line-height: 1.5;
 
@@ -44,7 +44,7 @@ const StyledSubTitle = styled(SubTitle)`
   font-weight: bold;
 `;
 
-export function Post(props: PostProps) {
+export function PostTemplate(props: PostTemplateProps) {
   const { data } = props;
   if (!data) {
     return <div />;
@@ -52,17 +52,17 @@ export function Post(props: PostProps) {
   const { markdownRemark: post } = data;
   return (
     <Layout>
-      <StyledPost>
+      <StyledPostTemplate>
         <StyledSubTitle title={post.frontmatter.title} />
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <PostCaption
+        <PostCaptionTemplate
           title={post.frontmatter.title}
           description={post.frontmatter.title}
           url={post.fields.slug}
         />
-      </StyledPost>
+      </StyledPostTemplate>
     </Layout>
   );
 }
 
-export default Post;
+export default PostTemplate;

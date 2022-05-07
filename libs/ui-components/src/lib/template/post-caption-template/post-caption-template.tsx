@@ -3,7 +3,7 @@ import SocialLinks from '../../link/social-links/social-links';
 import Seperator from '../../seperator/seperator';
 
 /* eslint-disable-next-line */
-export interface PostCaptionProps {
+export interface PostCaptionTemplateProps {
   url: string;
   title: string;
   description: string;
@@ -18,7 +18,7 @@ const SocialLinkBox = styled(SocialLinks)`
   float: right;
 `;
 
-export function PostCaption(props: PostCaptionProps) {
+export function PostCaptionTemplate(props: PostCaptionTemplateProps) {
   const { url, title, description } = props;
   return (
     <StyledPostCaption>
@@ -33,4 +33,4 @@ export function PostCaption(props: PostCaptionProps) {
   );
 }
 
-export default PostCaption;
+export default PostCaptionTemplate;
