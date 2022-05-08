@@ -1,5 +1,5 @@
 import _ from "lodash";
-import feednami from "@bbl-remix/apis/feednami";
+import { feednamiApi } from "@bbl-nx/apis";
 
 export interface TistoryItem {
   guid: string;
@@ -18,7 +18,7 @@ export interface ITistory {
 
 export const getFeednamiTistories = (rssUrl: string) => {
   return new Promise((resolve, reject) => {
-    (feednami as any).load(rssUrl, (res: ITistory) => {
+    feednamiApi.load(rssUrl, (res: ITistory) => {
       const tistories = _.map(res.feed.entries, article => ({
         guid: article.guid,
         title: article.title,
