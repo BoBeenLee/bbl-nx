@@ -8,9 +8,9 @@ import {
   ScrollRestoration,
 } from 'remix';
 import type { MetaFunction } from 'remix';
-import { getMetadata } from './constants/metadata';
-import Layout from '@bbl-remix/components/Layout';
-import globalStylesUrl from '@bbl-remix/styles/global.css';
+import { getMetadata } from '@bbl-nx/constants';
+import { Layout } from '@bbl-nx/ui-components';
+import globalStylesUrl from './styles/global.css';
 
 export const links: LinksFunction = () => {
   return [
@@ -23,10 +23,10 @@ export const links: LinksFunction = () => {
 
 export const meta: MetaFunction = (args) => {
   const { data } = args;
-  const { title, description, site_url, keywords } = getMetadata(true);
+  const { title, description, url, keywords } = getMetadata(true);
   const metaTitle = title;
   const metaDescription = description;
-  const metaUrl = site_url;
+  const metaUrl = url;
 
   return {
     title,

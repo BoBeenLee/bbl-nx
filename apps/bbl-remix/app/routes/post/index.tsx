@@ -3,7 +3,7 @@ import { Link, useLoaderData } from "remix";
 import styled from "styled-components";
 
 import { getPosts, PostItem } from "@bbl-remix/post";
-import { PostCard } from "@bbl-remix/components/Card";
+import { PostCard } from "@bbl-nx/ui-components";
 
 const Root = styled.div`
   padding-top: 20px;
