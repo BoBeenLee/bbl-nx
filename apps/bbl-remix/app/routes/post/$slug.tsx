@@ -1,6 +1,6 @@
 import { useLoaderData } from 'remix';
 import type { LoaderFunction } from 'remix';
-import { getPost, PostItem } from '@bbl-remix/post';
+import { getPost, PostItem } from '../../post';
 import { PostTemplate } from '@bbl-nx/ui-components';
 
 export const loader: LoaderFunction = async ({ params }) => {

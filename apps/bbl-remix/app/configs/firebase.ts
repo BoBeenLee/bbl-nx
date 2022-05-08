@@ -3,7 +3,7 @@ import "firebase/analytics";
 import "firebase/remote-config";
 import _ from "lodash";
 
-import env from "@bbl-remix/configs/env";
+import env from "./env";
 
 export const firebaseInstance = _.once(() => {
   if (typeof document === "undefined") {

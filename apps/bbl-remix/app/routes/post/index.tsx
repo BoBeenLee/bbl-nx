@@ -2,7 +2,7 @@ import _ from "lodash";
 import { Link, useLoaderData } from "remix";
 import styled from "styled-components";
 
-import { getPosts, PostItem } from "@bbl-remix/post";
+import { getPosts, PostItem } from "../../post";
 import { PostCard } from "@bbl-nx/ui-components";
 
 const Root = styled.div`
