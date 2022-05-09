@@ -1,7 +1,6 @@
 import App from 'next/app';
 import React from 'react';
-
-import '../styles/global.css';
+import { GlobalCSS } from '@bbl-nx/styles';
 
 class MyApp extends App {
   public render() {
@@ -11,6 +10,7 @@ class MyApp extends App {
 
     return (
       <React.Fragment>
+        <GlobalCSS />
         <TargetComponent {...pageProps} />
       </React.Fragment>
     );
