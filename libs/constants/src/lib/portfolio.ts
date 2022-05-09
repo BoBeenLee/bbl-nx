@@ -18,6 +18,56 @@ export interface PortfolioItem {
 
 export const companyPortfolios: PortfolioItem[] = [
   {
+    id: "Henesis",
+    name: "Henesis",
+    period: "2020.5 - 2022.5",
+    githubRepoName: [],
+    skills: [
+      "react",
+      "mobx state tree",
+      "mobx",
+      "nextjs",
+      "emotion",
+      "typescript",
+      "storybook",
+      "material-ui",
+      "i18next"
+    ],
+    summary: `국내 주요 은행, 가상자산 거래소, 핀테크 회사, 가상자산 
+수탁업체가 Henesis로 가상자산 서비스를 준비합니다. `,
+    githubUrl: "",
+    linkUrl: "https://app.wallet.henesis.io/account/login",
+    googleStoreUrl:
+      "",
+    appStoreUrl: "",
+    images: []
+  },
+  {
+    id: "Koda",
+    name: "KODA",
+    period: "2021.4 - 2021.10",
+    githubRepoName: [],
+    skills: [
+      "react",
+      "mobx state tree",
+      "mobx",
+      "nextjs",
+      "styled-components",
+      "typescript",
+      "storybook",
+      "material-ui",
+      "openapi-generator",
+    ],
+    summary: `비트코인 수탁 등 법인·기관 투자자를 위한 
+디지털 자산 수탁 원스탑 서비스`,
+    githubUrl: "",
+    linkUrl: "https://app.kodax.com/account/login",
+    googleStoreUrl:
+      "",
+    appStoreUrl: "",
+    images: []
+  },
+  {
     id: "FITSME",
     name: "FITSME",
     period: "2019.4 - 2020.1",

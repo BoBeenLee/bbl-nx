@@ -1,5 +1,6 @@
 import { Story, Meta } from '@storybook/react';
 import { Portfolio, PortfolioProps } from './portfolio';
+import { companyPortfolios, teamPortfolios } from '@bbl-nx/constants';
 
 export default {
   component: Portfolio,
@@ -8,7 +9,13 @@ export default {
 
 const Template: Story<PortfolioProps> = (args) => <Portfolio {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = {
-  title: '',
+export const Company = Template.bind({});
+Company.args = {
+  title: 'Company',
+  portfolios: companyPortfolios,
+};
+export const Team = Template.bind({});
+Team.args = {
+  title: 'Project',
+  portfolios: teamPortfolios,
 };
