@@ -15,8 +15,10 @@
     "build:affected:all": "nx affected --target=build --all",
     "test": "nx test",
     "test:affected": "nx affected --target=test --base= origin/master~1 --head= origin/master",
-    "components:storybook": "nx run ui-components:storybook",
-    "components:build-storybook": "nx run ui-components:build-storybook"
+    "organizations:storybook": "nx run organizations:storybook",
+    "organizations:build-storybook": "nx run organizations:build-storybook",
+    "ui-components:storybook": "nx run ui-components:storybook",
+    "ui-components:build-storybook": "nx run ui-components:build-storybook"
   },
   "private": true,
   "dependencies": {
