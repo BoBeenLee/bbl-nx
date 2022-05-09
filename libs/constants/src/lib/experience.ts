@@ -7,6 +7,12 @@ export interface ExperienceItem {
 
 export const experiences: ExperienceItem[] = [
   {
+    title: "Haechi Labs",
+    titleUri: "https://haechi.io/ko",
+    period: "2020.2 - 2019.12",
+    role: "Frontend Developer"
+  },
+  {
     title: "Blended",
     titleUri: "https://www.rocketpunch.com/companies/trillionaire",
     period: "2018.4 - 2019.12",
