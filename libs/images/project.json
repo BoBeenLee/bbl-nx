@@ -11,7 +11,7 @@
         "outputPath": "dist/libs/images",
         "main": "libs/images/src/index.ts",
         "tsConfig": "libs/images/tsconfig.lib.json",
-        "assets": ["libs/images/*.md"]
+        "assets": ["libs/images/*.md", "libs/images/src/lib/assets/**/*"]
       }
     },
     "lint": {
