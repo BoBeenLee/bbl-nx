@@ -1,5 +1,5 @@
+import React from 'react';
 import { isBrowser } from '@bbl-nx/utils';
-import { Component } from 'react';
 
 /* eslint-disable-next-line */
 export interface RotateProps {
@@ -21,7 +21,7 @@ interface RotateStates {
   orientation: number;
 }
 
-export class Rotate extends Component<RotateProps, RotateStates> {
+export class Rotate extends React.Component<RotateProps, RotateStates> {
   public static defaultProps = {};
 
   constructor(props: RotateProps) {
