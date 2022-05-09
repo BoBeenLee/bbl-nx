@@ -3,6 +3,16 @@
   "sourceRoot": "libs/constants/src",
   "projectType": "library",
   "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/constants",
+        "main": "libs/constants/src/index.ts",
+        "tsConfig": "libs/constants/tsconfig.lib.json",
+        "assets": ["libs/constants/*.md"]
+      }
+    },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],

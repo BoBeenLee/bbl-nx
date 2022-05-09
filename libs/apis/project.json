@@ -3,6 +3,16 @@
   "sourceRoot": "libs/apis/src",
   "projectType": "library",
   "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/apis",
+        "main": "libs/apis/src/index.ts",
+        "tsConfig": "libs/apis/tsconfig.lib.json",
+        "assets": ["libs/apis/*.md"]
+      }
+    },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
