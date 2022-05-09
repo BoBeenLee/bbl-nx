@@ -20,6 +20,7 @@
     "@netlify/functions": "^1.0.0",
     "@nrwl/next": "13.8.3",
     "@remix-run/netlify": "^1.4.1",
+    "@remix-run/node": "^1.4.3",
     "@remix-run/react": "^1.4.1",
     "@remix-run/serve": "^1.4.1",
     "axios": "0.24.0",
@@ -60,7 +61,6 @@
     "regenerator-runtime": "0.13.7",
     "remark": "^10.0.1",
     "remark-html": "^15.0.0",
-    "remix": "^1.4.1",
     "styled-components": "^5.2.0",
     "tslib": "^2.0.0"
   },

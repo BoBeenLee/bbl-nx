@@ -1,5 +1,6 @@
-import { useLoaderData } from 'remix';
-import type { LoaderFunction } from 'remix';
+import { useLoaderData } from '@remix-run/react';
+import type { LoaderFunction } from '@remix-run/node';
+
 import { getPost, PostItem } from '../../post';
 import { PostTemplate } from '@bbl-nx/ui-components';
 

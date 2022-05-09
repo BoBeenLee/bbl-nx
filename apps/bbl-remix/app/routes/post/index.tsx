@@ -1,9 +1,9 @@
-import _ from "lodash";
-import { Link, useLoaderData } from "remix";
-import styled from "styled-components";
+import _ from 'lodash';
+import { Link, useLoaderData } from '@remix-run/react';
+import styled from 'styled-components';
 
-import { getPosts, PostItem } from "../../post";
-import { PostCard } from "@bbl-nx/ui-components";
+import { getPosts, PostItem } from '../../post';
+import { PostCard } from '@bbl-nx/ui-components';
 
 const Root = styled.div`
   padding-top: 20px;

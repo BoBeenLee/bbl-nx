@@ -4,10 +4,9 @@ import {
   Meta,
   Outlet,
   Scripts,
-  LinksFunction,
   ScrollRestoration,
-} from 'remix';
-import type { MetaFunction } from 'remix';
+} from '@remix-run/react';
+import { LinksFunction, MetaFunction } from '@remix-run/react/routeModules';
 import { getMetadata } from '@bbl-nx/constants';
 import { Layout } from '@bbl-nx/ui-components';
 import globalStylesUrl from './styles/global.css';

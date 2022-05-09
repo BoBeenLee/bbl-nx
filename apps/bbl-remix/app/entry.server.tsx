@@ -1,5 +1,5 @@
 import { renderToString } from 'react-dom/server';
-import { RemixServer, EntryContext, RemixServerProps } from 'remix';
+import { RemixServer, RemixServerProps } from '@remix-run/react';
 import { ServerStyleSheet } from 'styled-components';
 
 export default function handleRequest(
