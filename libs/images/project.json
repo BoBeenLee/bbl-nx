@@ -4,6 +4,16 @@
   "projectType": "library",
   "tags": [],
   "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/images",
+        "main": "libs/images/src/index.ts",
+        "tsConfig": "libs/images/tsconfig.lib.json",
+        "assets": ["libs/images/*.md"]
+      }
+    },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
