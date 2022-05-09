@@ -1,8 +1,10 @@
 {
   "packages": [
-    "libs/*"
+    "apps/*",
+    "dist/libs/*"
   ],
   "version": "independent",
   "npmClient": "yarn",
-  "useWorkspaces": true
+  "useWorkspaces": true,
+  "lerna": "2.11.0"
 }

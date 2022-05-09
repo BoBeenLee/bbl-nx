@@ -8,7 +8,7 @@
     "dev": "remix dev",
     "serve": "remix dev",
     "netlify:dev": "cross-env NODE_ENV=development netlify dev",
-    "postinstall": "remix setup node",
+    "postinstall": "npx remix setup node",
     "start": "npx remix-serve build"
   },
   "dependencies": {
@@ -31,6 +31,7 @@
     "react-modal": "^3.4.4",
     "react-share": "4.0.1",
     "react-slick": "^0.29.0",
+    "remix": "^1.4.3",
     "styled-components": "^5.2.0"
   },
   "devDependencies": {
@@ -46,6 +47,10 @@
     "@types/react-slick": "^0.23.8",
     "@types/styled-components": "^5.1.4",
     "typescript": "^4.1.2"
+  },
+  "resolutions": {
+    "@types/react": "17.0.2",
+    "@types/react-dom": "17.0.2"
   },
   "engines": {
     "node": ">=14"
