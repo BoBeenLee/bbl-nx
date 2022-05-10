@@ -38,7 +38,9 @@ yarn test:affected
 ## Deployment
 
 - Deploy to Storybook
-  - github action master브랜치 기준 github pages로 배포 진행합니다.
+  - github action master 브랜치 기준 github pages로 배포 진행합니다.
+  - ui-components: https://bobeenlee.github.io/bbl-nx/ui-components/
+  - organizations: https://bobeenlee.github.io/bbl-nx/organizations/
 - Deploy to Vercel
   - In Progress
 
