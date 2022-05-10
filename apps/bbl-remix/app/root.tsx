@@ -22,7 +22,7 @@ export const links: LinksFunction = () => {
 
 export const meta: MetaFunction = (args) => {
   const { data } = args;
-  const { title, description, url, keywords } = getMetadata(true);
+  const { title, description, url, keywords } = getMetadata();
   const metaTitle = title;
   const metaDescription = description;
   const metaUrl = url;
@@ -33,7 +33,7 @@ export const meta: MetaFunction = (args) => {
     'og:type': 'website',
     'og:title': metaTitle,
     'og:url': metaUrl,
-    'og:site_name': 'BoBeenLee',
+    'og:site_name': metaTitle,
     'og:description': metaDescription,
     keywords,
     'twitter:card': 'summary',
