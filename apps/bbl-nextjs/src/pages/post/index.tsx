@@ -7,7 +7,7 @@ import { TistoryItem } from '../../configs/tistory';
 import { getAllPosts, PostItem } from '../../configs/post';
 import { getFeednamiTistories } from '../../configs/tistory';
 
-interface IProps {
+interface PostPageProps {
   tistories: TistoryItem[];
   allMarkdownRemark: Array<PostItem>;
 }
@@ -30,7 +30,7 @@ export async function getStaticProps() {
   };
 }
 
-class PostPage extends PureComponent<IProps> {
+class PostPage extends PureComponent<PostPageProps> {
   public render() {
     const posts = [...this.mapTistoryToPosts(), ...this.mapRemarkToPosts()];
     const postsByDESC = _.orderBy(posts, ['date'], ['desc']);

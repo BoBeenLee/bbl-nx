@@ -8,7 +8,7 @@ const EVENT_TYPE_MAX_LENGTH = 40;
 
 export type EventType = 'test';
 
-export interface IEventResult {
+export interface EventResult {
   eventType: EventType;
   [key: string]: any;
 }
@@ -18,7 +18,7 @@ function firebaseAnalyticsFactory(
   setUserId: (userId: string) => void,
   setCurrentScreen: (screenName: string) => void
 ) {
-  function firebaseLogEvent(eventData: IEventResult) {
+  function firebaseLogEvent(eventData: EventResult) {
     const { eventType } = eventData;
 
     if (!eventType) {

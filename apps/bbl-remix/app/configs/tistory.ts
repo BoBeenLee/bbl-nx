@@ -10,7 +10,7 @@ export interface TistoryItem {
   showDetails: boolean;
 }
 
-export interface ITistory {
+export interface TistoryResponse {
   feed: {
     entries: Array<TistoryItem>;
   };
@@ -18,7 +18,7 @@ export interface ITistory {
 
 export const getFeednamiTistories = (rssUrl: string) => {
   return new Promise((resolve, reject) => {
-    feednamiApi.load(rssUrl, (res: ITistory) => {
+    feednamiApi.load(rssUrl, (res: TistoryResponse) => {
       const tistories = _.map(res.feed.entries, article => ({
         guid: article.guid,
         title: article.title,

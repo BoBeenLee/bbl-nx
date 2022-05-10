@@ -1,15 +1,15 @@
-interface IEnvironment {
-  production: IEnvironmentEntry;
-  staging: IEnvironmentEntry;
+interface Environment {
+  production: EnvironmentEntry;
+  staging: EnvironmentEntry;
 }
 
-interface IEnvironmentEntry {
+interface EnvironmentEntry {
   FIREBASE_CONFIG?: any;
 }
 
 const ENV_TYPE = process.env.REACT_ENV || "staging";
 
-const env: IEnvironment = {
+const env: Environment = {
   production: {
     FIREBASE_CONFIG: {
       apiKey: "AIzaSyDdFJKoVQTL_EgUcy0BOQFaVGEk1fktPrU",
@@ -38,4 +38,4 @@ const env: IEnvironment = {
 
 export const isProduction = () => ENV_TYPE === "production";
 
-export default env[ENV_TYPE as keyof IEnvironment] || {};
+export default env[ENV_TYPE as keyof Environment] || {};

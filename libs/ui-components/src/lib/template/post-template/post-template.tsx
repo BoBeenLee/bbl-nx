@@ -5,23 +5,23 @@ import Layout from '../../layout/layout';
 import SubTitle from '../../title/sub-title/sub-title';
 import PostCaptionTemplate from '../post-caption-template/post-caption-template';
 
-interface IMarkdownRemark {
+interface MarkdownRemark {
   id: string;
   html: string;
-  fields: IMarkdownRemarkFields;
-  frontmatter: IMarkdownRemarkFrontmatter;
+  fields: MarkdownRemarkFields;
+  frontmatter: MarkdownRemarkFrontmatter;
 }
 
-interface IMarkdownRemarkFields {
+interface MarkdownRemarkFields {
   slug: string;
 }
 
-interface IMarkdownRemarkFrontmatter {
+interface MarkdownRemarkFrontmatter {
   title: string;
 }
 
 export interface PostTemplateProps {
-  data: { markdownRemark: IMarkdownRemark };
+  data: { markdownRemark: MarkdownRemark };
 }
 
 const StyledPostTemplate = styled.div`
