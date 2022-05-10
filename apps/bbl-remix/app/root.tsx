@@ -9,7 +9,7 @@ import {
 import { LinksFunction, MetaFunction } from '@remix-run/react/routeModules';
 import { getMetadata } from '@bbl-nx/constants';
 import { Layout } from '@bbl-nx/ui-components';
-import globalStylesUrl from './styles/global.css';
+import globalStylesUrl from '@bbl-nx/styles/global.css';
 
 export const links: LinksFunction = () => {
   return [

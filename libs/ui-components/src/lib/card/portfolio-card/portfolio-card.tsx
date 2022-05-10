@@ -32,7 +32,7 @@ const StyledPortfolioCard = styled.div`
   color: ${theme.primary};
 `;
 
-const NameBox = styled.a`
+const Name = styled.a`
   grid-column: 1;
   grid-row: 1;
   display: flex;
@@ -45,7 +45,7 @@ const NameBox = styled.a`
   text-decoration: none;
 `;
 
-const PeriodBox = styled.div`
+const Period = styled.div`
   grid-column: 2;
   grid-row: 1;
   display: flex;
@@ -55,7 +55,7 @@ const PeriodBox = styled.div`
   color: ${theme.third};
 `;
 
-const LinkBox = styled.div`
+const Link = styled.div`
   grid-column: 3;
   grid-row: 1;
   display: flex;
@@ -64,7 +64,7 @@ const LinkBox = styled.div`
   justify-content: flex-end;
 `;
 
-const IconBox = styled.a`
+const Icon = styled.a`
   margin-left: 10px;
   color: ${theme.primary};
   text-decoration: none;
@@ -73,7 +73,7 @@ const IconBox = styled.a`
   }
 `;
 
-const SkillsBox = styled.div`
+const Skills = styled.div`
   grid-column: 1/4;
   grid-row: 2;
   font-size: 13px;
@@ -107,7 +107,7 @@ const SkillLinkItem = styled.a`
   }
 `;
 
-const SummaryBox = styled.div`
+const Summary = styled.div`
   grid-column: 1/4;
   grid-row: 3;
   padding-left: 10px;
@@ -115,7 +115,7 @@ const SummaryBox = styled.div`
   color: ${theme.third};
 `;
 
-const PhotoGalleryBox = styled.div`
+const PhotoGalleryGroup = styled.div`
   grid-column: 2/3;
   grid-row: 4;
   margin: 20px 0;
@@ -171,42 +171,42 @@ export function PortfolioCard(props: PortfolioCardProps) {
 
   return (
     <StyledPortfolioCard>
-      <NameBox href={`#${name}`} id={name}>
+      <Name href={`#${name}`} id={name}>
         {name}
-      </NameBox>
-      <PeriodBox>{period}</PeriodBox>
-      <LinkBox>
+      </Name>
+      <Period>{period}</Period>
+      <Link>
         {googleStoreUrl && (
-          <IconBox href={googleStoreUrl} target="_blank">
+          <Icon href={googleStoreUrl} target="_blank">
             <DiAndroid size={20} />
-          </IconBox>
+          </Icon>
         )}
         {appStoreUrl && (
-          <IconBox href={appStoreUrl} target="_blank">
+          <Icon href={appStoreUrl} target="_blank">
             <DiApple size={20} />
-          </IconBox>
+          </Icon>
         )}
         {githubUrl && (
-          <IconBox href={githubUrl} target="_blank">
+          <Icon href={githubUrl} target="_blank">
             <GithubIcon size={20} />
-          </IconBox>
+          </Icon>
         )}
         {storybookUrl && (
-          <IconBox href={storybookUrl} target="_blank">
+          <Icon href={storybookUrl} target="_blank">
             <StorybookIcon src={images.storybook} />
-          </IconBox>
+          </Icon>
         )}
         {linkUrl && (
-          <IconBox href={linkUrl} target="_blank">
+          <Icon href={linkUrl} target="_blank">
             <LinkIcon size={20} />
-          </IconBox>
+          </Icon>
         )}
-      </LinkBox>
-      <SkillsBox>{_.map(skills, renderSkillItem)}</SkillsBox>
-      <SummaryBox>{summary}</SummaryBox>
-      <PhotoGalleryBox>
+      </Link>
+      <Skills>{_.map(skills, renderSkillItem)}</Skills>
+      <Summary>{summary}</Summary>
+      <PhotoGalleryGroup>
         <PhotoGallery images={portfolioImages} onImagePopup={onImagePopup} />
-      </PhotoGalleryBox>
+      </PhotoGalleryGroup>
       <BottomSeparator />
     </StyledPortfolioCard>
   );

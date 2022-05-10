@@ -7,7 +7,6 @@ import Footer from '../footer/footer';
 import Header from '../header/header';
 import BottomPopup from '../popup/bottom-popup/bottom-popup';
 
-/* eslint-disable-next-line */
 export interface LayoutProps {
   children: React.ReactNode;
 }
@@ -16,7 +15,7 @@ const StyledLayout = styled.div`
   height: 100%;
 `;
 
-const ContainerBox = styled.div`
+const Container = styled.div`
   display: grid;
   grid-template-areas:
     'header'
@@ -27,11 +26,11 @@ const ContainerBox = styled.div`
   height: 100%;
 `;
 
-const HeaderBox = styled.header`
+const HeaderGroup = styled.header`
   grid-area: header;
 `;
 
-const ContentBox = styled.main`
+const Content = styled.main`
   grid-area: content;
   margin: 0 auto;
   padding: 20px 20px;
@@ -46,11 +45,11 @@ const ContentBox = styled.main`
   `}
 `;
 
-const FooterBox = styled.footer`
+const FooterGroup = styled.footer`
   grid-area: footer;
 `;
 
-const StatePopupBox = styled(BottomPopup)<{ isShowStatePopup: boolean }>`
+const StatePopup = styled(BottomPopup)<{ isShowStatePopup: boolean }>`
   display: ${({ isShowStatePopup }) => (isShowStatePopup ? 'flex' : 'none')};
   color: ${theme.warning};
 `;
@@ -72,21 +71,21 @@ export function Layout(props: LayoutProps) {
 
   return (
     <StyledLayout id="outer-container">
-      <StatePopupBox isShowStatePopup={isShowStatePopup}>
+      <StatePopup isShowStatePopup={isShowStatePopup}>
         <span>
           Your computer seems to be offline. We&apos;ll keep trying, but there
           may be a problem with your connection.
         </span>
-      </StatePopupBox>
-      <ContainerBox>
-        <HeaderBox>
+      </StatePopup>
+      <Container>
+        <HeaderGroup>
           <Header titles={menus} />
-        </HeaderBox>
-        <ContentBox id="page-box">{children}</ContentBox>
-        <FooterBox>
+        </HeaderGroup>
+        <Content id="page-box">{children}</Content>
+        <FooterGroup>
           <Footer />
-        </FooterBox>
-      </ContainerBox>
+        </FooterGroup>
+      </Container>
     </StyledLayout>
   );
 }

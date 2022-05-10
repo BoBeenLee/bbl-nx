@@ -13,7 +13,7 @@ const StyledPostCaption = styled.div`
   margin-top: 50px;
 `;
 
-const SocialLinkBox = styled(SocialLinks)`
+const StyledSocialLink = styled(SocialLinks)`
   width: 150px;
   float: right;
 `;
@@ -23,7 +23,7 @@ export function PostCaptionTemplate(props: PostCaptionTemplateProps) {
   return (
     <StyledPostCaption>
       <Seperator />
-      <SocialLinkBox
+      <StyledSocialLink
         url={`http://bbl.netlify.com${url}`}
         title={title}
         description={description}

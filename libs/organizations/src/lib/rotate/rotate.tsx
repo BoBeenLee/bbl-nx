@@ -13,7 +13,7 @@ const StyledRotate = styled.div`
   grid-template-rows: 20% 50% 30%;
 `;
 
-const IconBox = styled.div<{ zDeg: number }>`
+const IconGroup = styled.div<{ zDeg: number }>`
   grid-area: icon;
   display: flex;
   flex-direction: row;
@@ -22,7 +22,7 @@ const IconBox = styled.div<{ zDeg: number }>`
   transform: ${({ zDeg = 0 }) => `rotateZ(${zDeg}deg)`};
 `;
 
-const LinkBox = styled.a``;
+const IconLink = styled.a``;
 
 const Icon = styled.img`
   width: 40px;
@@ -31,20 +31,20 @@ const Icon = styled.img`
 
 export function Rotate(props: RotateProps) {
   const renderIcons = ({ zDeg }: { zDeg: number }) => (
-    <IconBox zDeg={zDeg}>
-      <LinkBox href="https://www.facebook.com/bobin.lee.9" target="_blank">
+    <IconGroup zDeg={zDeg}>
+      <IconLink href="https://www.facebook.com/bobin.lee.9" target="_blank">
         <Icon alt="facebook" src={images.facebook} />
-      </LinkBox>
-      <LinkBox href="https://www.instagram.com/bobeenlee_" target="_blank">
+      </IconLink>
+      <IconLink href="https://www.instagram.com/bobeenlee_" target="_blank">
         <Icon alt="instagram" src={images.instagram} />
-      </LinkBox>
-      <LinkBox
+      </IconLink>
+      <IconLink
         href="https://www.linkedin.com/in/%EB%B3%B4%EB%B9%88-%EC%9D%B4-035613a5/"
         target="_blank"
       >
         <Icon alt="linkedin" src={images.linkedin} />
-      </LinkBox>
-    </IconBox>
+      </IconLink>
+    </IconGroup>
   );
   return (
     <StyledRotate>

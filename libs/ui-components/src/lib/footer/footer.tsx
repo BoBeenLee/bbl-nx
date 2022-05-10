@@ -21,7 +21,7 @@ const StyledFooter = styled.div`
     `};
 `;
 
-const CopyrightBox = styled.div`
+const Copyright = styled.div`
   grid-column: 1;
   grid-row: 2;
   display: flex;
@@ -62,7 +62,7 @@ const ContactItem = styled.a`
 export function Footer(props: FooterProps) {
   return (
     <StyledFooter>
-      <CopyrightBox>@ 2018</CopyrightBox>
+      <Copyright>@ 2018</Copyright>
       <Contact>
         <ContactColumnOne>
           <ContactItem href="https://cultist-tp.tistory.com/" target="_blank">

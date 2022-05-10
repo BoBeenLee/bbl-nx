@@ -63,7 +63,7 @@ const Icon = styled(Avatar)`
   height: 45px;
 `;
 
-const TitleBox = styled.div`
+const TitleGroup = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -141,11 +141,11 @@ export function Header(props: HeaderProps) {
   ) => {
     const { url, name } = title;
     return (
-      <TitleBox key={index}>
+      <TitleGroup key={index}>
         <Title href={url}>
           <TitleText>{name}</TitleText>
         </Title>
-      </TitleBox>
+      </TitleGroup>
     );
   };
 

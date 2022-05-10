@@ -19,13 +19,13 @@ const StyledMenu = styled.div`
   }
 `;
 
-const HeaderBox = styled.div`
+const Header = styled.div`
   display: flex !important;
   flex-direction: row;
   height: 6em;
 `;
 
-const ContentBox = styled.div`
+const Content = styled.div`
   display: flex !important;
   flex-direction: column;
   align-items: center;
@@ -84,14 +84,14 @@ export function Menu(props: MenuProps) {
         pageWrapId="page-box"
         outerContainerId="outer-container"
       >
-        <HeaderBox>
+        <Header>
           <BottomSeparator />
-        </HeaderBox>
-        <ContentBox>
+        </Header>
+        <Content>
           {_.map(menus, (menu) => (
             <MenuItem key={menu.name} {...menu} />
           ))}
-        </ContentBox>
+        </Content>
       </BurgerMenu>
     </StyledMenu>
   );
