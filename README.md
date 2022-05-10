@@ -6,27 +6,41 @@ blog & homepage project based on monorepo(nx)
 
 ## Feature
 
-- Nextjs
-- [Web APIs You [Probably] Didn't Know Existed](https://www.youtube.com/watch?v=EZpdEljk5dY)
-- [Styled Component](https://github.com/styled-components/styled-components)
-- Layout - [CSS Grid Changes EVERYTHING - Amazing Presentation](https://www.youtube.com/watch?v=7kVeCqQCxlk)
-- Google Analystic support
-- [Storybook](https://github.com/storybooks/storybook) usage in development
+- Nextjs, Remix
+- [CSS Grid Layout](https://www.youtube.com/watch?v=7kVeCqQCxlk)
+- [Styled Components](https://github.com/styled-components/styled-components)
+- [Storybook](https://github.com/storybooks/storybook)
+- [Nx.dev](https://nx.dev/)
 
-#### Running in Development
+## Prerequisites
 
-`npm run dev`
+node version 14.17.1
+
+## Installing / Getting started
+
+```shell
+yarn install
+```
+
+### Setting up Dev
+
+```
+yarn start
+```
+
+## Tests
+
+### Running unit tests
+```
+yarn test:affected
+```
 
 ## Deployment
 
-- [Deploy to Storybook](https://github.com/storybooks/storybook-deployer)
+- Deploy to Storybook
+  - github action master브랜치 기준 github pages로 배포 진행합니다.
 - Deploy to Zeit
-
-## Running unit tests
-
-Run `nx test my-app` to execute the unit tests via [Jest](https://jestjs.io).
-
-Run `nx affected:test` to execute the unit tests affected by a change.
+  - In Progress
 
 ## Understand your workspace
 
