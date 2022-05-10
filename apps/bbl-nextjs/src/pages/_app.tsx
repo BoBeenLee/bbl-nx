@@ -36,8 +36,8 @@ const MyApp = (props: Props) => {
         <meta property="og:description" content={metadata.description} />
         <meta property="og:image" content={metadata.metaImage} />
         <meta name="keywords" content={metadata.keywords} />
-        <GlobalCSS />
       </Head>
+      <GlobalCSS />
       {getLayout(<TargetComponent {...pageProps} />)}
     </React.Fragment>
   );
