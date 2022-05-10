@@ -3,9 +3,9 @@ import React, { PureComponent } from 'react';
 import styled from 'styled-components';
 
 import { PostCard, Layout } from '@bbl-nx/ui-components';
-import { TistoryItem } from '../../configs/tistory';
-import { getAllPosts, PostItem } from '../../configs/post';
-import { getFeednamiTistories } from '../../configs/tistory';
+import { TistoryItem } from '../../libs/tistory';
+import { getAllPosts, PostItem } from '../../libs/post';
+import { getFeednamiTistories } from '../../libs/tistory';
 
 interface PostPageProps {
   tistories: TistoryItem[];

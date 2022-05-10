@@ -2,7 +2,7 @@
 import remark from 'remark';
 import html from 'remark-html';
 import React from 'react';
-import { getPostBySlug, getAllPosts, PostItem } from '../../configs/post';
+import { getPostBySlug, getAllPosts, PostItem } from '../../libs/post';
 import { PostTemplate } from '@bbl-nx/ui-components';
 
 const PostById = (props: PostItem) => {
