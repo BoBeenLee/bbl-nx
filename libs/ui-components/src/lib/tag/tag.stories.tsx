@@ -11,5 +11,5 @@ const Template: Story<TagProps> = (args) => <Tag {...args} />;
 export const Primary = Template.bind({});
 Primary.args = {
   className: '',
-  name: '',
+  name: 'Tag',
 };

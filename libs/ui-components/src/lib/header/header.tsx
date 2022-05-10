@@ -57,7 +57,7 @@ const LogoLink = styled.a`
   height: 45px;
 `;
 
-const Icon = styled(Avatar)`
+const LogoIcon = styled(Avatar)`
   width: 45px;
   height: 45px;
 `;
@@ -160,7 +160,7 @@ export function Header(props: HeaderProps) {
           <HeaderTitle>
             <Logo>
               <LogoLink href="/">
-                <Icon src={images.quokka} alt="bobeenlee" />
+                <LogoIcon avatarUrl={images.quokka} alt="bobeenlee" />
               </LogoLink>
             </Logo>
             {_.map(titles, renderTitleItem)}

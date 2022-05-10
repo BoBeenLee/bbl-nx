@@ -1,5 +1,4 @@
 export * from './lib/avatar/avatar';
-export * from './lib/card/github-card/github-card';
 export * from './lib/card/portfolio-card/portfolio-card';
 export * from './lib/card/post-card/post-card';
 export * from './lib/footer/footer';
@@ -11,7 +10,6 @@ export * from './lib/menu/menu-item/menu-item';
 export * from './lib/photo-gallery/photo-gallery';
 export * from './lib/popup/bottom-popup/bottom-popup';
 export * from './lib/popup/image-popup/image-popup';
-export * from './lib/profile/github-profile/github-profile';
 export * from './lib/seperator/seperator';
 export * from './lib/tag/tag';
 export * from './lib/text/line-text/line-text';

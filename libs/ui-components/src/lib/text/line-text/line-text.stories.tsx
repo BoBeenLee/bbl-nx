@@ -11,4 +11,5 @@ const Template: Story<LineTextProps> = (args) => <LineText {...args} />;
 export const Primary = Template.bind({});
 Primary.args = {
   className: '',
+  children: "Hello World"
 };

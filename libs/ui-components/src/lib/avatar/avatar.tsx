@@ -3,9 +3,7 @@ import styled from 'styled-components';
 export interface AvatarProps {
   alt?: string;
   width?: string;
-  src?: string;
-  avatarUrl?: string;
-  onPress?: () => void;
+  avatarUrl: string;
 }
 
 const StyledAvatar = styled.img`

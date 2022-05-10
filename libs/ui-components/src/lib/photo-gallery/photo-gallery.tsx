@@ -51,7 +51,6 @@ export function PhotoGallery(props: PhotoGalleryProps) {
   if (_.isEmpty(images)) {
     return <div />;
   }
-
   return (
     <StyledPhotoGallery {...DEFAULT_SETTINGS}>
       {_.map(images, (image, index) => (
@@ -62,12 +61,5 @@ export function PhotoGallery(props: PhotoGalleryProps) {
     </StyledPhotoGallery>
   );
 }
-
-PhotoGallery.defaultProps = {
-  images: _.times(5, () => {
-    return 'https://images.unsplash.com/photo-1471101173712-b9884175254e?dpr=2&auto=format&w=256&h=256';
-  }),
-  onImagePopup: _.identity,
-};
 
 export default PhotoGallery;

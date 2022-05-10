@@ -1,5 +1,6 @@
 import { Story, Meta } from '@storybook/react';
 import { PostCard, PostCardProps } from './post-card';
+import { today } from '@bbl-nx/utils';
 
 export default {
   component: PostCard,
@@ -10,8 +11,8 @@ const Template: Story<PostCardProps> = (args) => <PostCard {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  title: '',
-  date: '',
+  createdAt: today().valueOf(),
+  externalUrl: '',
+  title: 'Hello World',
   url: '',
-  linkUrl: '',
 };

@@ -4,7 +4,7 @@ import Tag from './tag';
 
 describe('Tag', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<Tag />);
+    const { baseElement } = render(<Tag name={"Tag"} />);
     expect(baseElement).toBeTruthy();
   });
 });

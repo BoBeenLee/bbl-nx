@@ -31,9 +31,4 @@ export function MenuItem(props: MenuItemProps) {
   );
 }
 
-MenuItem.defaultProps = {
-  name: 'Home',
-  url: '/',
-};
-
 export default MenuItem;

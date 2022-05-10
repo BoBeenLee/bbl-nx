@@ -9,10 +9,9 @@ export default {
 const Template: Story<SocialLinksProps> = (args) => <SocialLinks {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = {
-  className: '',
-  url: '',
-  title: '',
-  description: '',
-  iconSize: 0,
+Primary.args =  {
+  description: 'hello',
+  iconSize: 35,
+  title: 'hello world',
+  url: 'http://bbl.netlify.com',
 };

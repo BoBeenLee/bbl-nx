@@ -10,6 +10,6 @@ const Template: Story<MenuItemProps> = (args) => <MenuItem {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  name: '',
-  url: '',
+  name: 'Home',
+  url: '/',
 };

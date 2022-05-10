@@ -38,9 +38,17 @@ class PostPage extends PureComponent<IProps> {
     return (
       <Layout>
         <Root>
-          {_.map(filterPublished, (item) => (
-            <PostCard key={item.id} {...item} />
-          ))}
+          {_.map(filterPublished, (item) => {
+            const { title, createdAt, url, isExternal } = item;
+            return (
+              <PostCard
+                key={item.id}
+                title={title}
+                {...(isExternal ? { externalUrl: url } : { url })}
+                createdAt={Number(createdAt)}
+              />
+            );
+          })}
         </Root>
       </Layout>
     );
@@ -53,11 +61,12 @@ class PostPage extends PureComponent<IProps> {
       posts,
       ({ slug, frontmatter: { title, date, path, published } }) => {
         return {
-          date,
+          createdAt: date,
           id: slug,
           title,
           url: path,
           published,
+          isExternal: false,
         };
       }
     );
@@ -66,11 +75,12 @@ class PostPage extends PureComponent<IProps> {
   private mapTistoryToPosts = () => {
     const { tistories = [] } = this.props;
     return _.map(tistories, (item) => ({
-      date: item.date,
+      createdAt: item.date,
       id: item.guid,
-      linkUrl: item.link,
       title: item.title,
+      url: item.link,
       published: true,
+      isExternal: true,
     }));
   };
 }

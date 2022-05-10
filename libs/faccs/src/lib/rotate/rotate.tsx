@@ -21,8 +21,6 @@ interface RotateStates {
 }
 
 export class Rotate extends React.Component<RotateProps, RotateStates> {
-  public static defaultProps = {};
-
   constructor(props: RotateProps) {
     super(props);
     this.state = {

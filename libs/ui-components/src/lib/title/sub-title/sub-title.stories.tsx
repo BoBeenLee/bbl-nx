@@ -10,5 +10,5 @@ const Template: Story<SubTitleProps> = (args) => <SubTitle {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  title: '',
+  title: 'Hello World',
 };

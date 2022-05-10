@@ -13,7 +13,7 @@ const Template: Story<AvatarProps> = (args) => <Avatar {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  alt: '',
-  width: '',
-  avatarUrl: '',
+  alt: 'avatar',
+  width: '100px',
+  avatarUrl: 'https://avatars0.githubusercontent.com/u/1489321?v=4',
 };

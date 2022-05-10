@@ -4,7 +4,14 @@ import MenuItem from './menu-item';
 
 describe('MenuItem', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<MenuItem />);
+    const { baseElement } = render(
+      <MenuItem
+        {...{
+          name: 'Home',
+          url: '/',
+        }}
+      />
+    );
     expect(baseElement).toBeTruthy();
   });
 });

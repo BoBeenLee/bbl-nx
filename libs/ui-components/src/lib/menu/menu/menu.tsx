@@ -35,7 +35,6 @@ const BottomSeparator = styled(Seperator)`
   border-width: 2px;
 `;
 
-// tslint:disable:object-literal-sort-keys
 const styles: Record<string, CSSProperties> = {
   bmBurgerButton: {
     position: 'relative',

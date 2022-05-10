@@ -9,7 +9,6 @@ interface IEnvironmentEntry {
 
 const ENV_TYPE = process.env.REACT_ENV || 'staging';
 
-// tslint:disable:object-literal-sort-keys
 const env: IEnvironment = {
   production: {
     FIREBASE_CONFIG: {

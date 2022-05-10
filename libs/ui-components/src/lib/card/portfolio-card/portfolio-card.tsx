@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import React from 'react';
 import styled from 'styled-components';
 import { DiAndroid, DiApple } from 'react-icons/di';
 import { GoLink as LinkIcon, GoMarkGithub as GithubIcon } from 'react-icons/go';
@@ -8,7 +9,6 @@ import { media } from '@bbl-nx/utils';
 import { images } from '@bbl-nx/images';
 import Seperator from '../../seperator/seperator';
 import PhotoGallery from '../../photo-gallery/photo-gallery';
-import React from 'react';
 
 export interface PortfolioCardProps {
   name: string;
@@ -144,7 +144,7 @@ export function PortfolioCard(props: PortfolioCardProps) {
   const {
     name,
     period,
-    skills,
+    skills = [],
     allSkills,
     summary,
     githubUrl,
@@ -152,13 +152,13 @@ export function PortfolioCard(props: PortfolioCardProps) {
     storybookUrl,
     googleStoreUrl,
     appStoreUrl,
-    portfolioImages,
+    portfolioImages = [],
     onImagePopup,
   } = props;
 
   const renderSkillItem = (skillName: string, index: number) => {
-    const uri = allSkills[_.replace(skillName, / /g, '_').toUpperCase()]?.uri;
-    if (!_.isEmpty(uri)) {
+    const uri = allSkills?.[_.replace(skillName, / /g, '_').toUpperCase()]?.uri;
+    if (!uri) {
       return (
         <SkillLinkItem key={index} href={uri} target="_blank">
           {skillName}
@@ -210,27 +210,5 @@ export function PortfolioCard(props: PortfolioCardProps) {
     </StyledPortfolioCard>
   );
 }
-
-PortfolioCard.defaultProps = {
-  name: 'flass',
-  period: '2016-01 ~ 2017-01',
-  skills: [
-    'ReactJS',
-    'React-Router',
-    'Mocha',
-    'Redux',
-    'Material UI',
-    'Webpack',
-    'Sass',
-    'Rails',
-  ],
-  summary: 'INTRO',
-  images: _.times(5, () => {
-    return 'https://images.unsplash.com/photo-1471101173712-b9884175254e?dpr=2&auto=format&w=256&h=256';
-  }),
-  githubUrl: '',
-  linkUrl: '',
-  onImagePopup: _.identity,
-};
 
 export default PortfolioCard;

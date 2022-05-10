@@ -3,8 +3,8 @@ import {
   FacebookIcon,
   FacebookShareButton,
   TwitterIcon,
-  TwitterShareButton
-} from "react-share";
+  TwitterShareButton,
+} from 'react-share';
 
 export interface SocialLinksProps {
   className?: string;
@@ -38,19 +38,9 @@ export function SocialLinks(props: SocialLinksProps) {
       <Seperator />
       <FacebookShareButton url={url}>
         <FacebookIcon round={true} size={iconSize} />
-        {/* <FacebookShareCount url={url}>
-            {count => <div className="share-count">{filter(count)}</div>}
-          </FacebookShareCount> */}
       </FacebookShareButton>
     </StyledSocialLinks>
   );
 }
-
-SocialLinks.defaultProps = {
-  description: 'hello',
-  iconSize: 35,
-  title: 'hello world',
-  url: 'http://bbl.netlify.com',
-};
 
 export default SocialLinks;

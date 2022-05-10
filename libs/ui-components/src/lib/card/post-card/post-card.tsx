@@ -7,9 +7,9 @@ import SubTitle from '../../title/sub-title/sub-title';
 
 export interface PostCardProps {
   title: string;
-  date: string;
   url?: string;
-  linkUrl?: string;
+  externalUrl?: string;
+  createdAt: number;
 }
 
 const StyledPostCard = styled.div`
@@ -96,11 +96,11 @@ const BottomSeparator = styled(Seperator)`
 `;
 
 export function PostCard(props: PostCardProps) {
-  const { title, date, url, linkUrl } = props;
+  const { title, createdAt, url, externalUrl: linkUrl } = props;
   return (
     <StyledPostCard>
       <Title title={title} />
-      <Date>{toDateTimeText(date, 'MMMM D, YYYY')}</Date>
+      <Date>{toDateTimeText(createdAt, 'MMMM D, YYYY')}</Date>
       {url && (
         <Url>
           <AniLinkA href={url}>
@@ -121,12 +121,5 @@ export function PostCard(props: PostCardProps) {
     </StyledPostCard>
   );
 }
-
-PostCard.defaultProps = {
-  date: String(today().valueOf()),
-  linkUrl: '',
-  title: 'Hello World',
-  url: '',
-};
 
 export default PostCard;

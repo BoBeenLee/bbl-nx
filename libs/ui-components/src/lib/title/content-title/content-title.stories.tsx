@@ -11,6 +11,6 @@ const Template: Story<ContentTitleProps> = (args) => <ContentTitle {...args} />;
 export const Primary = Template.bind({});
 Primary.args = {
   className: '',
-  title: '',
+  title: 'Hello World',
   uri: '',
 };

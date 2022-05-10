@@ -16,8 +16,4 @@ export function SubTitle(props: SubTitleProps) {
   return <StyledSubTitle {...rest}>{title}</StyledSubTitle>;
 }
 
-SubTitle.defaultProps = {
-  title: 'Hello World',
-};
-
 export default SubTitle;
