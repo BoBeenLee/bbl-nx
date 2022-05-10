@@ -14,11 +14,12 @@ type Props = AppProps & {
 const MyApp = (props: Props) => {
   const { Component, pageProps } = props;
   const TargetComponent = Component;
+  const getLayout = Component.getLayout ?? ((page) => page);
 
   return (
     <React.Fragment>
       <GlobalCSS />
-      <TargetComponent {...pageProps} />
+      {getLayout(<TargetComponent {...pageProps} />)}
     </React.Fragment>
   );
 };

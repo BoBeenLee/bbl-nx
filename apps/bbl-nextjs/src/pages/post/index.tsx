@@ -68,22 +68,24 @@ const PostPage = (props: PostPageProps) => {
   const filterPublished = postsByDESC.filter((item) => item.published);
 
   return (
-    <Layout>
-      <Root>
-        {_.map(filterPublished, (item) => {
-          const { title, createdAt, url, isExternal } = item;
-          return (
-            <PostCard
-              key={item.id}
-              title={title}
-              {...(isExternal ? { externalUrl: url } : { url })}
-              createdAt={createdAt}
-            />
-          );
-        })}
-      </Root>
-    </Layout>
+    <Root>
+      {_.map(filterPublished, (item) => {
+        const { title, createdAt, url, isExternal } = item;
+        return (
+          <PostCard
+            key={item.id}
+            title={title}
+            {...(isExternal ? { externalUrl: url } : { url })}
+            createdAt={createdAt}
+          />
+        );
+      })}
+    </Root>
   );
+};
+
+PostPage.getLayout = function getLayout(page: React.ReactElement) {
+  return <Layout>{page}</Layout>;
 };
 
 export default PostPage;

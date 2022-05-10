@@ -9,12 +9,14 @@ const Root = styled.div`
 
 const HomePage = () => {
   return (
-    <Layout>
-      <Root>
-        <Rotate />
-      </Root>
-    </Layout>
+    <Root>
+      <Rotate />
+    </Root>
   );
+};
+
+HomePage.getLayout = function getLayout(page: React.ReactElement) {
+  return <Layout>{page}</Layout>;
 };
 
 export default HomePage;

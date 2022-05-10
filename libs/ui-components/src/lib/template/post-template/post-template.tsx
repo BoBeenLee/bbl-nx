@@ -1,7 +1,6 @@
 import { theme } from '@bbl-nx/styles';
 import { media } from '@bbl-nx/utils';
 import styled from 'styled-components';
-import Layout from '../../layout/layout';
 import SubTitle from '../../title/sub-title/sub-title';
 import PostCaptionTemplate from '../post-caption-template/post-caption-template';
 
@@ -50,17 +49,15 @@ export function PostTemplate(props: PostTemplateProps) {
   }
   const { markdownRemark: post } = data;
   return (
-    <Layout>
-      <StyledPostTemplate>
-        <StyledSubTitle title={post.frontmatter.title} />
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <PostCaptionTemplate
-          title={post.frontmatter.title}
-          description={post.frontmatter.title}
-          url={post.fields.slug}
-        />
-      </StyledPostTemplate>
-    </Layout>
+    <StyledPostTemplate>
+      <StyledSubTitle title={post.frontmatter.title} />
+      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <PostCaptionTemplate
+        title={post.frontmatter.title}
+        description={post.frontmatter.title}
+        url={post.fields.slug}
+      />
+    </StyledPostTemplate>
   );
 }
 

@@ -10,15 +10,17 @@ const Root = styled.div`
 
 const AboutPage = () => {
   return (
-    <Layout>
-      <Root>
-        <Experience />
-        <Activity />
-        <Skill />
-        <Education />
-      </Root>
-    </Layout>
+    <Root>
+      <Experience />
+      <Activity />
+      <Skill />
+      <Education />
+    </Root>
   );
+};
+
+AboutPage.getLayout = function getLayout(page: React.ReactElement) {
+  return <Layout>{page}</Layout>;
 };
 
 export default AboutPage;

@@ -11,21 +11,23 @@ const Root = styled.div`
 
 const PortfolioPage = () => {
   return (
-    <Layout>
-      <Root>
-        <Portfolio
-          key={'company'}
-          title="Company"
-          portfolios={companyPortfolios}
-        />
-        <Portfolio
-          key={'project'}
-          title={`Project`}
-          portfolios={teamPortfolios}
-        />
-      </Root>
-    </Layout>
+    <Root>
+      <Portfolio
+        key={'company'}
+        title="Company"
+        portfolios={companyPortfolios}
+      />
+      <Portfolio
+        key={'project'}
+        title={`Project`}
+        portfolios={teamPortfolios}
+      />
+    </Root>
   );
+};
+
+PortfolioPage.getLayout = function getLayout(page: React.ReactElement) {
+  return <Layout>{page}</Layout>;
 };
 
 export default PortfolioPage;

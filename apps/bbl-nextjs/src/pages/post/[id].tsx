@@ -3,7 +3,7 @@ import remark from 'remark';
 import html from 'remark-html';
 import React from 'react';
 import { getPostBySlug, getAllPosts, PostItem } from '../../libs/post';
-import { PostTemplate } from '@bbl-nx/ui-components';
+import { Layout, PostTemplate } from '@bbl-nx/ui-components';
 
 const PostByIdPage = (props: PostItem) => {
   const { slug, frontmatter, content } = props;
@@ -21,6 +21,10 @@ const PostByIdPage = (props: PostItem) => {
       }}
     />
   );
+};
+
+PostByIdPage.getLayout = function getLayout(page: React.ReactElement) {
+  return <Layout>{page}</Layout>;
 };
 
 export async function getStaticProps({ params }: any) {
