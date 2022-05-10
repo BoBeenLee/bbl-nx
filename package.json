@@ -15,6 +15,7 @@
     "build:affected:all": "nx affected --target=build --all",
     "test": "nx test",
     "test:affected": "nx affected --target=test --base= origin/master~1 --head= origin/master",
+    "build-storybook": "nx run-many --target=build-storybook --projects=ui-components,organizations",
     "organizations:storybook": "nx run organizations:storybook",
     "organizations:build-storybook": "nx run organizations:build-storybook",
     "ui-components:storybook": "nx run ui-components:storybook",
