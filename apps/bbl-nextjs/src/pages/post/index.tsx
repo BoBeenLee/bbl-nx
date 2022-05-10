@@ -45,7 +45,7 @@ class PostPage extends PureComponent<PostPageProps> {
                 key={item.id}
                 title={title}
                 {...(isExternal ? { externalUrl: url } : { url })}
-                createdAt={Number(createdAt)}
+                createdAt={createdAt}
               />
             );
           })}

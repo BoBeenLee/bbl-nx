@@ -9,7 +9,7 @@ export interface PostCardProps {
   title: string;
   url?: string;
   externalUrl?: string;
-  createdAt: number;
+  createdAt: string;
 }
 
 const StyledPostCard = styled.div`

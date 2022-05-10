@@ -8,7 +8,7 @@ describe('PostCard', () => {
     const { baseElement } = render(
       <PostCard
         {...{
-          createdAt: today().valueOf(),
+          createdAt: "2018-01-22T05:24:36.000Z",
           externalUrl: '',
           title: 'Hello World',
           url: '',
