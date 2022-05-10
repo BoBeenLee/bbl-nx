@@ -42,7 +42,7 @@ yarn test:affected
   - ui-components: https://bobeenlee.github.io/bbl-nx/ui-components/
   - organizations: https://bobeenlee.github.io/bbl-nx/organizations/
 - Deploy to Vercel
-  - In Progress
+  - https://bbl-nx.vercel.app/
 
 ## Understand your workspace
 
