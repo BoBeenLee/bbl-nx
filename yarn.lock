@@ -10117,7 +10117,7 @@ error-ex@^1.2.0, error-ex@^1.3.1:
   dependencies:
     is-arrayish "^0.2.1"
 
-error-stack-parser@^2.0.4, error-stack-parser@^2.0.6:
+error-stack-parser@^2.0.6:
   version "2.0.7"
   resolved "https://registry.npmjs.org/error-stack-parser/-/error-stack-parser-2.0.7.tgz"
   integrity sha512-chLOW0ZGRf4s8raLrDxa5sdkvPec5YdvwbFnqJme4rk0rFajP8mPtrDL1+I+CwrQDCjswDA5sREX7jYQDQs9vA==
@@ -16999,24 +16999,6 @@ mobile-detect@^1.4.1:
   resolved "https://registry.npmjs.org/mobile-detect/-/mobile-detect-1.4.5.tgz"
   integrity sha512-yc0LhH6tItlvfLBugVUEtgawwFU2sIe+cSdmRJJCTMZ5GEJyLxNyC/NIOAOGk67Fa8GNpOttO3Xz/1bHpXFD/g==
 
-mobx-react@^5.4.3:
-  version "5.4.4"
-  resolved "https://registry.npmjs.org/mobx-react/-/mobx-react-5.4.4.tgz"
-  integrity sha512-2mTzpyEjVB/RGk2i6KbcmP4HWcAUFox5ZRCrGvSyz49w20I4C4qql63grPpYrS9E9GKwgydBHQlA4y665LuRCQ==
-  dependencies:
-    hoist-non-react-statics "^3.0.0"
-    react-lifecycles-compat "^3.0.2"
-
-mobx-state-tree@^3.15.0:
-  version "3.17.3"
-  resolved "https://registry.npmjs.org/mobx-state-tree/-/mobx-state-tree-3.17.3.tgz"
-  integrity sha512-ph4ee/Lh1qUJqHEGkfdWdBAUGdG+VAu7xZbYX/+4qem5hSSpdeZYAJOcN3bhtgEH8Wh/ZxRpQVOLM0aMFXfBSw==
-
-mobx@^4.9.4:
-  version "4.15.7"
-  resolved "https://registry.npmjs.org/mobx/-/mobx-4.15.7.tgz"
-  integrity sha512-X4uQvuf2zYKHVO5kRT5Utmr+J9fDnRgxWWnSqJ4oiccPTQU38YG+/O3nPmOhUy4jeHexl7XJJpWDBgEnEfp+8w==
-
 modify-values@^1.0.0:
   version "1.0.1"
   resolved "https://registry.npmjs.org/modify-values/-/modify-values-1.0.1.tgz"
@@ -19662,11 +19644,6 @@ ramda@^0.21.0:
   resolved "https://registry.npmjs.org/ramda/-/ramda-0.21.0.tgz"
   integrity sha1-oAGr7bP/YQd9T/HVd9RN536NCjU=
 
-ramda@^0.25.0:
-  version "0.25.0"
-  resolved "https://registry.npmjs.org/ramda/-/ramda-0.25.0.tgz"
-  integrity sha512-GXpfrYVPwx3K7RQ6aYT8KPS8XViSXUVJT1ONhoKPE9VAleW42YE+U+8VEyGWt41EnEQW7gwecYJriTI0pKoecQ==
-
 randexp@0.4.6:
   version "0.4.6"
   resolved "https://registry.npmjs.org/randexp/-/randexp-0.4.6.tgz"
@@ -20336,26 +20313,6 @@ reactcss@^1.2.0:
   dependencies:
     lodash "^4.0.1"
 
-reactotron-core-client@2.8.9:
-  version "2.8.9"
-  resolved "https://registry.npmjs.org/reactotron-core-client/-/reactotron-core-client-2.8.9.tgz"
-  integrity sha512-IAfNEst/VrWC4b5kOWkHLV0xCwM5n3Pd8q59ueotg1Tql81HnhCeHW1/lCPaaNh2B3/Eh3rAXuiM3yYWvdU36g==
-
-reactotron-mst@^3.1.3:
-  version "3.1.4"
-  resolved "https://registry.npmjs.org/reactotron-mst/-/reactotron-mst-3.1.4.tgz"
-  integrity sha512-dRFMcWbGpXKx7o6mWfHNyh+JwLh5kaOwhlX478K+Tc/e+8OeUO9ku56PqkcrMZh005ntIcvDjBgj3mq4la1J6A==
-  dependencies:
-    ramda "^0.25.0"
-
-reactotron-react-js@^3.3.7:
-  version "3.3.7"
-  resolved "https://registry.npmjs.org/reactotron-react-js/-/reactotron-react-js-3.3.7.tgz"
-  integrity sha512-wWC2P2A2OhtUMN0L4vIphaPZXcC2HRwotNljCipEyzHDzTwvRmgsb5ZNKQjmAWGPZlqlb8EEAJA1L9A7HB8B2A==
-  dependencies:
-    reactotron-core-client "2.8.9"
-    stacktrace-js "2.0.1"
-
 read-cache@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/read-cache/-/read-cache-1.0.0.tgz"
@@ -20624,11 +20581,6 @@ regenerate@^1.4.2:
   version "1.4.2"
   resolved "https://registry.npmjs.org/regenerate/-/regenerate-1.4.2.tgz"
   integrity sha512-zrceR/XhGYU/d/opr2EKO7aRHUeiBI8qjtfHqADTwZd6Szfy16la6kqD0MIUs5z5hx6AaKa+PixpPrR289+I0A==
-
-regenerator-runtime@0.13.7:
-  version "0.13.7"
-  resolved "https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.13.7.tgz"
-  integrity sha512-a54FxoJDIr27pgf7IgeQGxmqUNYrcV338lf/6gH456HZ/PhX+5BcwHXG9ajESmwe6WRO0tAzRUrRmNONWgkrew==
 
 regenerator-runtime@^0.10.5:
   version "0.10.5"
@@ -22130,11 +22082,6 @@ source-map-url@^0.4.0:
   resolved "https://registry.npmjs.org/source-map-url/-/source-map-url-0.4.1.tgz"
   integrity sha512-cPiFOTLUKvJFIg4SKVScy4ilPPW6rFgMgfuZJPNoDuMs3nC1HbMUycBoJw77xFIp6z1UJQJOfx6C9GMH80DiTw==
 
-source-map@0.5.6:
-  version "0.5.6"
-  resolved "https://registry.npmjs.org/source-map/-/source-map-0.5.6.tgz"
-  integrity sha1-dc449SvwczxafwwRjYEzSiu19BI=
-
 source-map@0.7.3, source-map@^0.7.0, source-map@^0.7.3:
   version "0.7.3"
   resolved "https://registry.npmjs.org/source-map/-/source-map-0.7.3.tgz"
@@ -22310,13 +22257,6 @@ stable@^0.1.8:
   resolved "https://registry.npmjs.org/stable/-/stable-0.1.8.tgz"
   integrity sha512-ji9qxRnOVfcuLDySj9qzhGSEFVobyt1kIOSkj1qZzYLzq7Tos/oUUWvotUPQLlrsidqsK6tBH89Bc9kL5zHA6w==
 
-stack-generator@^2.0.4:
-  version "2.0.5"
-  resolved "https://registry.npmjs.org/stack-generator/-/stack-generator-2.0.5.tgz"
-  integrity sha512-/t1ebrbHkrLrDuNMdeAcsvynWgoH/i4o8EGGfX7dEYDoTXOYVAkEpFdtshlvabzc6JlJ8Kf9YdFEoz7JkzGN9Q==
-  dependencies:
-    stackframe "^1.1.1"
-
 stack-utils@^1.0.1:
   version "1.0.5"
   resolved "https://registry.npmjs.org/stack-utils/-/stack-utils-1.0.5.tgz"
@@ -22335,23 +22275,6 @@ stackframe@^1.1.1:
   version "1.2.1"
   resolved "https://registry.npmjs.org/stackframe/-/stackframe-1.2.1.tgz"
   integrity sha512-h88QkzREN/hy8eRdyNhhsO7RSJ5oyTqxxmmn0dzBIMUclZsjpfmrsg81vp8mjjAs2vAZ72nyWxRUwSwmh0e4xg==
-
-stacktrace-gps@^3.0.3:
-  version "3.0.4"
-  resolved "https://registry.npmjs.org/stacktrace-gps/-/stacktrace-gps-3.0.4.tgz"
-  integrity sha512-qIr8x41yZVSldqdqe6jciXEaSCKw1U8XTXpjDuy0ki/apyTn/r3w9hDAAQOhZdxvsC93H+WwwEu5cq5VemzYeg==
-  dependencies:
-    source-map "0.5.6"
-    stackframe "^1.1.1"
-
-stacktrace-js@2.0.1:
-  version "2.0.1"
-  resolved "https://registry.npmjs.org/stacktrace-js/-/stacktrace-js-2.0.1.tgz"
-  integrity sha512-13oDNgBSeWtdGa4/2BycNyKqe+VktCoJ8VLx4pDoJkwGGJVtiHdfMOAj3aW9xTi8oR2v34z9IcvfCvT6XNdNAw==
-  dependencies:
-    error-stack-parser "^2.0.4"
-    stack-generator "^2.0.4"
-    stacktrace-gps "^3.0.3"
 
 standard-as-callback@^2.1.0:
   version "2.1.0"
