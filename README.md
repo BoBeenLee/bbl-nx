@@ -20,12 +20,14 @@ node version 14.17.1
 
 ```shell
 yarn install
+npm i --legacy-peer-deps
 ```
 
 ### Setting up Dev
 
 ```
 yarn start
+npm start
 ```
 
 ## Tests
