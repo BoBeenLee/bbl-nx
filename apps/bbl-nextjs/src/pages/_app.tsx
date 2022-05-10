@@ -1,20 +1,26 @@
-import App from 'next/app';
+import { AppProps } from 'next/app';
 import React from 'react';
 import { GlobalCSS } from '@bbl-nx/styles';
+import { NextPage } from 'next';
 
-class MyApp extends App {
-  public render() {
-    const { Component } = this.props;
-    const { pageProps } = this.props;
-    const TargetComponent = Component;
+type NextPageWithLayout = NextPage & {
+  getLayout?: (page: React.ReactElement) => React.ReactNode;
+};
 
-    return (
-      <React.Fragment>
-        <GlobalCSS />
-        <TargetComponent {...pageProps} />
-      </React.Fragment>
-    );
-  }
-}
+type Props = AppProps & {
+  Component: NextPageWithLayout;
+};
+
+const MyApp = (props: Props) => {
+  const { Component, pageProps } = props;
+  const TargetComponent = Component;
+
+  return (
+    <React.Fragment>
+      <GlobalCSS />
+      <TargetComponent {...pageProps} />
+    </React.Fragment>
+  );
+};
 
 export default MyApp;

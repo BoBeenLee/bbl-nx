@@ -1,14 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class NotFoundPage extends Component {
-  public render() {
-    return (
-      <div>
-        <h1>NOT FOUND</h1>
-        <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-      </div>
-    );
-  }
-}
+const NotFoundPage = () => {
+  return (
+    <div>
+      <h1>NOT FOUND</h1>
+      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    </div>
+  );
+};
 
 export default NotFoundPage;

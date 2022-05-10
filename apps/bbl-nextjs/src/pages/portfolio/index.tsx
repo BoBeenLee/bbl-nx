@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import { Layout } from '@bbl-nx/ui-components';
@@ -9,25 +9,23 @@ const Root = styled.div`
   padding-top: 20px;
 `;
 
-class PorfolioPage extends PureComponent {
-  public render() {
-    return (
-      <Layout>
-        <Root>
-          <Portfolio
-            key={'company'}
-            title="Company"
-            portfolios={companyPortfolios}
-          />
-          <Portfolio
-            key={'project'}
-            title={`Project`}
-            portfolios={teamPortfolios}
-          />
-        </Root>
-      </Layout>
-    );
-  }
-}
+const PortfolioPage = () => {
+  return (
+    <Layout>
+      <Root>
+        <Portfolio
+          key={'company'}
+          title="Company"
+          portfolios={companyPortfolios}
+        />
+        <Portfolio
+          key={'project'}
+          title={`Project`}
+          portfolios={teamPortfolios}
+        />
+      </Root>
+    </Layout>
+  );
+};
 
-export default PorfolioPage;
+export default PortfolioPage;

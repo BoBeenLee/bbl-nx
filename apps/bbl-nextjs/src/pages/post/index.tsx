@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import React, { PureComponent } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import { PostCard, Layout } from '@bbl-nx/ui-components';
@@ -9,7 +9,7 @@ import { getFeednamiTistories } from '../../libs/tistory';
 
 interface PostPageProps {
   tistories: TistoryItem[];
-  allMarkdownRemark: Array<PostItem>;
+  allMarkdownRemark: PostItem[];
 }
 
 const Root = styled.div`
@@ -30,59 +30,60 @@ export async function getStaticProps() {
   };
 }
 
-class PostPage extends PureComponent<PostPageProps> {
-  public render() {
-    const posts = [...this.mapTistoryToPosts(), ...this.mapRemarkToPosts()];
-    const postsByDESC = _.orderBy(posts, ['date'], ['desc']);
-    const filterPublished = postsByDESC.filter((item) => item.published);
-    return (
-      <Layout>
-        <Root>
-          {_.map(filterPublished, (item) => {
-            const { title, createdAt, url, isExternal } = item;
-            return (
-              <PostCard
-                key={item.id}
-                title={title}
-                {...(isExternal ? { externalUrl: url } : { url })}
-                createdAt={createdAt}
-              />
-            );
-          })}
-        </Root>
-      </Layout>
-    );
-  }
+const mapRemarkToPosts = (allMarkdownRemark: PostItem[]) => {
+  const posts = allMarkdownRemark;
+  return _.map(
+    posts,
+    ({ slug, frontmatter: { title, date, path, published } }) => {
+      return {
+        createdAt: date,
+        id: slug,
+        title,
+        url: path,
+        published,
+        isExternal: false,
+      };
+    }
+  );
+};
 
-  private mapRemarkToPosts = () => {
-    const { allMarkdownRemark } = this.props;
-    const posts = allMarkdownRemark;
-    return _.map(
-      posts,
-      ({ slug, frontmatter: { title, date, path, published } }) => {
-        return {
-          createdAt: date,
-          id: slug,
-          title,
-          url: path,
-          published,
-          isExternal: false,
-        };
-      }
-    );
-  };
+const mapTistoryToPosts = (tistories: TistoryItem[]) => {
+  return _.map(tistories, (item) => ({
+    createdAt: item.date,
+    id: item.guid,
+    title: item.title,
+    url: item.link,
+    published: true,
+    isExternal: true,
+  }));
+};
 
-  private mapTistoryToPosts = () => {
-    const { tistories = [] } = this.props;
-    return _.map(tistories, (item) => ({
-      createdAt: item.date,
-      id: item.guid,
-      title: item.title,
-      url: item.link,
-      published: true,
-      isExternal: true,
-    }));
-  };
-}
+const PostPage = (props: PostPageProps) => {
+  const { tistories = [], allMarkdownRemark } = props;
+  const posts = [
+    ...mapTistoryToPosts(tistories),
+    ...mapRemarkToPosts(allMarkdownRemark),
+  ];
+  const postsByDESC = _.orderBy(posts, ['date'], ['desc']);
+  const filterPublished = postsByDESC.filter((item) => item.published);
+
+  return (
+    <Layout>
+      <Root>
+        {_.map(filterPublished, (item) => {
+          const { title, createdAt, url, isExternal } = item;
+          return (
+            <PostCard
+              key={item.id}
+              title={title}
+              {...(isExternal ? { externalUrl: url } : { url })}
+              createdAt={createdAt}
+            />
+          );
+        })}
+      </Root>
+    </Layout>
+  );
+};
 
 export default PostPage;

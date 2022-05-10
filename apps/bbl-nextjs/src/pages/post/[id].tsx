@@ -5,7 +5,7 @@ import React from 'react';
 import { getPostBySlug, getAllPosts, PostItem } from '../../libs/post';
 import { PostTemplate } from '@bbl-nx/ui-components';
 
-const PostById = (props: PostItem) => {
+const PostByIdPage = (props: PostItem) => {
   const { slug, frontmatter, content } = props;
   return (
     <PostTemplate
@@ -53,4 +53,4 @@ export async function getStaticPaths() {
   };
 }
 
-export default PostById;
+export default PostByIdPage;
