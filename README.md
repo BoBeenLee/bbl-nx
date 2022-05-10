@@ -39,7 +39,7 @@ yarn test:affected
 
 - Deploy to Storybook
   - github action master브랜치 기준 github pages로 배포 진행합니다.
-- Deploy to Zeit
+- Deploy to Vercel
   - In Progress
 
 ## Understand your workspace
