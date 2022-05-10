@@ -1,4 +1,3 @@
-export * from './lib/ui-components';
 export * from './lib/avatar/avatar';
 export * from './lib/card/github-card/github-card';
 export * from './lib/card/portfolio-card/portfolio-card';

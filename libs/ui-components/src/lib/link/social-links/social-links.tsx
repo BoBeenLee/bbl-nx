@@ -6,7 +6,6 @@ import {
   TwitterShareButton
 } from "react-share";
 
-/* eslint-disable-next-line */
 export interface SocialLinksProps {
   className?: string;
   url: string;

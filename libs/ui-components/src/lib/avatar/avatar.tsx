@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 
-/* eslint-disable-next-line */
 export interface AvatarProps {
   alt?: string;
   width?: string;
-  src?: any;
+  src?: string;
   avatarUrl?: string;
   onPress?: () => void;
 }

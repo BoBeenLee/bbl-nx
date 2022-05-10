@@ -1,7 +1,6 @@
 import React from 'react';
 import { isBrowser } from '@bbl-nx/utils';
 
-/* eslint-disable-next-line */
 export interface RotateProps {
   children: ({
     xDeg,

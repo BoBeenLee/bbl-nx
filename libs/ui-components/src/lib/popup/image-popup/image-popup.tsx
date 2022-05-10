@@ -4,7 +4,6 @@ import { CSSProperties } from 'react';
 import ReactModal from 'react-modal';
 import styled from 'styled-components';
 
-/* eslint-disable-next-line */
 export interface ImagePopupProps {
   showModal: boolean;
   PopupComponent: React.ReactNode;

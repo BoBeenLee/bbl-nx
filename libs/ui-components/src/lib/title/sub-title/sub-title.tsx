@@ -1,7 +1,6 @@
 import { theme } from '@bbl-nx/styles';
 import styled from 'styled-components';
 
-/* eslint-disable-next-line */
 export interface SubTitleProps {
   title: string;
 }

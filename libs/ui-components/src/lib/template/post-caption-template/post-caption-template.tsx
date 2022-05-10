@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import SocialLinks from '../../link/social-links/social-links';
 import Seperator from '../../seperator/seperator';
 
-/* eslint-disable-next-line */
 export interface PostCaptionTemplateProps {
   url: string;
   title: string;

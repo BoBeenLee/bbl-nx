@@ -10,7 +10,6 @@ import Seperator from '../../seperator/seperator';
 import PhotoGallery from '../../photo-gallery/photo-gallery';
 import React from 'react';
 
-/* eslint-disable-next-line */
 export interface PortfolioCardProps {
   name: string;
   period: string;

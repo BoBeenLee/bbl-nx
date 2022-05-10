@@ -4,7 +4,6 @@ import { ImagePopup, PortfolioCard, SubTitle } from '@bbl-nx/ui-components';
 import styled from 'styled-components';
 import React, { useState } from 'react';
 
-/* eslint-disable-next-line */
 export interface PortfolioProps {
   title: string;
   portfolios: PortfolioItem[];

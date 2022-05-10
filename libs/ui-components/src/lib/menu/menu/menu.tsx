@@ -6,7 +6,6 @@ import styled from 'styled-components';
 import Seperator from '../../seperator/seperator';
 import MenuItem from '../menu-item/menu-item';
 
-/* eslint-disable-next-line */
 export interface MenuProps {
   isOpen: boolean;
   menus: Array<{ name: string; url: string }>;

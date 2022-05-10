@@ -5,7 +5,6 @@ import { theme } from '@bbl-nx/styles';
 import Seperator from '../../seperator/seperator';
 import SubTitle from '../../title/sub-title/sub-title';
 
-/* eslint-disable-next-line */
 export interface PostCardProps {
   title: string;
   date: string;

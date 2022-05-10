@@ -9,7 +9,6 @@ import Headroom from 'react-headroom';
 import { images } from '@bbl-nx/images';
 import Menu from '../menu/menu/menu';
 
-/* eslint-disable-next-line */
 export interface HeaderProps {
   titles: Array<{ url: string; name: string }>;
 }

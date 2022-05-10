@@ -4,7 +4,6 @@ import Slider from 'react-slick';
 import { useCallback } from 'react';
 import { isMobile } from '@bbl-nx/utils';
 
-/* eslint-disable-next-line */
 export interface PhotoGalleryProps {
   images: string[];
   onImagePopup: (PopupImage: React.ReactNode) => void;

@@ -2,7 +2,6 @@ import _ from 'lodash';
 import styled from 'styled-components';
 import Avatar from '../../avatar/avatar';
 
-/* eslint-disable-next-line */
 export interface GithubProfileProps {
   avatarUrl: string;
   email: string;

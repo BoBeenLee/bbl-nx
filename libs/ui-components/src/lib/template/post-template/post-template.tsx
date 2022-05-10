@@ -20,7 +20,6 @@ interface IMarkdownRemarkFrontmatter {
   title: string;
 }
 
-/* eslint-disable-next-line */
 export interface PostTemplateProps {
   data: { markdownRemark: IMarkdownRemark };
 }

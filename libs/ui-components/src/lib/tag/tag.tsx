@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-/* eslint-disable-next-line */
 export interface TagProps {
   className?: string;
   name: string;

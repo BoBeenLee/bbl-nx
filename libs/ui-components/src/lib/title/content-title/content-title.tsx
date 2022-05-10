@@ -2,7 +2,6 @@ import _ from 'lodash';
 import { theme } from '@bbl-nx/styles';
 import styled from 'styled-components';
 
-/* eslint-disable-next-line */
 export interface ContentTitleProps {
   className?: string;
   title: string;
