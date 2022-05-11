@@ -5,6 +5,14 @@ const withImages = require('next-images');
 
 module.exports = withNx(
   withImages({
+    swcMinify: true,
+    compiler: {
+      // ssr and displayName are configured by default
+      styledComponents: true,
+      removeConsole: {
+        exclude: ['error'],
+      },
+    },
     nx: {
       // Set this to true if you would like to to use SVGR
       // See: https://github.com/gregberge/svgr
