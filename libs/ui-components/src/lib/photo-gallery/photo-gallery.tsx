@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import Slider from 'react-slick';
 import { useCallback } from 'react';
 import { isMobile } from '@bbl-nx/utils';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export interface PhotoGalleryProps {
   images: string[];

@@ -2,8 +2,6 @@ import { createGlobalStyle } from 'styled-components'
 
 export const GlobalCSS = createGlobalStyle`
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
-@import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css");
-@import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css");
 /* @import "./slick.min.css"; */
 /* @import "./slick-theme.min.css"; */
 
@@ -75,7 +73,7 @@ template {
 a {
   transition: all 0.5s;
   background-color: transparent;
-  text-decoration-skip: objects;
+  text-decoration: none;
 }
 a:active,
 a:hover {
