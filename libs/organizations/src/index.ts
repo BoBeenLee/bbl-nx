@@ -1,4 +1,3 @@
-export * from './lib/organizations';
 export * from './lib/about/activity/activity';
 export * from './lib/about/education/education';
 export * from './lib/about/experience/experience';

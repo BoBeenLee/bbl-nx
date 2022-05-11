@@ -5,7 +5,7 @@ import { skills } from "@bbl-nx/constants";
 
 export default {
   component: PortfolioCard,
-  title: 'PortfolioCard',
+  title: 'Card/PortfolioCard',
   argTypes: {
     onImagePopup: { action: 'onImagePopup executed!' },
   },

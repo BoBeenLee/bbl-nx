@@ -3,7 +3,7 @@ import { SubTitle, SubTitleProps } from './sub-title';
 
 export default {
   component: SubTitle,
-  title: 'SubTitle',
+  title: 'Title/SubTitle',
 } as Meta;
 
 const Template: Story<SubTitleProps> = (args) => <SubTitle {...args} />;

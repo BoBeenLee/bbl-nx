@@ -4,7 +4,7 @@ import { today } from '@bbl-nx/utils';
 
 export default {
   component: PostCard,
-  title: 'PostCard',
+  title: 'Card/PostCard',
 } as Meta;
 
 const Template: Story<PostCardProps> = (args) => <PostCard {...args} />;

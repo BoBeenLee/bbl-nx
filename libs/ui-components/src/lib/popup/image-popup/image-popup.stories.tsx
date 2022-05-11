@@ -3,7 +3,7 @@ import { ImagePopup, ImagePopupProps } from './image-popup';
 
 export default {
   component: ImagePopup,
-  title: 'ImagePopup',
+  title: 'Popup/ImagePopup',
   argTypes: {
     onClose: { action: 'onClose executed!' },
   },
