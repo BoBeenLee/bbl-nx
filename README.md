@@ -1,4 +1,5 @@
 # bbl-nx
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9df06975-e9cf-4761-bf57-48f6f970c96b/deploy-status)](https://app.netlify.com/sites/bbl/deploys)
 
 blog & homepage project based on monorepo(nx)
 - bbl-nextjs
