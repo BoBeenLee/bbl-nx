@@ -1,2 +1,5 @@
+[build]
+  publish = "dist/apps/bbl-nextjs/.next"
+
 [[plugins]]
   package = "@netlify/plugin-nextjs"
