@@ -9,7 +9,7 @@ export const experiences: ExperienceItem[] = [
   {
     title: "Haechi Labs",
     titleUri: "https://haechi.io/ko",
-    period: "2020.2 - 2019.12",
+    period: "2020.2 - 2022.5",
     role: "Frontend Developer"
   },
   {
