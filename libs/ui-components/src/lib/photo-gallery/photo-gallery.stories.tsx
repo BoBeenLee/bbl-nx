@@ -5,9 +5,7 @@ import { PhotoGallery, PhotoGalleryProps } from './photo-gallery';
 export default {
   component: PhotoGallery,
   title: 'PhotoGallery',
-  argTypes: {
-    onImagePopup: { action: 'onImagePopup executed!' },
-  },
+  argTypes: {},
 } as Meta;
 
 const Template: Story<PhotoGalleryProps> = (args) => <PhotoGallery {...args} />;
@@ -17,5 +15,4 @@ Primary.args = {
   images: _.times(5, () => {
     return 'https://images.unsplash.com/photo-1471101173712-b9884175254e?dpr=2&auto=format&w=256&h=256';
   }),
-  onImagePopup: _.identity,
 };

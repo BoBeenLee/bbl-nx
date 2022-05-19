@@ -1,14 +1,12 @@
 import _ from 'lodash';
 import { Story, Meta } from '@storybook/react';
 import { PortfolioCard, PortfolioCardProps } from './portfolio-card';
-import { skills } from "@bbl-nx/constants";
+import { skills } from '@bbl-nx/constants';
 
 export default {
   component: PortfolioCard,
   title: 'Card/PortfolioCard',
-  argTypes: {
-    onImagePopup: { action: 'onImagePopup executed!' },
-  },
+  argTypes: {},
 } as Meta;
 
 const Template: Story<PortfolioCardProps> = (args) => (
@@ -36,5 +34,4 @@ Primary.args = {
   }),
   githubUrl: '',
   linkUrl: '',
-  onImagePopup: _.identity,
 };

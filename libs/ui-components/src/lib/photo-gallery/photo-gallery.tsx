@@ -1,15 +1,12 @@
 import _ from 'lodash';
 import styled from 'styled-components';
 import Slider from 'react-slick';
-import { useCallback } from 'react';
-import { isMobile } from '@bbl-nx/utils';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import ZoomImage from '../image/zoom-image/zoom-image';
 
 export interface PhotoGalleryProps {
   images: string[];
-  onImagePopup: (PopupImage: React.ReactNode) => void;
 }
 
 const DEFAULT_SETTINGS = {
@@ -30,26 +27,8 @@ const Image = styled.div`
   padding: 10px 10px 30px 10px;
 `;
 
-const PopupImage = styled.div`
-  height: 100%;
-`;
-
 export function PhotoGallery(props: PhotoGalleryProps) {
-  const { images, onImagePopup } = props;
-
-  const onPhotoClick = useCallback(
-    (index: number) => {
-      if (!isMobile()) {
-        return;
-      }
-      onImagePopup(
-        <PopupImage>
-          <img alt="" style={{ width: '100%' }} src={images[index]} />
-        </PopupImage>
-      );
-    },
-    [images, onImagePopup]
-  );
+  const { images } = props;
 
   if (_.isEmpty(images)) {
     return <div />;
@@ -57,7 +36,7 @@ export function PhotoGallery(props: PhotoGalleryProps) {
   return (
     <StyledPhotoGallery {...DEFAULT_SETTINGS}>
       {_.map(images, (image, index) => (
-        <Image onClick={_.partial(onPhotoClick, index)} key={index}>
+        <Image key={index}>
           <ZoomImage>
             <img alt="" style={{ width: '100%' }} src={image} />
           </ZoomImage>

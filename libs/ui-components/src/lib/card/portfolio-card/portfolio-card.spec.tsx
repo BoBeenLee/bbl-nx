@@ -28,7 +28,6 @@ describe('PortfolioCard', () => {
           }),
           githubUrl: '',
           linkUrl: '',
-          onImagePopup: _.identity,
         }}
       />
     );

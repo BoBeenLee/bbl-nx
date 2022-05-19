@@ -152,7 +152,6 @@ export function PortfolioCard(props: PortfolioCardProps) {
     googleStoreUrl,
     appStoreUrl,
     portfolioImages = [],
-    onImagePopup,
   } = props;
 
   const renderSkillItem = (skillName: string, index: number) => {
@@ -203,7 +202,7 @@ export function PortfolioCard(props: PortfolioCardProps) {
       <Skills>{_.map(skills, renderSkillItem)}</Skills>
       <Summary>{summary}</Summary>
       <PhotoGalleryGroup>
-        <PhotoGallery images={portfolioImages} onImagePopup={onImagePopup} />
+        <PhotoGallery images={portfolioImages} />
       </PhotoGalleryGroup>
       <BottomSeparator />
     </StyledPortfolioCard>
