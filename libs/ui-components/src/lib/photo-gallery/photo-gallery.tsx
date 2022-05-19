@@ -3,8 +3,9 @@ import styled from 'styled-components';
 import Slider from 'react-slick';
 import { useCallback } from 'react';
 import { isMobile } from '@bbl-nx/utils';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import ZoomImage from '../image/zoom-image/zoom-image';
 
 export interface PhotoGalleryProps {
   images: string[];
@@ -57,7 +58,9 @@ export function PhotoGallery(props: PhotoGalleryProps) {
     <StyledPhotoGallery {...DEFAULT_SETTINGS}>
       {_.map(images, (image, index) => (
         <Image onClick={_.partial(onPhotoClick, index)} key={index}>
-          <img alt="" style={{ width: '100%' }} src={image} />
+          <ZoomImage>
+            <img alt="" style={{ width: '100%' }} src={image} />
+          </ZoomImage>
         </Image>
       ))}
     </StyledPhotoGallery>

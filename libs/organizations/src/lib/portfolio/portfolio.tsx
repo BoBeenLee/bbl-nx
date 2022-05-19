@@ -1,8 +1,8 @@
 import _ from 'lodash';
 import { PortfolioItem, skills as allSkills } from '@bbl-nx/constants';
-import { ImagePopup, PortfolioCard, SubTitle } from '@bbl-nx/ui-components';
-import styled from 'styled-components';
+import { PortfolioCard, SubTitle } from '@bbl-nx/ui-components';
 import React, { useState } from 'react';
+import styled from 'styled-components';
 
 export interface PortfolioProps {
   title: string;
@@ -21,17 +21,6 @@ const Content = styled.div`
 
 export function Portfolio(props: PortfolioProps) {
   const { title, portfolios } = props;
-  const [showModal, setShowModal] = useState(false);
-  const [PopupComponent, setPopupComponent] = useState<React.ReactNode>(null);
-
-  const onClose = () => {
-    setShowModal(false);
-  };
-
-  const onImagePopup = (PopupImage: React.ReactNode) => {
-    setShowModal(true);
-    setPopupComponent(PopupImage);
-  };
 
   const renderPortfolioCard = (portfolio: PortfolioItem) => {
     const {
@@ -62,7 +51,6 @@ export function Portfolio(props: PortfolioProps) {
         googleStoreUrl={googleStoreUrl}
         appStoreUrl={appStoreUrl}
         portfolioImages={images}
-        onImagePopup={onImagePopup}
       />
     );
   };
@@ -71,11 +59,6 @@ export function Portfolio(props: PortfolioProps) {
     <StyledPortfolio>
       <StyledSubTitle title={title} />
       <Content>{_.map(portfolios, renderPortfolioCard)}</Content>
-      <ImagePopup
-        showModal={showModal}
-        PopupComponent={PopupComponent}
-        onClose={onClose}
-      />
     </StyledPortfolio>
   );
 }

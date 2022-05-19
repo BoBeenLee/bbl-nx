@@ -22,7 +22,6 @@ export interface PortfolioCardProps {
   storybookUrl?: string;
   googleStoreUrl?: string;
   appStoreUrl?: string;
-  onImagePopup: (PopupImage: React.ReactNode) => void;
 }
 
 const StyledPortfolioCard = styled.div`
