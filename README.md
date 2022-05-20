@@ -17,7 +17,7 @@ blog & homepage project based on monorepo(nx)
 
 ## Prerequisites
 
-node version 14.17.1
+node version 16.13.2
 
 ## Installing / Getting started
 
