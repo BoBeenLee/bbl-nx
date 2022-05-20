@@ -131,6 +131,7 @@
     "cypress": "^9.1.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
+    "esbuild": "^0.14.39",
     "eslint": "8.12.0",
     "eslint-config-next": "12.1.5",
     "eslint-config-prettier": "8.1.0",
