@@ -1,5 +1,4 @@
 {
-  "root": "libs/organizations",
   "sourceRoot": "libs/organizations/src",
   "projectType": "library",
   "tags": [],

@@ -1,5 +1,4 @@
 {
-  "root": "apps/bbl-nextjs",
   "sourceRoot": "apps/bbl-nextjs",
   "projectType": "application",
   "targets": {

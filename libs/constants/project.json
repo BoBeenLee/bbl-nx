@@ -1,5 +1,4 @@
 {
-  "root": "libs/constants",
   "sourceRoot": "libs/constants/src",
   "projectType": "library",
   "targets": {

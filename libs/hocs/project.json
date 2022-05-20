@@ -1,5 +1,4 @@
 {
-  "root": "libs/hocs",
   "sourceRoot": "libs/hocs/src",
   "projectType": "library",
   "tags": [],

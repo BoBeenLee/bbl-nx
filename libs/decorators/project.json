@@ -1,5 +1,4 @@
 {
-  "root": "libs/decorators",
   "sourceRoot": "libs/decorators/src",
   "projectType": "library",
   "targets": {
