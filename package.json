@@ -83,7 +83,6 @@
     "@nrwl/linter": "14.1.7",
     "@nrwl/nx-cloud": "14.0.3",
     "@nrwl/react": "14.1.7",
-    "@nrwl/remix": "^13.7.1",
     "@nrwl/storybook": "14.1.7",
     "@nrwl/tao": "14.1.7",
     "@nrwl/web": "14.1.7",
