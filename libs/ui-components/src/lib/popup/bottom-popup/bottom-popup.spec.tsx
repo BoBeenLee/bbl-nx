@@ -4,7 +4,11 @@ import BottomPopup from './bottom-popup';
 
 describe('BottomPopup', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<BottomPopup />);
+    const { baseElement } = render(
+      <BottomPopup>
+        <div>test</div>
+      </BottomPopup>
+    );
     expect(baseElement).toBeTruthy();
   });
 });

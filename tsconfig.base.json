@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@bbl-nextjs/*": ["./apps/bbl-nextjs/src/*"],
+      "@bbl-remix/*": ["./apps/bbl-remix/app/*"],
       "@bbl-nx/apis": ["libs/apis/src/index.ts"],
       "@bbl-nx/constants": ["libs/constants/src/index.ts"],
       "@bbl-nx/decorators": ["libs/decorators/src/index.ts"],
@@ -25,8 +26,7 @@
       "@bbl-nx/organizations": ["libs/organizations/src/index.ts"],
       "@bbl-nx/styles": ["libs/styles/src/index.ts"],
       "@bbl-nx/ui-components": ["libs/ui-components/src/index.ts"],
-      "@bbl-nx/utils": ["libs/utils/src/index.ts"],
-      "@bbl-remix/*": ["./apps/bbl-remix/app/*"]
+      "@bbl-nx/utils": ["libs/utils/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

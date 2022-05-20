@@ -4,7 +4,8 @@ import WithRotate from './with-rotate';
 
 describe('WithRotate', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<WithRotate />);
+    const TargetComponent = WithRotate(() => <div />);
+    const { baseElement } = render(<TargetComponent />);
     expect(baseElement).toBeTruthy();
   });
 });

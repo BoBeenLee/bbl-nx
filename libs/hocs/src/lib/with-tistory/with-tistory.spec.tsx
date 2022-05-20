@@ -4,7 +4,8 @@ import WithTistory from './with-tistory';
 
 describe('WithTistory', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<WithTistory />);
+    const TargetComponent = WithTistory(() => <div />);
+    const { baseElement } = render(<TargetComponent />);
     expect(baseElement).toBeTruthy();
   });
 });

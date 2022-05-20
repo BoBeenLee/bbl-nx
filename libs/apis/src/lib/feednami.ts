@@ -46,9 +46,19 @@ const feednami: {
   // }
   axios.get(d).then(result => {
     n(result.data);
+  }).catch(error => {
+    n(undefined, error);
   });
 }),
   ((feednami).loadGoogleFormat = function (e: any, n: any) {
     return feednami.load({ url: e, format: "google", includeXml: !0 }, n);
   });
-export const feednamiApi = feednami;
+export const feednamiApi = (rssUrl: string) => new Promise((resolve, reject) => {
+  feednami.load(rssUrl, (data: any, error: any) => {
+    if (error) {
+      reject(error);
+      return;
+    }
+    resolve(data);
+  })
+});
