@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components';
 
 export const GlobalCSS = createGlobalStyle`
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
@@ -601,4 +601,4 @@ pre tt:after {
     font-size: 100%;
   }
 }
-`
+`;

@@ -1,8 +1,8 @@
 ---
-path: "/post/proxy-decorator-pattern"
-title: "Proxy Decorator Pattern"
+path: '/post/proxy-decorator-pattern'
+title: 'Proxy Decorator Pattern'
 published: false
-date: "2018-03-13"
+date: '2018-03-13'
 ---
 
 ### Proxy

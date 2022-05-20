@@ -5,7 +5,7 @@ module.exports = {
   webpackFinal: async (config, { configType }) => {
     // Make whatever fine-grained changes you need that should apply to all storybook configs
     const fileLoaderRule = config.module.rules.find(
-      (rule) => !Array.isArray(rule.test) && rule.test.test(".svg"),
+      (rule) => !Array.isArray(rule.test) && rule.test.test('.svg')
     );
     fileLoaderRule.exclude = /\.svg$/;
     config.module.rules.push({

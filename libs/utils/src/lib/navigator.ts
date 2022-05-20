@@ -1,6 +1,6 @@
-import MobileDetect from "mobile-detect";
+import MobileDetect from 'mobile-detect';
 
-export const isBrowser = typeof window !== "undefined";
+export const isBrowser = typeof window !== 'undefined';
 
 export const isMobile = () => {
   if (!isBrowser) {
@@ -15,11 +15,11 @@ export const isIE = () => {
     return false;
   }
   const md = new MobileDetect(window.navigator.userAgent);
-  return !!md.version("IE");
+  return !!md.version('IE');
 };
 
 export const isHome = (url: string) => {
-  if (url === "/") {
+  if (url === '/') {
     return true;
   }
   return false;

@@ -1,8 +1,8 @@
 ---
-path: "/post/react-environment"
-title: "React Custom Environment"
+path: '/post/react-environment'
+title: 'React Custom Environment'
 published: true
-date: "2018-02-25"
+date: '2018-02-25'
 ---
 
 요약하면 dotenv 설정 시 crna 를 이용할 경우, <br/>.env 파일에 NODE*ENV 환경 설정 가능하고 <br/>다른 환경 변수를 설정 시엔 REACT_APP*\* 변수로 지정하면 React 코드 환경에서 환경변수를 불러 올 수 있다. <br/>

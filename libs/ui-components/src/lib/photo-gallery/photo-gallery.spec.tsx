@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import _ from "lodash";
+import _ from 'lodash';
 
 import PhotoGallery from './photo-gallery';
 

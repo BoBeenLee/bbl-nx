@@ -1,5 +1,5 @@
-import _ from "lodash";
-import { skills } from "@bbl-nx/constants";
+import _ from 'lodash';
+import { skills } from '@bbl-nx/constants';
 import { render } from '@testing-library/react';
 
 import PortfolioCard from './portfolio-card';

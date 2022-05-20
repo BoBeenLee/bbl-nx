@@ -1,8 +1,8 @@
 ---
-path: "/post/async-generator"
-title: "Async Generator And Redux Saga"
+path: '/post/async-generator'
+title: 'Async Generator And Redux Saga'
 published: false
-date: "2018-03-24"
+date: '2018-03-24'
 ---
 
 ## Redux Saga

@@ -9,7 +9,7 @@ export default {
 const Template: Story<SocialLinksProps> = (args) => <SocialLinks {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args =  {
+Primary.args = {
   description: 'hello',
   iconSize: 35,
   title: 'hello world',

@@ -1,4 +1,4 @@
-import type { Component } from "react";
+import type { Component } from 'react';
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 export type MakeData<IProps, IStates, T> = (

@@ -1,8 +1,8 @@
 ---
-path: "/post/oop-ffp-pp"
-title: "oop-ffp-pp"
+path: '/post/oop-ffp-pp'
+title: 'oop-ffp-pp'
 published: false
-date: "2018-03-23"
+date: '2018-03-23'
 ---
 
 Object Oriented Programming

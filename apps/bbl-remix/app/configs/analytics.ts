@@ -1,4 +1,4 @@
-import _ from "lodash";
+import _ from 'lodash';
 
 import { firebaseInstance } from './firebase';
 import { createInjectDecorator } from '@bbl-nx/decorators';
@@ -6,7 +6,7 @@ import { traverseObjectKeys, traverseObjectSliceStr } from '@bbl-nx/utils';
 
 const EVENT_TYPE_MAX_LENGTH = 40;
 
-export type EventType = "test";
+export type EventType = 'test';
 
 export interface EventResult {
   eventType: EventType;
@@ -22,7 +22,7 @@ function firebaseAnalyticsFactory(
     const { eventType } = eventData;
 
     if (!eventType) {
-      throw new Error("eventType is not provided!");
+      throw new Error('eventType is not provided!');
     }
 
     if (eventType.length > EVENT_TYPE_MAX_LENGTH) {
@@ -32,7 +32,7 @@ function firebaseAnalyticsFactory(
     }
 
     const isAllKeysUnderLength40 = traverseObjectKeys(
-      _.omit(eventData, ["eventType"]),
+      _.omit(eventData, ['eventType']),
       (key: string) => key.length <= EVENT_TYPE_MAX_LENGTH
     );
 
@@ -41,7 +41,7 @@ function firebaseAnalyticsFactory(
     }
 
     const parameters = traverseObjectSliceStr(
-      _.omit(eventData, ["eventType"]),
+      _.omit(eventData, ['eventType']),
       100
     );
     funcAnalytics(eventData.eventType, parameters);
@@ -55,7 +55,7 @@ function firebaseAnalyticsFactory(
     },
     test: () => {
       firebaseLogEvent({
-        eventType: "test",
+        eventType: 'test',
       });
     },
   };

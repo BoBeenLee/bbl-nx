@@ -1,8 +1,8 @@
 ---
-path: "/post/list-map"
-title: "list-map"
+path: '/post/list-map'
+title: 'list-map'
 published: false
-date: "2018-03-23"
+date: '2018-03-23'
 ---
 
 list and map.

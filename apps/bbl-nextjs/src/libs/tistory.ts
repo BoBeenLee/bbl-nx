@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import { feednamiApi} from '@bbl-nx/apis';
+import { feednamiApi } from '@bbl-nx/apis';
 
 export interface TistoryItem {
   guid: string;

@@ -1,8 +1,8 @@
 ---
-path: "/post/function-compare-code"
-title: "React For pure function compare"
+path: '/post/function-compare-code'
+title: 'React For pure function compare'
 published: false
-date: "2018-03-11"
+date: '2018-03-11'
 ---
 
 FaCC(Function as Child Component) 구현시 함수를 넘겨주는 데 PureComponent로 shallow comparing하면은 함수 비교시 원하는대로 동작을 안할 것이다. <br/>

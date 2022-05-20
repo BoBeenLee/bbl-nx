@@ -1,8 +1,8 @@
 ---
-path: "/post/react-facc-hoc"
-title: "Function as Child Component And High Order Component"
+path: '/post/react-facc-hoc'
+title: 'Function as Child Component And High Order Component'
 published: true
-date: "2018-03-08"
+date: '2018-03-08'
 ---
 
 HOC는 많은 사람들이 이미 알고 있고 자주 사용하기에 따로 설명은 하지 않겠다. <br />
@@ -26,13 +26,13 @@ function withMouse(Component) {
     handleMouseMove(event) {
       this.setState({
         x: event.clientX,
-        y: event.clientY
+        y: event.clientY,
       });
     }
 
     render() {
       return (
-        <div style={{ height: "100%" }} onMouseMove={this.handleMouseMove}>
+        <div style={{ height: '100%' }} onMouseMove={this.handleMouseMove}>
           <Component {...this.props} mouse={this.state} />
         </div>
       );
@@ -86,13 +86,13 @@ class Mouse extends React.Component {
   handleMouseMove(event) {
     this.setState({
       x: event.clientX,
-      y: event.clientY
+      y: event.clientY,
     });
   }
 
   render() {
     return (
-      <div style={{ height: "100%" }} onMouseMove={this.handleMouseMove}>
+      <div style={{ height: '100%' }} onMouseMove={this.handleMouseMove}>
         {this.props.children(this.state)}
       </div>
     );
@@ -129,7 +129,9 @@ renderTouch는 한번만 호출되어 랜더링 될 것이다. <br />
     return class extends React.Component {
       render() {
         return (
-          <Mouse>{mouse => <Component {...this.props} mouse={mouse} />}</Mouse>
+          <Mouse>
+            {(mouse) => <Component {...this.props} mouse={mouse} />}
+          </Mouse>
         );
       }
     };

@@ -1,7 +1,7 @@
 ---
-path: "/post/files-are-imported-from-their-absolute-paths-instead-of-their-relative-paths"
+path: '/post/files-are-imported-from-their-absolute-paths-instead-of-their-relative-paths'
 title: React 상대경로 -> 절대경로 변경
-date: "2018-04-04"
+date: '2018-04-04'
 published: true
 tags:
   - javascript
@@ -10,7 +10,7 @@ tags:
 ## 상대경로 설정 시 문제점
 
 ```javascript
-import utils from "../../../../utils/my-utils";
+import utils from '../../../../utils/my-utils';
 ```
 
 와 같이 패키지 구조가 깊어질 경우 임포트하기 번거로워지게 된다.

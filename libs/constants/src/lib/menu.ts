@@ -4,8 +4,8 @@ export interface MenuItem {
 }
 
 export const menus: MenuItem[] = [
-  { name: "Home", url: "/" },
-  { name: "About", url: "/about" },
-  { name: "Portfolio", url: "/portfolio" },
-  { name: "Post", url: "/post" }
+  { name: 'Home', url: '/' },
+  { name: 'About', url: '/about' },
+  { name: 'Portfolio', url: '/portfolio' },
+  { name: 'Post', url: '/post' },
 ];

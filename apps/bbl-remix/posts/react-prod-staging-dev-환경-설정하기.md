@@ -1,6 +1,6 @@
 ---
-title: "React prod, staging, dev 환경 설정하기"
-date: "2018-07-08"
+title: 'React prod, staging, dev 환경 설정하기'
+date: '2018-07-08'
 published: false
 tags:
   - React

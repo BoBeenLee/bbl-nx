@@ -1,9 +1,9 @@
-import path from "path";
+import path from 'path';
 // Note: netlify doesn't support `import fs from "fs/promises";`
 // import { promises as fs } from "fs";
-import fs from "fs/promises";
-import parseFrontMatter from "front-matter";
-import { marked } from "marked";
+import fs from 'fs/promises';
+import parseFrontMatter from 'front-matter';
+import { marked } from 'marked';
 
 export type PostItem = {
   slug: string;
@@ -23,7 +23,7 @@ export type PostMarkdownAttributes = {
 
 // Relative to the server output not the source!
 // i.e. netlify/functions/server/build/index.js
-const postsPath = path.join(__dirname, "../../../..", "posts");
+const postsPath = path.join(__dirname, '../../../..', 'posts');
 
 export async function getPosts() {
   const dir = await fs.readdir(postsPath);
@@ -34,7 +34,7 @@ export async function getPosts() {
         file.toString()
       );
       return {
-        slug: filename.replace(/\.md$/, ""),
+        slug: filename.replace(/\.md$/, ''),
         title: attributes.title,
         url: attributes.path,
         date: attributes.date,
@@ -45,7 +45,7 @@ export async function getPosts() {
 }
 
 export async function getPost(slug: string) {
-  const filepath = path.join(postsPath, slug + ".md");
+  const filepath = path.join(postsPath, slug + '.md');
   const file = await fs.readFile(filepath);
   const { attributes, body } = parseFrontMatter<PostMarkdownAttributes>(
     file.toString()

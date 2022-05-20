@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { css, CSSObject, SimpleInterpolation } from "styled-components";
+import { css, CSSObject, SimpleInterpolation } from 'styled-components';
 
 const sizes = {
   desktop: 1220,
-  mobile: 767
+  mobile: 767,
 };
 
 export const media = {
@@ -22,7 +22,7 @@ export const media = {
     @media (max-width: 767px) {
       ${css(first, ...args)};
     }
-  `
+  `,
 };
 
 /*

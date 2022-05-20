@@ -1,4 +1,4 @@
-import { menus } from "@bbl-nx/constants";
+import { menus } from '@bbl-nx/constants';
 import { dimension, theme } from '@bbl-nx/styles';
 import { isBrowser, media } from '@bbl-nx/utils';
 import { useState, useEffect } from 'react';
