@@ -4,13 +4,8 @@ import rootMain from '../../jest.config.base';
 export default {
   displayName: 'ui-components',
   preset: '../../jest.preset.js',
-  globals: {
-    'ts-jest': {
-      tsconfig: '<rootDir>/tsconfig.spec.json',
-    },
-  },
   transform: {
-    '^.+\\.[tj]s$': 'ts-jest',
+    '^.+\\.[tj]sx?$': 'babel-jest',
   },
   moduleNameMapper: {
     ...rootMain.moduleNameMapper,
