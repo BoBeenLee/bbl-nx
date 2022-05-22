@@ -14,14 +14,7 @@
     "incremental": true,
     "experimentalDecorators": true
   },
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    "**/*.js",
-    "**/*.jsx",
-    "next-env.d.ts",
-    "jest.config.ts"
-  ],
+  "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", "next-env.d.ts"],
   "exclude": [
     "**/*.spec.ts",
     "**/*.test.ts",

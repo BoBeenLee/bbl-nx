@@ -1,6 +1,5 @@
-/* eslint-disable */
-export default {
-  displayName: 'styles',
+module.exports = {
+  displayName: 'decorators',
   preset: '../../jest.preset.js',
   globals: {
     'ts-jest': {
@@ -11,5 +10,5 @@ export default {
     '^.+\\.[tj]s$': 'ts-jest',
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: '../../coverage/libs/styles',
+  coverageDirectory: '../../coverage/libs/decorators',
 };

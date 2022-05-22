@@ -36,7 +36,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/faccs"],
       "options": {
-        "jestConfig": "libs/faccs/jest.config.ts",
+        "jestConfig": "libs/faccs/jest.config.js",
         "passWithNoTests": true
       }
     }

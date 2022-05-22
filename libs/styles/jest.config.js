@@ -1,6 +1,5 @@
-/* eslint-disable */
-export default {
-  displayName: 'apis',
+module.exports = {
+  displayName: 'styles',
   preset: '../../jest.preset.js',
   globals: {
     'ts-jest': {
@@ -11,5 +10,5 @@ export default {
     '^.+\\.[tj]s$': 'ts-jest',
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: '../../coverage/libs/apis',
+  coverageDirectory: '../../coverage/libs/styles',
 };

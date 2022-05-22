@@ -1,4 +1,4 @@
-import rootMain from '../../jest.config.base';
+const rootMain = require('../../jest.config.base.js');
 
 module.exports = {
   displayName: 'images',
