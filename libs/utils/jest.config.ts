@@ -1,5 +1,6 @@
-module.exports = {
-  displayName: 'hocs',
+/* eslint-disable */
+export default {
+  displayName: 'utils',
   preset: '../../jest.preset.js',
   globals: {
     'ts-jest': {
@@ -10,5 +11,5 @@ module.exports = {
     '^.+\\.[tj]sx?$': 'ts-jest',
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../coverage/libs/hocs',
+  coverageDirectory: '../../coverage/libs/utils',
 };

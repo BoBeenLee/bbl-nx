@@ -1,15 +1,11 @@
-const rootMain = require('../../jest.config.base.js');
+import rootMain from '../../jest.config.base';
 
-module.exports = {
+/* eslint-disable */
+export default {
   displayName: 'ui-components',
   preset: '../../jest.preset.js',
-  globals: {
-    'ts-jest': {
-      tsconfig: '<rootDir>/tsconfig.spec.json',
-    },
-  },
   transform: {
-    '^.+\\.[tj]sx?$': 'ts-jest',
+    '^.+\\.[tj]sx?$': 'babel-jest',
   },
   moduleNameMapper: {
     ...rootMain.moduleNameMapper,

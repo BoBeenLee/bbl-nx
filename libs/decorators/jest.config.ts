@@ -1,5 +1,6 @@
-module.exports = {
-  displayName: 'apis',
+/* eslint-disable */
+export default {
+  displayName: 'decorators',
   preset: '../../jest.preset.js',
   globals: {
     'ts-jest': {
@@ -10,5 +11,5 @@ module.exports = {
     '^.+\\.[tj]s$': 'ts-jest',
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: '../../coverage/libs/apis',
+  coverageDirectory: '../../coverage/libs/decorators',
 };
