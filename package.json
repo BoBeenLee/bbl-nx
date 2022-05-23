@@ -30,6 +30,7 @@
     "@remix-run/react": "^1.5.1",
     "@remix-run/serve": "^1.5.1",
     "@storybook/core-server": "6.4.22",
+    "@xstate/react": "^3.0.0",
     "axios": "0.24.0",
     "core-js": "^3.6.5",
     "cross-env": "^5.1.6",
@@ -63,7 +64,8 @@
     "remark-html": "^15.0.0",
     "slick-carousel": "^1.8.1",
     "styled-components": "5.3.5",
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.0",
+    "xstate": "^4.32.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.10",
