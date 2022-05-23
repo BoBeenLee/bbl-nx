@@ -1,7 +1,8 @@
-const rootMain = require('../../jest.config.base.js');
+import rootMain from '../../jest.config.base';
 
-module.exports = {
-  displayName: 'ui-components',
+/* eslint-disable */
+export default {
+  displayName: 'organizations',
   preset: '../../jest.preset.js',
   globals: {
     'ts-jest': {
@@ -15,6 +16,6 @@ module.exports = {
     ...rootMain.moduleNameMapper,
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../coverage/libs/ui-components',
+  coverageDirectory: '../../coverage/libs/organizations',
   setupFiles: ['../../jest.setupTests.base.js'],
 };

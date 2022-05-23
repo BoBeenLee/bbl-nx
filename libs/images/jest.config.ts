@@ -1,6 +1,7 @@
-const rootMain = require('../../jest.config.base.js');
+import rootMain from '../../jest.config.base';
 
-module.exports = {
+/* eslint-disable */
+export default {
   displayName: 'images',
   preset: '../../jest.preset.js',
   transform: {
