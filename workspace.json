@@ -10,6 +10,7 @@
     "faccs": "libs/faccs",
     "hocs": "libs/hocs",
     "images": "libs/images",
+    "machines": "libs/machines",
     "organizations": "libs/organizations",
     "styles": "libs/styles",
     "ui-components": "libs/ui-components",
