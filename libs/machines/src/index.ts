@@ -1,1 +1,2 @@
-export * from './lib/post-machine';
+export * from './lib/post-machine/post-machine';
+
