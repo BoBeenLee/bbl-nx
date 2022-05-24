@@ -51,6 +51,11 @@ yarn test:affected
 - Deploy to Vercel
   - https://bbl-nx.vercel.app/
 
+## State Diagram
+
+- Post 조회
+[![Post Machine](https://stately.ai/registry/machines/d896bb7e-cfde-4a9c-b62e-cb716c43df7d.png)](https://stately.ai/viz/d896bb7e-cfde-4a9c-b62e-cb716c43df7d)
+  
 ## Understand your workspace
 
 Run `nx graph` to see a diagram of the dependencies of your projects.
