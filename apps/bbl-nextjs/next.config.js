@@ -24,37 +24,14 @@ module.exports = withNx(
     publicRuntimeConfig: {
       staticFolder: '/public',
     },
-    webpack(config, options) {
-      config.module.rules.push({
-        test: /\.(ts|tsx)$/,
-        loader: require.resolve('babel-loader'),
-        options: {
-          // Disable reading babel configuration
-          babelrc: false,
-          configFile: false,
-
-          // The configration for compilation
-          presets: ['next/babel', ['@babel/env', { targets: { node: 6 } }]],
-          plugins: [
-            ['@babel/plugin-proposal-decorators', { legacy: true }],
-            [
-              'module-resolver',
-              {
-                root: ['.'],
-                alias: {
-                  src: './src',
-                },
-                cwd: 'babelrc',
-              },
-            ],
-            ['@babel/plugin-proposal-class-properties', { loose: false }],
-            [
-              'styled-components',
-              { ssr: false, displayName: true, preprocess: false },
-            ],
-          ],
-        },
-      });
+    webpack(config, { isServer }) {
+      if (!isServer) {
+        // don't resolve 'fs' module on the client to prevent this error on build --> Error: Can't resolve 'fs'
+        config.resolve.fallback = {
+          fs: false,
+          path: false,
+        };
+      }
       return config;
     },
   })
