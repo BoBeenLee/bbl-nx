@@ -96,7 +96,6 @@ const mapTistoryToPosts = (tistories: TistoryItem[]) => {
 
 const PostPage = (props: PostPageProps) => {
   const { posts } = props;
-  console.log(posts);
   const postsByDESC = _.orderBy(posts, ['date'], ['desc']);
   const filterPublished = postsByDESC.filter((item) => item.published);
 
