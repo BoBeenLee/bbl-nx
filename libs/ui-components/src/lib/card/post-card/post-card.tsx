@@ -69,6 +69,7 @@ const LinkCSS = css`
 
 const Url = styled.div`
   grid-area: link;
+  display: flex;
   padding-top: 10px;
   padding-left: 3px;
   a {
