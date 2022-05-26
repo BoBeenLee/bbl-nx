@@ -90,8 +90,8 @@ export const companyPortfolios: PortfolioItem[] = [
     images: [],
   },
   {
-    id: 'HAECHI',
-    name: 'HAECHI',
+    id: 'HAECHI Website',
+    name: 'HAECHI Website',
     period: '2019.6 - 2019.6',
     githubRepoName: [],
     skills: [
@@ -110,8 +110,8 @@ export const companyPortfolios: PortfolioItem[] = [
     images: [],
   },
   {
-    id: 'Henesis',
-    name: 'Henesis',
+    id: 'Henesis Website',
+    name: 'Henesis Website',
     period: '2019.6 - 2019.6',
     githubRepoName: [],
     skills: ['react', 'gatsby', 'styled components', 'typescript', 'storybook'],
