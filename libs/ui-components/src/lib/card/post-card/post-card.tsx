@@ -39,7 +39,6 @@ const Title = styled(SubTitle)`
 
 const BookIcon = styled(GoBookIcon)`
   padding-left: 5px;
-  padding-bottom: 3px;
 `;
 
 const Date = styled.div`
