@@ -2,6 +2,7 @@
 import remark from 'remark';
 import html from 'remark-html';
 import React from 'react';
+import { GetStaticPaths, GetStaticProps } from 'next';
 import { getPostBySlug, getAllPosts, PostItem } from '../../libs/post';
 import { Layout, PostTemplate } from '@bbl-nx/ui-components';
 
@@ -27,8 +28,10 @@ PostByIdPage.getLayout = function getLayout(page: React.ReactElement) {
   return <Layout>{page}</Layout>;
 };
 
-export async function getStaticProps({ params }: any) {
-  const post = getPostBySlug(params.id);
+export const getStaticProps: GetStaticProps<PostItem, { id: string }> = async ({
+  params,
+}) => {
+  const post = getPostBySlug(params?.id ?? '');
   const markdown = await remark()
     .use(html)
     .process(post.content || '');
@@ -40,9 +43,9 @@ export async function getStaticProps({ params }: any) {
       content,
     },
   };
-}
+};
 
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = async () => {
   const posts = getAllPosts();
 
   return {
@@ -55,6 +58,6 @@ export async function getStaticPaths() {
     }),
     fallback: false,
   };
-}
+};
 
 export default PostByIdPage;

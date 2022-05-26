@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
+import { GetStaticProps } from 'next';
 import styled from 'styled-components';
 
 import { PostCard, Layout } from '@bbl-nx/ui-components';
@@ -56,15 +57,14 @@ const getPostItems = () => {
   });
 };
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const data = await getPostItems();
-
   return {
     props: {
       posts: data,
     },
   };
-}
+};
 
 const mapRemarkToPosts = (allMarkdownRemark: MDPostItem[]) => {
   const posts = allMarkdownRemark;
