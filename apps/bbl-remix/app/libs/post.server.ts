@@ -25,16 +25,17 @@ export type PostMarkdownAttributes = {
 
 // Relative to the server output not the source!
 // i.e. netlify/functions/server/build/index.js
-const postsPath = path.join(__dirname, '../../../..', 'posts');
+const postsPath = path.join(__dirname, '../', 'posts');
 
-export const getPostBySlug = async (filename: string): Promise<PostItem> => {
-  const file = await fs.readFile(path.join(postsPath, filename));
+export const getPostBySlug = async (slug: string): Promise<PostItem> => {
+  const realSlug = slug.replace(/\.md$/, '');
+  const file = await fs.readFile(path.join(postsPath, `${realSlug}.md`), 'utf8');
   const { attributes, body } = parseFrontMatter<PostMarkdownAttributes>(
     file.toString()
   );
   const html = marked(body);
   return {
-    slug: filename.replace(/\.md$/, ''),
+    slug: realSlug,
     frontmatter: {
       title: attributes.title,
       published: attributes.published,
@@ -48,6 +49,6 @@ export const getPostBySlug = async (filename: string): Promise<PostItem> => {
 export const getAllPosts = async () => {
   const dir = await fs.readdir(postsPath);
   return await Promise.all(
-    dir.map((filename) => getPostBySlug(filename))
+    dir.map((slug) => getPostBySlug(slug))
   );
 }
