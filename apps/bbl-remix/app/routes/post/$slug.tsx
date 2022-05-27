@@ -1,28 +1,27 @@
 import { useLoaderData } from '@remix-run/react';
 import type { LoaderFunction } from '@remix-run/node';
 
-import { getPost, PostItem } from '../../post';
+import { getPostBySlug, PostItem } from '../../libs/post.server';
 import { PostTemplate } from '@bbl-nx/ui-components';
 
 export const loader: LoaderFunction = async ({ params }) => {
-  return getPost(params.slug ?? '');
+  const post = await getPostBySlug(params.slug ?? '');
+  return post;
 };
 
 export default function PostSlug() {
   const post = useLoaderData<PostItem>();
-  const { slug, title, html } = post;
+  const { slug, frontmatter, content } = post;
   return (
     <PostTemplate
       data={{
         markdownRemark: {
           id: slug,
-          html: html ?? '',
+          html: content,
           fields: {
             slug,
           },
-          frontmatter: {
-            title,
-          },
+          frontmatter,
         },
       }}
     />
