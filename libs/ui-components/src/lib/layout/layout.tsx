@@ -1,7 +1,7 @@
 import { menus } from '@bbl-nx/constants';
 import { dimension, theme } from '@bbl-nx/styles';
 import { isBrowser, media } from '@bbl-nx/utils';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useId } from 'react';
 import styled from 'styled-components';
 import Footer from '../footer/footer';
 import Header from '../header/header';
@@ -56,6 +56,7 @@ const StatePopup = styled(BottomPopup)<{ isShowStatePopup: boolean }>`
 
 export function Layout(props: LayoutProps) {
   const { children } = props;
+  const layoutId = useId();
   const [isShowStatePopup, setIsShowStatePopup] = useState(false);
 
   useEffect(() => {
@@ -71,7 +72,7 @@ export function Layout(props: LayoutProps) {
 
   return (
     <StyledLayout id="outer-container">
-      <StatePopup isShowStatePopup={isShowStatePopup}>
+      <StatePopup key={layoutId} isShowStatePopup={isShowStatePopup}>
         <span>
           Your computer seems to be offline. We&apos;ll keep trying, but there
           may be a problem with your connection.
