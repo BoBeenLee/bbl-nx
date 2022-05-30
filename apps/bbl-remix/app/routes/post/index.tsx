@@ -2,8 +2,11 @@ import _ from 'lodash';
 import { Link, useLoaderData } from '@remix-run/react';
 import styled from 'styled-components';
 
-import { getAllPosts, PostItem as MDPostItem } from '../../libs/post.server';
-import { getFeednamiTistories, TistoryItem } from '../../libs/tistory';
+   
+import { deferred } from "@remix-run/node";
+
+import { getAllPosts, PostItem as MDPostItem } from '~/libs/post.server';
+import { getFeednamiTistories, TistoryItem } from '~/libs/tistory';
 import { PostCard } from '@bbl-nx/ui-components';
 import { postMachine, PostItem } from '@bbl-nx/machines';
 import { interpret, assign, Subscription } from 'xstate';
@@ -11,6 +14,7 @@ import { interpret, assign, Subscription } from 'xstate';
 const Root = styled.div`
   padding-top: 20px;
 `;
+
 
 const postService = interpret(
   postMachine.withConfig({
@@ -88,7 +92,6 @@ export default function Posts() {
   const posts = useLoaderData<PostItem[]>();
   const postsByDESC = _.orderBy(posts, ['date'], ['desc']);
   const filterPublished = postsByDESC.filter((item) => item.published);
-  
   return (
     <Root>
       {_.map(filterPublished, (item) => {

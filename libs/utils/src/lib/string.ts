@@ -1,12 +1,17 @@
+
+interface TraverseObject {
+  [index: string]: TraverseObject | string;
+}
+
 export const traverseObjectKeys = (
-  o: { [key: string]: any },
+  o: TraverseObject,
   predicate: (key: string) => boolean
 ) => {
-  const keys = Object.keys(o);
-  for (const key of keys) {
+  for (const key in o) {
     let keyPredicateResult;
-    if (typeof o[key] === 'object' && o[key] !== null) {
-      keyPredicateResult = traverseObjectKeys(o[key], predicate);
+    const oValue = o[key];
+    if (typeof oValue !== 'string' && oValue) {
+      keyPredicateResult = traverseObjectKeys(oValue, predicate);
     } else {
       keyPredicateResult = predicate(key);
     }
@@ -20,15 +25,15 @@ export const traverseObjectKeys = (
 };
 
 export const traverseObjectSliceStr = (
-  o: { [key: string]: any },
+  o: TraverseObject,
   maxLength: number
 ) => {
-  const keys = Object.keys(o);
-  for (const key of keys) {
-    if (typeof o[key] === 'object' && o[key] !== null) {
-      o[key] = traverseObjectSliceStr(o[key], maxLength);
-    } else if (typeof o[key] === 'string') {
-      o[key] = o[key].substr(0, maxLength);
+  for (const key in o) {
+    const oValue = o[key];
+    if (typeof oValue !== 'string' && oValue) {
+      o[key] = traverseObjectSliceStr(oValue, maxLength);
+    } else if (typeof oValue === 'string') {
+      o[key] = oValue.substring(0, maxLength);
     }
   }
   return o;

@@ -56,28 +56,15 @@ const StatePopup = styled(BottomPopup)<{ isShowStatePopup: boolean }>`
 
 export function Layout(props: LayoutProps) {
   const { children } = props;
-  const layoutId = useId();
-  const [isShowStatePopup, setIsShowStatePopup] = useState(false);
-
-  useEffect(() => {
-    if (isBrowser) {
-      window.addEventListener('offline', () => {
-        setIsShowStatePopup(true);
-      });
-      window.addEventListener('online', () => {
-        setIsShowStatePopup(false);
-      });
-    }
-  }, []);
 
   return (
     <StyledLayout id="outer-container">
-      <StatePopup key={layoutId} isShowStatePopup={isShowStatePopup}>
+      {/* <StatePopup key={layoutId} isShowStatePopup={isShowStatePopup}>
         <span>
           Your computer seems to be offline. We&apos;ll keep trying, but there
           may be a problem with your connection.
         </span>
-      </StatePopup>
+      </StatePopup> */}
       <Container>
         <HeaderGroup>
           <Header titles={menus} />
