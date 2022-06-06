@@ -24,14 +24,12 @@ node version 16.13.2
 ## Installing / Getting started
 
 ```shell
-yarn install
 npm i --legacy-peer-deps
 ```
 
 ### Setting up Dev
 
-```
-yarn start
+```shell
 npm start
 ```
 
@@ -39,8 +37,8 @@ npm start
 
 ### Running unit tests
 
-```
-yarn test:affected
+```shell
+npm run test:affected
 ```
 
 ## Deployment
@@ -64,6 +62,12 @@ Run `nx graph` to see a diagram of the dependencies of your projects.
 ## Further help
 
 Visit the [Nx Documentation](https://nx.dev) to learn more.
+
+### Generate UI-Components
+```
+nx g component my-component --project=ui-components
+```
+
 
 
 
