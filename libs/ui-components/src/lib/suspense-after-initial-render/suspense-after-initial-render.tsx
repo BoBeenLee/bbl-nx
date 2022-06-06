@@ -3,7 +3,7 @@ import { Suspense, useState } from 'react';
 
 export interface SuspenseAfterInitialRenderProps {
   children: React.ReactNode;
-  fallback?: React.ReactNode;
+  fallback: NonNullable<React.ReactNode> | null;
 }
 
 export function SuspenseAfterInitialRender(
