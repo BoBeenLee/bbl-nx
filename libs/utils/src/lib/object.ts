@@ -8,4 +8,10 @@ function callValue<T>(supplier: () => T, defaultValue: T) {
   }
 }
 
-export { callValue };
+
+function getKeys<T>(obj: T): (keyof T)[] {
+  return Object.keys(obj) as (keyof T)[];
+}
+
+
+export { callValue, getKeys };
