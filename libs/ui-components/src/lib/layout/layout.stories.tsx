@@ -3,7 +3,7 @@ import { Layout, LayoutProps } from './layout';
 
 export default {
   component: Layout,
-  title: 'Layout',
+  title: 'Components/Layout',
 } as Meta;
 
 const Template: Story<LayoutProps> = (args) => <Layout {...args} />;

@@ -3,7 +3,7 @@ import { ZoomImage, ZoomImageProps } from './zoom-image';
 
 export default {
   component: ZoomImage,
-  title: 'ZoomImage',
+  title: 'Components/ZoomImage',
 } as Meta;
 
 const Template: Story<ZoomImageProps> = (args) => <ZoomImage {...args} />;

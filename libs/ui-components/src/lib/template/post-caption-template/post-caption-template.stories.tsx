@@ -6,7 +6,7 @@ import {
 
 export default {
   component: PostCaptionTemplate,
-  title: 'PostCaptionTemplate',
+  title: 'Components/PostCaptionTemplate',
 } as Meta;
 
 const Template: Story<PostCaptionTemplateProps> = (args) => (
@@ -16,6 +16,6 @@ const Template: Story<PostCaptionTemplateProps> = (args) => (
 export const Primary = Template.bind({});
 Primary.args = {
   url: '',
-  title: '',
+  title: 'Components/',
   description: '',
 };

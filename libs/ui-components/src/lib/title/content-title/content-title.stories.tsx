@@ -3,7 +3,7 @@ import { ContentTitle, ContentTitleProps } from './content-title';
 
 export default {
   component: ContentTitle,
-  title: 'Title/ContentTitle',
+  title: 'Components/Title/ContentTitle',
 } as Meta;
 
 const Template: Story<ContentTitleProps> = (args) => <ContentTitle {...args} />;
@@ -11,6 +11,6 @@ const Template: Story<ContentTitleProps> = (args) => <ContentTitle {...args} />;
 export const Primary = Template.bind({});
 Primary.args = {
   className: '',
-  title: 'Hello World',
+  title: 'Components/Hello World',
   uri: '',
 };

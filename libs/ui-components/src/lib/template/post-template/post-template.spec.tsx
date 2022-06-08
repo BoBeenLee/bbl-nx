@@ -14,7 +14,7 @@ describe('PostTemplate', () => {
               slug: 'slug',
             },
             frontmatter: {
-              title: 'title',
+              title: 'Components/title',
             },
           },
         }}

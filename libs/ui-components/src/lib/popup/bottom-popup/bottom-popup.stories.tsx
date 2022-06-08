@@ -3,7 +3,7 @@ import { BottomPopup, BottomPopupProps } from './bottom-popup';
 
 export default {
   component: BottomPopup,
-  title: 'Popup/BottomPopup',
+  title: 'Components/Popup/BottomPopup',
 } as Meta;
 
 const Template: Story<BottomPopupProps> = (args) => <BottomPopup {...args} />;

@@ -3,7 +3,7 @@ import { MenuItem, MenuItemProps } from './menu-item';
 
 export default {
   component: MenuItem,
-  title: 'Menu/MenuItem',
+  title: 'Components/Menu/MenuItem',
 } as Meta;
 
 const Template: Story<MenuItemProps> = (args) => <MenuItem {...args} />;

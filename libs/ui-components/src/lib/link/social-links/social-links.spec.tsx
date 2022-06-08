@@ -9,7 +9,7 @@ describe('SocialLinks', () => {
         {...{
           description: 'hello',
           iconSize: 35,
-          title: 'hello world',
+          title: 'Components/hello world',
           url: 'http://bbl.netlify.com',
         }}
       />

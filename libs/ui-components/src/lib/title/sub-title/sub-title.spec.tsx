@@ -7,7 +7,7 @@ describe('SubTitle', () => {
     const { baseElement } = render(
       <SubTitle
         {...{
-          title: 'Hello World',
+          title: 'Components/Hello World',
         }}
       />
     );

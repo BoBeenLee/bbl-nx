@@ -3,7 +3,7 @@ import { Menu, MenuProps } from './menu';
 
 export default {
   component: Menu,
-  title: 'Menu/Menu',
+  title: 'Components/Menu/Menu',
   argTypes: {
     onToggleMenu: { action: 'onToggleMenu executed!' },
   },

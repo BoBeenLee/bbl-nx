@@ -3,7 +3,7 @@ import { LineText, LineTextProps } from './line-text';
 
 export default {
   component: LineText,
-  title: 'LinkText',
+  title: 'Components/LinkText',
 } as Meta;
 
 const Template: Story<LineTextProps> = (args) => <LineText {...args} />;

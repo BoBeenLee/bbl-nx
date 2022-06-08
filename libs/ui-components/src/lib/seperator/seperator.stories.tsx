@@ -3,7 +3,7 @@ import { Seperator, SeperatorProps } from './seperator';
 
 export default {
   component: Seperator,
-  title: 'Seperator',
+  title: 'Components/Seperator',
 } as Meta;
 
 const Template: Story<SeperatorProps> = (args) => <Seperator {...args} />;

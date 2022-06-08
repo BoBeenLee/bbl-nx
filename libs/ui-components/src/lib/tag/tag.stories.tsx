@@ -3,7 +3,7 @@ import { Tag, TagProps } from './tag';
 
 export default {
   component: Tag,
-  title: 'Tag',
+  title: 'Components/Tag',
 } as Meta;
 
 const Template: Story<TagProps> = (args) => <Tag {...args} />;

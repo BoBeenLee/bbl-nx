@@ -5,7 +5,7 @@ import { skills } from '@bbl-nx/constants';
 
 export default {
   component: PortfolioCard,
-  title: 'Card/PortfolioCard',
+  title: 'Components/Card/PortfolioCard',
   argTypes: {},
 } as Meta;
 

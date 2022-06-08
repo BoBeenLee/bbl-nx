@@ -3,7 +3,7 @@ import { PostTemplate, PostTemplateProps } from './post-template';
 
 export default {
   component: PostTemplate,
-  title: 'PostTemplate',
+  title: 'Components/PostTemplate',
 } as Meta;
 
 const Template: Story<PostTemplateProps> = (args) => <PostTemplate {...args} />;

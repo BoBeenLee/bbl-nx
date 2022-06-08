@@ -6,7 +6,7 @@ import {
 
 export default {
   component: SuspenseAfterInitialRender,
-  title: 'SuspenseAfterInitialRender',
+  title: 'Components/SuspenseAfterInitialRender',
 } as Meta;
 
 const Template: Story<SuspenseAfterInitialRenderProps> = (args) => (

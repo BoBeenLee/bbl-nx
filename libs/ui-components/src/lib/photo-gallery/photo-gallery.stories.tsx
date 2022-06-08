@@ -4,7 +4,7 @@ import { PhotoGallery, PhotoGalleryProps } from './photo-gallery';
 
 export default {
   component: PhotoGallery,
-  title: 'PhotoGallery',
+  title: 'Components/PhotoGallery',
   argTypes: {},
 } as Meta;
 

@@ -3,7 +3,7 @@ import { Avatar, AvatarProps } from './avatar';
 
 export default {
   component: Avatar,
-  title: 'Avatar',
+  title: 'Components/Avatar',
   argTypes: {
     onPress: { action: 'onPress executed!' },
   },
