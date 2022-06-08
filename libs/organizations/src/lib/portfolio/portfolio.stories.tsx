@@ -4,18 +4,18 @@ import { companyPortfolios, teamPortfolios } from '@bbl-nx/constants';
 
 export default {
   component: Portfolio,
-  title: 'Portfolio',
+  title: 'Organizations/Portfolio',
 } as Meta;
 
 const Template: Story<PortfolioProps> = (args) => <Portfolio {...args} />;
 
 export const Company = Template.bind({});
 Company.args = {
-  title: 'Company',
+  title: 'Organizations/Company',
   portfolios: companyPortfolios,
 };
 export const Team = Template.bind({});
 Team.args = {
-  title: 'Project',
+  title: 'Organizations/Project',
   portfolios: teamPortfolios,
 };

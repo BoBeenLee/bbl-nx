@@ -3,7 +3,7 @@ import { Experience, ExperienceProps } from './experience';
 
 export default {
   component: Experience,
-  title: 'About/Experience',
+  title: 'Organizations/About/Experience',
 } as Meta;
 
 const Template: Story<ExperienceProps> = (args) => <Experience {...args} />;
