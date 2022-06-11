@@ -3,57 +3,57 @@
 export interface Typegen0 {
   '@@xstate/typegen': true;
   eventsCausingActions: {
-    'Post 리스트 업데이트':
-      | 'done.invoke.postMachine.Post 조회.티스토리 조회.조회 중:invocation[0]'
-      | 'done.invoke.postMachine.Post 조회.MD 조회.조회 중:invocation[0]';
+    updatePostsContext:
+      | 'done.invoke.postMachine.FetchingPosts.FetchingTistories.Fetching:invocation[0]'
+      | 'done.invoke.postMachine.FetchingPosts.FetchingMD.Fetching:invocation[0]';
   };
   internalEvents: {
-    'done.invoke.postMachine.Post 조회.티스토리 조회.조회 중:invocation[0]': {
-      type: 'done.invoke.postMachine.Post 조회.티스토리 조회.조회 중:invocation[0]';
+    'done.invoke.postMachine.FetchingPosts.FetchingTistories.Fetching:invocation[0]': {
+      type: 'done.invoke.postMachine.FetchingPosts.FetchingTistories.Fetching:invocation[0]';
       data: unknown;
       __tip: 'See the XState TS docs to learn how to strongly type this.';
     };
-    'done.invoke.postMachine.Post 조회.MD 조회.조회 중:invocation[0]': {
-      type: 'done.invoke.postMachine.Post 조회.MD 조회.조회 중:invocation[0]';
+    'done.invoke.postMachine.FetchingPosts.FetchingMD.Fetching:invocation[0]': {
+      type: 'done.invoke.postMachine.FetchingPosts.FetchingMD.Fetching:invocation[0]';
       data: unknown;
       __tip: 'See the XState TS docs to learn how to strongly type this.';
     };
     'xstate.init': { type: 'xstate.init' };
   };
   invokeSrcNameMap: {
-    '티스토리 조회': 'done.invoke.postMachine.Post 조회.티스토리 조회.조회 중:invocation[0]';
-    'MD 호출': 'done.invoke.postMachine.Post 조회.MD 조회.조회 중:invocation[0]';
+    fetchTistories: 'done.invoke.postMachine.FetchingPosts.FetchingTistories.Fetching:invocation[0]';
+    fetchMD: 'done.invoke.postMachine.FetchingPosts.FetchingMD.Fetching:invocation[0]';
   };
   missingImplementations: {
-    actions: 'Post 리스트 업데이트';
-    services: '티스토리 조회' | 'MD 호출';
+    actions: 'updatePostsContext';
+    services: 'fetchTistories' | 'fetchMD';
     guards: never;
     delays: never;
   };
   eventsCausingServices: {
-    '티스토리 조회': 'xstate.init';
-    'MD 호출': 'xstate.init';
+    fetchTistories: 'xstate.init';
+    fetchMD: 'xstate.init';
   };
   eventsCausingGuards: {};
   eventsCausingDelays: {};
   matchesStates:
-    | 'Post 조회'
-    | 'Post 조회.티스토리 조회'
-    | 'Post 조회.티스토리 조회.조회 중'
-    | 'Post 조회.티스토리 조회.조회 완료'
-    | 'Post 조회.티스토리 조회.조회 실패'
-    | 'Post 조회.MD 조회'
-    | 'Post 조회.MD 조회.조회 중'
-    | 'Post 조회.MD 조회.조회 완료'
-    | 'Post 조회.MD 조회.조회 실패'
-    | 'Post 조회 완료'
+    | 'FetchingPosts'
+    | 'FetchingPosts.FetchingTistories'
+    | 'FetchingPosts.FetchingTistories.Fetching'
+    | 'FetchingPosts.FetchingTistories.Done'
+    | 'FetchingPosts.FetchingTistories.Error'
+    | 'FetchingPosts.FetchingMD'
+    | 'FetchingPosts.FetchingMD.Fetching'
+    | 'FetchingPosts.FetchingMD.Done'
+    | 'FetchingPosts.FetchingMD.Error'
+    | 'Done'
     | {
-        'Post 조회'?:
-          | '티스토리 조회'
-          | 'MD 조회'
+        FetchingPosts?:
+          | 'FetchingTistories'
+          | 'FetchingMD'
           | {
-              '티스토리 조회'?: '조회 중' | '조회 완료' | '조회 실패';
-              'MD 조회'?: '조회 중' | '조회 완료' | '조회 실패';
+              FetchingTistories?: 'Fetching' | 'Done' | 'Error';
+              FetchingMD?: 'Fetching' | 'Done' | 'Error';
             };
       };
   tags: never;

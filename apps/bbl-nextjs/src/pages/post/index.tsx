@@ -21,21 +21,21 @@ const Root = styled.div`
 const postService = interpret(
   postMachine.withConfig({
     actions: {
-      'Post 리스트 업데이트': assign((ctx, event) => {
+      'updatePostsContext': assign((ctx, event) => {
         return {
           posts: [...ctx.posts, ...event.data],
         };
       }),
     },
     services: {
-      '티스토리 조회': async (ctx, event) => {
+      'fetchTistories': async (ctx, event) => {
         const response = await getFeednamiTistories(
           'http://cultist-tp.tistory.com/rss'
         );
         const data = mapTistoryToPosts(response);
         return data;
       },
-      'MD 호출': async () => {
+      'fetchMD': async () => {
         const response = await getAllPosts();
         const data = mapRemarkToPosts(response);
         return data;
@@ -49,7 +49,7 @@ const getPostItems = () => {
   return new Promise((resolve) => {
     postService.start();
     postServiceSubscription = postService.subscribe((state) => {
-      if (state.matches('Post 조회 완료')) {
+      if (state.matches('Done')) {
         resolve(state.context.posts);
         postServiceSubscription?.unsubscribe?.();
       }

@@ -10,79 +10,87 @@ export interface PostItem {
 }
 
 export const postMachine =
-  /** @xstate-layout N4IgpgJg5mDOIC5QAcD2sAuBZAhgYwAsBLAOzADoAFdDAAkAcJwGLXzAHpcBKhwAsXAazoeadsCIkwGIIqMuVIA3VAGsKaTLkKkK1TL1aceTcvwEIpqPDgxExAbQAMAXUQp0RU2LsgAHogDMAJgDs5ABz+PgAslj4+AKwAjFERIQA0IACeiF7B-uQAnP4AbFGZwZlemSU+XgC+5YkK2PjE4mp0OuzcGnpCYABOnaid5MgANiYAZr0Atv00SvWqNBot2nyMggYk0sZOJFa2SCAKjmYkLu4I3n6BIWGRMXHBiSmnHn7BPjk5QRE5BT7+wZXVUzqKiocx0WAAIm1lsJROJDHJJoogQ1QcwIVCVoYNodti59ptjqlMjlyL44l4PNk8md7ogIpZMuRgnk8gV0pYPB4Iv89oDlCj1GDITp2l0en1BiNxojavzZoK0cKlpi1kYTDibHiHATdidiiSyWVKbkojTknTMn5MhEvKbYi9TZZ-DyatNgY1eCIxBRMCZ5HyZiCFVrYAdnLrEGUMv4OcTgh5Cl5Av5aadwkzXiFMh5-BTXh5KlUQCRUBA4CHZYGPc0tBiBCGw0cIwgopYvKmvBEPOQcsF0m8fJz-I7uUXXcj5U1mAsMYARMcAMx0NnWgE7RRk5LufS05LkeN4dnJeDNd4K2yxOykugPu1GaVoi5aAE6HABTLS8OhIQa57m6++a7+-NR4ogzMJrS5T49y8HIryROUgynO9FjfcMV0jFNAKiSIskyJ1mR+V4Ii7GDKxvBVyHRB9BGQptUJbNtU2iYJyCiLwOS7SxexCQdiLdAUEIo5UF2oj90iYrwoLbB1WxYu5AJtI9rVwnC9zCKCeIneCNAE3Qn1fXZ8XfZtRNJCS0h8GJLBkhjMmAgpDzyJ1xPMiox2vPitKVYTmx+VN4xJZlD0koJvCCaDXNgqtUS82iIlkh5WwU61T2yKDFNi9S4OrZYhP07VDNo35LGY+NhzKaIznQh4nmAl5cJjCych+DKZmitxPEsVMPCK89zxeMlTzKMJC3KIA */
+  /** @xstate-layout N4IgpgJg5mDOIC5QAcD2sAuBZAhgYwAsBLAOzADoAxMDQ0qABXQ1iprpKgBUjNUAnInDa1inAMQRUZcqQBuqANYU0mXBwrVR9JplZaO3XhgFD97MVATzUeHBiLSA2gAYAuohToiD6Z5AAHogAzABMAOzkABxR4QAsLuHhAKwAjKnJ8QA0IACeiKFxUeQAnFEAbKklcSWhJfXhoQC+TTmq2PhimhY6zObanDx8gsIGluJg-PwC5MgANvYAZgIAtrPM6l0ihros25ZDJiP9htYkCna+JK4eSCCqPo4k-kEIYZEx8Ykp6ZlxOfk3sFInFwuVyrFkuVquEonEWm0Np1SN0Bow+vt6FgACKYiRSGQ2ZTrNTImRjXp6PFQHHUs4XexPG7+B5XF4FErlcgRTKhYJlSrvAGIZIuErkOKVSrVIouYLBZII+5IjTU3YnSy0ikSSbTfizBYYZb8NbtTYotUY7U03HW+m2RnOdws7xsu6vOpcnmNfkVVJCvIikqRErJUL+jKg-0uKJKs1k1E7PqSaQUTD2FQqrbW9Uu2CPPzuxCNYpROWcuLBGqhGJRYVvJISsHxErBKJ8sHBFqtEAkVAQOB5jqqnNWnqDYymUbjqB5gvPIsIVIuUL10LJYLkcpxIrg8LyqLRxU9+Mjmfq6mHKesbGpudu0CvNLi8obqHB8oK4LgtflUJNjc4nDFwY35OMswtUcqWtK9jnIABRKYBHvJ52QQZ8tzfaFOw3H9AyBVIm0SUMFShb9QnKcDSTPNELxgydjhQwtH2LOt8NSMFyBcDiQJKVJKlSGt9yo4ds3PMc0S1GcmIXFilxXes0jichBLlDcXG3eJhJPCDyXE6CZ1pW8yBktCimU0IKJXKNl0E-58LDf9QxjGo5XKRIKJE809NoiTDFpRC9VMxdzO5KzCnCdJuMKRS+NKSUKOXdsIkEryE0tAzJOxYK5NhetKy5atK2-cI+NfNKaKTPQcsCEV7MBZdNxcUF23lWpwvhHTqK2YywBq144RcFTK0PRo0neNjAWBQjQRcssovKWEKq6fqQhcetgiGxIKmBP82o4oDuyaIA */
   createMachine({
-    context: { posts: [] },
-    schema: {
-      context: {} as { posts: PostItem[] },
-      events: {} as { type: "done.invoke.postMachine.Post 조회.티스토리 조회.조회 중:invocation[0]", data: PostItem[] } | { type: "done.invoke.postMachine.Post 조회.MD 조회.조회 중:invocation[0]", data: PostItem[] }
-    },
-    tsTypes: {} as import('./post-machine.typegen').Typegen0,
-    initial: 'Post 조회',
-    id: 'postMachine',
-    states: {
-      'Post 조회': {
-        type: 'parallel',
-        states: {
-          '티스토리 조회': {
-            initial: '조회 중',
-            states: {
-              '조회 중': {
-                invoke: {
-                  src: '티스토리 조회',
-                  onDone: [
-                    {
-                      actions: 'Post 리스트 업데이트',
-                      target: '조회 완료',
-                    },
-                  ],
-                  onError: [
-                    {
-                      target: '조회 실패',
-                    },
-                  ],
-                },
-              },
-              '조회 완료': {
-                type: 'final',
-              },
-              '조회 실패': {
-                type: 'final',
+  context: { posts: [] },
+  tsTypes: {} as import('./post-machine.typegen').Typegen0,
+  schema: {
+    context: {} as { posts: PostItem[] },
+    events: {} as
+      | {
+          type: 'done.invoke.postMachine.FetchingPosts.FetchingTistories.Fetching:invocation[0]';
+          data: PostItem[];
+        }
+      | {
+          type: 'done.invoke.postMachine.FetchingPosts.FetchingMD.Fetching:invocation[0]';
+          data: PostItem[];
+        },
+  },
+  initial: 'FetchingPosts',
+  id: 'postMachine',
+  states: {
+    FetchingPosts: {
+      type: 'parallel',
+      states: {
+        FetchingTistories: {
+          initial: 'Fetching',
+          states: {
+            Fetching: {
+              invoke: {
+                src: 'fetchTistories',
+                onDone: [
+                  {
+                    actions: 'updatePostsContext',
+                    target: 'Done',
+                  },
+                ],
+                onError: [
+                  {
+                    target: 'Error',
+                  },
+                ],
               },
             },
-          },
-          'MD 조회': {
-            initial: '조회 중',
-            states: {
-              '조회 중': {
-                invoke: {
-                  src: 'MD 호출',
-                  onDone: [
-                    {
-                      actions: 'Post 리스트 업데이트',
-                      target: '조회 완료',
-                    },
-                  ],
-                  onError: [
-                    {
-                      target: '조회 실패',
-                    },
-                  ],
-                },
-              },
-              '조회 완료': {
-                type: 'final',
-              },
-              '조회 실패': {
-                type: 'final',
-              },
+            Done: {
+              type: 'final',
+            },
+            Error: {
+              type: 'final',
             },
           },
         },
-        onDone: {
-          target: 'Post 조회 완료',
+        FetchingMD: {
+          initial: 'Fetching',
+          states: {
+            Fetching: {
+              invoke: {
+                src: 'fetchMD',
+                onDone: [
+                  {
+                    actions: 'updatePostsContext',
+                    target: 'Done',
+                  },
+                ],
+                onError: [
+                  {
+                    target: 'Error',
+                  },
+                ],
+              },
+            },
+            Done: {
+              type: 'final',
+            },
+            Error: {
+              type: 'final',
+            },
+          },
         },
       },
-      'Post 조회 완료': {},
+      onDone: {
+        target: 'Done',
+      },
     },
-  });
+    Done: {},
+  },
+});
