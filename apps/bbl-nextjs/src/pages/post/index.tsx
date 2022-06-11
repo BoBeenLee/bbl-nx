@@ -20,6 +20,10 @@ const Root = styled.div`
   padding-top: 20px;
 `;
 
+const Loading = styled.div`
+  height: 100vh;
+`;
+
 const postServiceWithConfig = postMachine.withConfig({
   actions: {
     updatePostsContext: assign((ctx, event) => {
@@ -106,7 +110,7 @@ const PostPage = (props: PostPageProps) => {
   }, []);
 
   if (!state.matches('Done')) {
-    return "Loading...";
+    return <Loading>{'Loading...'}</Loading>;
   }
   const posts = state.context.posts;
   const postsByDESC = _.orderBy(posts, ['date'], ['desc']);
@@ -114,7 +118,7 @@ const PostPage = (props: PostPageProps) => {
 
   return (
     <Root>
-       {_.map(filterPublished, (item) => {
+      {_.map(filterPublished, (item) => {
         const { title, createdAt, url, isExternal } = item;
         return (
           <PostCard
@@ -130,11 +134,7 @@ const PostPage = (props: PostPageProps) => {
 };
 
 PostPage.getLayout = function getLayout(page: React.ReactElement) {
-  return (
-    <Layout>
-      {page}
-    </Layout>
-  );
+  return <Layout>{page}</Layout>;
 };
 
-export default  PostPage;
+export default PostPage;
