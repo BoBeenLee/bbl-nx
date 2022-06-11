@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import React from 'react';
+import React, { Suspense, useEffect } from 'react';
 import { GetStaticProps } from 'next';
 import styled from 'styled-components';
 
@@ -9,59 +9,60 @@ import { getAllPosts, PostItem as MDPostItem } from '../../libs/post';
 import { getFeednamiTistories } from '../../libs/tistory';
 import { postMachine, PostItem } from '@bbl-nx/machines';
 import { interpret, assign, Subscription } from 'xstate';
+import { waitFor } from 'xstate/lib/waitFor';
+import { useMachine } from '@xstate/react';
 
 interface PostPageProps {
-  posts: PostItem[];
+  postMachineState: string;
 }
 
 const Root = styled.div`
   padding-top: 20px;
 `;
 
-const postService = interpret(
-  postMachine.withConfig({
-    actions: {
-      'updatePostsContext': assign((ctx, event) => {
-        return {
-          posts: [...ctx.posts, ...event.data],
-        };
-      }),
+const postServiceWithConfig = postMachine.withConfig({
+  actions: {
+    updatePostsContext: assign((ctx, event) => {
+      return {
+        posts: [...ctx.posts, ...event.data],
+      };
+    }),
+  },
+  services: {
+    fetchTistories: async (ctx, event) => {
+      const response = await getFeednamiTistories(
+        'http://cultist-tp.tistory.com/rss'
+      );
+      const data = mapTistoryToPosts(response);
+      return data;
     },
-    services: {
-      'fetchTistories': async (ctx, event) => {
-        const response = await getFeednamiTistories(
-          'http://cultist-tp.tistory.com/rss'
-        );
-        const data = mapTistoryToPosts(response);
-        return data;
-      },
-      'fetchMD': async () => {
-        const response = await getAllPosts();
-        const data = mapRemarkToPosts(response);
-        return data;
-      },
+    fetchMD: async () => {
+      const response = await getAllPosts();
+      const data = mapRemarkToPosts(response);
+      return data;
     },
-  })
-);
+  },
+});
 
-const getPostItems = () => {
-  let postServiceSubscription: Subscription | null = null;
-  return new Promise((resolve) => {
-    postService.start();
-    postServiceSubscription = postService.subscribe((state) => {
-      if (state.matches('Done')) {
-        resolve(state.context.posts);
-        postServiceSubscription?.unsubscribe?.();
-      }
-    });
-  });
+const makeMDPostState = async () => {
+  const postService = interpret(postServiceWithConfig);
+  postService.start();
+  const doneState = await waitFor(
+    postService,
+    (state) => state.matches('FetchingPosts.FetchingMD.Done'),
+    {
+      timeout: 10_000,
+    }
+  );
+  return doneState;
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const data = await getPostItems();
+  const postMachineState = await makeMDPostState();
+
   return {
     props: {
-      posts: data,
+      postMachineState: JSON.stringify(postMachineState),
     },
   };
 };
@@ -95,13 +96,25 @@ const mapTistoryToPosts = (tistories: TistoryItem[]) => {
 };
 
 const PostPage = (props: PostPageProps) => {
-  const { posts } = props;
+  const { postMachineState } = props;
+  const [state, send, service] = useMachine(postServiceWithConfig, {
+    state: JSON.parse(postMachineState),
+  });
+
+  useEffect(() => {
+    send('FETCH');
+  }, []);
+
+  if (!state.matches('Done')) {
+    return "Loading...";
+  }
+  const posts = state.context.posts;
   const postsByDESC = _.orderBy(posts, ['date'], ['desc']);
   const filterPublished = postsByDESC.filter((item) => item.published);
 
   return (
     <Root>
-      {_.map(filterPublished, (item) => {
+       {_.map(filterPublished, (item) => {
         const { title, createdAt, url, isExternal } = item;
         return (
           <PostCard
@@ -117,7 +130,11 @@ const PostPage = (props: PostPageProps) => {
 };
 
 PostPage.getLayout = function getLayout(page: React.ReactElement) {
-  return <Layout>{page}</Layout>;
+  return (
+    <Layout>
+      {page}
+    </Layout>
+  );
 };
 
-export default PostPage;
+export default  PostPage;

@@ -31,7 +31,7 @@ export interface Typegen0 {
     delays: never;
   };
   eventsCausingServices: {
-    fetchTistories: 'xstate.init';
+    fetchTistories: 'FETCH';
     fetchMD: 'xstate.init';
   };
   eventsCausingGuards: {};
@@ -42,6 +42,7 @@ export interface Typegen0 {
     | 'FetchingPosts.FetchingTistories.Fetching'
     | 'FetchingPosts.FetchingTistories.Done'
     | 'FetchingPosts.FetchingTistories.Error'
+    | 'FetchingPosts.FetchingTistories.Idle'
     | 'FetchingPosts.FetchingMD'
     | 'FetchingPosts.FetchingMD.Fetching'
     | 'FetchingPosts.FetchingMD.Done'
@@ -52,7 +53,7 @@ export interface Typegen0 {
           | 'FetchingTistories'
           | 'FetchingMD'
           | {
-              FetchingTistories?: 'Fetching' | 'Done' | 'Error';
+              FetchingTistories?: 'Fetching' | 'Done' | 'Error' | 'Idle';
               FetchingMD?: 'Fetching' | 'Done' | 'Error';
             };
       };
