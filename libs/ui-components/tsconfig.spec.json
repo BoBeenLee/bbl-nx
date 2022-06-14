@@ -15,11 +15,5 @@
     "**/*.test.jsx",
     "**/*.spec.jsx",
     "**/*.d.ts"
-  ],
-  "paths": {
-    "@bbl-nx/images": [
-      "libs/images/src/index.ts",
-      "libs/images/src/lib/assets/*"
-    ]
-  }
+  ]
 }
