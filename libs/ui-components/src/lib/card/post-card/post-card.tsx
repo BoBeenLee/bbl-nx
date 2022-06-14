@@ -1,10 +1,10 @@
 import styled, { css } from 'styled-components';
 import { GoBook as GoBookIcon } from 'react-icons/go';
 import { media, toDateTimeText, today } from '@bbl-nx/utils';
+import { DATE_TIME_FORMAT5 } from "@bbl-nx/utils";
 import { theme } from '@bbl-nx/styles';
 import Seperator from '../../seperator/seperator';
 import SubTitle from '../../title/sub-title/sub-title';
-import { DATE_TIME_FORMAT5 } from "libs/utils/src/lib/datetime/datetime-format";
 
 export interface PostCardProps {
   title: string;
