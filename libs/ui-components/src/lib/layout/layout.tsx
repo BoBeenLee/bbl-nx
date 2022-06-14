@@ -12,7 +12,7 @@ export interface LayoutProps {
 }
 
 const StyledLayout = styled.div`
-  height: 100%;
+  height: 100vh;
 `;
 
 const Container = styled.div`
