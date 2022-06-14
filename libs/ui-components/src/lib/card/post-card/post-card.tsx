@@ -4,6 +4,7 @@ import { media, toDateTimeText, today } from '@bbl-nx/utils';
 import { theme } from '@bbl-nx/styles';
 import Seperator from '../../seperator/seperator';
 import SubTitle from '../../title/sub-title/sub-title';
+import { DATE_TIME_FORMAT5 } from "libs/utils/src/lib/datetime/datetime-format";
 
 export interface PostCardProps {
   title: string;
@@ -100,7 +101,7 @@ export function PostCard(props: PostCardProps) {
   return (
     <StyledPostCard>
       <Title title={title} />
-      <Date>{toDateTimeText(createdAt, 'MMMM D, YYYY')}</Date>
+      <Date>{toDateTimeText(createdAt, DATE_TIME_FORMAT5)}</Date>
       {url && (
         <Url>
           <AniLinkA href={url}>
