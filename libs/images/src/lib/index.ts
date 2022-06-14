@@ -1,4 +1,3 @@
-import board from './assets/__mocks__/board.png';
 import portfolioCompetition from './portfolio-competition';
 import portfolioHouse from './portfolio-house';
 import portfolioIntersection from './portfolio-intersection';
@@ -6,19 +5,10 @@ import portfolioMain from './portfolio-main';
 import portfolioSkhualarm from './portfolio-skhualarm';
 import portfolioSkhucalc from './portfolio-skhucalc';
 import portfolioSofthome from './portfolio-softhome';
-import githubIcon from './assets/github.svg';
-import googlePlayButton from './assets/google-play.png';
-import octocatIcon from './assets/octocat.png';
-import quokka from './assets/quokka.png';
-import closeIcon from './assets/x-circle.svg';
-import facebook from './assets/facebook.svg';
-import instagram from './assets/instagram.svg';
-import linkedin from './assets/linkedin.svg';
-import storybook from './assets/storybook.png';
 
 export const images = {
   mock: {
-    board,
+    board: require('./assets/__mocks__/board.png'),
   },
   portfolio: {
     competition: portfolioCompetition,
@@ -29,13 +19,13 @@ export const images = {
     skhucalc: portfolioSkhucalc,
     softhome: portfolioSofthome,
   },
-  githubIcon,
-  googlePlayButton,
-  octocatIcon,
-  quokka,
-  closeIcon,
-  facebook,
-  instagram,
-  linkedin,
-  storybook,
+  githubIcon: require('./assets/github.svg'),
+  googlePlayButton: require('./assets/google-play.png'),
+  octocatIcon: require('./assets/octocat.png'),
+  quokka: require('./assets/quokka.png'),
+  closeIcon: require('./assets/x-circle.svg'),
+  facebook: require('./assets/facebook.svg'),
+  instagram: require('./assets/instagram.svg'),
+  linkedin: require('./assets/linkedin.svg'),
+  storybook: require('./assets/storybook.png'),
 };
