@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 import { theme } from '@bbl-nx/styles';
-import { getKeys } from "@bbl-nx/utils";
 import chroma from "chroma-js";
 
 /* eslint-disable-next-line */
@@ -24,6 +23,11 @@ const ColorItem = styled.div<{ $bgColor: string }>`
 const ColorText = styled.div<{ $color: string; }>`
   color: ${({ $color }) => $color};
 `;
+
+
+function getKeys<T>(obj: T): (keyof T)[] {
+  return Object.keys(obj) as (keyof T)[];
+}
 
 export function Colors(props: ColorsProps) {
   const themeKeys = getKeys(theme);
