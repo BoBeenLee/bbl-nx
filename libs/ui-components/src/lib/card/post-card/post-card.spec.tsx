@@ -1,4 +1,3 @@
-import { today } from '@bbl-nx/utils';
 import { render } from '@testing-library/react';
 
 import PostCard from './post-card';

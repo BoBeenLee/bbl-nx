@@ -29,7 +29,7 @@ function getKeys<T>(obj: T): (keyof T)[] {
   return Object.keys(obj) as (keyof T)[];
 }
 
-export function Colors(props: ColorsProps) {
+export function Colors() {
   const themeKeys = getKeys(theme);
   const textColor = chroma.average(Object.values(theme)).hex();
   return (
