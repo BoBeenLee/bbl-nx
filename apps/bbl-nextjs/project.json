@@ -48,6 +48,14 @@
       "options": {
         "lintFilePatterns": ["apps/bbl-nextjs/**/*.{ts,tsx,js,jsx}"]
       }
+    },
+    "lint-fix": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/bbl-nextjs/**/*.{ts,tsx,js,jsx}"],
+        "fix": true
+      }
     }
   },
   "tags": []

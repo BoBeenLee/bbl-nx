@@ -59,7 +59,7 @@ const ContactItem = styled.a`
   }
 `;
 
-export function Footer(props: FooterProps) {
+export function Footer() {
   return (
     <StyledFooter>
       <Copyright>@ 2018</Copyright>

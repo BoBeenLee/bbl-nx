@@ -45,7 +45,7 @@ const BottomSeparator = styled(Seperator)`
   margin: 40px 0;
 `;
 
-export function Experience(props: ExperienceProps) {
+export function Experience() {
   const renderItem = (item: ExperienceItem) => (
     <Item key={item.title}>
       <Title title={item.role} uri={item.titleUri} />

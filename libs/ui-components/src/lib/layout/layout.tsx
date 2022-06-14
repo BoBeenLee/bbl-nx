@@ -1,12 +1,9 @@
 import { menus } from '@bbl-nx/constants';
-import { dimension, theme } from '@bbl-nx/styles';
-import { isBrowser, media } from '@bbl-nx/utils';
-import { useState, useEffect, useId } from 'react';
+import { dimension } from '@bbl-nx/styles';
+import { media } from '@bbl-nx/utils';
 import styled from 'styled-components';
 import Footer from '../footer/footer';
 import Header from '../header/header';
-import BottomPopup from '../popup/bottom-popup/bottom-popup';
-
 export interface LayoutProps {
   children: React.ReactNode;
 }
@@ -47,11 +44,6 @@ const Content = styled.main`
 
 const FooterGroup = styled.footer`
   grid-area: footer;
-`;
-
-const StatePopup = styled(BottomPopup)<{ isShowStatePopup: boolean }>`
-  display: ${({ isShowStatePopup }) => (isShowStatePopup ? 'flex' : 'none')};
-  color: ${theme.warning};
 `;
 
 export function Layout(props: LayoutProps) {

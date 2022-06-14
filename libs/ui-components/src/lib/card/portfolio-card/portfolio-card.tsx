@@ -1,5 +1,4 @@
 import _ from 'lodash';
-import React from 'react';
 import styled from 'styled-components';
 import { DiAndroid, DiApple } from 'react-icons/di';
 import { GoLink as LinkIcon, GoMarkGithub as GithubIcon } from 'react-icons/go';

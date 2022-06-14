@@ -29,7 +29,7 @@ const Icon = styled.img`
   height: 40px;
 `;
 
-export function Rotate(props: RotateProps) {
+export function Rotate() {
   const renderIcons = ({ zDeg }: { zDeg: number }) => (
     <IconGroup zDeg={zDeg}>
       <IconLink href="https://www.facebook.com/bobin.lee.9" target="_blank">

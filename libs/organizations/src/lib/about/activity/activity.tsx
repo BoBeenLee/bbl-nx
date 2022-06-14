@@ -46,7 +46,7 @@ const BottomSeparator = styled(Seperator)`
   margin: 40px 0;
 `;
 
-export function Activity(props: ActivityProps) {
+export function Activity() {
   const renderItem = (item: ActivityItem) => (
     <Item key={item.name}>
       <Title title={item.name} uri={item.url} />

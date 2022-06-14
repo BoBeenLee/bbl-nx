@@ -7,7 +7,7 @@ const StyledReactImages = styled.div`
   color: pink;
 `;
 
-export function ReactImages(props: ReactImagesProps) {
+export function ReactImages() {
   return (
     <StyledReactImages>
       <h1>Welcome to ReactImages!</h1>

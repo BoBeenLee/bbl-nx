@@ -11,8 +11,10 @@
   ],
   "scripts": {
     "start": "nx serve",
-    "build": "nx build",
+    "build": "nx run-many --target=build --all",
     "build:affected:all": "nx affected --target=build --all",
+    "eslint": "nx run-many --target=lint --all",
+    "eslint:fix": "nx run-many --target=lint-fix --all",
     "test": "nx test",
     "test:affected": "nx affected --target=test --base= origin/master~1 --head= origin/master",
     "build-storybook": "nx run-many --target=build-storybook --projects=ui-components,organizations",

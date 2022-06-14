@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import React from 'react';
 import Document, {
   Html,
@@ -6,7 +5,6 @@ import Document, {
   Main,
   NextScript,
   DocumentContext,
-  DocumentInitialProps,
 } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 

@@ -11,7 +11,7 @@ export const media = {
     first: TemplateStringsArray | CSSObject,
     ...args: SimpleInterpolation[]
   ) => css`
-    @media (min-width: 1220px) {
+    @media (min-width: ${sizes.desktop}px) {
       ${css(first, ...args)};
     }
   `,
@@ -19,7 +19,7 @@ export const media = {
     first: TemplateStringsArray | CSSObject,
     ...args: SimpleInterpolation[]
   ) => css`
-    @media (max-width: 767px) {
+    @media (max-width: ${sizes.mobile}px) {
       ${css(first, ...args)};
     }
   `,

@@ -1,7 +1,6 @@
 import _ from 'lodash';
 import { PortfolioItem, skills as allSkills } from '@bbl-nx/constants';
 import { PortfolioCard, SubTitle } from '@bbl-nx/ui-components';
-import React, { useState } from 'react';
 import styled from 'styled-components';
 
 export interface PortfolioProps {

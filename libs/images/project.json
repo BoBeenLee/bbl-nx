@@ -21,6 +21,14 @@
         "lintFilePatterns": ["libs/images/**/*.{ts,tsx,js,jsx}"]
       }
     },
+    "lint-fix": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/images/**/*.{ts,tsx,js,jsx}"],
+        "fix": true
+      }
+    },
     "test": {
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/images"],

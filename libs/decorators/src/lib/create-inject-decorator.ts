@@ -42,7 +42,7 @@ function injectFuncInArrow<IProps, IStates, T>(
 }
 
 function injectFuncInMethod<IProps, IStates, T>(
-  propsName: string,
+  __: string,
   descriptor: any,
   func: MakeData<IProps, IStates, T>
 ) {

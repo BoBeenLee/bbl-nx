@@ -1,6 +1,5 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const withNx = require('@nrwl/next/plugins/with-nx');
-const _ = require('lodash');
 const withImages = require('next-images');
 
 module.exports = withNx(

@@ -20,6 +20,15 @@
         "lintFilePatterns": ["libs/constants/**/*.ts"]
       }
     },
+    "lint-fix": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/constants/**/*.ts"],
+        "fix": true
+      }
+    },
+    
     "test": {
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/constants"],

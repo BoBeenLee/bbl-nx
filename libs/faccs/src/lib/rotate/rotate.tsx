@@ -52,7 +52,7 @@ export class Rotate extends React.Component<RotateProps, RotateStates> {
       );
       window.addEventListener(
         'orientationchange',
-        (ev) => {
+        (__) => {
           this.setState({ orientation: orientation ?? 0 });
         },
         false

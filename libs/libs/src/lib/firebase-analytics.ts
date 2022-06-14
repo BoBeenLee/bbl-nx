@@ -1,7 +1,3 @@
-import { createInjectDecorator } from '@bbl-nx/decorators';
-import { traverseObjectKeys, traverseObjectSliceStr } from '@bbl-nx/utils';
-
-const EVENT_TYPE_MAX_LENGTH = 40;
 
 export type Event = {
   type: "test";

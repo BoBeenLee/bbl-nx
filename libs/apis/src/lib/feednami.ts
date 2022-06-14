@@ -5,9 +5,9 @@ const feednami: {
   loadGoogleFormat: (e: any, n: any) => void;
 } = {
   // eslint-disable-next-line @typescript-eslint/no-empty-function
-  load: (e, n) => {},
+  load: () => {},
   // eslint-disable-next-line @typescript-eslint/no-empty-function
-  loadGoogleFormat: (e, n) => {},
+  loadGoogleFormat: () => {},
 };
 
 (feednami.load = function (e: any, n: any) {

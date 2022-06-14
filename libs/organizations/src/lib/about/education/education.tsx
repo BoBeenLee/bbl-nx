@@ -24,7 +24,7 @@ const BottomSeparator = styled(Seperator)`
   margin: 40px 0;
 `;
 
-export function Education(props: EducationProps) {
+export function Education() {
   return (
     <StyledEducation>
       <SubTitle title="Education" />

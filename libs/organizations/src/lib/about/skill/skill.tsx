@@ -37,7 +37,7 @@ const BottomSeparator = styled(Seperator)`
   margin: 40px 0;
 `;
 
-export function Skill(props: SkillProps) {
+export function Skill() {
   const renderItem = (item: CategorySkillsItem) => (
     <Item key={item.name}>
       <ContentTitle title={item.name} uri={item?.uri ?? ''} />

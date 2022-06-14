@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import React, { Suspense, useEffect } from 'react';
+import React, {  useEffect } from 'react';
 import { GetStaticProps } from 'next';
 import styled from 'styled-components';
 
@@ -7,8 +7,8 @@ import { PostCard, Layout } from '@bbl-nx/ui-components';
 import { TistoryItem } from '../../libs/tistory';
 import { getAllPosts, PostItem as MDPostItem } from '../../libs/post';
 import { getFeednamiTistories } from '../../libs/tistory';
-import { postMachine, PostItem } from '@bbl-nx/machines';
-import { interpret, assign, Subscription } from 'xstate';
+import { postMachine } from '@bbl-nx/machines';
+import { interpret, assign } from 'xstate';
 import { waitFor } from 'xstate/lib/waitFor';
 import { useMachine } from '@xstate/react';
 
@@ -33,7 +33,7 @@ const postServiceWithConfig = postMachine.withConfig({
     }),
   },
   services: {
-    fetchTistories: async (ctx, event) => {
+    fetchTistories: async (__, ___) => {
       const response = await getFeednamiTistories(
         'http://cultist-tp.tistory.com/rss'
       );
@@ -101,13 +101,13 @@ const mapTistoryToPosts = (tistories: TistoryItem[]) => {
 
 const PostPage = (props: PostPageProps) => {
   const { postMachineState } = props;
-  const [state, send, service] = useMachine(postServiceWithConfig, {
+  const [state, send] = useMachine(postServiceWithConfig, {
     state: JSON.parse(postMachineState),
   });
 
   useEffect(() => {
     send('FETCH');
-  }, []);
+  }, [send]);
 
   if (!state.matches('Done')) {
     return <Loading>{'Loading...'}</Loading>;

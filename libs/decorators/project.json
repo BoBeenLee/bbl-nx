@@ -20,6 +20,14 @@
         "lintFilePatterns": ["libs/decorators/**/*.ts"]
       }
     },
+    "lint-fix": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/decorators/**/*.ts"],
+        "fix": true
+      }
+    },
     "test": {
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/decorators"],
