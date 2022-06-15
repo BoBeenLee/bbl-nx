@@ -11,7 +11,7 @@ export const firebaseAnalytics = _.once(() => {
     if (!instance) {
       return;
     }
-    instance.analytics().logEvent<Event["type"]>(type, payload as any);
+    instance.analytics().logEvent<Event["type"]>(type, payload);
   };
   const setUserId = (userId: string) => {
     const instance = firebaseInstance();
@@ -37,10 +37,10 @@ export function firebaseTracking<IProps, IStates>(
     props: IProps,
     state: IStates,
     event: typeof firebaseAnalytics,
-    args: any[]
+    args: unknown
   ) => void
 ): any {
-  const func = async (props: IProps, state: IStates, args: any[]) => {
+  const func = async (props: IProps, state: IStates, args: unknown) => {
     trackingConsumer(props, state, firebaseAnalytics, args);
   };
   return createInjectDecorator(func);

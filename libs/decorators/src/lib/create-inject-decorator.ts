@@ -10,12 +10,11 @@ export type MakeData<IProps, IStates, T> = (
 export function createInjectDecorator<IProps, IStates, T>(
   func: MakeData<IProps, IStates, T>
 ): any {
-  return function InjectFunc(__: any, propName: any, descriptor: any) {
+  return function InjectFunc(__: any, propName: string, descriptor: any) {
     const isArrowFunction = !!descriptor.initializer;
     if (isArrowFunction) {
       return injectFuncInArrow(propName, descriptor, func);
     }
-
     return injectFuncInMethod(propName, descriptor, func);
   };
 }
