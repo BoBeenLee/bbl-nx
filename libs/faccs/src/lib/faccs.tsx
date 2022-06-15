@@ -7,7 +7,7 @@ const StyledFaccs = styled.div`
   color: pink;
 `;
 
-export function Faccs(props: FaccsProps) {
+export function Faccs() {
   return (
     <StyledFaccs>
       <h1>Welcome to Faccs!</h1>
