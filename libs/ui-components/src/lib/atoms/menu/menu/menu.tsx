@@ -3,7 +3,7 @@ import { theme } from '@bbl-nx/styles';
 import { CSSProperties } from 'react';
 import { slide as BurgerMenu } from 'react-burger-menu';
 import styled from 'styled-components';
-import Seperator from '../../../atoms/seperator/seperator';
+import Seperator from '../../seperator/seperator';
 import MenuItem from '../menu-item/menu-item';
 
 export interface MenuProps {
