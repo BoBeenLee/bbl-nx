@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { Layout } from '@bbl-nx/ui-components';
-import { Rotate } from '@bbl-nx/organizations';
+import { Rotate } from '@bbl-nx/ui-components';
 
 const Root = styled.div`
   height: 100%;

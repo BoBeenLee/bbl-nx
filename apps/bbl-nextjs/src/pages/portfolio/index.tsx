@@ -1,9 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Layout } from '@bbl-nx/ui-components';
+import { Layout, Portfolio } from '@bbl-nx/ui-components';
 import { companyPortfolios, teamPortfolios } from '@bbl-nx/constants';
-import { Portfolio } from '@bbl-nx/organizations';
 
 const Root = styled.div`
   padding-top: 20px;

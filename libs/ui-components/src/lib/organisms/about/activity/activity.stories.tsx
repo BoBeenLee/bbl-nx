@@ -3,7 +3,7 @@ import { Activity, ActivityProps } from './activity';
 
 export default {
   component: Activity,
-  title: 'Organizations/About/Activity',
+  title: 'Organisms/About/Activity',
 } as Meta;
 
 const Template: Story<ActivityProps> = (args) => <Activity {...args} />;

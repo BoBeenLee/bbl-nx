@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-import { Activity, Education, Experience, Skill } from '@bbl-nx/organizations';
+import { Activity, Education, Experience, Skill } from '@bbl-nx/ui-components';
 
 const Root = styled.div`
   padding-top: 20px;

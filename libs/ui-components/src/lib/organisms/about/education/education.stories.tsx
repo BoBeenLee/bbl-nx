@@ -3,7 +3,7 @@ import { Education, EducationProps } from './education';
 
 export default {
   component: Education,
-  title: 'Organizations/About/Education',
+  title: 'Organisms/About/Education',
 } as Meta;
 
 const Template: Story<EducationProps> = (args) => <Education {...args} />;

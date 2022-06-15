@@ -4,7 +4,7 @@ import { companyPortfolios, teamPortfolios } from '@bbl-nx/constants';
 
 export default {
   component: Portfolio,
-  title: 'Organizations/Portfolio',
+  title: 'Organisms/Portfolio',
 } as Meta;
 
 const Template: Story<PortfolioProps> = (args) => <Portfolio {...args} />;

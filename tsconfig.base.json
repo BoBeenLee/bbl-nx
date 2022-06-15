@@ -27,7 +27,6 @@
       "@bbl-nx/images": ["libs/images/src/index.ts"],
       "@bbl-nx/libs": ["libs/libs/src/index.ts"],
       "@bbl-nx/machines": ["libs/machines/src/index.ts"],
-      "@bbl-nx/organizations": ["libs/organizations/src/index.ts"],
       "@bbl-nx/styles": ["libs/styles/src/index.ts"],
       "@bbl-nx/ui-components": ["libs/ui-components/src/index.ts"],
       "@bbl-nx/utils": ["libs/utils/src/index.ts"],

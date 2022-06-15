@@ -3,7 +3,7 @@ import { Skill, SkillProps } from './skill';
 
 export default {
   component: Skill,
-  title: 'Organizations/About/Skill',
+  title: 'Organisms/About/Skill',
 } as Meta;
 
 const Template: Story<SkillProps> = (args) => <Skill {...args} />;

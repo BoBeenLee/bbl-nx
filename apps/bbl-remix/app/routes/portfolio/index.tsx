@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import styled from 'styled-components';
 
 import { companyPortfolios, teamPortfolios } from '@bbl-nx/constants';
-import { Portfolio } from '@bbl-nx/organizations';
+import { Portfolio } from '@bbl-nx/ui-components';
 
 const Root = styled.div`
   padding-top: 20px;

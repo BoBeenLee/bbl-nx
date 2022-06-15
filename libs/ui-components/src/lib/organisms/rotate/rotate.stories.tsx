@@ -3,7 +3,7 @@ import { Rotate, RotateProps } from './rotate';
 
 export default {
   component: Rotate,
-  title: 'Organizations/Rotate',
+  title: 'Organisms/Rotate',
 } as Meta;
 
 const Template: Story<RotateProps> = (args) => <Rotate {...args} />;
