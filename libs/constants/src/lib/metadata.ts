@@ -1,4 +1,3 @@
-import _ from 'lodash';
 
 const metadataItem = {
   description: 'BoBeen Lee',
@@ -10,4 +9,6 @@ const metadataItem = {
   themeColor: `#5191FD`,
 };
 
-export const getMetadata = () => metadataItem;
+export type MetadataItem = Readonly<typeof metadataItem>;
+
+export const getMetadata = (): MetadataItem => metadataItem;

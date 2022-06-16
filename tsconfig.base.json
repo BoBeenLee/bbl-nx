@@ -33,5 +33,6 @@
       "@bbl-remix/*": ["./apps/bbl-remix/app/*"]
     }
   },
+  "files": ["./types/global.d.ts"],
   "exclude": ["node_modules", "tmp"]
 }

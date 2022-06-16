@@ -47,12 +47,15 @@ const BottomSeparator = styled(Seperator)`
 `;
 
 export function Activity() {
-  const renderItem = (item: ActivityItem) => (
-    <Item key={item.name}>
-      <Title title={item.name} uri={item.url} />
-      <Content>{item.description}</Content>
-    </Item>
-  );
+  const renderItem = (item: ActivityItem) => {
+    
+    return (
+      <Item key={item.name}>
+        <Title title={item.name} uri={item.url} />
+        <Content>{item.description}</Content>
+      </Item>
+    );
+  };
 
   return (
     <StyledActivity>

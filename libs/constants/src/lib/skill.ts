@@ -1,8 +1,4 @@
-export interface SkillItem {
-  uri: string;
-}
-
-export const skills: { [key in string]: SkillItem } = {
+export const skills: Record<string, { uri: string }> = {
   REACT_NATIVE: {
     uri: 'https://facebook.github.io/react-native/',
   },
@@ -71,13 +67,14 @@ export const skills: { [key in string]: SkillItem } = {
   },
 };
 
-export interface CategorySkillsItem {
+
+export type CategorySkillsItem = {
   name: string;
   skills: string[];
   uri?: string;
 }
 
-export const categorySkills: { [key in string]: CategorySkillsItem } = {
+export const categorySkills: Record<string, CategorySkillsItem> = {
   frontend: {
     name: 'Front End',
     skills: [

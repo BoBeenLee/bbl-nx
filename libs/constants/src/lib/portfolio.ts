@@ -1,22 +1,7 @@
 import _ from 'lodash';
 import { images } from '@bbl-nx/images';
 
-export interface PortfolioItem {
-  id: string;
-  name: string;
-  period: string;
-  githubRepoName: string[];
-  skills: string[];
-  summary: string;
-  githubUrl?: string;
-  linkUrl?: string;
-  storybookUrl?: string;
-  googleStoreUrl?: string;
-  appStoreUrl?: string;
-  images: string[];
-}
-
-export const companyPortfolios: PortfolioItem[] = [
+export const companyPortfolios = [
   {
     id: 'Henesis',
     name: 'Henesis',
@@ -195,7 +180,7 @@ export const companyPortfolios: PortfolioItem[] = [
   },
 ];
 
-export const teamPortfolios: PortfolioItem[] = [
+export const teamPortfolios = [
   {
     id: 'onesecondmusicgame',
     name: 'onesecondmusicgame',
@@ -370,3 +355,5 @@ export const teamPortfolios: PortfolioItem[] = [
     images: _.values(images.portfolio.softhome),
   },
 ];
+
+export type PortfolioItem = Merge<MergeArrayType<typeof companyPortfolios>, MergeArrayType<typeof teamPortfolios>>;

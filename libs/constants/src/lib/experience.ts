@@ -1,11 +1,5 @@
-export interface ExperienceItem {
-  title: string;
-  titleUri: string;
-  period: string;
-  role: string;
-}
 
-export const experiences: ExperienceItem[] = [
+export const experiences = [
   {
     title: 'Haechi Labs',
     titleUri: 'https://haechi.io/ko',
@@ -37,3 +31,6 @@ export const experiences: ExperienceItem[] = [
     role: 'Developer Intern',
   },
 ];
+
+
+export type ExperienceItem = Readonly<MergeArrayType<typeof experiences>>;

@@ -1,8 +1,3 @@
-export interface ActivityItem {
-  name: string;
-  url: string;
-  description: string;
-}
 
 export const activity = [
   {
@@ -16,3 +11,5 @@ export const activity = [
     description: 'Developer',
   },
 ];
+
+export type ActivityItem = Readonly<MergeArrayType<typeof activity>>;
