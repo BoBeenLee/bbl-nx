@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import { PortfolioItem, skills as allSkills } from '@bbl-nx/constants';
-import { PortfolioCard, SubTitle } from '@bbl-nx/ui-components';
+import { SubTitle } from '../../atoms';
+import { PortfolioCard } from '../../molecules';
 import styled from 'styled-components';
 
 export interface PortfolioProps {

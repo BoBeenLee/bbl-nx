@@ -5,7 +5,7 @@ import {
   LineText,
   Seperator,
   SubTitle,
-} from '@bbl-nx/ui-components';
+} from '../../../atoms';
 import { media } from '@bbl-nx/utils';
 import styled from 'styled-components';
 

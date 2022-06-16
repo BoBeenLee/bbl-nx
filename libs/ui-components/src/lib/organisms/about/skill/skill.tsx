@@ -5,7 +5,7 @@ import {
   LineText,
   Seperator,
   SubTitle,
-} from '@bbl-nx/ui-components';
+} from '../../../atoms';
 import styled from 'styled-components';
 
 /* eslint-disable-next-line */

@@ -6,7 +6,7 @@ import {
   SubTitle,
   LineText,
   Seperator,
-} from '@bbl-nx/ui-components';
+} from '../../../atoms';
 import { activity, ActivityItem } from '@bbl-nx/constants';
 
 /* eslint-disable-next-line */
