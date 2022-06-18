@@ -1,10 +1,9 @@
-import _ from 'lodash';
-import React, { Suspense, useEffect } from 'react';
+import React, { Suspense } from 'react';
 import { GetStaticProps } from 'next';
 import styled from 'styled-components';
 
-import { PostCard, Layout, Loading } from '@bbl-nx/ui-components';
-import { interpret, assign } from 'xstate';
+import { Layout, Loading } from '@bbl-nx/ui-components';
+import { interpret } from 'xstate';
 import { waitFor } from 'xstate/lib/waitFor';
 import { postServiceWithConfig } from '../../machines/post-service-machine';
 import dynamic from 'next/dynamic';
