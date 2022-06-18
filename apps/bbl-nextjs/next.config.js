@@ -8,9 +8,9 @@ module.exports = withNx(
     compiler: {
       // ssr and displayName are configured by default
       styledComponents: true,
-      removeConsole: {
-        exclude: ['error'],
-      },
+      // removeConsole: {
+      //   exclude: ['error'],
+      // },
     },
     nx: {
       // Set this to true if you would like to to use SVGR

@@ -4,15 +4,10 @@ export interface Typegen0 {
   '@@xstate/typegen': true;
   eventsCausingActions: {
     updatePostsContext:
-      | 'done.invoke.postMachine.FetchingPosts.FetchingTistories.Fetching:invocation[0]'
+      | 'UPDATE'
       | 'done.invoke.postMachine.FetchingPosts.FetchingMD.Fetching:invocation[0]';
   };
   internalEvents: {
-    'done.invoke.postMachine.FetchingPosts.FetchingTistories.Fetching:invocation[0]': {
-      type: 'done.invoke.postMachine.FetchingPosts.FetchingTistories.Fetching:invocation[0]';
-      data: unknown;
-      __tip: 'See the XState TS docs to learn how to strongly type this.';
-    };
     'done.invoke.postMachine.FetchingPosts.FetchingMD.Fetching:invocation[0]': {
       type: 'done.invoke.postMachine.FetchingPosts.FetchingMD.Fetching:invocation[0]';
       data: unknown;
@@ -21,17 +16,15 @@ export interface Typegen0 {
     'xstate.init': { type: 'xstate.init' };
   };
   invokeSrcNameMap: {
-    fetchTistories: 'done.invoke.postMachine.FetchingPosts.FetchingTistories.Fetching:invocation[0]';
     fetchMD: 'done.invoke.postMachine.FetchingPosts.FetchingMD.Fetching:invocation[0]';
   };
   missingImplementations: {
-    actions: 'updatePostsContext';
-    services: 'fetchTistories' | 'fetchMD';
+    actions: never;
+    services: 'fetchMD';
     guards: never;
     delays: never;
   };
   eventsCausingServices: {
-    fetchTistories: 'FETCH';
     fetchMD: 'xstate.init';
   };
   eventsCausingGuards: {};
@@ -39,10 +32,9 @@ export interface Typegen0 {
   matchesStates:
     | 'FetchingPosts'
     | 'FetchingPosts.FetchingTistories'
-    | 'FetchingPosts.FetchingTistories.Fetching'
     | 'FetchingPosts.FetchingTistories.Done'
     | 'FetchingPosts.FetchingTistories.Error'
-    | 'FetchingPosts.FetchingTistories.Idle'
+    | 'FetchingPosts.FetchingTistories.Initial'
     | 'FetchingPosts.FetchingMD'
     | 'FetchingPosts.FetchingMD.Fetching'
     | 'FetchingPosts.FetchingMD.Done'
@@ -53,7 +45,7 @@ export interface Typegen0 {
           | 'FetchingTistories'
           | 'FetchingMD'
           | {
-              FetchingTistories?: 'Fetching' | 'Done' | 'Error' | 'Idle';
+              FetchingTistories?: 'Done' | 'Error' | 'Initial';
               FetchingMD?: 'Fetching' | 'Done' | 'Error';
             };
       };

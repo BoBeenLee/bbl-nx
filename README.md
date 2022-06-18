@@ -48,11 +48,6 @@ npm run test:affected
   - ui-components: https://bobeenlee.github.io/bbl-nx/ui-components/
 - Deploy to Vercel
   - https://bbl-nx.vercel.app/
-
-## State Diagram
-
-- Post 조회
-[![Post Machine](https://stately.ai/registry/machines/d896bb7e-cfde-4a9c-b62e-cb716c43df7d.png)](https://stately.ai/viz/d896bb7e-cfde-4a9c-b62e-cb716c43df7d)
   
 ## Understand your workspace
 

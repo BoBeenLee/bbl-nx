@@ -4,6 +4,11 @@ import { GlobalCSS } from '@bbl-nx/styles';
 import { NextPage } from 'next';
 import Head from 'next/head';
 import { getMetadata } from '@bbl-nx/constants';
+import {
+  QueryClient,
+  QueryClientProvider,
+  Hydrate,
+} from 'react-query';
 
 type NextPageWithLayout = NextPage & {
   getLayout?: (page: React.ReactElement) => React.ReactNode;
@@ -18,6 +23,8 @@ const MyApp = (props: Props) => {
   const TargetComponent = Component;
   const getLayout = Component.getLayout ?? ((page) => page);
   const metadata = getMetadata();
+  const [queryClient] = React.useState(() => new QueryClient());
+
   return (
     <React.Fragment>
       <Head>
@@ -38,7 +45,11 @@ const MyApp = (props: Props) => {
         <meta name="keywords" content={metadata.keywords} />
       </Head>
       <GlobalCSS />
-      {getLayout(<TargetComponent {...pageProps} />)}
+      <QueryClientProvider client={queryClient}>
+        <Hydrate state={pageProps.dehydratedState}>
+          {getLayout(<TargetComponent {...pageProps} />)}
+        </Hydrate>
+      </QueryClientProvider>
     </React.Fragment>
   );
 };

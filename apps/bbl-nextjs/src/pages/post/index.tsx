@@ -1,16 +1,13 @@
 import _ from 'lodash';
-import React, {  useEffect } from 'react';
+import React, { Suspense, useEffect } from 'react';
 import { GetStaticProps } from 'next';
 import styled from 'styled-components';
 
 import { PostCard, Layout } from '@bbl-nx/ui-components';
-import { TistoryItem } from '../../libs/tistory';
-import { getAllPosts, PostItem as MDPostItem } from '../../libs/post';
-import { getFeednamiTistories } from '../../libs/tistory';
-import { postMachine } from '@bbl-nx/machines';
 import { interpret, assign } from 'xstate';
 import { waitFor } from 'xstate/lib/waitFor';
-import { useMachine } from '@xstate/react';
+import { postServiceWithConfig } from '../../machines/post-service-machine';
+import dynamic from 'next/dynamic';
 
 interface PostPageProps {
   postMachineState: string;
@@ -23,30 +20,6 @@ const Root = styled.div`
 const Loading = styled.div`
   height: 100vh;
 `;
-
-const postServiceWithConfig = postMachine.withConfig({
-  actions: {
-    updatePostsContext: assign((ctx, event) => {
-      return {
-        posts: [...ctx.posts, ...event.data],
-      };
-    }),
-  },
-  services: {
-    fetchTistories: async (__, ___) => {
-      const response = await getFeednamiTistories(
-        'http://cultist-tp.tistory.com/rss'
-      );
-      const data = mapTistoryToPosts(response);
-      return data;
-    },
-    fetchMD: async () => {
-      const response = await getAllPosts();
-      const data = mapRemarkToPosts(response);
-      return data;
-    },
-  },
-});
 
 const makeMDPostState = async () => {
   const postService = interpret(postServiceWithConfig);
@@ -71,70 +44,27 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-const mapRemarkToPosts = (allMarkdownRemark: MDPostItem[]) => {
-  const posts = allMarkdownRemark;
-  return _.map(
-    posts,
-    ({ slug, frontmatter: { title, date, path, published } }) => {
-      return {
-        createdAt: date,
-        id: slug,
-        title,
-        url: path ?? '',
-        published,
-        isExternal: false,
-      };
-    }
-  );
-};
-
-const mapTistoryToPosts = (tistories: TistoryItem[]) => {
-  return _.map(tistories, (item) => ({
-    createdAt: item.date,
-    id: item.guid,
-    title: item.title,
-    url: item.link,
-    published: true,
-    isExternal: true,
-  }));
-};
+const ClientPostRoute = dynamic(
+  () => import('../../routes/post/index.client'),
+  {
+    ssr: false,
+  }
+);
 
 const PostPage = (props: PostPageProps) => {
-  const { postMachineState } = props;
-  const [state, send] = useMachine(postServiceWithConfig, {
-    state: JSON.parse(postMachineState),
-  });
-
-  useEffect(() => {
-    send('FETCH');
-  }, [send]);
-
-  if (!state.matches('Done')) {
-    return <Loading>{'Loading...'}</Loading>;
-  }
-  const posts = state.context.posts;
-  const postsByDESC = _.orderBy(posts, ['date'], ['desc']);
-  const filterPublished = postsByDESC.filter((item) => item.published);
-
   return (
     <Root>
-      {_.map(filterPublished, (item) => {
-        const { title, createdAt, url, isExternal } = item;
-        return (
-          <PostCard
-            key={item.id}
-            title={title}
-            {...(isExternal ? { externalUrl: url } : { url })}
-            createdAt={createdAt}
-          />
-        );
-      })}
+      <ClientPostRoute {...props} />
     </Root>
   );
 };
 
 PostPage.getLayout = function getLayout(page: React.ReactElement) {
-  return <Layout>{page}</Layout>;
+  return (
+    <Layout>
+      <Suspense fallback={<Loading>...Loading</Loading>}>{page}</Suspense>
+    </Layout>
+  );
 };
 
 export default PostPage;
