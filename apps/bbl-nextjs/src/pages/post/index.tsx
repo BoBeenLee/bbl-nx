@@ -3,7 +3,7 @@ import React, { Suspense, useEffect } from 'react';
 import { GetStaticProps } from 'next';
 import styled from 'styled-components';
 
-import { PostCard, Layout } from '@bbl-nx/ui-components';
+import { PostCard, Layout, Loading } from '@bbl-nx/ui-components';
 import { interpret, assign } from 'xstate';
 import { waitFor } from 'xstate/lib/waitFor';
 import { postServiceWithConfig } from '../../machines/post-service-machine';
@@ -15,9 +15,10 @@ interface PostPageProps {
 
 const Root = styled.div`
   padding-top: 20px;
+  min-height: 100vh;
 `;
 
-const Loading = styled.div`
+const PageLoading = styled(Loading)`
   height: 100vh;
 `;
 
@@ -62,7 +63,7 @@ const PostPage = (props: PostPageProps) => {
 PostPage.getLayout = function getLayout(page: React.ReactElement) {
   return (
     <Layout>
-      <Suspense fallback={<Loading>...Loading</Loading>}>{page}</Suspense>
+      <Suspense fallback={<PageLoading size={100} />}>{page}</Suspense>
     </Layout>
   );
 };

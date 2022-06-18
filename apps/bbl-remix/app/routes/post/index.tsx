@@ -7,12 +7,14 @@ import { interpret, assign } from 'xstate';
 import { waitFor } from 'xstate/lib/waitFor';
 import { postServiceWithConfig } from '~/machines/post-service-machine';
 import PostClient from '~/components/post.client';
+import { Loading } from "@bbl-nx/ui-components";
 
 const Root = styled.div`
   padding-top: 20px;
+  min-height: 100vh;
 `;
 
-const Loading = styled.div`
+const PageLoading = styled(Loading)`
   height: 100vh;
 `;
 
@@ -39,7 +41,7 @@ export default function Posts() {
 
   return (
     <Root>
-      <ClientOnly fallback={<Loading>Loading...</Loading>}>
+      <ClientOnly fallback={<PageLoading size={40} />}>
         {() => <PostClient postMachineState={postMachineState} />}
       </ClientOnly>
     </Root>
