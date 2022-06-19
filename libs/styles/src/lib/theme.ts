@@ -1,5 +1,5 @@
 
-import { ModeType, DefaultTheme } from "styled-components";
+import { ModeType } from "styled-components";
 import theme from 'styled-theming';
 
 export interface ThemeProps {
