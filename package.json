@@ -16,7 +16,7 @@
     "eslint": "nx run-many --target=lint --all",
     "eslint:fix": "nx run-many --target=lint-fix --all",
     "test": "nx test",
-    "test:affected": "nx affected --target=test --base= origin/master~1 --head= origin/master",
+    "test:affected": "nx affected --target=test --base=master~1 --head=master",
     "build-storybook": "nx run-many --target=build-storybook --projects=ui-components",
     "ui-components:storybook": "nx run ui-components:storybook",
     "ui-components:build-storybook": "nx run ui-components:build-storybook"
