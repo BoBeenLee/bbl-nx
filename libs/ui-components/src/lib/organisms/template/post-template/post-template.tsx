@@ -1,4 +1,4 @@
-import { theme } from '@bbl-nx/styles';
+import { getThemeProps } from '@bbl-nx/styles';
 import { media } from '@bbl-nx/utils';
 import styled from 'styled-components';
 import SubTitle from '../../../atoms/title/sub-title/sub-title';
@@ -28,7 +28,7 @@ const StyledPostTemplate = styled.div`
   line-height: 1.5;
 
   a {
-    color: ${theme.secondary};
+    color: ${getThemeProps("secondary")};
   }
   ${media.mobile`
     padding: 30px 10px 40px 10px;
@@ -38,7 +38,7 @@ const StyledPostTemplate = styled.div`
 const StyledSubTitle = styled(SubTitle)`
   font-size: 30px;
   margin-bottom: 20px;
-  color: ${theme.primary};
+  color: ${getThemeProps("primary")};
   font-weight: bold;
 `;
 

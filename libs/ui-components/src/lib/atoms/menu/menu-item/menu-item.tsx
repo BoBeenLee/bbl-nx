@@ -1,4 +1,4 @@
-import { theme } from '@bbl-nx/styles';
+import { getThemeProps } from '@bbl-nx/styles';
 import styled from 'styled-components';
 
 export interface MenuItemProps {
@@ -13,10 +13,10 @@ const StyledMenuItem = styled.div`
 const MenuLink = styled.a``;
 
 const MenuLinkText = styled.span`
-  color: ${theme.primary};
+  color: ${getThemeProps("primary")};
   text-decoration: none;
   &:hover {
-    color: ${theme.secondary};
+    color: ${getThemeProps("secondary")};
   }
 `;
 

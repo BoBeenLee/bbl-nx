@@ -1,14 +1,11 @@
 import { AppProps } from 'next/app';
 import React from 'react';
-import { GlobalCSS } from '@bbl-nx/styles';
+import { GlobalCSS, defaultMode } from '@bbl-nx/styles';
 import { NextPage } from 'next';
 import Head from 'next/head';
 import { getMetadata } from '@bbl-nx/constants';
-import {
-  QueryClient,
-  QueryClientProvider,
-  Hydrate,
-} from 'react-query';
+import { QueryClient, QueryClientProvider, Hydrate } from 'react-query';
+import { ThemeProvider } from "styled-components";
 
 type NextPageWithLayout = NextPage & {
   getLayout?: (page: React.ReactElement) => React.ReactNode;
@@ -45,11 +42,13 @@ const MyApp = (props: Props) => {
         <meta name="keywords" content={metadata.keywords} />
       </Head>
       <GlobalCSS />
-      <QueryClientProvider client={queryClient}>
-        <Hydrate state={pageProps.dehydratedState}>
-          {getLayout(<TargetComponent {...pageProps} />)}
-        </Hydrate>
-      </QueryClientProvider>
+      <ThemeProvider theme={defaultMode}>
+        <QueryClientProvider client={queryClient}>
+          <Hydrate state={pageProps.dehydratedState}>
+            {getLayout(<TargetComponent {...pageProps} />)}
+          </Hydrate>
+        </QueryClientProvider>
+      </ThemeProvider>
     </React.Fragment>
   );
 };

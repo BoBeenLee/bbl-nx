@@ -4935,13 +4935,21 @@
   "resolved" "https://registry.npmjs.org/@types/stack-utils/-/stack-utils-2.0.1.tgz"
   "version" "2.0.1"
 
-"@types/styled-components@^5.1.4", "@types/styled-components@5.1.25":
+"@types/styled-components@*", "@types/styled-components@^5.1.4", "@types/styled-components@5.1.25":
   "integrity" "sha512-fgwl+0Pa8pdkwXRoVPP9JbqF0Ivo9llnmsm+7TCI330kbPIFd9qv1Lrhr37shf4tnxCOSu+/IgqM7uJXLWZZNQ=="
   "resolved" "https://registry.npmjs.org/@types/styled-components/-/styled-components-5.1.25.tgz"
   "version" "5.1.25"
   dependencies:
     "@types/hoist-non-react-statics" "*"
     "@types/react" "*"
+    "csstype" "^3.0.2"
+
+"@types/styled-theming@^2.2.5":
+  "integrity" "sha512-7Rxu3Oj2nFG40+barPjt/5hzexlZTjWKDHfngrprxO2+y9RhxtzJ2wSiZrY9+kwtC0mmlI0poVW4PxTiobv1qQ=="
+  "resolved" "https://registry.npmjs.org/@types/styled-theming/-/styled-theming-2.2.5.tgz"
+  "version" "2.2.5"
+  dependencies:
+    "@types/styled-components" "*"
     "csstype" "^3.0.2"
 
 "@types/tapable@^1", "@types/tapable@^1.0.5":
@@ -20736,6 +20744,11 @@
   "integrity" "sha512-LqPQrbBh3egD57NBcHET4qcgshPks+yblyhPlH2GY8oaDgKs8SK4C3dBh3oSJjgzJ3G5t1SYEZGHkP+QEpX9EQ=="
   "resolved" "https://registry.npmjs.org/styled-jsx/-/styled-jsx-5.0.2.tgz"
   "version" "5.0.2"
+
+"styled-theming@^2.2.0":
+  "integrity" "sha512-5nqUoCR/BJ6ziJ39xN/K5nmrzMn37BgPc693vgeQlO0hMaat/hJvJ0/u0vtm1ZQxU82sdltEbynqjkoYYMVwaA=="
+  "resolved" "https://registry.npmjs.org/styled-theming/-/styled-theming-2.2.0.tgz"
+  "version" "2.2.0"
 
 "stylehacks@^5.1.0":
   "integrity" "sha512-SzLmvHQTrIWfSgljkQCw2++C9+Ne91d/6Sp92I8c5uHTcy/PgeHamwITIbBW9wnFTY/3ZfSXR9HIL6Ikqmcu6Q=="

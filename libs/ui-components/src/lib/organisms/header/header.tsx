@@ -1,7 +1,12 @@
 import _ from 'lodash';
-import { dimension, theme } from '@bbl-nx/styles';
+import {
+  dimension,
+  getThemeProps,
+  getThemeValueByMode,
+  ThemeProps,
+} from '@bbl-nx/styles';
 import { isIE, media } from '@bbl-nx/utils';
-import styled, { css } from 'styled-components';
+import styled, { css, withTheme } from 'styled-components';
 import Headroom from 'react-headroom';
 import { images } from '@bbl-nx/images';
 import { useCallback, useState } from 'react';
@@ -9,7 +14,7 @@ import Seperator from '../../atoms/seperator/seperator';
 import Avatar from '../../atoms/avatar/avatar';
 import Menu from '../../atoms/menu/menu/menu';
 
-export interface HeaderProps {
+export interface HeaderProps extends ThemeProps {
   titles: Array<{ url: string; name: string }>;
 }
 
@@ -74,10 +79,10 @@ const Title = styled.a``;
 const TitleText = styled.span`
   /* font-size: 11px; */
   padding: 0.5em;
-  color: ${theme.primary};
+  color: ${getThemeProps('primary')};
   text-decoration: none;
   &:hover {
-    color: ${theme.secondary};
+    color: ${getThemeProps('secondary')};
   }
 
   ${media.mobile`
@@ -114,8 +119,11 @@ const SeperatorBottom = styled(Seperator)`
 `;
 
 export function Header(props: HeaderProps) {
-  const { titles } = props;
-  const styles = Object.assign({}, { backgroundColor: '#fff' });
+  const { titles, theme } = props;
+  const styles = Object.assign(
+    {},
+    { backgroundColor: getThemeValueByMode(theme?.mode ?? 'light', 'bgColor') }
+  );
   const [isOpenHeader, setIsOpenHeader] = useState(true);
   const [isOpenMenu, setIsOpenMenu] = useState(false);
 
@@ -181,4 +189,4 @@ export function Header(props: HeaderProps) {
   );
 }
 
-export default Header;
+export default withTheme(Header);

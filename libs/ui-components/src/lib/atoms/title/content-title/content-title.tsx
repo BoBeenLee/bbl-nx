@@ -1,4 +1,4 @@
-import { theme } from '@bbl-nx/styles';
+import { getThemeProps } from '@bbl-nx/styles';
 import styled, { css } from 'styled-components';
 
 export interface ContentTitleProps {
@@ -10,7 +10,7 @@ export interface ContentTitleProps {
 const StyledContentTitle = styled.a`
   font-size: 18px;
   font-weight: 600;
-  color: ${theme.primary};
+  color: ${getThemeProps("primary")};
   line-height: 2;
   ${(props) =>
     props.href

@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { theme } from '@bbl-nx/styles';
+import { lightTheme } from '@bbl-nx/styles';
 import chroma from "chroma-js";
 
 /* eslint-disable-next-line */
@@ -30,15 +30,15 @@ function getKeys<T>(obj: T): (keyof T)[] {
 }
 
 export function Colors() {
-  const themeKeys = getKeys(theme);
-  const textColor = chroma.average(Object.values(theme)).hex();
+  const themeKeys = getKeys(lightTheme);
+  const textColor = chroma.average(Object.values(lightTheme)).hex();
   return (
     <StyledColors>
       {themeKeys.map((themeKey) => {
         return (
-          <ColorItem key={themeKey} $bgColor={theme[themeKey]}>
+          <ColorItem key={themeKey} $bgColor={lightTheme[themeKey]}>
             <ColorText $color={textColor}>{`${themeKey}`}</ColorText>
-            <ColorText $color={textColor}>{`${theme[themeKey]}`}</ColorText>
+            <ColorText $color={textColor}>{`${lightTheme[themeKey]}`}</ColorText>
           </ColorItem>
         );
       })}

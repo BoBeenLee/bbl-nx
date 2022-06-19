@@ -1,4 +1,4 @@
-import { theme } from '@bbl-nx/styles';
+import { getThemeProps } from '@bbl-nx/styles';
 import { media } from '@bbl-nx/utils';
 import {
   GoOctoface as OctofaceIcon,
@@ -14,7 +14,7 @@ const StyledFooter = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  background-color: ${theme.lineColor};
+  background-color: ${getThemeProps("lineColor")};
   height: 300px;
   ${media.mobile`
         height: 200px;
@@ -52,10 +52,10 @@ const ContactColumnOne = styled(ContactColumn)`
 `;
 
 const ContactItem = styled.a`
-  color: ${theme.primary};
+  color: ${getThemeProps("primary")};
   padding: 0 0;
   &:hover {
-    color: ${theme.secondary};
+    color: ${getThemeProps("secondary")};
   }
 `;
 

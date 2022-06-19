@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { DiAndroid, DiApple } from 'react-icons/di';
 import { GoLink as LinkIcon, GoMarkGithub as GithubIcon } from 'react-icons/go';
 
-import { theme } from '@bbl-nx/styles';
+import { getThemeProps } from '@bbl-nx/styles';
 import { media } from '@bbl-nx/utils';
 import { images } from '@bbl-nx/images';
 import Seperator from '../../../atoms/seperator/seperator';
@@ -26,7 +26,7 @@ export interface PortfolioCardProps {
 const StyledPortfolioCard = styled.div`
   display: grid;
   grid-template-columns: auto 2fr 1fr;
-  color: ${theme.primary};
+  color: ${getThemeProps("primary")};
 `;
 
 const Name = styled.a`
@@ -36,7 +36,7 @@ const Name = styled.a`
   flex-direction: row;
   align-items: center;
   font-size: 20px;
-  color: ${theme.primary};
+  color: ${getThemeProps("primary")};
   padding-left: 10px;
   margin-right: 15px;
   text-decoration: none;
@@ -49,7 +49,7 @@ const Period = styled.div`
   flex-direction: row;
   align-items: center;
   font-size: 13px;
-  color: ${theme.third};
+  color: ${getThemeProps("third")};
 `;
 
 const Link = styled.div`
@@ -63,10 +63,10 @@ const Link = styled.div`
 
 const Icon = styled.a`
   margin-left: 10px;
-  color: ${theme.primary};
+  color: ${getThemeProps("primary")};
   text-decoration: none;
   &:hover {
-    color: ${theme.secondary};
+    color: ${getThemeProps("secondary")};
   }
 `;
 
@@ -74,16 +74,16 @@ const Skills = styled.div`
   grid-column: 1/4;
   grid-row: 2;
   font-size: 13px;
-  color: ${theme.secondary};
+  color: ${getThemeProps("secondary")};
   padding: 15px 0px 10px 10px;
 `;
 
 const SkillItem = styled.div`
   display: inline-block;
-  color: ${theme.primary};
+  color: ${getThemeProps("primary")};
   line-height: 1.5;
   margin-right: 10px;
-  border: 1px solid ${theme.third};
+  border: 1px solid ${getThemeProps("third")};
   padding: 4px 8px;
   border-radius: 15px;
   margin-bottom: 10px;
@@ -92,10 +92,10 @@ const SkillItem = styled.div`
 const SkillLinkItem = styled.a`
   display: inline-block;
   text-decoration: none;
-  color: ${theme.primary};
+  color: ${getThemeProps("primary")};
   line-height: 1.5;
   margin-right: 10px;
-  border: 1px solid ${theme.third};
+  border: 1px solid ${getThemeProps("third")};
   padding: 4px 8px;
   border-radius: 15px;
   margin-bottom: 10px;
@@ -109,7 +109,7 @@ const Summary = styled.div`
   grid-row: 3;
   padding-left: 10px;
   font-size: 12px;
-  color: ${theme.third};
+  color: ${getThemeProps("third")};
 `;
 
 const PhotoGalleryGroup = styled.div`

@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import { GoBook as GoBookIcon } from 'react-icons/go';
 import { media, toDateTimeText } from '@bbl-nx/utils';
 import { DATE_TIME_FORMAT5 } from "@bbl-nx/utils";
-import { theme } from '@bbl-nx/styles';
+import { getThemeProps } from '@bbl-nx/styles';
 import Seperator from '../../../atoms/seperator/seperator';
 import SubTitle from '../../../atoms/title/sub-title/sub-title';
 
@@ -49,7 +49,7 @@ const Date = styled.div`
   align-items: flex-end;
   line-height: 16px;
   font-size: 13px;
-  color: ${theme.primary};
+  color: ${getThemeProps("primary")};
   justify-content: flex-end;
   ${media.mobile`
   line-height: 20px;
@@ -59,7 +59,7 @@ const Date = styled.div`
 
 const LinkCSS = css`
   font-size: 13px;
-  color: ${theme.secondary};
+  color: ${getThemeProps("secondary")};
   text-decoration: none;
 
   &:hover {

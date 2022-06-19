@@ -1,4 +1,4 @@
-import { theme } from '@bbl-nx/styles';
+import { getThemeProps } from '@bbl-nx/styles';
 import styled from 'styled-components';
 
 export interface SubTitleProps {
@@ -8,7 +8,7 @@ export interface SubTitleProps {
 const StyledSubTitle = styled.div`
   font-size: 30px;
   font-weight: 400;
-  color: ${theme.third};
+  color: ${getThemeProps("third")};
 `;
 
 export function SubTitle(props: SubTitleProps) {

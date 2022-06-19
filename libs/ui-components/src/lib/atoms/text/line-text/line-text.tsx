@@ -1,4 +1,4 @@
-import { theme } from '@bbl-nx/styles';
+import { getThemeProps } from "@bbl-nx/styles";
 import styled from 'styled-components';
 
 export interface LineTextProps {
@@ -9,7 +9,7 @@ export interface LineTextProps {
 const StyledLineText = styled.div`
   font-size: 13px;
   font-weight: 400;
-  color: ${theme.third};
+  color: ${getThemeProps("third")};
   line-height: 1.5;
 `;
 

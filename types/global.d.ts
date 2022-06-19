@@ -1,4 +1,4 @@
-
+import "./styled";
 
 type ExtractArray<T extends any[]> = T extends (infer K)[] ? K : never;
 
