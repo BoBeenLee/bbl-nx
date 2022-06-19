@@ -1,3 +1,4 @@
+
 export const theme = {
   bgColor: '#fff',
   primary: '#333333',
