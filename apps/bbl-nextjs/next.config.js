@@ -4,7 +4,7 @@ const withImages = require('next-images');
 
 module.exports = withNx(
   withImages({
-    swcMinify: false,
+    swcMinify: true,
     compiler: {
       // ssr and displayName are configured by default
       styledComponents: true,
