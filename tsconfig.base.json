@@ -24,6 +24,7 @@
       "@bbl-nx/decorators": ["libs/decorators/src/index.ts"],
       "@bbl-nx/faccs": ["libs/faccs/src/index.ts"],
       "@bbl-nx/hocs": ["libs/hocs/src/index.ts"],
+      "@bbl-nx/hooks": ["libs/hooks/src/index.ts"],
       "@bbl-nx/images": ["libs/images/src/index.ts"],
       "@bbl-nx/libs": ["libs/libs/src/index.ts"],
       "@bbl-nx/machines": ["libs/machines/src/index.ts"],

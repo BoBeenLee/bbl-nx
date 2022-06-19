@@ -9,6 +9,7 @@
     "decorators": "libs/decorators",
     "faccs": "libs/faccs",
     "hocs": "libs/hocs",
+    "hooks": "libs/hooks",
     "images": "libs/images",
     "libs": "libs/libs",
     "machines": "libs/machines",

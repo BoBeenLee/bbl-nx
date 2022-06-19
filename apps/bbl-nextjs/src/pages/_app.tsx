@@ -5,7 +5,8 @@ import { NextPage } from 'next';
 import Head from 'next/head';
 import { getMetadata } from '@bbl-nx/constants';
 import { QueryClient, QueryClientProvider, Hydrate } from 'react-query';
-import { ThemeProvider } from "styled-components";
+import { ThemeProvider } from 'styled-components';
+import { useDarkMode } from '@bbl-nx/hooks';
 
 type NextPageWithLayout = NextPage & {
   getLayout?: (page: React.ReactElement) => React.ReactNode;
@@ -21,7 +22,7 @@ const MyApp = (props: Props) => {
   const getLayout = Component.getLayout ?? ((page) => page);
   const metadata = getMetadata();
   const [queryClient] = React.useState(() => new QueryClient());
-
+  const [themeMode] = useDarkMode();
   return (
     <React.Fragment>
       <Head>
@@ -42,7 +43,7 @@ const MyApp = (props: Props) => {
         <meta name="keywords" content={metadata.keywords} />
       </Head>
       <GlobalCSS />
-      <ThemeProvider theme={defaultMode}>
+      <ThemeProvider theme={{ ...defaultMode, mode: themeMode }}>
         <QueryClientProvider client={queryClient}>
           <Hydrate state={pageProps.dehydratedState}>
             {getLayout(<TargetComponent {...pageProps} />)}
