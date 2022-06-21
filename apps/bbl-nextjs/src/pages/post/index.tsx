@@ -8,7 +8,6 @@ import { interpret } from 'xstate';
 import { waitFor } from 'xstate/lib/waitFor';
 import { postServiceWithConfig } from '../../machines/post-service-machine';
 import { useQuery } from 'react-query';
-
 import { PostCard } from '@bbl-nx/ui-components';
 import { useMachine } from '@xstate/react';
 import { fetchTistories } from '../../apis/post';
@@ -58,7 +57,7 @@ const PostPage = (props: PostPageProps) => {
     suspense: true,
   });
   const posts = [...state.context.posts, ...data];
-  const postsByDESC = _.orderBy(posts, ['date'], ['desc']);
+  const postsByDESC = _.orderBy(posts, ['createdAt'], ['desc']);
   const filterPublished = postsByDESC.filter((item) => item.published);
 
   return (
