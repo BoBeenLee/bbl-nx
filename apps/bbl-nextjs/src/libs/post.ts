@@ -17,9 +17,6 @@ export type PostItem = {
 // Add markdown files in `src/posts`
 const postsDirectory = join(
   process.cwd(),
-  'apps',
-  'bbl-nextjs',
-  'src',
   'posts'
 );
 
