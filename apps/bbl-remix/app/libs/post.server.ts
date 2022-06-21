@@ -25,7 +25,7 @@ export type PostMarkdownAttributes = {
 
 // Relative to the server output not the source!
 // i.e. netlify/functions/server/build/index.js
-const postsPath = path.join(__dirname, '../', 'posts');
+const postsPath = path.join(__dirname, '../../../../', 'posts');
 
 export const getPostBySlug = async (slug: string): Promise<PostItem> => {
   const realSlug = slug.replace(/\.md$/, '');

@@ -44,6 +44,7 @@ export default function (plop) {
       },
     ],
     actions: (data) => {
+      const templateDir = "tools/generators/plop-templates";
       const componentName = transformName(data.componentName);
       const componentFolder = data.componentFolder;
       const layerFolder = data.layerFolder;
@@ -62,7 +63,7 @@ export default function (plop) {
         actions.push({
           type: 'add',
           path: `${componentDir}/${transformFileName(file, componentName)}`,
-          templateFile: `plop-templates/ui-components/${file}`,
+          templateFile: `${templateDir}/ui-components/${file}`,
         });
       });
 
