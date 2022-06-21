@@ -15,12 +15,51 @@ export default function (plop) {
     return str.replace(`component`, replaceStr);
   };
 
-  const transformFileName = (componentFileName, componentName) => {
+  const transformComponentFileName = (componentFileName, componentName) => {
     return transformComponentName(
       transformFileTxtName(componentFileName),
       componentName
     );
   };
+
+  plop.setGenerator('post', {
+    description: 'new post in repo',
+    prompts: [
+      {
+        type: 'input',
+        name: 'postName',
+        message: 'Post Name: ',
+      },
+    ],
+    actions: (data) => {
+      const templateDir = 'tools/generators/plop-templates';
+      const postFileName = transformName(data.postName);
+      const postDir = `posts`;
+      const actions = [];
+
+      actions.push({
+        type: 'add',
+        path: `${postDir}/${transformName(postFileName)}.md`,
+        templateFile: `${templateDir}/posts/article.md`,
+      });
+
+      actions.push({
+        type: 'modify',
+        path: `${postDir}/${transformName(postFileName)}.md`,
+        pattern: /(-- PLOP TITLE PATH HERE --)/gi,
+        template: `${postFileName}`,
+      });
+
+      actions.push({
+        type: 'modify',
+        path: `${postDir}/${transformName(postFileName)}.md`,
+        pattern: /(-- PLOP TITLE NAME HERE --)/gi,
+        template: `${data.postName}`,
+      });
+
+      return [...actions];
+    },
+  });
 
   plop.setGenerator('ui-components', {
     description: 'new ui component in repo',
@@ -44,7 +83,7 @@ export default function (plop) {
       },
     ],
     actions: (data) => {
-      const templateDir = "tools/generators/plop-templates";
+      const templateDir = 'tools/generators/plop-templates';
       const componentName = transformName(data.componentName);
       const componentFolder = data.componentFolder;
       const layerFolder = data.layerFolder;
@@ -62,7 +101,10 @@ export default function (plop) {
       filesToAlwaysCopyOver.forEach((file) => {
         actions.push({
           type: 'add',
-          path: `${componentDir}/${transformFileName(file, componentName)}`,
+          path: `${componentDir}/${transformComponentFileName(
+            file,
+            componentName
+          )}`,
           templateFile: `${templateDir}/ui-components/${file}`,
         });
       });
@@ -71,19 +113,28 @@ export default function (plop) {
       filesToAlwaysCopyOver.forEach((file) => {
         actions.push({
           type: 'modify',
-          path: `${componentDir}/${transformFileName(file, componentName)}`,
+          path: `${componentDir}/${transformComponentFileName(
+            file,
+            componentName
+          )}`,
           pattern: /(-- PLOP COMPONENT NAME HERE --)/gi,
           template: `${capitalizeFirstLetter(componentName)}`,
         });
         actions.push({
           type: 'modify',
-          path: `${componentDir}/${transformFileName(file, componentName)}`,
+          path: `${componentDir}/${transformComponentFileName(
+            file,
+            componentName
+          )}`,
           pattern: /(-- PLOP COMPONENT FOLDER NAME HERE --)/gi,
           template: `${componentName}`,
         });
         actions.push({
           type: 'modify',
-          path: `${componentDir}/${transformFileName(file, componentName)}`,
+          path: `${componentDir}/${transformComponentFileName(
+            file,
+            componentName
+          )}`,
           pattern: /(-- PLOP LAYER FOLDER HERE --)/gi,
           template: `${layerFolder}`,
         });

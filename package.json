@@ -20,6 +20,7 @@
     "test:affected": "nx affected --target=test --base=master~1 --head=master",
     "build-storybook": "nx run-many --target=build-storybook --projects=ui-components",
     "storybook": "npm run ui-components:storybook",
+    "post:new": "plop post",
     "ui-components:new": "plop ui-components",
     "ui-components:storybook": "nx run ui-components:storybook",
     "ui-components:build-storybook": "nx run ui-components:build-storybook"
