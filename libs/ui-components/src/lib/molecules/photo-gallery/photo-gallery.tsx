@@ -38,7 +38,7 @@ export function PhotoGallery(props: PhotoGalleryProps) {
       {_.map(images, (image, index) => (
         <Image key={index}>
           <ZoomImage>
-            <img alt="" style={{ width: '100%' }} src={image} />
+            <img alt={`photo${index}`} style={{ width: '100%' }} src={image} />
           </ZoomImage>
         </Image>
       ))}
