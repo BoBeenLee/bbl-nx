@@ -1,4 +1,5 @@
 import { Story, Meta } from '@storybook/react';
+import { within, fireEvent } from '@storybook/testing-library';
 import { Menu, MenuProps } from './menu';
 
 export default {
@@ -14,4 +15,11 @@ const Template: Story<MenuProps> = (args) => <Menu {...args} />;
 export const Primary = Template.bind({});
 Primary.args = {
   isOpen: false,
+};
+
+Primary.play = async ({ canvasElement }) => {
+  const canvas = within(canvasElement);
+  await fireEvent.click(canvas.getByText("Open Menu"));
+  const bmOverlay = document.querySelector(".bm-overlay");
+  bmOverlay && await fireEvent.click(bmOverlay);
 };
