@@ -20,6 +20,6 @@ Primary.args = {
 Primary.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement);
   await fireEvent.click(canvas.getByText("Open Menu"));
-  const bmOverlay = document.querySelector(".bm-overlay");
+  const bmOverlay = canvasElement.querySelector(".bm-overlay");
   bmOverlay && await fireEvent.click(bmOverlay);
 };
