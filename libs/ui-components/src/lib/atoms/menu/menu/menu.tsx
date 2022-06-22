@@ -19,13 +19,13 @@ const StyledMenu = styled.div`
 `;
 
 const Header = styled.div`
-  display: flex !important;
+  display: flex;
   flex-direction: row;
   height: 6em;
 `;
 
 const Content = styled.div`
-  display: flex !important;
+  display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 20px;
