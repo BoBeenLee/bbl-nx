@@ -1,5 +1,6 @@
 import { Story, Meta } from '@storybook/react';
 import { within, fireEvent } from '@storybook/testing-library';
+import { expect } from '@storybook/jest';
 import { Menu, MenuProps } from './menu';
 
 export default {
@@ -19,7 +20,10 @@ Primary.args = {
 
 Primary.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement);
+  expect(canvasElement.querySelector("#menu")?.getAttribute("aria-hidden")).toBe("true");
   await fireEvent.click(canvas.getByText("Open Menu"));
+  expect(canvasElement.querySelector("#menu")?.getAttribute("aria-hidden")).toBe("false");
   const bmOverlay = canvasElement.querySelector(".bm-overlay");
   bmOverlay && await fireEvent.click(bmOverlay);
+  expect(canvasElement.querySelector("#menu")?.getAttribute("aria-hidden")).toBe("true");
 };
