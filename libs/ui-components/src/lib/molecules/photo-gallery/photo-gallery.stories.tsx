@@ -18,14 +18,10 @@ Primary.args = {
   }),
 };
 
-
-
 Primary.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement);
-  
   const nextButton = canvas.getByText("2");
   await fireEvent.click(nextButton);
-  canvasElement.querySelector("[data-rmiz-wrap='visible']");
   const visiblePhotoDiv = canvasElement.querySelector("[data-rmiz-wrap='visible']");
   const visiblePhotoButton = visiblePhotoDiv?.getElementsByTagName("button")?.item?.(0);
   visiblePhotoButton && await fireEvent.click(visiblePhotoButton);
