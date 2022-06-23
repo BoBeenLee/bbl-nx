@@ -1,5 +1,5 @@
 # bbl-nx
-
+![build](https://github.com/BoBeenLee/bbl-nx/actions/workflows/ci-cd.yml/badge.svg)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/9df06975-e9cf-4761-bf57-48f6f970c96b/deploy-status)](https://app.netlify.com/sites/bbl/deploys)
 ![GitHub deployments](https://img.shields.io/github/deployments/BoBeenLee/bbl-nx/production?label=vercel&logo=vercel&logoColor=white)
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
