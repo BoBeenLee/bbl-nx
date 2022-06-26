@@ -1,12 +1,12 @@
 import { AppProps } from 'next/app';
 import React from 'react';
-import { GlobalCSS, defaultMode } from '@bbl-nx/styles';
+import { GlobalStyle } from '@bbl-nx/styles';
 import { NextPage } from 'next';
 import Head from 'next/head';
 import { getMetadata } from '@bbl-nx/constants';
 import { QueryClient, QueryClientProvider, Hydrate } from 'react-query';
-import { ThemeProvider } from 'styled-components';
-import { useDarkMode } from '@bbl-nx/hooks';
+import { DarkModeProvider } from '@bbl-nx/hooks';
+import { storage } from '../libs/local-storage';
 
 type NextPageWithLayout = NextPage & {
   getLayout?: (page: React.ReactElement) => React.ReactNode;
@@ -22,34 +22,35 @@ const MyApp = (props: Props) => {
   const getLayout = Component.getLayout ?? ((page) => page);
   const metadata = getMetadata();
   const [queryClient] = React.useState(() => new QueryClient());
-  const [themeMode] = useDarkMode();
+  const snapshotTheme = storage().getSnapshotTheme();
+
   return (
     <React.Fragment>
-      <Head>
-        <title>{metadata.title}</title>
-        <meta name="theme-color" content={metadata.themeColor} />
-        <meta charSet="utf-8" />
-        <meta
-          name="viewport"
-          content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, user-scalable=no"
-        />
-        <meta name="title" content={metadata.title} />
-        <meta name="description" content={metadata.description} />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content={metadata.title} />
-        <meta property="og:site_name" content={metadata.title} />
-        <meta property="og:description" content={metadata.description} />
-        <meta property="og:image" content={metadata.metaImage} />
-        <meta name="keywords" content={metadata.keywords} />
-      </Head>
-      <GlobalCSS />
-      <ThemeProvider theme={{ ...defaultMode, mode: themeMode }}>
+      <DarkModeProvider initialDarkMode={snapshotTheme}>
+        <Head>
+          <title>{metadata.title}</title>
+          <meta name="theme-color" content={metadata.themeColor} />
+          <meta charSet="utf-8" />
+          <meta
+            name="viewport"
+            content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, user-scalable=no"
+          />
+          <meta name="title" content={metadata.title} />
+          <meta name="description" content={metadata.description} />
+          <meta property="og:type" content="website" />
+          <meta property="og:title" content={metadata.title} />
+          <meta property="og:site_name" content={metadata.title} />
+          <meta property="og:description" content={metadata.description} />
+          <meta property="og:image" content={metadata.metaImage} />
+          <meta name="keywords" content={metadata.keywords} />
+        </Head>
+        <GlobalStyle />
         <QueryClientProvider client={queryClient}>
           <Hydrate state={pageProps.dehydratedState}>
             {getLayout(<TargetComponent {...pageProps} />)}
           </Hydrate>
         </QueryClientProvider>
-      </ThemeProvider>
+      </DarkModeProvider>
     </React.Fragment>
   );
 };

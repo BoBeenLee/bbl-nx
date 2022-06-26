@@ -1214,54 +1214,6 @@
   "resolved" "https://registry.npmjs.org/@base2/pretty-print-object/-/pretty-print-object-1.0.1.tgz"
   "version" "1.0.1"
 
-"@bbl-nx/apis@file:/Users/bobinlee/Documents/dev/mygit/bbl-nx/dist/libs/apis":
-  "resolved" "file:dist/libs/apis"
-  "version" "0.0.1"
-
-"@bbl-nx/constants@0.0.1", "@bbl-nx/constants@file:/Users/bobinlee/Documents/dev/mygit/bbl-nx/dist/libs/constants":
-  "resolved" "file:dist/libs/constants"
-  "version" "0.0.1"
-
-"@bbl-nx/decorators@file:/Users/bobinlee/Documents/dev/mygit/bbl-nx/dist/libs/decorators":
-  "resolved" "file:dist/libs/decorators"
-  "version" "0.0.1"
-
-"@bbl-nx/faccs@0.0.1", "@bbl-nx/faccs@file:/Users/bobinlee/Documents/dev/mygit/bbl-nx/dist/libs/faccs":
-  "resolved" "file:dist/libs/faccs"
-  "version" "0.0.1"
-
-"@bbl-nx/hocs@file:/Users/bobinlee/Documents/dev/mygit/bbl-nx/dist/libs/hocs":
-  "resolved" "file:dist/libs/hocs"
-  "version" "0.0.1"
-
-"@bbl-nx/hooks@0.0.1", "@bbl-nx/hooks@file:/Users/bobinlee/Documents/dev/mygit/bbl-nx/dist/libs/hooks":
-  "resolved" "file:dist/libs/hooks"
-  "version" "0.0.1"
-
-"@bbl-nx/images@0.0.1", "@bbl-nx/images@file:/Users/bobinlee/Documents/dev/mygit/bbl-nx/dist/libs/images":
-  "resolved" "file:dist/libs/images"
-  "version" "0.0.1"
-
-"@bbl-nx/libs@file:/Users/bobinlee/Documents/dev/mygit/bbl-nx/dist/libs/libs":
-  "resolved" "file:dist/libs/libs"
-  "version" "0.0.1"
-
-"@bbl-nx/organizations@file:/Users/bobinlee/Documents/dev/mygit/bbl-nx/dist/libs/organizations":
-  "resolved" "file:dist/libs/organizations"
-  "version" "0.0.1"
-
-"@bbl-nx/styles@0.0.1", "@bbl-nx/styles@file:/Users/bobinlee/Documents/dev/mygit/bbl-nx/dist/libs/styles":
-  "resolved" "file:dist/libs/styles"
-  "version" "0.0.1"
-
-"@bbl-nx/ui-components@0.0.1", "@bbl-nx/ui-components@file:/Users/bobinlee/Documents/dev/mygit/bbl-nx/dist/libs/ui-components":
-  "resolved" "file:dist/libs/ui-components"
-  "version" "0.0.1"
-
-"@bbl-nx/utils@0.0.1", "@bbl-nx/utils@file:/Users/bobinlee/Documents/dev/mygit/bbl-nx/dist/libs/utils":
-  "resolved" "file:dist/libs/utils"
-  "version" "0.0.1"
-
 "@bcoe/v8-coverage@^0.2.3":
   "integrity" "sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw=="
   "resolved" "https://registry.npmjs.org/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz"
@@ -2532,9 +2484,9 @@
   dependencies:
     "glob" "7.1.7"
 
-"@next/swc-darwin-x64@12.1.6":
-  "integrity" "sha512-9FptMnbgHJK3dRDzfTpexs9S2hGpzOQxSQbe8omz6Pcl7rnEp9x4uSEKY51ho85JCjL4d0tDLBcXEJZKKLzxNg=="
-  "resolved" "https://registry.npmjs.org/@next/swc-darwin-x64/-/swc-darwin-x64-12.1.6.tgz"
+"@next/swc-darwin-arm64@12.1.6":
+  "integrity" "sha512-P0EXU12BMSdNj1F7vdkP/VrYDuCNwBExtRPDYawgSUakzi6qP0iKJpya2BuLvNzXx+XPU49GFuDC5X+SvY0mOw=="
+  "resolved" "https://registry.npmjs.org/@next/swc-darwin-arm64/-/swc-darwin-arm64-12.1.6.tgz"
   "version" "12.1.6"
 
 "@nicolo-ribaudo/chokidar-2@2.1.8-no-fsevents.3":
@@ -4486,9 +4438,9 @@
   dependencies:
     "source-map-support" "^0.5.21"
 
-"@swc/core-darwin-x64@1.2.189":
-  "integrity" "sha512-BEcxnBHx51514Voe2dn/y1y5H9VNyw7Zpp9+mPekZqx5o/onPD5wZ1ZfAsPrA4UlvM3v16u6ITE/cLawJ/GdAQ=="
-  "resolved" "https://registry.npmjs.org/@swc/core-darwin-x64/-/core-darwin-x64-1.2.189.tgz"
+"@swc/core-darwin-arm64@1.2.189":
+  "integrity" "sha512-OGjZRkTulKirJMLYbW9etb59lA9ueDXVwYRVD9SrNh8tRMTf0Nq+SUT/C3LVhBBGC4KSdWOzBAYbDTTdsnY++Q=="
+  "resolved" "https://registry.npmjs.org/@swc/core-darwin-arm64/-/core-darwin-arm64-1.2.189.tgz"
   "version" "1.2.189"
 
 "@swc/core@^1.2.172", "@swc/core@^1.2.173":
@@ -6833,11 +6785,11 @@
   "resolved" "https://registry.npmjs.org/batch/-/batch-0.6.1.tgz"
   "version" "0.6.1"
 
-"bbl-nextjs@file:/Users/bobinlee/Documents/dev/mygit/bbl-nx/apps/bbl-nextjs":
+"bbl-nextjs@file:/Users/bobeenlee/Desktop/mygit/bbl-nx/apps/bbl-nextjs":
   "resolved" "file:apps/bbl-nextjs"
   "version" "0.0.1"
 
-"bbl-remix@file:/Users/bobinlee/Documents/dev/mygit/bbl-nx/apps/bbl-remix":
+"bbl-remix@file:/Users/bobeenlee/Desktop/mygit/bbl-nx/apps/bbl-remix":
   "resolved" "file:apps/bbl-remix"
   dependencies:
     "@netlify/functions" "^1.0.0"
@@ -10181,14 +10133,14 @@
   "resolved" "https://registry.npmjs.org/es6-shim/-/es6-shim-0.35.6.tgz"
   "version" "0.35.6"
 
-"esbuild-darwin-64@0.14.22":
-  "integrity" "sha512-d8Ceuo6Vw6HM3fW218FB6jTY6O3r2WNcTAU0SGsBkXZ3k8SDoRLd3Nrc//EqzdgYnzDNMNtrWegK2Qsss4THhw=="
-  "resolved" "https://registry.npmjs.org/esbuild-darwin-64/-/esbuild-darwin-64-0.14.22.tgz"
+"esbuild-darwin-arm64@0.14.22":
+  "integrity" "sha512-YAt9Tj3SkIUkswuzHxkaNlT9+sg0xvzDvE75LlBo4DI++ogSgSmKNR6B4eUhU5EUUepVXcXdRIdqMq9ppeRqfw=="
+  "resolved" "https://registry.npmjs.org/esbuild-darwin-arm64/-/esbuild-darwin-arm64-0.14.22.tgz"
   "version" "0.14.22"
 
-"esbuild-darwin-64@0.14.39":
-  "integrity" "sha512-ImT6eUw3kcGcHoUxEcdBpi6LfTRWaV6+qf32iYYAfwOeV+XaQ/Xp5XQIBiijLeo+LpGci9M0FVec09nUw41a5g=="
-  "resolved" "https://registry.npmjs.org/esbuild-darwin-64/-/esbuild-darwin-64-0.14.39.tgz"
+"esbuild-darwin-arm64@0.14.39":
+  "integrity" "sha512-/fcQ5UhE05OiT+bW5v7/up1bDsnvaRZPJxXwzXsMRrr7rZqPa85vayrD723oWMT64dhrgWeA3FIneF8yER0XTw=="
+  "resolved" "https://registry.npmjs.org/esbuild-darwin-arm64/-/esbuild-darwin-arm64-0.14.39.tgz"
   "version" "0.14.39"
 
 "esbuild@*", "esbuild@^0.14.39":

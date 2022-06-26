@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-export const GlobalCSS = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
 /* @import "./slick.min.css"; */
 /* @import "./slick-theme.min.css"; */

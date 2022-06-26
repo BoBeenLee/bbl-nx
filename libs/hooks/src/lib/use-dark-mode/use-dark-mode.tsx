@@ -1,37 +1,58 @@
-import { isBrowser } from '@bbl-nx/utils';
+import { defaultMode } from '@bbl-nx/styles';
+import React, { useContext, useMemo } from 'react';
 import { useEffect, useState } from 'react';
-import { ModeType } from 'styled-components';
+import { ThemeProvider, ModeType } from 'styled-components';
 
-export function useDarkMode(): [ModeType, () => void, boolean] {
-  const [theme, setTheme] = useState<ModeType>('light');
-  const [componentMounted, setComponentMounted] = useState(false);
-  const setMode = (mode: ModeType) => {
-    isBrowser && window.localStorage.setItem('theme', mode);
-    setTheme(mode);
-  };
+interface DarkModeState {
+  mode: ModeType;
+}
 
-  const toggleTheme = () => {
-    if (theme === 'light') {
-      setMode('dark');
-    } else {
-      setMode('light');
-    }
-  };
+const DarkModeProviderContext = React.createContext<DarkModeState>({
+  mode: 'light',
+});
+
+export function DarkModeProvider({
+  initialDarkMode,
+  children,
+}: {
+  initialDarkMode: { mode?: ModeType };
+  children: React.ReactNode;
+}) {
+  const [darkMode, setDarkMode] = useState<DarkModeState>({ mode: 'light' });
 
   useEffect(() => {
-    if (!isBrowser) {
+    if (
+      window.matchMedia &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches
+    ) {
+      setDarkMode({
+        mode: 'dark',
+      });
       return;
     }
-    const localTheme = window.localStorage.getItem('theme');
-    window.matchMedia &&
-    window.matchMedia('(prefers-color-scheme: dark)').matches &&
-    !localTheme
-      ? setMode('dark')
-      : localTheme
-      ? setTheme(localTheme as ModeType)
-      : setMode('light');
-    setComponentMounted(true);
-  }, []);
+    if (initialDarkMode?.mode) {
+      setDarkMode({
+        mode: initialDarkMode.mode
+      });
+      return;
+    }
+    setDarkMode({
+      mode: 'light',
+    });
+  }, [initialDarkMode]);
 
-  return [theme, toggleTheme, componentMounted];
-};
+  const theme = useMemo(() => {
+    return { ...defaultMode, mode: darkMode.mode ?? defaultMode.mode };
+  }, [darkMode.mode]);
+
+  return (
+    <DarkModeProviderContext.Provider value={darkMode}>
+      <ThemeProvider theme={theme}>{children}</ThemeProvider>
+    </DarkModeProviderContext.Provider>
+  );
+}
+
+export function useDarkMode() {
+  const darkMode = useContext(DarkModeProviderContext);
+  return darkMode;
+}
