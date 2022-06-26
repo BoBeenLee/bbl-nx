@@ -1,23 +1,31 @@
 export default function (plop) {
-  const capitalizeFirstLetter = (string) => {
-    return string.charAt(0).toUpperCase() + string.slice(1);
+  const camelize = (str) => {
+    return str
+      .replace(/(?:^\w|[A-Z]|\b\w)/g, function (word, index) {
+        return index === 0 ? word.toLowerCase() : word.toUpperCase();
+      })
+      .replace(/\s+/g, '');
   };
 
-  const transformName = (str) => {
+  const capitalizeFirstLetter = (str) => {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  };
+
+  const transformFileName = (str) => {
     return str.toLowerCase().replace(/ /g, '-');
   };
 
-  const transformFileTxtName = (str) => {
+  const transformComponentName = (str) => {
+    return capitalizeFirstLetter(camelize(str));
+  };
+
+  const transformFileTxtToTsx = (str) => {
     return str.toLowerCase().replace(/txt/g, 'tsx');
   };
 
-  const transformComponentName = (str, replaceStr) => {
-    return str.replace(`component`, replaceStr);
-  };
-
   const transformComponentFileName = (componentFileName, componentName) => {
-    return transformComponentName(
-      transformFileTxtName(componentFileName),
+    return transformFileTxtToTsx(componentFileName).replace(
+      `component`,
       componentName
     );
   };
@@ -33,26 +41,26 @@ export default function (plop) {
     ],
     actions: (data) => {
       const templateDir = 'tools/generators/plop-templates';
-      const postFileName = transformName(data.postName);
+      const postFileName = transformFileName(data.postName);
       const postDir = `posts`;
       const actions = [];
 
       actions.push({
         type: 'add',
-        path: `${postDir}/${transformName(postFileName)}.md`,
+        path: `${postDir}/${transformFileName(postFileName)}.md`,
         templateFile: `${templateDir}/posts/article.md`,
       });
 
       actions.push({
         type: 'modify',
-        path: `${postDir}/${transformName(postFileName)}.md`,
+        path: `${postDir}/${transformFileName(postFileName)}.md`,
         pattern: /(-- PLOP TITLE PATH HERE --)/gi,
         template: `${postFileName}`,
       });
 
       actions.push({
         type: 'modify',
-        path: `${postDir}/${transformName(postFileName)}.md`,
+        path: `${postDir}/${transformFileName(postFileName)}.md`,
         pattern: /(-- PLOP TITLE NAME HERE --)/gi,
         template: `${data.postName}`,
       });
@@ -84,11 +92,12 @@ export default function (plop) {
     ],
     actions: (data) => {
       const templateDir = 'tools/generators/plop-templates';
-      const componentName = transformName(data.componentName);
+      const componentFileName = transformFileName(data.componentName);
+      const componentName = transformComponentName(data.componentName);
       const componentFolder = data.componentFolder;
       const layerFolder = data.layerFolder;
 
-      const componentDir = `libs/ui-components/src/lib/${layerFolder}/${componentName}`;
+      const componentDir = `libs/ui-components/src/lib/${layerFolder}/${componentFileName}`;
       const layerDir = `libs/ui-components/src/lib/${layerFolder}`;
       const filesToAlwaysCopyOver = [
         'component.spec.txt',
@@ -103,7 +112,7 @@ export default function (plop) {
           type: 'add',
           path: `${componentDir}/${transformComponentFileName(
             file,
-            componentName
+            componentFileName
           )}`,
           templateFile: `${templateDir}/ui-components/${file}`,
         });
@@ -115,25 +124,25 @@ export default function (plop) {
           type: 'modify',
           path: `${componentDir}/${transformComponentFileName(
             file,
-            componentName
+            componentFileName
           )}`,
           pattern: /(-- PLOP COMPONENT NAME HERE --)/gi,
-          template: `${capitalizeFirstLetter(componentName)}`,
-        });
-        actions.push({
-          type: 'modify',
-          path: `${componentDir}/${transformComponentFileName(
-            file,
-            componentName
-          )}`,
-          pattern: /(-- PLOP COMPONENT FOLDER NAME HERE --)/gi,
           template: `${componentName}`,
         });
         actions.push({
           type: 'modify',
           path: `${componentDir}/${transformComponentFileName(
             file,
-            componentName
+            componentFileName
+          )}`,
+          pattern: /(-- PLOP COMPONENT FOLDER NAME HERE --)/gi,
+          template: `${componentFileName}`,
+        });
+        actions.push({
+          type: 'modify',
+          path: `${componentDir}/${transformComponentFileName(
+            file,
+            componentFileName
           )}`,
           pattern: /(-- PLOP LAYER FOLDER HERE --)/gi,
           template: `${layerFolder}`,
@@ -145,7 +154,7 @@ export default function (plop) {
         {
           type: 'append',
           path: `${layerDir}/index.ts`,
-          template: `export * from './${componentName}/${componentName}';`,
+          template: `export * from './${componentFileName}/${componentFileName}';`,
         },
       ];
     },
