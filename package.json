@@ -67,6 +67,7 @@
     "react-reveal": "^1.2.2",
     "react-share": "4.0.1",
     "react-slick": "^0.29.0",
+    "react-virtuoso": "^2.14.0",
     "recompose": "^0.30.0",
     "regenerator-runtime": "0.13.7",
     "remark": "^10.0.1",
