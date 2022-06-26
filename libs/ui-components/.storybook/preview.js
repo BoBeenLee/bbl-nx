@@ -1,24 +1,13 @@
-import { GlobalCSS, defaultMode } from '@bbl-nx/styles';
-import { ThemeProvider } from 'styled-components';
-import { useDarkMode } from "@bbl-nx/hooks";
-
-function ThemeWrapper(props) {
-  const [theme] = useDarkMode();
-  return (
-    <ThemeProvider theme={{ ...defaultMode, theme }}>
-      {props.children}
-    </ThemeProvider>
-  );
-}
-
+import { GlobalStyle } from '@bbl-nx/styles';
+import { DarkModeProvider } from '@bbl-nx/hooks';
 
 export const decorators = [
   (Story) => (
     <>
-      <GlobalCSS />
-      <ThemeWrapper>
+      <GlobalStyle />
+      <DarkModeProvider initialDarkMode={{}}>
         <Story />
-      </ThemeWrapper>
+      </DarkModeProvider>
     </>
   ),
 ];
