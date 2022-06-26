@@ -6,3 +6,4 @@ export * from './title/content-title/content-title';
 export * from './title/sub-title/sub-title';
 export * from './menu/menu/menu';
 export * from './loading/loading';
+export * from './infinite-list/infinite-list';
