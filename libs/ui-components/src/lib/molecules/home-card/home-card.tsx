@@ -1,4 +1,3 @@
-import { images } from '@bbl-nx/images';
 import { Avatar } from '../../atoms';
 
 export interface HomeCardProps {
