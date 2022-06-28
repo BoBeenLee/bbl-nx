@@ -17,7 +17,7 @@ export function AboutTemplate(props: AboutTemplateProps) {
     <LayoutTemplate asPath={asPath} onNavigate={onNavigate}>
       <div className="flex flex-col items-start w-full max-w-2xl mx-auto border-gray-200 sm:mb-16 dark:border-gray-700">
         <div className="w-full mt-4 space-y-8">
-          <SectionTitle className="pb-4">Experience</SectionTitle>
+          <SectionTitle className="pb-2">Experience</SectionTitle>
           {experiences.map((item) => {
             const { title, titleUri, period, role } = item;
             return (
@@ -40,7 +40,7 @@ export function AboutTemplate(props: AboutTemplateProps) {
           <Seperator />
         </div>
         <div className="w-full mt-16 space-y-8">
-          <SectionTitle className="pb-4">Activity</SectionTitle>
+          <SectionTitle className="pb-2">Activity</SectionTitle>
           {activity.map((item) => {
             const { name, url, description } = item;
             return (
@@ -58,12 +58,19 @@ export function AboutTemplate(props: AboutTemplateProps) {
           <Seperator />
         </div>
         <div className="w-full mt-16 space-y-8">
-          <SectionTitle className="pb-4">Tech Stack</SectionTitle>
+          <SectionTitle className="pb-2">Tech Stack</SectionTitle>
           {Object.values(categorySkills).map((item) => {
             const { name, skills } = item;
             return <TechStackCard key={name} groupName={name} items={skills} />;
           })}
           <Seperator />
+        </div>
+        <div className="w-full mt-16 space-y-8">
+          <SectionTitle className="pb-2">Education</SectionTitle>
+          <p className="font-medium text-gray-900 truncate dark:text-gray-100">
+            BoBeen Lee graduated from Sungkonghoe University in Software
+            Engineering.
+          </p>
         </div>
       </div>
     </LayoutTemplate>
