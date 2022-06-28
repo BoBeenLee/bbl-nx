@@ -59,8 +59,7 @@ Visit the [Nx Documentation](https://nx.dev) to learn more.
 
 ### Generate UI-Components
 ```
-nx g component suspense-after-initial-render --project=ui-components
-nx g component-story --componentPath=/lib/suspense-after-initial-render/suspense-after-initial-render.tsx --project=ui-components --dry-run
+npm run ui-components:new
 ```
 
 ## Contributors
