@@ -17,7 +17,7 @@ export function AboutTemplate(props: AboutTemplateProps) {
   return (
     <LayoutTemplate asPath={asPath} onNavigate={onNavigate}>
       <div className="flex flex-col items-start w-full max-w-2xl mx-auto mb-8 border-gray-200 sm:mb-12 dark:border-gray-700">
-        <div className="w-full mt-4 space-y-8">
+        <div className="w-full space-y-8">
           <SectionTitle className="pb-2" href={"#experience"}>Experience</SectionTitle>
           {experiences.map((item) => {
             const { title, titleUri, period, role } = item;
