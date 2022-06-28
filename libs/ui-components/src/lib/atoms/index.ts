@@ -8,3 +8,4 @@ export * from './menu/menu/menu';
 export * from './loading/loading';
 export * from './infinite-list/infinite-list';
 export * from './icon/icon';
+export * from './page-title/page-title';
