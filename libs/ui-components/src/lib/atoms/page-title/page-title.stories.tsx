@@ -11,7 +11,9 @@ export default {
 const Template: Story<PageTitleProps> = (args) => <PageTitle {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = {};
+Primary.args = {
+  children: <div>Hello World</div>,
+};
 
 Primary.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement);

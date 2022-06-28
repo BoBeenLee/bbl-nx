@@ -5,7 +5,9 @@ import PageTitle from './page-title';
 describe('PageTitle', () => {
   it('should render successfully', () => {
     const { baseElement } = render(
-      <PageTitle />
+      <PageTitle>
+        <div>Hello World</div>
+      </PageTitle>
     );
     expect(baseElement).toBeTruthy();
   });
