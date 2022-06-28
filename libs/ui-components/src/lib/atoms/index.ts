@@ -7,3 +7,4 @@ export * from './title/sub-title/sub-title';
 export * from './menu/menu/menu';
 export * from './loading/loading';
 export * from './infinite-list/infinite-list';
+export * from './icon/icon';
