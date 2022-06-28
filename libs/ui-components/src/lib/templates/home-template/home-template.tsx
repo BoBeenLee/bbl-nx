@@ -1,6 +1,7 @@
 import { Nav, NavProps } from '../../molecules/nav/nav';
 import { nav } from '@bbl-nx/constants';
 import { useMemo } from 'react';
+import NavFooter from '../../molecules/nav-footer/nav-footer';
 
 export interface HomeTemplateProps {
   asPath: string;
@@ -22,6 +23,7 @@ export function HomeTemplate(props: HomeTemplateProps) {
           main
         </div>
       </main>
+      <NavFooter data={navItems} onNavigate={onNavigate} />
     </div>
   );
 }
