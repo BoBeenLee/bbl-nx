@@ -7,6 +7,7 @@ import { getMetadata } from '@bbl-nx/constants';
 import { QueryClient, QueryClientProvider, Hydrate } from 'react-query';
 import { DarkModeProvider } from '@bbl-nx/hooks';
 import { storage } from '../libs/local-storage';
+import './styles.css';
 
 type NextPageWithLayout = NextPage & {
   getLayout?: (page: React.ReactElement) => React.ReactNode;
