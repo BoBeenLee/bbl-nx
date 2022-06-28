@@ -1,3 +1,4 @@
+import { nav } from '@bbl-nx/constants';
 import { Story, Meta } from '@storybook/react';
 import { within } from '@storybook/testing-library';
 import { Nav, NavProps } from './nav';
@@ -12,18 +13,7 @@ const Template: Story<NavProps> = (args) => <Nav {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  data: [
-    {
-      href: '/',
-      text: 'Home',
-      isActive: false,
-    },
-    {
-      href: '/about',
-      text: 'About',
-      isActive: true,
-    },
-  ],
+  data: nav.map((item) => ({ text: item.text, href: item.href, isActive: false })),
   onNavigate: () => {
     // SOMETHING
   },
