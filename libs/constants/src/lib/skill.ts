@@ -67,58 +67,84 @@ export const skills: Record<string, { uri: string }> = {
   },
 };
 
-
 export type CategorySkillsItem = {
   name: string;
   skills: string[];
   uri?: string;
-}
+};
 
 export const categorySkills: Record<string, CategorySkillsItem> = {
   frontend: {
-    name: 'Front End',
+    name: 'Frontend',
+    skills: ['React', 'React Native', 'Javascript', 'Typescript', 'JQuery'],
+  },
+  framework: {
+    name: 'Framework',
+    skills: ['Nextjs', 'Gatsby', 'React Native CLI', 'Expo'],
+  },
+  uicomponent: {
+    name: 'UI Component',
     skills: [
-      'react',
-      'react native',
-      'javascript',
-      'typescript',
-      'jQuery',
-      'sass',
-      'android',
+      'Storybook',
+      'Material UI (mui)',
+      'Antd',
+      'Native Base, React Bootstrap',
     ],
+  },
+  style: {
+    name: 'Styling',
+    skills: ['Emotion', 'Styled-components', 'Less', 'Sass'],
+  },
+  statemanagement: {
+    name: 'State Management',
+    skills: [
+      'Mobx',
+      'Mobx State Tree',
+      'XState',
+      'Redux',
+      'Redux Saga',
+      'React Query',
+      'React Apollo',
+    ],
+  },
+  navigation: {
+    name: 'Navigation',
+    skills: ['React Router', 'React Navigation', 'React Native Navigation'],
   },
   backend: {
-    name: 'Back End',
-    skills: ['nodejs', 'graphql', 'spring framework', 'spring boot'],
+    name: 'Backend',
+    skills: [
+      'Express',
+      'GraphQL',
+      'Serverless',
+      'Spring Framework',
+      'Spring Boot',
+    ],
   },
-  db: { name: 'DB', skills: ['RDB', 'mongodb', 'firebase'] },
+  db: {
+    name: 'DB',
+    skills: [
+      'RDB (MySQL, MariaDB, PostgreSQL)',
+      'Prisma',
+      'Mongodb',
+      'Dynamodb',
+    ],
+  },
+  buildsystem: {
+    name: 'Build System',
+    skills: ['Nx.dev', 'Lerna'],
+  },
   collaboration: {
     name: 'Collaboration',
-    skills: [
-      'github',
-      'gitlab',
-      'slack',
-      'notion',
-      'jira',
-      'trello',
-      'teamviewer',
-    ],
+    skills: ['Linear', 'Notion', 'Workspace', 'Slack', 'JIRA', 'Trello'],
   },
-  usage: { name: 'Usage', skills: ['aws ec2, s3', 'docker'] },
-  tool: {
-    name: 'Tools',
-    skills: [
-      'vscode',
-      'gitkraken',
-      'reactotron',
-      'insomnia',
-      'intellj idea',
-      'webstorm',
-      'android studio',
-      'source tree',
-      'zeplin',
-      'fork',
-      'miro',
-    ],
+  // usage: { name: 'Usage', skills: ['aws ec2, s3', 'docker'] },
+  deployment: {
+    name: 'Deployment',
+    skills: ['Code Push', 'Fastlane'],
+  },
+  ci: {
+    name: 'CI',
+    skills: ['Github Action'],
   },
 };

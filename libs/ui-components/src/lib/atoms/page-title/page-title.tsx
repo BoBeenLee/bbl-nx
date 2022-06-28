@@ -11,7 +11,7 @@ export function PageTitle(props: PageTitleProps) {
     <div
       className={cn(
         className,
-        'text-3xl font-bold tracking-tight text-black md:text-5xl dark:text-white'
+        'font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black dark:text-white'
       )}
     >
       {children}

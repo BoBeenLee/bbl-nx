@@ -19,7 +19,7 @@ export function LayoutTemplate(props: LayoutTemplateProps) {
   return (
     <div className="bg-gray-50 dark:bg-gray-900">
       <Nav data={navItems} onNavigate={onNavigate} />
-      <main className="flex flex-col justify-center bg-gray-50 dark:bg-gray-900">
+      <main className="flex flex-col justify-center px-8 bg-gray-50 dark:bg-gray-900">
         {children}
       </main>
       <NavFooter data={navItems} onNavigate={onNavigate} />

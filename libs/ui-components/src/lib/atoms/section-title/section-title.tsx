@@ -11,7 +11,7 @@ export function SectionTitle(props: SectionTitleProps) {
     <div
       className={cn(
         className,
-        'text-3xl font-bold tracking-tight text-black dark:text-white'
+        'font-bold text-3xl tracking-tigh text-black dark:text-white'
       )}
     >
       {children}
