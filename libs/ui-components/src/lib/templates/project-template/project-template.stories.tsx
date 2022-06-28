@@ -1,14 +1,14 @@
 import { Story, Meta } from '@storybook/react';
 import { within } from '@storybook/testing-library';
-import { AboutTemplate, AboutTemplateProps } from './about-template';
+import { ProjectTemplate, ProjectTemplateProps } from './project-template';
 
 export default {
-  component: AboutTemplate,
-  title: 'templates/AboutTemplate',
+  component: ProjectTemplate,
+  title: 'templates/ProjectTemplate',
   argTypes: {},
 } as Meta;
 
-const Template: Story<AboutTemplateProps> = (args) => <AboutTemplate {...args} />;
+const Template: Story<ProjectTemplateProps> = (args) => <ProjectTemplate {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {

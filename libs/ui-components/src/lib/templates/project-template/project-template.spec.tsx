@@ -1,11 +1,11 @@
 import { render } from '@testing-library/react';
 
-import HomeTemplate from './home-template';
+import ProjectTemplate from './project-template';
 
-describe('HomeTemplate', () => {
+describe('ProjectTemplate', () => {
   it('should render successfully', () => {
     const { baseElement } = render(
-      <HomeTemplate
+      <ProjectTemplate
         asPath=""
         onNavigate={() => {
           // SOMETHING

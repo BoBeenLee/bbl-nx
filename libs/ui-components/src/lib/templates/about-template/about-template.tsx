@@ -8,7 +8,8 @@ import LayoutTemplate, {
 } from '../layout-template/layout-template';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
-export interface AboutTemplateProps extends LayoutTemplateProps {}
+export interface AboutTemplateProps
+  extends Omit<LayoutTemplateProps, 'children'> {}
 
 export function AboutTemplate(props: AboutTemplateProps) {
   const { asPath, onNavigate } = props;

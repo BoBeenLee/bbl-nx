@@ -1,11 +1,11 @@
-import { NavProps } from '../../molecules/nav/nav';
 import HomeCard from '../../molecules/home-card/home-card';
 import LayoutTemplate, {
   LayoutTemplateProps,
 } from '../layout-template/layout-template';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
-export interface HomeTemplateProps extends LayoutTemplateProps {}
+export interface HomeTemplateProps
+  extends Omit<LayoutTemplateProps, 'children'> {}
 
 export function HomeTemplate(props: HomeTemplateProps) {
   const { asPath, onNavigate } = props;
