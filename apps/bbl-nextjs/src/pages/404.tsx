@@ -7,7 +7,7 @@ const NotFoundPage = () => {
   return (
     <Layout>
       <div className="flex flex-col items-center w-full max-w-2xl py-12 mx-auto sm:py-20 sm:mb-16">
-        <PageTitle>Something wnet Wrong.</PageTitle>
+        <PageTitle>Something went Wrong.</PageTitle>
         <div className="mb-8 text-gray-600 dark:text-gray-400">
           {`I'm guessing you spelled something wrong. Can you double check
           that URL?`}

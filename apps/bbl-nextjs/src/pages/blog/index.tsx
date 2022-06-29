@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import React, { useCallback } from 'react';
+import React from 'react';
 import { GetStaticProps } from 'next';
 
 import Layout from '../../components/layout';
