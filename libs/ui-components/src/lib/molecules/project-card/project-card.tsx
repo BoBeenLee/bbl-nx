@@ -19,7 +19,7 @@ export function ProjectCard(props: ProjectCardProps) {
         </div>
         {IconComponent}
       </div>
-      <p className="mb-2 text-gray-600 dark:text-gray-400">{summary}</p>
+      <p className="mb-2 text-sm text-gray-600 dark:text-gray-400">{summary}</p>
       <div className="flex flex-row flex-wrap items-center gap-2">
         {techStacks.map((item) => {
           return (

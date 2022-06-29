@@ -163,7 +163,7 @@ export const companyPortfolios = [
     period: '',
     githubRepoName: [],
     skills: ['bootstrap', 'jQuery', 'velocity', 'lessjs'],
-    summary: 'Team42 Site',
+    summary: 'Team42 홈페이지',
     githubUrl: '',
     linkUrl: 'http://team42.net/',
     images: [],
