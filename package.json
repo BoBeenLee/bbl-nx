@@ -11,7 +11,7 @@
     "build:affected:all": "nx affected --target=build --all",
     "eslint": "nx run-many --target=lint --all",
     "eslint:fix": "nx run-many --target=lint-fix --all",
-    "test": "nx test",
+    "test": "npm run test:all",
     "test:all": "nx run-many --target=test --all",
     "test:affected": "nx affected --target=test --base=master~1 --head=master",
     "build-storybook": "nx run-many --target=build-storybook --projects=ui-components",

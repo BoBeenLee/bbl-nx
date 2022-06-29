@@ -1,3 +1,4 @@
+export * from './lib/home';
 export * from './lib/activity';
 export * from './lib/experience';
 export * from './lib/menu';
