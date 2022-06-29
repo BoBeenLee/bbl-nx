@@ -1,4 +1,6 @@
-import { PageTitle } from "../../atoms";
+import { PageTitle } from '../../atoms';
+import BlogCard from '../../molecules/blog-card/blog-card';
+import { mockBlogs } from '../../__mocks__/blog';
 import LayoutTemplate, {
   LayoutTemplateProps,
 } from '../layout-template/layout-template';
@@ -12,9 +14,25 @@ export function BlogTemplate(props: BlogTemplateProps) {
 
   return (
     <LayoutTemplate asPath={asPath} onNavigate={onNavigate}>
-      <div className="flex flex-col items-start justify-center max-w-2xl py-16 mx-auto border-gray-200 sm:mb-16 dark:border-gray-700">
-        <PageTitle>All Posts</PageTitle>
-        test
+      <div className="flex flex-col items-start w-full max-w-2xl mx-auto mb-8 border-gray-200 sm:mb-12 dark:border-gray-700">
+        <PageTitle className="pb-6">All Posts</PageTitle>
+        <div className="w-full space-y-12">
+          {mockBlogs.map((item) => {
+            const { id, title, createdAt, url, isExternal } = item;
+            return (
+              <div key={id}>
+                <a
+                  href={url}
+                  {...(isExternal
+                    ? { target: '_blank', rel: 'noreferrer' }
+                    : {})}
+                >
+                  <BlogCard title={title} createdAt={createdAt} />
+                </a>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </LayoutTemplate>
   );
