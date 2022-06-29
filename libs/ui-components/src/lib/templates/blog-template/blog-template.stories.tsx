@@ -1,6 +1,7 @@
 import { Story, Meta } from '@storybook/react';
 import { within } from '@storybook/testing-library';
-import { mockBlogs } from "../../__mocks__/blog";
+import { mockBlogs } from '../../__mocks__/blog';
+import LayoutTemplate from '../layout-template/layout-template';
 import { BlogTemplate, BlogTemplateProps } from './blog-template';
 
 export default {
@@ -9,15 +10,22 @@ export default {
   argTypes: {},
 } as Meta;
 
-const Template: Story<BlogTemplateProps> = (args) => <BlogTemplate {...args} />;
+const Template: Story<BlogTemplateProps> = (args) => (
+  <LayoutTemplate
+    {...{
+      asPath: '/',
+      onNavigate: () => {
+        // SOMETHING
+      },
+    }}
+  >
+    <BlogTemplate {...args} />
+  </LayoutTemplate>
+);
 
 export const Primary = Template.bind({});
 Primary.args = {
   allPosts: mockBlogs,
-  asPath: "",
-  onNavigate: () => {
-    // SOMETHING
-  }
 };
 
 Primary.play = async ({ canvasElement }) => {

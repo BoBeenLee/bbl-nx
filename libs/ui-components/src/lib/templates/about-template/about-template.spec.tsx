@@ -4,11 +4,7 @@ import AboutTemplate from './about-template';
 
 describe('AboutTemplate', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(
-      <AboutTemplate asPath="" onNavigate={() => {
-        // SOMETHING
-      }} />
-    );
+    const { baseElement } = render(<AboutTemplate />);
     expect(baseElement).toBeTruthy();
   });
 });

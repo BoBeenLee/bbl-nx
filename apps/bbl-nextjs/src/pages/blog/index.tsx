@@ -2,11 +2,11 @@ import _ from 'lodash';
 import React, { useCallback } from 'react';
 import { GetStaticProps } from 'next';
 
+import Layout from '../../components/layout';
 import { BlogTemplate } from '@bbl-nx/ui-components';
 import { interpret } from 'xstate';
 import { waitFor } from 'xstate/lib/waitFor';
 import { postServiceWithConfig } from '../../machines/post-service-machine';
-import { useRouter } from 'next/router';
 import { PostItem } from '@bbl-nx/interfaces';
 
 interface PostPageProps {
@@ -38,24 +38,14 @@ export const getStaticProps: GetStaticProps = async () => {
 
 const BlogPage = (props: PostPageProps) => {
   const { allPosts } = props;
-  const router = useRouter();
 
   const postsByDESC = _.orderBy(allPosts, ['createdAt'], ['desc']);
   const filterPublished = postsByDESC.filter((item) => item.published);
 
-  const onNavigate = useCallback(
-    ({ href }: { href: string }) => {
-      router.push(href);
-    },
-    [router]
-  );
-
   return (
-    <BlogTemplate
-      asPath={router.asPath}
-      onNavigate={onNavigate}
-      allPosts={filterPublished}
-    />
+    <Layout>
+      <BlogTemplate allPosts={filterPublished} />
+    </Layout>
   );
 };
 

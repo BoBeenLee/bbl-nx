@@ -1,5 +1,6 @@
 import { Story, Meta } from '@storybook/react';
 import { within } from '@storybook/testing-library';
+import LayoutTemplate from '../layout-template/layout-template';
 import { AboutTemplate, AboutTemplateProps } from './about-template';
 
 export default {
@@ -8,15 +9,21 @@ export default {
   argTypes: {},
 } as Meta;
 
-const Template: Story<AboutTemplateProps> = (args) => <AboutTemplate {...args} />;
+const Template: Story<AboutTemplateProps> = (args) => (
+  <LayoutTemplate
+    {...{
+      asPath: '/',
+      onNavigate: () => {
+        // SOMETHING
+      },
+    }}
+  >
+    <AboutTemplate {...args} />
+  </LayoutTemplate>
+);
 
 export const Primary = Template.bind({});
-Primary.args = {
-  asPath: "/",
-  onNavigate: () => {
-    // SOMETHING
-  }
-};
+Primary.args = {};
 
 Primary.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement);

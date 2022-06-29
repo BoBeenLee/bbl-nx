@@ -1,19 +1,13 @@
 import React from 'react';
 import { HomeTemplate } from '@bbl-nx/ui-components';
-import { useRouter } from 'next/router';
-import { useCallback } from 'react';
+import Layout from '../components/layout';
 
 const HomePage = () => {
-  const router = useRouter();
-
-  const onNavigate = useCallback(
-    ({ href }: { href: string }) => {
-      router.push(href);
-    },
-    [router]
+  return (
+    <Layout>
+      <HomeTemplate />
+    </Layout>
   );
-
-  return <HomeTemplate asPath={router.asPath} onNavigate={onNavigate} />;
 };
 
 export default HomePage;

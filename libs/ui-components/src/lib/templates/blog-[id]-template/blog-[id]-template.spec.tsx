@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 
 import BlogIdTemplate from './blog-[id]-template';
-import { mockBlogId } from "../../__mocks__/blog";
+import { mockBlogId } from '../../__mocks__/blog';
 
 describe('BlogIdTemplate', () => {
   it('should render successfully', () => {
@@ -12,10 +12,6 @@ describe('BlogIdTemplate', () => {
           title: mockBlogId.title,
           createdAt: mockBlogId.createdAt,
           content: mockBlogId.content,
-        }}
-        asPath={""}
-        onNavigate={() => {
-          // SONETHING
         }}
       />
     );
