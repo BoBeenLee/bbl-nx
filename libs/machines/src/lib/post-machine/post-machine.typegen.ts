@@ -4,10 +4,15 @@ export interface Typegen0 {
   '@@xstate/typegen': true;
   eventsCausingActions: {
     updatePostsContext:
-      | 'UPDATE'
+      | 'done.invoke.postMachine.FetchingPosts.FetchingTistories.Fetching:invocation[0]'
       | 'done.invoke.postMachine.FetchingPosts.FetchingMD.Fetching:invocation[0]';
   };
   internalEvents: {
+    'done.invoke.postMachine.FetchingPosts.FetchingTistories.Fetching:invocation[0]': {
+      type: 'done.invoke.postMachine.FetchingPosts.FetchingTistories.Fetching:invocation[0]';
+      data: unknown;
+      __tip: 'See the XState TS docs to learn how to strongly type this.';
+    };
     'done.invoke.postMachine.FetchingPosts.FetchingMD.Fetching:invocation[0]': {
       type: 'done.invoke.postMachine.FetchingPosts.FetchingMD.Fetching:invocation[0]';
       data: unknown;
@@ -16,15 +21,17 @@ export interface Typegen0 {
     'xstate.init': { type: 'xstate.init' };
   };
   invokeSrcNameMap: {
+    fetchTistories: 'done.invoke.postMachine.FetchingPosts.FetchingTistories.Fetching:invocation[0]';
     fetchMD: 'done.invoke.postMachine.FetchingPosts.FetchingMD.Fetching:invocation[0]';
   };
   missingImplementations: {
     actions: never;
-    services: 'fetchMD';
+    services: 'fetchTistories' | 'fetchMD';
     guards: never;
     delays: never;
   };
   eventsCausingServices: {
+    fetchTistories: 'xstate.init';
     fetchMD: 'xstate.init';
   };
   eventsCausingGuards: {};
@@ -34,7 +41,7 @@ export interface Typegen0 {
     | 'FetchingPosts.FetchingTistories'
     | 'FetchingPosts.FetchingTistories.Done'
     | 'FetchingPosts.FetchingTistories.Error'
-    | 'FetchingPosts.FetchingTistories.Initial'
+    | 'FetchingPosts.FetchingTistories.Fetching'
     | 'FetchingPosts.FetchingMD'
     | 'FetchingPosts.FetchingMD.Fetching'
     | 'FetchingPosts.FetchingMD.Done'
@@ -45,7 +52,7 @@ export interface Typegen0 {
           | 'FetchingTistories'
           | 'FetchingMD'
           | {
-              FetchingTistories?: 'Done' | 'Error' | 'Initial';
+              FetchingTistories?: 'Done' | 'Error' | 'Fetching';
               FetchingMD?: 'Fetching' | 'Done' | 'Error';
             };
       };

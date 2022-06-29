@@ -10,6 +10,17 @@ body {
   height: 100%;
 }
 
+#__next {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.dark #__next {
+    --tw-bg-opacity: 1;
+    background-color: rgb(17 17 17/var(--tw-bg-opacity));
+}
+
 ::selection {
   background: #0074e5;
   color: #fff;
