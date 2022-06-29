@@ -45,7 +45,7 @@ class MyDocument extends Document {
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
         </Head>
-        <body>
+        <body className="text-white bg-white dark:bg-black dark:text-black">
           <Main />
           <NextScript />
           <script

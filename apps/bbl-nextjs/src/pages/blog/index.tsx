@@ -18,8 +18,7 @@ const makePostState = async () => {
   postService.start();
   const doneState = await waitFor(
     postService,
-    (state) =>
-      state.matches('Done'),
+    (state) => state.matches('Done'),
     {
       timeout: 10_000,
     }
@@ -37,7 +36,7 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-const PostPage = (props: PostPageProps) => {
+const BlogPage = (props: PostPageProps) => {
   const { allPosts } = props;
   const router = useRouter();
 
@@ -53,11 +52,11 @@ const PostPage = (props: PostPageProps) => {
 
   return (
     <BlogTemplate
-      allPosts={filterPublished}
       asPath={router.asPath}
       onNavigate={onNavigate}
+      allPosts={filterPublished}
     />
   );
 };
 
-export default PostPage;
+export default BlogPage;

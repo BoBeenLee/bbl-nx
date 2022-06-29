@@ -8,14 +8,14 @@ export interface PageTitleProps {
 export function PageTitle(props: PageTitleProps) {
   const { className, children } = props;
   return (
-    <div
+    <h1
       className={cn(
         className,
         'font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black dark:text-white'
       )}
     >
       {children}
-    </div>
+    </h1>
   );
 }
 

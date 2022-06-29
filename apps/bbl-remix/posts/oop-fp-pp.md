@@ -1,5 +1,5 @@
 ---
-path: '/post/oop-ffp-pp'
+path: '/blog/oop-ffp-pp'
 title: 'oop-ffp-pp'
 published: false
 date: '2018-03-23'

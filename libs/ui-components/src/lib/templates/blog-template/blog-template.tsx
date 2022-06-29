@@ -1,9 +1,9 @@
-import { PostItem } from 'libs/machines/src/lib/post-machine/post-machine';
 import { PageTitle } from '../../atoms';
 import BlogCard from '../../molecules/blog-card/blog-card';
 import LayoutTemplate, {
   LayoutTemplateProps,
 } from '../layout-template/layout-template';
+import { PostItem } from "@bbl-nx/machines";
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface BlogTemplateProps

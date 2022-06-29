@@ -1,5 +1,5 @@
 ---
-path: '/post/function-compare-code'
+path: '/blog/function-compare-code'
 title: 'React For pure function compare'
 published: false
 date: '2018-03-11'

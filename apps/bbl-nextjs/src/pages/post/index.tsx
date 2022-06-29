@@ -59,7 +59,6 @@ const PostPage = (props: PostPageProps) => {
   const posts = [...state.context.posts, ...data];
   const postsByDESC = _.orderBy(posts, ['createdAt'], ['desc']);
   const filterPublished = postsByDESC.filter((item) => item.published);
-
   return (
     <Root>
       {_.map(filterPublished, (item) => {

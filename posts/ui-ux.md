@@ -1,5 +1,5 @@
 ---
-path: '/post/ui-ux'
+path: '/blog/ui-ux'
 title: 'ui-ux'
 published: false
 date: '2018-03-15'

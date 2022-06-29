@@ -1,5 +1,5 @@
 import { useCallback } from 'react';
-import { Seperator } from "../../atoms";
+import { Seperator } from '../../atoms';
 
 export interface NavFooterItemProps {
   href: string;
@@ -33,39 +33,41 @@ function NavFooterItem({
 export function NavFooter(props: NavFooterProps) {
   const { data, onNavigate } = props;
   return (
-    <footer className="box-content flex flex-col items-start justify-center w-full max-w-2xl px-8 mx-auto mb-8">
-      <Seperator className="mb-8" />
-      <div className="grid w-full max-w-2xl grid-cols-1 gap-4 pb-16 sm:grid-cols-3">
-        <div className="flex flex-col items-start space-y-4">
-          {data.map((item) => {
-            const { href, text } = item;
-            return (
-              <NavFooterItem
-                key={href}
-                href={href}
-                text={text}
-                onNavigate={onNavigate}
-              />
-            );
-          })}
-        </div>
-        <div className="flex flex-col space-y-4">
-          <a
-            rel="noreferrer"
-            href="https://github.com/BoBeenLee"
-            target="_blank"
-            className="text-gray-500 transition hover:text-gray-600"
-          >
-            Github
-          </a>
-          <a
-            rel="noreferrer"
-            href="mailto:globaldev@naver.com"
-            target="_blank"
-            className="text-gray-500 transition hover:text-gray-600"
-          >
-            Email
-          </a>
+    <footer className="flex flex-col flex-1 px-8">
+      <div className="flex flex-col items-start justify-center w-full max-w-2xl mx-auto mb-8">
+        <Seperator className="mb-8" />
+        <div className="grid w-full max-w-2xl grid-cols-2 gap-4 pb-16">
+          <div className="flex flex-col items-start space-y-4">
+            {data.map((item) => {
+              const { href, text } = item;
+              return (
+                <NavFooterItem
+                  key={href}
+                  href={href}
+                  text={text}
+                  onNavigate={onNavigate}
+                />
+              );
+            })}
+          </div>
+          <div className="flex flex-col space-y-4">
+            <a
+              rel="noreferrer"
+              href="https://github.com/BoBeenLee"
+              target="_blank"
+              className="text-gray-500 transition hover:text-gray-600"
+            >
+              Github
+            </a>
+            <a
+              rel="noreferrer"
+              href="mailto:globaldev@naver.com"
+              target="_blank"
+              className="text-gray-500 transition hover:text-gray-600"
+            >
+              Email
+            </a>
+          </div>
         </div>
       </div>
     </footer>

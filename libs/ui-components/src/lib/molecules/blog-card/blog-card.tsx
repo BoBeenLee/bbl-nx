@@ -16,7 +16,7 @@ export function BlogCard(props: BlogCardProps) {
         <h4 className="mb-0 text-lg font-medium text-gray-900 b-2 md:text-xl dark:text-gray-100">
           {title}
         </h4>
-        <p className="mb-0 text-sm text-gray-500">
+        <p className="mb-0 text-sm text-right text-gray-500">
           {toDateTimeText(createdAt, DATE_TIME_FORMAT5)}
         </p>
       </div>

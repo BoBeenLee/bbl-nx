@@ -1,6 +1,5 @@
 import { AppProps } from 'next/app';
 import React from 'react';
-import { GlobalStyle } from '@bbl-nx/styles';
 import { NextPage } from 'next';
 import Head from 'next/head';
 import { getMetadata } from '@bbl-nx/constants';
@@ -45,7 +44,6 @@ const MyApp = (props: Props) => {
           <meta property="og:image" content={metadata.metaImage} />
           <meta name="keywords" content={metadata.keywords} />
         </Head>
-        <GlobalStyle />
         <QueryClientProvider client={queryClient}>
           <Hydrate state={pageProps.dehydratedState}>
             {getLayout(<TargetComponent {...pageProps} />)}

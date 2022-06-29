@@ -1,5 +1,5 @@
 ---
-path: '/post/list-map'
+path: '/blog/list-map'
 title: 'list-map'
 published: false
 date: '2018-03-23'

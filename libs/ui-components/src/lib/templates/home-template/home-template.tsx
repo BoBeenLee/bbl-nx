@@ -16,7 +16,7 @@ export function HomeTemplate(props: HomeTemplateProps) {
         <HomeCard
           name={'BoBeen Lee'}
           roleName={'Frontend Developer'}
-          description={'I love coding'}
+          description={'Thinking about React, Typescript and Misc development.'}
         />
       </div>
     </LayoutTemplate>
