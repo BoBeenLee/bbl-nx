@@ -2,8 +2,8 @@ import { Icon } from '../../atoms';
 
 export interface ProjectLinksProps {
   url: {
-    github?: string;
     link?: string;
+    github?: string;
     googleStore?: string;
     appStore?: string;
   };
@@ -29,12 +29,12 @@ export function ProjectLinks(props: ProjectLinksProps) {
         </a>
       ) : null}
       {url.googleStore ? (
-        <a className="w-5 h-5" href={url.link} target="_blank" rel="noreferrer">
+        <a className="w-5 h-5" href={url.googleStore} target="_blank" rel="noreferrer">
           <Icon name={'android'} />
         </a>
       ) : null}
       {url.appStore ? (
-        <a className="w-5 h-5" href={url.link} target="_blank" rel="noreferrer">
+        <a className="w-5 h-5" href={url.appStore} target="_blank" rel="noreferrer">
           <Icon name={'apple'} />
         </a>
       ) : null}

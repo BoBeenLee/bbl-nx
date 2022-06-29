@@ -17,7 +17,7 @@ export function ProjectCard(props: ProjectCardProps) {
           </p>
           <p className="mb-0 text-sm text-gray-500">{period}</p>
         </div>
-        <div>{IconComponent}</div>
+        {IconComponent}
       </div>
       <p className="mb-2 text-gray-600 dark:text-gray-400">{summary}</p>
       <div className="flex flex-row flex-wrap items-center gap-2">

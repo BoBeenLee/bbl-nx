@@ -180,11 +180,56 @@ export const companyPortfolios = [
   },
 ];
 
+export const personalPortforlios = [
+  {
+    id: 'bbl',
+    name: 'My Homepage',
+    period: 'ing',
+    githubRepoName: ['bbl', 'bbl-nx', 'bbl-nextjs'],
+    skills: [
+      'react',
+      'xstate',
+      'nextjs',
+      'nx.dev',
+      'tailwind',
+      'styled-components',
+      'typescript',
+      'storybook',
+    ],
+    summary: '나의 커리어 기록용, 블로그겸 홈페이지',
+    githubUrl: 'https://github.com/BoBeenLee/bbl-nx',
+    storybookUrl: 'https://bobeenlee.github.io/bbl-nx/ui-components/',
+    linkUrl: 'https://bbl-nx.vercel.app/',
+    images: [],
+  },
+  {
+    id: 'skhualarm',
+    name: 'Skhualarm',
+    period: '',
+    githubRepoName: [],
+    skills: [
+      'android',
+      'facebook-Graph-API',
+      'Picasso',
+      'spring-framework',
+      'myBatis',
+      'jsoup',
+      'quartz',
+      'mariaDB',
+    ],
+    summary: 'Sungkonghoe University Alarm App',
+    githubUrl: 'https://github.com/BoBeenLee/SkhuApp',
+    linkUrl:
+      'https://play.google.com/store/apps/details?id=com.skhu.bobinlee.skhuapp&hl=ko',
+    images: _.values(images.portfolio.skhualarm),
+  },
+];
+
 export const teamPortfolios = [
   {
     id: 'onesecondmusicgame',
     name: 'onesecondmusicgame',
-    period: 'current',
+    period: '~ 2021.10.06',
     githubRepoName: [],
     skills: [
       'react',
@@ -203,25 +248,6 @@ export const teamPortfolios = [
       'https://apps.apple.com/kr/app/%EC%95%8C%EC%8F%AD%EB%8B%AC%EC%8F%AD/id1493107650',
     googleStoreUrl:
       'https://play.google.com/store/apps/details?id=kr.nexters.onesecondmusicgame',
-    images: [],
-  },
-  {
-    id: 'bbl',
-    name: 'bbl',
-    period: 'current',
-    githubRepoName: [],
-    skills: [
-      'react',
-      'gatsby',
-      'styled-components',
-      'offline',
-      'typescript',
-      'storybook',
-    ],
-    summary: 'personal site',
-    githubUrl: 'https://github.com/BoBeenLee/bbl',
-    storybookUrl: 'https://bobeenlee.github.io/bbl/',
-    linkUrl: '',
     images: [],
   },
   {
@@ -303,27 +329,6 @@ export const teamPortfolios = [
     images: _.values(images.portfolio.intersection),
   },
   {
-    id: 'skhualarm',
-    name: 'Skhualarm',
-    period: '',
-    githubRepoName: [],
-    skills: [
-      'android',
-      'facebook-Graph-API',
-      'Picasso',
-      'spring-framework',
-      'myBatis',
-      'jsoup',
-      'quartz',
-      'mariaDB',
-    ],
-    summary: 'Sungkonghoe University Alarm App',
-    githubUrl: 'https://github.com/BoBeenLee/SkhuApp',
-    linkUrl:
-      'https://play.google.com/store/apps/details?id=com.skhu.bobinlee.skhuapp&hl=ko',
-    images: _.values(images.portfolio.skhualarm),
-  },
-  {
     id: 'competition',
     name: 'Competition',
     period: '',
@@ -356,4 +361,7 @@ export const teamPortfolios = [
   },
 ];
 
-export type PortfolioItem = Merge<MergeArrayType<typeof companyPortfolios>, MergeArrayType<typeof teamPortfolios>>;
+export type PortfolioItem = Merge<
+  MergeArrayType<typeof companyPortfolios>,
+  MergeArrayType<typeof teamPortfolios>
+>;
