@@ -8,7 +8,6 @@ import {
 import { isIE, media } from '@bbl-nx/utils';
 import styled, { css, withTheme } from 'styled-components';
 import Headroom from 'react-headroom';
-import { images } from '@bbl-nx/images';
 import { useCallback, useState } from 'react';
 import Seperator from '../../atoms/seperator/seperator';
 import Avatar from '../../atoms/avatar/avatar';
@@ -168,7 +167,7 @@ export function Header(props: HeaderProps) {
           <HeaderTitle>
             <Logo>
               <LogoLink href="/">
-                <LogoIcon avatarUrl={images.quokka} alt="bobeenlee" />
+                <LogoIcon alt="bobeenlee" />
               </LogoLink>
             </Logo>
             {_.map(titles, renderTitleItem)}

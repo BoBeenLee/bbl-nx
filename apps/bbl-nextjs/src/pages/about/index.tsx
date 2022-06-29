@@ -1,25 +1,18 @@
-import React from 'react';
-import styled from 'styled-components';
-
-import { Layout, Activity, Education, Experience, Skill  } from '@bbl-nx/ui-components';
-
-const Root = styled.div`
-  padding-top: 20px;
-`;
+import { AboutTemplate } from '@bbl-nx/ui-components';
+import { useRouter } from 'next/router';
+import { useCallback } from 'react';
 
 const AboutPage = () => {
-  return (
-    <Root>
-      <Experience />
-      <Activity />
-      <Skill />
-      <Education />
-    </Root>
-  );
-};
+  const router = useRouter();
 
-AboutPage.getLayout = function getLayout(page: React.ReactElement) {
-  return <Layout>{page}</Layout>;
+  const onNavigate = useCallback(
+    ({ href }: { href: string }) => {
+      router.push(href);
+    },
+    [router]
+  );
+
+  return <AboutTemplate asPath={router.asPath} onNavigate={onNavigate} />;
 };
 
 export default AboutPage;

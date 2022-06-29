@@ -1,16 +1,12 @@
-import { getThemeProps } from '@bbl-nx/styles';
-import styled from 'styled-components';
+import cn from "classnames"
 
-/* eslint-disable-next-line */
-export interface SeperatorProps {}
-
-const StyledSeperator = styled.div`
-  width: 100%;
-  border: 1px solid ${getThemeProps("lineColor")};
-`;
+export interface SeperatorProps {
+  className?: string;
+}
 
 export function Seperator(props: SeperatorProps) {
-  return <StyledSeperator {...props} />;
+  const { className } = props;
+  return <div className={cn(className, "w-full h-[1px] bg-gray-200 dark:bg-gray-800")} />;
 }
 
 export default Seperator;

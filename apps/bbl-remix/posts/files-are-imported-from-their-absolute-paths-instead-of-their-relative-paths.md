@@ -1,5 +1,5 @@
 ---
-path: '/post/files-are-imported-from-their-absolute-paths-instead-of-their-relative-paths'
+path: '/blog/files-are-imported-from-their-absolute-paths-instead-of-their-relative-paths'
 title: React 상대경로 -> 절대경로 변경
 date: '2018-04-04'
 published: true

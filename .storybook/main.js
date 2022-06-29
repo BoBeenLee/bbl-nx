@@ -3,7 +3,7 @@ module.exports = {
     interactionsDebugger: true,
   },
   stories: [],
-  addons: ['@storybook/addon-interactions', '@storybook/addon-essentials'],
+  addons: ['@storybook/addon-essentials'],
   typescript: { reactDocgen: false },
   // uncomment the property below if you want to apply some webpack config globally
   webpackFinal: async (config, { configType }) => {

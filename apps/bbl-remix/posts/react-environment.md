@@ -1,5 +1,5 @@
 ---
-path: '/post/react-environment'
+path: '/blog/react-environment'
 title: 'React Custom Environment'
 published: true
 date: '2018-02-25'

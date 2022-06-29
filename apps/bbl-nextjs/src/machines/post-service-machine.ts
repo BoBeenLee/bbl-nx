@@ -1,8 +1,9 @@
-import { postMachine } from "@bbl-nx/machines";
-import { fetchMD } from "../apis/post";
+import { postMachine } from '@bbl-nx/machines';
+import { fetchMD, fetchTistories } from '../apis/post';
 
 export const postServiceWithConfig = postMachine.withConfig({
-    services: {
-      fetchMD,
-    },
-  });
+  services: {
+    fetchMD,
+    fetchTistories
+  },
+});

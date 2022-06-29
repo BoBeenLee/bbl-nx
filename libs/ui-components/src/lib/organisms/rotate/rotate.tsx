@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Rotate as WindowRotate } from '@bbl-nx/faccs';
-import { images } from '@bbl-nx/images';
+import { Icon } from '../../atoms';
 
 /* eslint-disable-next-line */
 export interface RotateProps {}
@@ -24,25 +24,20 @@ const IconGroup = styled.div<{ zDeg: number }>`
 
 const IconLink = styled.a``;
 
-const Icon = styled.img`
-  width: 40px;
-  height: 40px;
-`;
-
 export function Rotate() {
   const renderIcons = ({ zDeg }: { zDeg: number }) => (
     <IconGroup zDeg={zDeg}>
       <IconLink href="https://www.facebook.com/bobin.lee.9" target="_blank">
-        <Icon alt="facebook" src={images.facebook} />
+        <Icon className="w-[40px] h-[40px]" name="facebook" />
       </IconLink>
       <IconLink href="https://www.instagram.com/bobeenlee_" target="_blank">
-        <Icon alt="instagram" src={images.instagram} />
+        <Icon className="w-[40px] h-[40px]" name="instagram" />
       </IconLink>
       <IconLink
         href="https://www.linkedin.com/in/%EB%B3%B4%EB%B9%88-%EC%9D%B4-035613a5/"
         target="_blank"
       >
-        <Icon alt="linkedin" src={images.linkedin} />
+        <Icon className="w-[40px] h-[40px]" name="linkedin" />
       </IconLink>
     </IconGroup>
   );

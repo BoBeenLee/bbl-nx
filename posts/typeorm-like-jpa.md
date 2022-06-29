@@ -1,5 +1,5 @@
 ---
-path: '/post/typeorm-like-jpa'
+path: '/blog/typeorm-like-jpa'
 title: 'Typeorm like jpa'
 published: false
 date: '2018-03-09'

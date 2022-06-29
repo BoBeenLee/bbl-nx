@@ -1,21 +1,19 @@
 import React from 'react';
-import styled from 'styled-components';
-import { Layout, Rotate } from '@bbl-nx/ui-components';
-
-const Root = styled.div`
-  height: 100%;
-`;
+import { HomeTemplate } from '@bbl-nx/ui-components';
+import { useRouter } from 'next/router';
+import { useCallback } from 'react';
 
 const HomePage = () => {
-  return (
-    <Root>
-      <Rotate />
-    </Root>
-  );
-};
+  const router = useRouter();
 
-HomePage.getLayout = function getLayout(page: React.ReactElement) {
-  return <Layout>{page}</Layout>;
+  const onNavigate = useCallback(
+    ({ href }: { href: string }) => {
+      router.push(href);
+    },
+    [router]
+  );
+
+  return <HomeTemplate asPath={router.asPath} onNavigate={onNavigate} />;
 };
 
 export default HomePage;

@@ -1,5 +1,5 @@
 ---
-path: '/post/react-facc-hoc'
+path: '/blog/react-facc-hoc'
 title: 'Function as Child Component And High Order Component'
 published: true
 date: '2018-03-08'

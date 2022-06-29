@@ -1,31 +1,33 @@
 // Install remark and remark-html
 import remark from 'remark';
 import html from 'remark-html';
-import React from 'react';
+import React, { useCallback } from 'react';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { getPostBySlug, getAllPosts, PostItem } from '../../libs/post';
-import { Layout, PostTemplate } from '@bbl-nx/ui-components';
+import { useRouter } from 'next/router';
+import { BlogIdTemplate } from '@bbl-nx/ui-components';
 
-const PostByIdPage = (props: PostItem) => {
+const BlogByIdPage = (props: PostItem) => {
+  const router = useRouter();
   const { slug, frontmatter, content } = props;
+
+  const onNavigate = useCallback(
+    ({ href }: { href: string }) => {
+      router.push(href);
+    },
+    [router]
+  );
+
   return (
-    <PostTemplate
-      data={{
-        markdownRemark: {
-          id: slug,
-          html: content,
-          fields: {
-            slug,
-          },
-          frontmatter,
-        },
-      }}
+    <BlogIdTemplate
+      asPath={router.asPath}
+      onNavigate={onNavigate}
+      id={slug}
+      title={frontmatter.title}
+      createdAt={frontmatter.date}
+      content={content}
     />
   );
-};
-
-PostByIdPage.getLayout = function getLayout(page: React.ReactElement) {
-  return <Layout>{page}</Layout>;
 };
 
 export const getStaticProps: GetStaticProps<PostItem, { id: string }> = async ({
@@ -60,4 +62,4 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-export default PostByIdPage;
+export default BlogByIdPage;
