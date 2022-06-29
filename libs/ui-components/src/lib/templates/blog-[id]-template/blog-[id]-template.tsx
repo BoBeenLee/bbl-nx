@@ -3,7 +3,6 @@ import LayoutTemplate, {
   LayoutTemplateProps,
 } from '../layout-template/layout-template';
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface BlogIdTemplateProps
   extends Omit<LayoutTemplateProps, 'children'> {
   id: string;
