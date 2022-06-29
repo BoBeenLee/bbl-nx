@@ -183,8 +183,8 @@ export const companyPortfolios = [
 export const personalPortforlios = [
   {
     id: 'bbl',
-    name: 'My Homepage',
-    period: 'ing',
+    name: 'BoBeen Lee',
+    period: 'sometimes',
     githubRepoName: ['bbl', 'bbl-nx', 'bbl-nextjs'],
     skills: [
       'react',
@@ -196,7 +196,7 @@ export const personalPortforlios = [
       'typescript',
       'storybook',
     ],
-    summary: '나의 커리어 기록용, 블로그겸 홈페이지',
+    summary: '나의 기록용, 블로그겸 홈페이지',
     githubUrl: 'https://github.com/BoBeenLee/bbl-nx',
     storybookUrl: 'https://bobeenlee.github.io/bbl-nx/ui-components/',
     linkUrl: 'https://bbl-nx.vercel.app/',
