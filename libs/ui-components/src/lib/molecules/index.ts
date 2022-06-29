@@ -10,3 +10,4 @@ export * from './experience-card/experience-card';
 export * from './activity-card/activity-card';
 export * from './tech-stack-card/tech-stack-card';
 export * from './project-card/project-card';
+export * from './project-links/project-links';
