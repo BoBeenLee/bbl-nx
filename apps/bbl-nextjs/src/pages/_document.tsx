@@ -36,7 +36,7 @@ class MyDocument extends Document {
 
   public render() {
     return (
-      <Html lang="en">
+      <Html lang="en" className="dark">
         <Head>
           <meta charSet="utf-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
