@@ -1,9 +1,8 @@
-import React from 'react';
-import { HomeTemplate } from '@bbl-nx/ui-components';
+import { ProjectTemplate } from '@bbl-nx/ui-components';
 import { useRouter } from 'next/router';
 import { useCallback } from 'react';
 
-const HomePage = () => {
+const ProjectPage = () => {
   const router = useRouter();
 
   const onNavigate = useCallback(
@@ -13,7 +12,7 @@ const HomePage = () => {
     [router]
   );
 
-  return <HomeTemplate asPath={router.asPath} onNavigate={onNavigate} />;
+  return <ProjectTemplate asPath={router.asPath} onNavigate={onNavigate} />;
 };
 
-export default HomePage;
+export default ProjectPage;
