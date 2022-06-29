@@ -52,6 +52,7 @@ export function ProjectTemplate(props: ProjectTemplateProps) {
               />
             );
           })}
+          <Seperator />
         </div>
       </div>
     </LayoutTemplate>

@@ -12,14 +12,15 @@ export function ProjectCard(props: ProjectCardProps) {
     <div className="flex flex-col">
       <div className="flex flex-row items-start justify-between mb-2">
         <div className="flex flex-row items-center">
-          <p className="pr-4 font-medium text-gray-900 truncate dark:text-gray-100">
+          <p className="pr-4 mb-0 font-medium text-gray-900 truncate dark:text-gray-100">
             {name}
           </p>
-          <p className="text-sm text-gray-500">{period}</p>
+          <p className="mb-0 text-sm text-gray-500">{period}</p>
         </div>
         <div>{IconComponent}</div>
       </div>
-      <div className="flex flex-row flex-wrap items-center gap-2 mb-4">
+      <p className="mb-2 text-gray-600 dark:text-gray-400">{summary}</p>
+      <div className="flex flex-row flex-wrap items-center gap-2">
         {techStacks.map((item) => {
           return (
             <div key={`${name}${item}`} className="text-sm text-gray-500">
@@ -28,7 +29,6 @@ export function ProjectCard(props: ProjectCardProps) {
           );
         })}
       </div>
-      <p className="text-sm text-gray-500">{summary}</p>
     </div>
   );
 }
