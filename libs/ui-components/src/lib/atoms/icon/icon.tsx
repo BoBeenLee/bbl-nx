@@ -9,7 +9,6 @@ export type IconType = SvgType | ReactIconType;
 export interface IconProps {
   className?: string;
   name: IconType;
-  color?: string;
 }
 
 const isReactIconType = (name: IconType): name is ReactIconType => {

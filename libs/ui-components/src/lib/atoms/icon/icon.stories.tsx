@@ -19,7 +19,6 @@ const Template: Story<IconProps> = (args) => <Icon {...args} />;
 export const Primary = Template.bind({});
 Primary.args = {
   name: 'facebook',
-  size: 20,
 };
 
 Primary.play = async ({ canvasElement }) => {
