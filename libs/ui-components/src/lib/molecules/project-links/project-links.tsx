@@ -2,6 +2,7 @@ import { Icon } from '../../atoms';
 
 export interface ProjectLinksProps {
   url: {
+    home?: string;
     link?: string;
     github?: string;
     googleStore?: string;
@@ -13,6 +14,11 @@ export function ProjectLinks(props: ProjectLinksProps) {
   const { url } = props;
   return (
     <div className="flex flex-row items-center gap-3">
+      {url.home ? (
+        <a className="w-5 h-5" href={url.home} target="_blank" rel="noreferrer">
+          <Icon name={'home'} />
+        </a>
+      ) : null}
       {url.link ? (
         <a className="w-5 h-5" href={url.link} target="_blank" rel="noreferrer">
           <Icon name={'link'} />
@@ -29,12 +35,22 @@ export function ProjectLinks(props: ProjectLinksProps) {
         </a>
       ) : null}
       {url.googleStore ? (
-        <a className="w-5 h-5" href={url.googleStore} target="_blank" rel="noreferrer">
+        <a
+          className="w-5 h-5"
+          href={url.googleStore}
+          target="_blank"
+          rel="noreferrer"
+        >
           <Icon name={'android'} />
         </a>
       ) : null}
       {url.appStore ? (
-        <a className="w-5 h-5" href={url.appStore} target="_blank" rel="noreferrer">
+        <a
+          className="w-5 h-5"
+          href={url.appStore}
+          target="_blank"
+          rel="noreferrer"
+        >
           <Icon name={'apple'} />
         </a>
       ) : null}

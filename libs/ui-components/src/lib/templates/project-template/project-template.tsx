@@ -31,6 +31,7 @@ export function ProjectTemplate(props: ProjectTemplateProps) {
               period,
               skills,
               summary,
+              homeUrl,
               githubUrl,
               linkUrl,
               googleStoreUrl,
@@ -46,6 +47,7 @@ export function ProjectTemplate(props: ProjectTemplateProps) {
                 IconComponent={
                   <ProjectLinks
                     url={{
+                      home: homeUrl,
                       link: linkUrl,
                       github: githubUrl,
                       googleStore: googleStoreUrl,
@@ -63,7 +65,7 @@ export function ProjectTemplate(props: ProjectTemplateProps) {
             Personal
           </SectionTitle>
           {personalPortforlios.map((item) => {
-            const { id, name, period, skills, summary, githubUrl, linkUrl } =
+            const { id, name, period, skills, summary, githubUrl, homeUrl } =
               item;
             return (
               <ProjectCard
@@ -75,7 +77,7 @@ export function ProjectTemplate(props: ProjectTemplateProps) {
                 IconComponent={
                   <ProjectLinks
                     url={{
-                      link: linkUrl,
+                      home: homeUrl,
                       github: githubUrl,
                     }}
                   />
@@ -97,7 +99,7 @@ export function ProjectTemplate(props: ProjectTemplateProps) {
               skills,
               summary,
               githubUrl,
-              linkUrl,
+              homeUrl,
               googleStoreUrl,
               appStoreUrl,
             } = item;
@@ -111,7 +113,7 @@ export function ProjectTemplate(props: ProjectTemplateProps) {
                 IconComponent={
                   <ProjectLinks
                     url={{
-                      link: linkUrl,
+                      home: homeUrl,
                       github: githubUrl,
                       googleStore: googleStoreUrl,
                       appStore: appStoreUrl,

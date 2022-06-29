@@ -12,6 +12,7 @@ export const companyPortfolios = [
       'mobx-state-tree',
       'mobx',
       'nextjs',
+      'gatsby',
       'emotion',
       'typescript',
       'storybook',
@@ -21,7 +22,8 @@ export const companyPortfolios = [
     summary: `국내 주요 은행, 가상자산 거래소, 핀테크 회사, 가상자산 
 수탁업체가 Henesis로 가상자산 서비스`,
     githubUrl: '',
-    linkUrl: 'https://app.wallet.henesis.io/account/login',
+    linkUrl: 'https://henesis.io/',
+    homeUrl: 'https://app.wallet.henesis.io/account/login',
     googleStoreUrl: '',
     appStoreUrl: '',
     images: [],
@@ -45,7 +47,8 @@ export const companyPortfolios = [
     summary: `비트코인 수탁 등 법인·기관 투자자를 위한 
 디지털 자산 수탁 원스탑 서비스`,
     githubUrl: '',
-    linkUrl: 'https://app.kodax.com/account/login',
+    linkUrl: 'https://kodax.com/',
+    homeUrl: 'https://app.kodax.com/account/login',
     googleStoreUrl: '',
     appStoreUrl: '',
     images: [],
@@ -68,7 +71,7 @@ export const companyPortfolios = [
     ],
     summary: '나에게 맞는, 더 나은 뷰티라이프',
     githubUrl: '',
-    linkUrl: 'https://fitsme.kr/',
+    homeUrl: 'https://fitsme.kr/',
     googleStoreUrl:
       'https://play.google.com/store/apps/details?id=kr.fitsme.app',
     appStoreUrl: 'https://apps.apple.com/kr/app/id1466041001',
@@ -89,20 +92,7 @@ export const companyPortfolios = [
     ],
     summary: 'haechi website',
     githubUrl: '',
-    linkUrl: 'https://haechi.io/',
-    googleStoreUrl: '',
-    appStoreUrl: '',
-    images: [],
-  },
-  {
-    id: 'Henesis Website',
-    name: 'Henesis Website',
-    period: '2019.6 - 2019.6',
-    githubRepoName: [],
-    skills: ['react', 'gatsby', 'styled components', 'typescript', 'storybook'],
-    summary: 'An all-in-one platform for blockchain integration',
-    githubUrl: '',
-    linkUrl: 'https://henesis.io/',
+    homeUrl: 'https://haechi.io/',
     googleStoreUrl: '',
     appStoreUrl: '',
     images: [],
@@ -146,7 +136,7 @@ export const companyPortfolios = [
     summary:
       '같은 목적지를 오가는 분들이 원하는 시간대에 함께 쓰는 새로운 카셰어링',
     githubUrl: '',
-    linkUrl: 'https://www.buxikorea.com/',
+    homeUrl: 'https://www.buxikorea.com/',
     images: [],
   },
   {
@@ -199,7 +189,7 @@ export const personalPortforlios = [
     summary: '나의 기록용, 블로그겸 홈페이지',
     githubUrl: 'https://github.com/BoBeenLee/bbl-nx',
     storybookUrl: 'https://bobeenlee.github.io/bbl-nx/ui-components/',
-    linkUrl: 'https://bbl-nx.vercel.app/',
+    homeUrl: 'https://bbl-nx.vercel.app/',
     images: [],
   },
   {
@@ -219,7 +209,7 @@ export const personalPortforlios = [
     ],
     summary: 'Sungkonghoe University Alarm App',
     githubUrl: 'https://github.com/BoBeenLee/SkhuApp',
-    linkUrl:
+    homeUrl:
       'https://play.google.com/store/apps/details?id=com.skhu.bobinlee.skhuapp&hl=ko',
     images: _.values(images.portfolio.skhualarm),
   },
@@ -243,7 +233,7 @@ export const teamPortfolios = [
     summary: '1초 음악 맞추기 게임',
     githubUrl: '',
     storybookUrl: 'http://onesecondmusicgame.surge.sh/',
-    linkUrl: '',
+    homeUrl: '',
     appStoreUrl:
       'https://apps.apple.com/kr/app/%EC%95%8C%EC%8F%AD%EB%8B%AC%EC%8F%AD/id1493107650',
     googleStoreUrl:
@@ -266,7 +256,7 @@ export const teamPortfolios = [
     ],
     summary: '셰프와 게스트 연결해주는 서비스',
     githubUrl: 'https://github.com/Nexters/inhousekitchen',
-    linkUrl: '',
+    homeUrl: '',
     images: _.values(images.portfolio.house),
   },
   {
@@ -286,7 +276,7 @@ export const teamPortfolios = [
     ],
     summary: 'Site For Flipped Learning',
     githubUrl: 'https://github.com/Nexters/flass',
-    linkUrl: 'http://flass.me',
+    homeUrl: 'http://flass.me',
     images: [],
   },
   {
@@ -306,7 +296,7 @@ export const teamPortfolios = [
     ],
     summary: '위치기반 익명 SNS',
     githubUrl: 'https://github.com/OnePageAndroid',
-    linkUrl:
+    homeUrl:
       'https://play.google.com/store/apps/details?id=kr.nexters.onepage&hl=ko',
     images: [],
   },
@@ -324,7 +314,7 @@ export const teamPortfolios = [
     ],
     summary: '너와 나의 중간지점',
     githubUrl: 'https://github.com/BoBeenLee/map',
-    linkUrl:
+    homeUrl:
       'https://play.google.com/store/apps/details?id=com.nexters.intersection.intersectionapp',
     images: _.values(images.portfolio.intersection),
   },
@@ -345,7 +335,7 @@ export const teamPortfolios = [
     ],
     summary: 'Sungkonghoe University Competition Site',
     githubUrl: 'https://github.com/BoBeenLee/SkhuCompetition.Server',
-    linkUrl: '',
+    homeUrl: '',
     images: _.values(images.portfolio.competition),
   },
   {
@@ -356,7 +346,7 @@ export const teamPortfolios = [
     skills: ['jQuery', 'prototypeJs', 'jPagejs', 'jsp', 'myBatis'],
     summary: 'Sungkonghoe University Software Engineering Department Site',
     githubUrl: 'https://github.com/BoBeenLee/swhome',
-    linkUrl: '',
+    homeUrl: '',
     images: _.values(images.portfolio.softhome),
   },
 ];
