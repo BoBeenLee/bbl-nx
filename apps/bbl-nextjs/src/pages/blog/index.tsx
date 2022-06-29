@@ -7,7 +7,7 @@ import { interpret } from 'xstate';
 import { waitFor } from 'xstate/lib/waitFor';
 import { postServiceWithConfig } from '../../machines/post-service-machine';
 import { useRouter } from 'next/router';
-import { PostItem } from '@bbl-nx/machines';
+import { PostItem } from '@bbl-nx/interfaces';
 
 interface PostPageProps {
   allPosts: PostItem[];

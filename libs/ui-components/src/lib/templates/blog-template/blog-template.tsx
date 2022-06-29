@@ -3,7 +3,7 @@ import BlogCard from '../../molecules/blog-card/blog-card';
 import LayoutTemplate, {
   LayoutTemplateProps,
 } from '../layout-template/layout-template';
-import { PostItem } from "@bbl-nx/machines";
+import { PostItem } from "@bbl-nx/interfaces";
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface BlogTemplateProps

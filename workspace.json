@@ -11,6 +11,7 @@
     "hocs": "libs/hocs",
     "hooks": "libs/hooks",
     "images": "libs/images",
+    "interfaces": "libs/interfaces",
     "libs": "libs/libs",
     "machines": "libs/machines",
     "styles": "libs/styles",

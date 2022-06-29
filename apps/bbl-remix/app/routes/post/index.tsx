@@ -18,12 +18,12 @@ const PageLoading = styled(Loading)`
   height: 100vh;
 `;
 
-const makeMDPostState = async () => {
+const makePostState = async () => {
   const postService = interpret(postServiceWithConfig);
   postService.start();
   const doneState = await waitFor(
     postService,
-    (state) => state.matches('FetchingPosts.FetchingMD.Done'),
+    (state) => state.matches('Done'),
     {
       timeout: 10_000,
     }
@@ -32,7 +32,7 @@ const makeMDPostState = async () => {
 };
 
 export const loader = async () => {
-  const state = await makeMDPostState();
+  const state = await makePostState();
   return JSON.stringify(state);
 };
 
