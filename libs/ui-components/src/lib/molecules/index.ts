@@ -7,3 +7,4 @@ export * from './tech-stack-card/tech-stack-card';
 export * from './project-card/project-card';
 export * from './project-links/project-links';
 export * from './blog-card/blog-card';
+export * from './dark-mode-button/dark-mode-button';
