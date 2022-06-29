@@ -46,7 +46,7 @@ export function DarkModeProvider({
 
   return (
     <DarkModeProviderContext.Provider value={darkMode}>
-      <ThemeProvider theme={theme}>{children}</ThemeProvider>
+      <ThemeProvider theme={theme as any}>{children}</ThemeProvider>
     </DarkModeProviderContext.Provider>
   );
 }
