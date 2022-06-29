@@ -1,4 +1,5 @@
 import { useCallback } from 'react';
+import { Seperator } from "../../atoms";
 
 export interface NavFooterItemProps {
   href: string;
@@ -33,6 +34,7 @@ export function NavFooter(props: NavFooterProps) {
   const { data, onNavigate } = props;
   return (
     <footer className="box-content flex flex-col items-start justify-center w-full max-w-2xl px-8 mx-auto mb-8">
+      <Seperator className="mb-8" />
       <div className="grid w-full max-w-2xl grid-cols-1 gap-4 pb-16 sm:grid-cols-3">
         <div className="flex flex-col items-start space-y-4">
           {data.map((item) => {

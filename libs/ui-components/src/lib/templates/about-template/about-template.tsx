@@ -72,7 +72,6 @@ export function AboutTemplate(props: AboutTemplateProps) {
             BoBeen Lee graduated from Sungkonghoe University in Software
             Engineering.
           </p>
-          <Seperator />
         </div>
       </div>
     </LayoutTemplate>

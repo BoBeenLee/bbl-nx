@@ -12,7 +12,7 @@ export function HomeTemplate(props: HomeTemplateProps) {
 
   return (
     <LayoutTemplate asPath={asPath} onNavigate={onNavigate}>
-      <div className="flex flex-col items-start justify-center max-w-2xl py-16 mx-auto border-gray-200 sm:mb-16 dark:border-gray-700">
+      <div className="flex flex-col items-start justify-center max-w-2xl py-20 mx-auto border-gray-200 sm:mb-16 dark:border-gray-700">
         <HomeCard
           name={'BoBeen Lee'}
           roleName={'Frontend Developer'}
