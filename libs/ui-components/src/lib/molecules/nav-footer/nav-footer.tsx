@@ -33,7 +33,7 @@ function NavFooterItem({
 export function NavFooter(props: NavFooterProps) {
   const { data, onNavigate } = props;
   return (
-    <footer className="flex flex-col flex-1 px-8">
+    <footer className="flex flex-col px-8">
       <div className="flex flex-col items-start justify-center w-full max-w-2xl mx-auto mb-8">
         <Seperator className="mb-8" />
         <div className="grid w-full max-w-2xl grid-cols-2 gap-4 pb-16">
