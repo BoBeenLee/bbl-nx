@@ -14,7 +14,6 @@
     "interfaces": "libs/interfaces",
     "libs": "libs/libs",
     "machines": "libs/machines",
-    "styles": "libs/styles",
     "ui-components": "libs/ui-components",
     "utils": "libs/utils"
   }

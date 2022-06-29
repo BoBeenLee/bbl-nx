@@ -1,4 +1,3 @@
-import { defaultMode } from '@bbl-nx/styles';
 import React, { useContext, useMemo } from 'react';
 import { useEffect, useState } from 'react';
 import { ThemeProvider, ModeType } from 'styled-components';
@@ -42,7 +41,7 @@ export function DarkModeProvider({
   }, [initialDarkMode]);
 
   const theme = useMemo(() => {
-    return { ...defaultMode, mode: darkMode.mode ?? defaultMode.mode };
+    return { mode: darkMode.mode ?? "light", size: "large" };
   }, [darkMode.mode]);
 
   return (
