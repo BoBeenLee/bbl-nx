@@ -24,10 +24,10 @@ export function Icon(props: IconProps) {
 
   if (isReactIconType(name)) {
     const TargetComponent = reactIcons[name];
-    return <TargetComponent className={cn(className, `fill-white w-full h-full`)} />;
+    return <TargetComponent className={cn(className, `dark:fill-white fill-black w-full h-full`)} />;
   }
   const TargetComponent = svgIcons[name];
-  return <TargetComponent className={cn(className, `fill-white w-full h-full`)} />;
+  return <TargetComponent className={cn(className, `dark:fill-white fill-black w-full h-full`)} />;
 }
 
 export default Icon;
