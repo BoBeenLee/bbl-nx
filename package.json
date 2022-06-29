@@ -49,7 +49,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
-    "react-icons": "^3.7.0",
+    "react-icons": "^4.4.0",
     "remark": "^10.0.1",
     "remark-html": "^15.0.0",
     "styled-components": "5.3.5",

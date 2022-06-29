@@ -6,6 +6,7 @@ import Linkedin from './Linkedin';
 import { DiAndroid, DiApple } from 'react-icons/di';
 import { AiFillHome } from 'react-icons/ai';
 import { GoLink as LinkIcon, GoMarkGithub as GithubIcon } from 'react-icons/go';
+import { MdOutlineLightMode, MdOutlineNightlight } from 'react-icons/md';
 
 export const svgIcons = {
   github: Github,
@@ -21,4 +22,6 @@ export const reactIcons = {
   link: LinkIcon,
   github: GithubIcon,
   home: AiFillHome,
+  light: MdOutlineLightMode,
+  night: MdOutlineNightlight,
 };

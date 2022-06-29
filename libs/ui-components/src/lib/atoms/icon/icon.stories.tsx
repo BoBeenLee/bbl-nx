@@ -1,15 +1,15 @@
 import { Story, Meta } from '@storybook/react';
 import { within } from '@storybook/testing-library';
 import { Icon, IconProps } from './icon';
-import { svgIcons } from "./svg";
+import { svgIcons, reactIcons } from './svg';
 
 export default {
   component: Icon,
   title: 'atoms/Icon',
   argTypes: {
     name: {
-      options: Object.keys(svgIcons),
-      control: { type: 'select' }
+      options: [...Object.keys(svgIcons), ...Object.keys(reactIcons)],
+      control: { type: 'select' },
     },
   },
 } as Meta;
