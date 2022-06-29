@@ -1,5 +1,6 @@
 import { Story, Meta } from '@storybook/react';
 import { within } from '@storybook/testing-library';
+import { mockBlogs } from "../../__mocks__/blog";
 import { BlogTemplate, BlogTemplateProps } from './blog-template';
 
 export default {
@@ -11,7 +12,13 @@ export default {
 const Template: Story<BlogTemplateProps> = (args) => <BlogTemplate {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = {};
+Primary.args = {
+  allPosts: mockBlogs,
+  asPath: "",
+  onNavigate: () => {
+    // SOMETHING
+  }
+};
 
 Primary.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement);

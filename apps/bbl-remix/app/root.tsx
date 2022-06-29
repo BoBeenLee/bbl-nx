@@ -8,7 +8,6 @@ import {
 } from '@remix-run/react';
 import { LinksFunction, MetaFunction } from '@remix-run/react/routeModules';
 import { getMetadata } from '@bbl-nx/constants';
-import { Layout } from '@bbl-nx/ui-components';
 import globalStylesUrl from './styles/global.css';
 
 export const links: LinksFunction = () => {
@@ -21,7 +20,6 @@ export const links: LinksFunction = () => {
 };
 
 export const meta: MetaFunction = (args) => {
-  const { data } = args;
   const { title, description, url, keywords } = getMetadata();
   const metaTitle = title;
   const metaDescription = description;
@@ -53,9 +51,7 @@ export default function App() {
         {typeof document === 'undefined' ? '__STYLES__' : null}
       </head>
       <body>
-        <Layout>
-          <Outlet />
-        </Layout>
+        <Outlet />
         <ScrollRestoration />
         <Scripts />
         {process.env.NODE_ENV === 'development' && <LiveReload />}

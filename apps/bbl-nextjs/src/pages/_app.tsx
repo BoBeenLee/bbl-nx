@@ -3,7 +3,6 @@ import React from 'react';
 import { NextPage } from 'next';
 import Head from 'next/head';
 import { getMetadata } from '@bbl-nx/constants';
-import { QueryClient, QueryClientProvider, Hydrate } from 'react-query';
 import { DarkModeProvider } from '@bbl-nx/hooks';
 import { storage } from '../libs/local-storage';
 import './styles.css';
@@ -19,9 +18,7 @@ type Props = AppProps & {
 const MyApp = (props: Props) => {
   const { Component, pageProps } = props;
   const TargetComponent = Component;
-  const getLayout = Component.getLayout ?? ((page) => page);
   const metadata = getMetadata();
-  const [queryClient] = React.useState(() => new QueryClient());
   const snapshotTheme = storage().getSnapshotTheme();
 
   return (
@@ -44,11 +41,7 @@ const MyApp = (props: Props) => {
           <meta property="og:image" content={metadata.metaImage} />
           <meta name="keywords" content={metadata.keywords} />
         </Head>
-        <QueryClientProvider client={queryClient}>
-          <Hydrate state={pageProps.dehydratedState}>
-            {getLayout(<TargetComponent {...pageProps} />)}
-          </Hydrate>
-        </QueryClientProvider>
+        <TargetComponent {...pageProps} />
       </DarkModeProvider>
     </React.Fragment>
   );
