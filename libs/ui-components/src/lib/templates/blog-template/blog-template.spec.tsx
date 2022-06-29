@@ -1,11 +1,20 @@
 import { render } from '@testing-library/react';
+import { mockBlogs } from "../../__mocks__/blog";
 
 import BlogTemplate from './blog-template';
 
 describe('BlogTemplate', () => {
   it('should render successfully', () => {
     const { baseElement } = render(
-      <BlogTemplate />
+      <BlogTemplate
+        {...{
+          allPosts: mockBlogs,
+          asPath: '',
+          onNavigate: () => {
+            // SOMETHING
+          },
+        }}
+      />
     );
     expect(baseElement).toBeTruthy();
   });

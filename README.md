@@ -39,14 +39,11 @@ blog & homepage project based on monorepo(nx)
     ├── libs
     ├──── apis             #
     ├──── constants        #
-    ├──── decorator        # deprecated
-    ├──── faccs            # deprecated
-    ├──── hocs             #
     ├──── hooks            # hooks
     ├──── images           # 이미지 저장소
-    ├──── libs             # deprecated
+    ├──── interfaces       #
+    ├──── libs             #
     ├──── machines         #
-    ├──── styles           #
     ├──── ui-components    # ui 컴포넌트 (atoms, molecules, organisms, templates)
     ├──── utils            # 사용자 정의 유틸 라이브러리 (ex) uri, browser)
     ├── posts              # MD posts directory
