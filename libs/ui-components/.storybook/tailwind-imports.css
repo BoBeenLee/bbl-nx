@@ -18,7 +18,7 @@ body {
 
 .dark #root {
     --tw-bg-opacity: 1;
-    background-color: rgb(17 17 17/var(--tw-bg-opacity));
+    background-color: rgb(17, 24, 39/var(--tw-bg-opacity));
 }
 
 *,
