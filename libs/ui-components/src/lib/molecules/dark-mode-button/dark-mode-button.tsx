@@ -9,7 +9,7 @@ export interface DarkModeButtonProps {
 
 export function DarkModeButton(props: DarkModeButtonProps) {
   const { className } = props;
-  const [mounted, setMounted] = useState();
+  const [mounted, setMounted] = useState<boolean>(false);
   const { theme, setTheme } = useTheme();
   const isDark = theme === 'dark';
 
