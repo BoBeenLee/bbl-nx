@@ -3,8 +3,7 @@ import React from 'react';
 import { NextPage } from 'next';
 import Head from 'next/head';
 import { getMetadata } from '@bbl-nx/constants';
-import { DarkModeProvider } from '@bbl-nx/hooks';
-import { storage } from '../libs/local-storage';
+import { ThemeProvider } from 'next-themes';
 import './styles.css';
 
 type NextPageWithLayout = NextPage & {
@@ -19,11 +18,10 @@ const MyApp = (props: Props) => {
   const { Component, pageProps } = props;
   const TargetComponent = Component;
   const metadata = getMetadata();
-  const snapshotTheme = storage().getSnapshotTheme();
 
   return (
     <React.Fragment>
-      <DarkModeProvider initialDarkMode={snapshotTheme}>
+      <ThemeProvider attribute="class">
         <Head>
           <title>{metadata.title}</title>
           <meta name="theme-color" content={metadata.themeColor} />
@@ -42,7 +40,7 @@ const MyApp = (props: Props) => {
           <meta name="keywords" content={metadata.keywords} />
         </Head>
         <TargetComponent {...pageProps} />
-      </DarkModeProvider>
+      </ThemeProvider>
     </React.Fragment>
   );
 };

@@ -1,10 +1,10 @@
-import { DarkModeProvider } from '@bbl-nx/hooks';
+import { ThemeProvider } from 'next-themes';
 import './tailwind-imports.css';
 
 export const decorators = [
   (Story) => (
-    <DarkModeProvider initialDarkMode={{}}>
+    <ThemeProvider>
       <Story />
-    </DarkModeProvider>
+    </ThemeProvider>
   ),
 ];
