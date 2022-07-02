@@ -6,6 +6,7 @@ import { getMetadata } from '@bbl-nx/constants';
 import { ThemeProvider } from 'next-themes';
 import Script from 'next/script';
 import './styles.css';
+import { env } from '../libs/env';
 
 type NextPageWithLayout = NextPage & {
   getLayout?: (page: React.ReactElement) => React.ReactNode;
@@ -44,7 +45,7 @@ const MyApp = (props: Props) => {
       </ThemeProvider>
       <Script
         strategy={'afterInteractive'}
-        src={'https://www.googletagmanager.com/gtag/js?id=G-TZZNKPFDD5'}
+        src={`https://www.googletagmanager.com/gtag/js?id=${env.GTM_ID}`}
       />
       <Script
         id="gtag"
@@ -55,7 +56,7 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 
-gtag('config', 'G-TZZNKPFDD5');
+gtag('config', '${env.GTM_ID}');
       `,
         }}
       />

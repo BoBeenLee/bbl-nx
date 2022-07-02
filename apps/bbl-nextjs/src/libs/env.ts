@@ -5,11 +5,13 @@ interface Environment {
 
 interface EnvironmentEntry {
   FIREBASE_CONFIG?: any;
+  GTM_ID: string;
 }
 
-const ENV_TYPE = process.env.REACT_ENV || 'staging';
+const ENV_TYPE: keyof Environment = 'production';
+const GTM_ID = process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID ?? '';
 
-const env: Environment = {
+export const envByType: Environment = {
   production: {
     FIREBASE_CONFIG: {
       apiKey: 'AIzaSyDdFJKoVQTL_EgUcy0BOQFaVGEk1fktPrU',
@@ -21,6 +23,7 @@ const env: Environment = {
       appId: '1:757274443049:web:cea92b2efec4f7f685cb38',
       measurementId: 'G-Q9PE71EK7F',
     },
+    GTM_ID,
   },
   staging: {
     FIREBASE_CONFIG: {
@@ -33,9 +36,9 @@ const env: Environment = {
       appId: '1:757274443049:web:cea92b2efec4f7f685cb38',
       measurementId: 'G-Q9PE71EK7F',
     },
+    GTM_ID,
   },
 };
 
 export const isProduction = () => ENV_TYPE === 'production';
-
-export default env[ENV_TYPE as keyof Environment] || {};
+export const env = envByType[ENV_TYPE];
