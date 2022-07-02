@@ -1,12 +1,10 @@
 
 const metadataItem = {
   description: 'BoBeen Lee',
-  keywords: 'BoBeenLee, ReactJS, React Native, Javascript',
+  keywords: 'BoBeen Lee, React, React Native, Typescript, Javascript',
   metaImage: '/meta_img.png',
-  url: 'https://bbl.netlify.com',
+  url: 'https://bbl-nx.vercel.app/',
   title: 'BoBeen Lee',
-  backgroundColor: `#fff`,
-  themeColor: `#5191FD`,
 };
 
 export type MetadataItem = Readonly<typeof metadataItem>;

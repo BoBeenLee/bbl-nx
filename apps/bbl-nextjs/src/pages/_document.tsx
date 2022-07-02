@@ -48,7 +48,6 @@ class MyDocument extends Document {
         <body className="text-white bg-white dark:bg-gray-900 dark:text-black">
           <Main />
           <NextScript />
-         
         </body>
       </Html>
     );
