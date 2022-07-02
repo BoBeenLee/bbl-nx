@@ -4,6 +4,7 @@ import { NextPage } from 'next';
 import Head from 'next/head';
 import { getMetadata } from '@bbl-nx/constants';
 import { ThemeProvider } from 'next-themes';
+import Script from 'next/script';
 import './styles.css';
 
 type NextPageWithLayout = NextPage & {
@@ -41,6 +42,23 @@ const MyApp = (props: Props) => {
         </Head>
         <TargetComponent {...pageProps} />
       </ThemeProvider>
+      <Script
+        strategy={'afterInteractive'}
+        src={'https://www.googletagmanager.com/gtag/js?id=G-TZZNKPFDD5'}
+      />
+      <Script
+        id="gtag"
+        strategy={'afterInteractive'}
+        dangerouslySetInnerHTML={{
+          __html: `
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-TZZNKPFDD5');
+      `,
+        }}
+      />
     </React.Fragment>
   );
 };

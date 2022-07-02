@@ -48,17 +48,7 @@ class MyDocument extends Document {
         <body className="text-white bg-white dark:bg-gray-900 dark:text-black">
           <Main />
           <NextScript />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
- window.dataLayer = window.dataLayer || [];
- function gtag(){dataLayer.push(arguments);}
- gtag('js', new Date());
-
- gtag('config', 'UA-114339461-1', { 'optimize_id': 'GTM-M8CNZBG'});      
-      `,
-            }}
-          ></script>
+         
         </body>
       </Html>
     );
