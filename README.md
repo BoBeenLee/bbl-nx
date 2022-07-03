@@ -14,7 +14,7 @@ blog & homepage project based on monorepo(nx)
 
 - **Framework**: Next.js, Remix
 - **Deployment**: Vercel
-- **Styling**: Tailwind CSS, [Styled Components](https://github.com/styled-components/styled-components)
+- **Styling**: Tailwind CSS
 - **Tooling**: [Storybook](https://github.com/storybooks/storybook)
 - **Build System**: [Nx.dev](https://nx.dev/)
 

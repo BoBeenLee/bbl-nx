@@ -1,8 +1,6 @@
 import { isJSON } from '@bbl-nx/utils';
 import _ from 'lodash';
 
-import { ModeType } from 'styled-components';
-
 type StorageType = string;
 
 function storageFactory(
@@ -10,10 +8,6 @@ function storageFactory(
   getItem: (key: string) => string,
   clear: () => void
 ) {
-  const setStorageItem = (key: StorageType, value: string) => {
-    return setItem(key, value);
-  };
-
   const getStringWithDefault = (
     key: StorageType,
     defaultItem: string
@@ -64,17 +58,9 @@ function storageFactory(
     return defaultItem;
   };
 
-  const setStorages = {
-    setTheme: (theme: unknown) => {
-      setStorageItem('theme', JSON.stringify(theme));
-    },
-  };
+  const setStorages = {};
 
-  const getStorages = {
-    getSnapshotTheme: () => {
-      return getJSONWithDefault<{ mode?: ModeType }>('theme', {});
-    },
-  };
+  const getStorages = {};
 
   return {
     ...setStorages,
