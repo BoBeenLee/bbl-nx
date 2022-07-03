@@ -2,7 +2,8 @@ import React from 'react';
 import { useRouter } from 'next/router';
 import { useCallback } from 'react';
 import { LayoutTemplate } from '@bbl-nx/ui-components';
-import Head from "next/head";
+import Head from 'next/head';
+import { getMetadata } from '@bbl-nx/constants';
 
 interface LayoutProps {
   title?: string;
@@ -10,7 +11,8 @@ interface LayoutProps {
 }
 
 export default function Layout(props: LayoutProps) {
-  const { title, children } = props;
+  const metadata = getMetadata();
+  const { title = metadata.title, children } = props;
   const router = useRouter();
 
   const onNavigate = useCallback(
