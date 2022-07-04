@@ -31,6 +31,8 @@ declare global {
       | (key extends keyof T ? T[key] : never)
       | (key extends keyof U ? U[key] : never);
   }>;
+
+  type IndexOf<T extends unknown[], S extends unknown[] = []> = S["length"] extends T["length"] ? never : S["length"] | IndexOf<T, [...S, unknown]>;
 }
 
 export {};
