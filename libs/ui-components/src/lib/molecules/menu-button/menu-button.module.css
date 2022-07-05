@@ -1,0 +1,12 @@
+.burger {
+}
+
+.burger svg {
+  opacity: 1;
+  transition: opacity 300ms ease, transform 300ms ease;
+}
+
+.burger svg[data-hide='true'] {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
+}

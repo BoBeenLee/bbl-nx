@@ -8,3 +8,4 @@ export * from './project-card/project-card';
 export * from './project-links/project-links';
 export * from './blog-card/blog-card';
 export * from './dark-mode-button/dark-mode-button';
+export * from './menu-button/menu-button';
