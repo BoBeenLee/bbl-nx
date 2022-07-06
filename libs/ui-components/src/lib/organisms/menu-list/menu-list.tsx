@@ -1,5 +1,6 @@
 import cn from 'classnames';
 import { useCallback } from 'react';
+import styles from './menu-list.module.css';
 
 export interface MenuItemProps {
   href: string;
@@ -9,6 +10,7 @@ export interface MenuItemProps {
 }
 
 export interface MenuListProps {
+  open: boolean;
   data: Omit<MenuItemProps, 'transitionDelay'>[];
   onNavigate: ({ href }: { href: string }) => void;
 }
@@ -35,7 +37,7 @@ function MenuItem({
       style={{ transitionDelay: `${transitionDelay}ms` }}
       onClick={onNavigateItem}
     >
-      <button className="flex w-auto pb-4" onClick={onNavigateItem}>
+      <button className="flex w-auto py-4" onClick={onNavigateItem}>
         {text}
       </button>
     </li>
@@ -43,13 +45,13 @@ function MenuItem({
 }
 
 export function MenuList(props: MenuListProps) {
-  const { data, onNavigate } = props;
+  const { open, data, onNavigate } = props;
   return (
     <ul
       className={cn(
-        // styles.menu,
-        'flex flex-col absolute bg-gray-100 dark:bg-gray-900'
-        // isMenuRendered && styles.menuRendered
+        styles["menu"],
+        'flex flex-col absolute bg-gray-100 dark:bg-gray-900',
+        open && styles["menuRendered"]
       )}
     >
       {data.map((item, index) => {
