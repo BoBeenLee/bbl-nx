@@ -2,7 +2,7 @@
   margin-top: 24px;
   width: 100%;
   height: 100vh;
-  z-index: 1000;
+  z-index: -1;
   opacity: 0;
   transition: opacity 300ms ease;
 }
@@ -17,6 +17,7 @@
 
 .menuRendered {
   opacity: 1;
+  z-index: 1000;
 }
 
 .menuRendered li {
