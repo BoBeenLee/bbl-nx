@@ -8,7 +8,7 @@
 }
 
 .menu li {
-  transition: opacity 300ms ease, border-color 300ms ease;
+  transition: opacity 300ms ease, width 300ms ease, border-color 300ms ease;
   white-space: nowrap;
   opacity: 0;
   width: 0px;

@@ -49,7 +49,7 @@ export function MenuList(props: MenuListProps) {
     <ul
       className={cn(
         styles['menu'],
-        'flex flex-col absolute bg-white dark:bg-gray-900 pl-2 pr-16 visible md:hidden',
+        'flex flex-col absolute bg-white dark:bg-gray-900 left-0 px-8 visible md:hidden',
         open && styles['menuRendered']
       )}
     >
