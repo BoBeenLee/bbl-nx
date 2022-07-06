@@ -21,7 +21,7 @@
 }
 
 .menu-list_menu__3h5LK li {
-  transition: opacity 300ms ease, border-color 300ms ease;
+  transition: opacity 300ms ease, width 300ms ease, border-color 300ms ease;
   opacity: 0;
   width: 0px;
   white-space: nowrap;
