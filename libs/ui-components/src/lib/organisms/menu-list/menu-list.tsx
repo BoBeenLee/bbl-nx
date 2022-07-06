@@ -21,7 +21,6 @@ const DEFAULT_TRANSITION_DELAY_UNIT = 25;
 function MenuItem({
   href,
   text,
-  isActive,
   transitionDelay,
   onNavigate,
 }: MenuItemProps & { onNavigate: MenuListProps['onNavigate'] }) {
