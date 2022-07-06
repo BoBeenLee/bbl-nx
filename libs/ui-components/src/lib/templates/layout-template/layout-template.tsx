@@ -1,7 +1,7 @@
-import { Nav, NavProps } from '../../molecules/nav/nav';
+import { Nav, NavProps } from '../../organisms/nav/nav';
 import { nav } from '@bbl-nx/constants';
 import { useMemo } from 'react';
-import NavFooter from '../../molecules/nav-footer/nav-footer';
+import NavFooter from '../../organisms/nav-footer/nav-footer';
 
 export interface LayoutTemplateProps {
   asPath: string;

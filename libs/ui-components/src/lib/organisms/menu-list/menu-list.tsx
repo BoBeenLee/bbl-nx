@@ -49,9 +49,9 @@ export function MenuList(props: MenuListProps) {
   return (
     <ul
       className={cn(
-        styles["menu"],
-        'flex flex-col absolute bg-gray-100 dark:bg-gray-900',
-        open && styles["menuRendered"]
+        styles['menu'],
+        'flex flex-col absolute bg-white dark:bg-gray-900 pl-2 pr-16 visible md:hidden',
+        open && styles['menuRendered']
       )}
     >
       {data.map((item, index) => {

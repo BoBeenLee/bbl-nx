@@ -1,3 +1,4 @@
+import { action } from '@storybook/addon-actions';
 import { Story, Meta } from '@storybook/react';
 import { within } from '@storybook/testing-library';
 import { mockBlogId } from '../../__mocks__/blog';
@@ -14,9 +15,7 @@ const Template: Story<BlogIdTemplateProps> = (args) => (
   <LayoutTemplate
     {...{
       asPath: '/',
-      onNavigate: () => {
-        // SOMETHING
-      },
+      onNavigate: action('onNavigate'),
     }}
   >
     <BlogIdTemplate {...args} />
