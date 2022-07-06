@@ -29,7 +29,7 @@ export function DarkModeButton(props: DarkModeButtonProps) {
       aria-label="Toggle Dark Mode"
       className={cn(
         className,
-        'w-10 p-1 sm:px-3 sm:py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-all'
+        'w-10 p-1 px-3 py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-all'
       )}
       onClick={onToggle}
     >
