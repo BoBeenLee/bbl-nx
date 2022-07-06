@@ -13,6 +13,7 @@ const Template: Story<MenuListProps> = (args) => <MenuList {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
+  open: true,
   data: nav.map((item) => ({ text: item.text, href: item.href, isActive: false })),
   onNavigate: () => {
     // SOMETHING
