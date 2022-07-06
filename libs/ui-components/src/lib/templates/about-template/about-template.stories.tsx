@@ -1,3 +1,4 @@
+import { action } from '@storybook/addon-actions';
 import { Story, Meta } from '@storybook/react';
 import { within } from '@storybook/testing-library';
 import LayoutTemplate from '../layout-template/layout-template';
@@ -13,9 +14,7 @@ const Template: Story<AboutTemplateProps> = (args) => (
   <LayoutTemplate
     {...{
       asPath: '/',
-      onNavigate: () => {
-        // SOMETHING
-      },
+      onNavigate: action('onNavigate'),
     }}
   >
     <AboutTemplate {...args} />

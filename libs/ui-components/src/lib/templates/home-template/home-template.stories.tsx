@@ -1,4 +1,5 @@
 import { Story, Meta } from '@storybook/react';
+import { action } from '@storybook/addon-actions';
 import { within } from '@storybook/testing-library';
 import LayoutTemplate from '../layout-template/layout-template';
 import { HomeTemplate, HomeTemplateProps } from './home-template';
@@ -13,9 +14,7 @@ const Template: Story<HomeTemplateProps> = (args) => (
   <LayoutTemplate
     {...{
       asPath: '/',
-      onNavigate: () => {
-        // SOMETHING
-      },
+      onNavigate: action('onNavigate'),
     }}
   >
     <HomeTemplate {...args} />
@@ -23,7 +22,9 @@ const Template: Story<HomeTemplateProps> = (args) => (
 );
 
 export const Primary = Template.bind({});
-Primary.args = {};
+Primary.args = {
+  
+};
 
 Primary.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement);

@@ -1,5 +1,3 @@
-export * from './nav/nav';
-export * from './nav-footer/nav-footer';
 export * from './home-card/home-card';
 export * from './experience-card/experience-card';
 export * from './activity-card/activity-card';
