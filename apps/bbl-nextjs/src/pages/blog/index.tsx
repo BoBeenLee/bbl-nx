@@ -6,18 +6,18 @@ import Layout from '../../components/layout';
 import { BlogTemplate } from '@bbl-nx/ui-components';
 import { interpret } from 'xstate';
 import { waitFor } from 'xstate/lib/waitFor';
-import { postServiceWithConfig } from '../../machines/post-service-machine';
-import { PostItem } from '@bbl-nx/interfaces';
+import { blogServiceWithConfig } from '../../machines/blog-service-machine';
+import { BlogItem } from '@bbl-nx/interfaces';
 
-interface PostPageProps {
-  allPosts: PostItem[];
+interface BlogPageProps {
+  allBlogs: BlogItem[];
 }
 
-const makePostState = async () => {
-  const postService = interpret(postServiceWithConfig);
-  postService.start();
+const makeBlogState = async () => {
+  const blogService = interpret(blogServiceWithConfig);
+  blogService.start();
   const doneState = await waitFor(
-    postService,
+    blogService,
     (state) => state.matches('Done'),
     {
       timeout: 10_000,
@@ -27,24 +27,23 @@ const makePostState = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const postMachineState = await makePostState();
+  const blogMachineState = await makeBlogState();
 
   return {
     props: {
-      allPosts: postMachineState.context.posts,
+      allBlogs: blogMachineState.context.blogs,
     },
   };
 };
 
-const BlogPage = (props: PostPageProps) => {
-  const { allPosts } = props;
-
-  const postsByDESC = _.orderBy(allPosts, ['createdAt'], ['desc']);
-  const filterPublished = postsByDESC.filter((item) => item.published);
+const BlogPage = (props: BlogPageProps) => {
+  const { allBlogs } = props;
+  const blogsByDESC = _.orderBy(allBlogs, ['createdAt'], ['desc']);
+  const filterPublished = blogsByDESC.filter((item) => item.published);
 
   return (
     <Layout>
-      <BlogTemplate allPosts={filterPublished} />
+      <BlogTemplate allBlogs={filterPublished} />
     </Layout>
   );
 };

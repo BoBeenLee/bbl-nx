@@ -1,26 +1,26 @@
 import { PageTitle } from '../../atoms';
 import BlogCard from '../../molecules/blog-card/blog-card';
-import { PostItem } from '@bbl-nx/interfaces';
+import { BlogItem } from '@bbl-nx/interfaces';
 import { useCallback, useState, useTransition } from 'react';
 import { SearchInput } from '../../molecules';
 
 export interface BlogTemplateProps {
-  allPosts: PostItem[];
+  allBlogs: BlogItem[];
 }
 
 export function BlogTemplate(props: BlogTemplateProps) {
-  const { allPosts } = props;
-  const [filteredPosts, setFilteredPosts] = useState(allPosts);
+  const { allBlogs } = props;
+  const [filteredBlogs, setFilteredBlogs] = useState(allBlogs);
   const [, startTransition] = useTransition();
 
   const onSearch = useCallback(
     (text: string) => {
-      const searchPosts = allPosts.filter((post) => post.title.includes(text));
+      const searchBlogs = allBlogs.filter((blog) => blog.title.includes(text));
       startTransition(() => {
-        setFilteredPosts(searchPosts);
+        setFilteredBlogs(searchBlogs);
       });
     },
-    [allPosts]
+    [allBlogs]
   );
 
   return (
@@ -28,7 +28,7 @@ export function BlogTemplate(props: BlogTemplateProps) {
       <PageTitle className="pb-4">All Blogs</PageTitle>
       <SearchInput className="w-full mb-12" onSearch={onSearch} />
       <div className="w-full space-y-12">
-        {filteredPosts.map((item) => {
+        {filteredBlogs.map((item) => {
           const { id, title, createdAt, url, isExternal } = item;
           return (
             <div key={id}>
