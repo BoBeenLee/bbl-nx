@@ -86,7 +86,7 @@ export default function (plop) {
           { name: 'molecules', value: 'molecules' },
           { name: 'organisms', value: 'organisms' },
           { name: 'templates', value: 'templates' },
-          { name: 'others', value: 'others' },
+          { name: 'helpers', value: 'helpers' },
         ],
       },
     ],
