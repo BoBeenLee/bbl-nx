@@ -20,7 +20,7 @@ const makeBlogState = async () => {
     blogService,
     (state) => state.matches('Done'),
     {
-      timeout: 10_000,
+      timeout: 30_000,
     }
   );
   return doneState;
