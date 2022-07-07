@@ -57,6 +57,7 @@ export function MenuList(props: MenuListProps) {
         const { href, text, isActive } = item;
         return (
           <MenuItem
+            key={text}
             href={href}
             text={text}
             isActive={isActive}
