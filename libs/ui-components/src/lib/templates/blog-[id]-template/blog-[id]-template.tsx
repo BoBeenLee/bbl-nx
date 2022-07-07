@@ -11,7 +11,7 @@ export function BlogIdTemplate(props: BlogIdTemplateProps) {
   const { title, content, createdAt } = props;
 
   return (
-    <div className="flex flex-col items-start w-full max-w-2xl mx-auto mb-8 border-gray-200 sm:mb-12 dark:border-gray-700">
+    <div className="flex flex-col items-start flex-1 w-full max-w-2xl mx-auto mb-8 border-gray-200 sm:mb-12 dark:border-gray-700">
       <PageTitle>{title}</PageTitle>
       <div className="flex flex-row items-center justify-between w-full mt-2">
         <div className="flex flex-row items-center">
