@@ -24,7 +24,7 @@ const Template: Story<BlogTemplateProps> = (args) => (
 
 export const Primary = Template.bind({});
 Primary.args = {
-  allPosts: mockBlogs,
+  allBlogs: mockBlogs,
 };
 
 Primary.play = async ({ canvasElement }) => {

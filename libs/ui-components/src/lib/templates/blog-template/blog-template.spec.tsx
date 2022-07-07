@@ -5,7 +5,7 @@ import BlogTemplate from './blog-template';
 
 describe('BlogTemplate', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<BlogTemplate allPosts={mockBlogs} />);
+    const { baseElement } = render(<BlogTemplate allBlogs={mockBlogs} />);
     expect(baseElement).toBeTruthy();
   });
 });

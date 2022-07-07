@@ -1,4 +1,4 @@
-import { fetchMD } from "../apis/post";
+import { fetchMD } from "../apis/blog";
 import { GetServerSideProps } from 'next';
 
 const createSitemap = (
@@ -18,8 +18,8 @@ const createSitemap = (
 `;
 
 export const getServerSideProps: GetServerSideProps = async ({ res }) => {
-  const allPosts = await fetchMD();
-  const allPages = [...allPosts.map(item => `blog/${item.id}`), ...['', 'about', 'blog', 'project']];
+  const allBlogs = await fetchMD();
+  const allPages = [...allBlogs.map(item => `blog/${item.id}`), ...['', 'about', 'blog', 'project']];
 
   res.setHeader('Content-Type', 'text/xml');
   res.setHeader(
