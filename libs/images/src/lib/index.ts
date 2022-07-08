@@ -6,6 +6,10 @@ import portfolioSkhualarm from './portfolio-skhualarm';
 import portfolioSkhucalc from './portfolio-skhucalc';
 import portfolioSofthome from './portfolio-softhome';
 
+export const webpImages = {
+  quokka: require('./assets/quokka.webp'),
+};
+
 export const images = {
   mock: {
     board: require('./assets/__mocks__/board.png'),
