@@ -21,7 +21,7 @@
     "ui-components:new": "plop ui-components",
     "ui-components:storybook": "nx run ui-components:storybook",
     "ui-components:build-storybook": "nx run ui-components:build-storybook",
-    "minify-image": "node ./tools/images/minify-image.js"
+    "images:imagemin": "imagemin 'libs/images/src/lib/assets/*.png' --plugin=pngquant --out-dir=libs/images/optimized"
   },
   "private": true,
   "dependencies": {
@@ -127,9 +127,6 @@
     "eslint-plugin-react-hooks": "4.6.0",
     "eslint-plugin-storybook": "^0.5.11",
     "husky": "4.2.5",
-    "imagemin": "^8.0.1",
-    "imagemin-jpegtran": "^7.0.0",
-    "imagemin-pngquant": "^9.0.2",
     "jest": "^27.5.1",
     "nx": "14.4.2",
     "plop": "^3.1.1",
@@ -150,4 +147,3 @@
     "@types/react-dom": "17.0.2"
   }
 }
-
