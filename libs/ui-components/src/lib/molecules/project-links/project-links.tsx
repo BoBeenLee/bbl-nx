@@ -27,12 +27,12 @@ export function ProjectLinks(props: ProjectLinksProps) {
       ) : null}
       {url.storybook ? (
         <a
-          className="w-5 h-5"
+          className="w-6 h-6"
           href={url.storybook}
           target="_blank"
           rel="noreferrer"
         >
-          <Icon className="w-5 h-5" name={'storybook'} />
+          <Icon className="w-6 h-6" name={'storybook'} />
         </a>
       ) : null}
       {url.github ? (
