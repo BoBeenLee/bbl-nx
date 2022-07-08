@@ -4,9 +4,6 @@
   "affected": {
     "defaultBase": "main"
   },
-  "cli": {
-    "defaultCollection": "@nrwl/next"
-  },
   "implicitDependencies": {
     "package.json": {
       "dependencies": "*",
@@ -23,26 +20,6 @@
       }
     }
   },
-  "targetDependencies": {
-    "build": [
-      {
-        "target": "build",
-        "projects": "dependencies"
-      }
-    ],
-    "dev": [
-      {
-        "target": "build",
-        "projects": "dependencies"
-      }
-    ],
-    "start": [
-      {
-        "target": "build",
-        "projects": "self"
-      }
-    ]
-  },
   "generators": {
     "@nrwl/react": {
       "application": {
@@ -55,5 +32,16 @@
       }
     }
   },
-  "defaultProject": "bbl-nextjs"
+  "defaultProject": "bbl-nextjs",
+  "targetDefaults": {
+    "build": {
+      "dependsOn": ["^build"]
+    },
+    "dev": {
+      "dependsOn": ["^build"]
+    },
+    "start": {
+      "dependsOn": ["build"]
+    }
+  }
 }
