@@ -4,7 +4,7 @@ import {
   teamPortfolios,
 } from '@bbl-nx/constants';
 import { SectionTitle, Seperator } from '../../atoms';
-import ProjectCard from '../../molecules/project-card/project-card';
+import ProjectCard from '../../organisms/project-card/project-card';
 import ProjectLinks from '../../molecules/project-links/project-links';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface

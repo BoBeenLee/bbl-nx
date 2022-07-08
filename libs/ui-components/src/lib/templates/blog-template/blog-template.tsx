@@ -1,8 +1,8 @@
-import { PageTitle } from '../../atoms';
-import BlogCard from '../../molecules/blog-card/blog-card';
-import { BlogItem } from '@bbl-nx/interfaces';
 import { useCallback, useState, useTransition } from 'react';
-import { SearchInput } from '../../molecules';
+import { BlogItem } from '@bbl-nx/interfaces';
+import { PageTitle } from '../../atoms';
+import BlogCard from '../../organisms/blog-card/blog-card';
+import { SearchInput } from '../../molecules/search-input/search-input';
 
 export interface BlogTemplateProps {
   allBlogs: BlogItem[];

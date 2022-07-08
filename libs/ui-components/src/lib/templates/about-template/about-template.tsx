@@ -1,8 +1,8 @@
 import { activity, experiences, categorySkills } from '@bbl-nx/constants';
 import { SectionTitle, Seperator } from '../../atoms';
-import ActivityCard from '../../molecules/activity-card/activity-card';
-import ExperienceCard from '../../molecules/experience-card/experience-card';
-import TechStackCard from '../../molecules/tech-stack-card/tech-stack-card';
+import ActivityCard from '../../organisms/activity-card/activity-card';
+import ExperienceCard from '../../organisms/experience-card/experience-card';
+import TechStackCard from '../../organisms/tech-stack-card/tech-stack-card';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface AboutTemplateProps {}
