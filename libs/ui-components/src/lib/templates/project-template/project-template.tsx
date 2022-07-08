@@ -58,8 +58,16 @@ export function ProjectTemplate() {
           Personal
         </SectionTitle>
         {personalPortforlios.map((item) => {
-          const { id, name, period, skills, summary, githubUrl, homeUrl } =
-            item;
+          const {
+            id,
+            name,
+            period,
+            skills,
+            summary,
+            githubUrl,
+            homeUrl,
+            storybookUrl,
+          } = item;
           return (
             <ProjectCard
               key={id}
@@ -72,6 +80,7 @@ export function ProjectTemplate() {
                   url={{
                     home: homeUrl,
                     github: githubUrl,
+                    storybook: storybookUrl,
                   }}
                 />
               }
@@ -95,6 +104,7 @@ export function ProjectTemplate() {
             homeUrl,
             googleStoreUrl,
             appStoreUrl,
+            storybookUrl,
           } = item;
           return (
             <ProjectCard
@@ -110,6 +120,7 @@ export function ProjectTemplate() {
                     github: githubUrl,
                     googleStore: googleStoreUrl,
                     appStore: appStoreUrl,
+                    storybook: storybookUrl,
                   }}
                 />
               }

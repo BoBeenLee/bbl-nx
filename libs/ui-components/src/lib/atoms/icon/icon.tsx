@@ -1,11 +1,12 @@
-import { svgIcons, reactIcons } from './svg';
+import { svgIcons, reactIcons, imageIcons } from './svg';
 import cn from 'classnames';
-import { getKeys } from "@bbl-nx/utils";
+import { getKeys } from '@bbl-nx/utils';
 
+type ImageType = keyof typeof imageIcons;
 type SvgType = keyof typeof svgIcons;
 type ReactIconType = keyof typeof reactIcons;
 
-export type IconType = SvgType | ReactIconType;
+export type IconType = ImageType | SvgType | ReactIconType;
 
 export interface IconProps {
   className?: string;
@@ -22,13 +23,20 @@ const isReactIconType = (name: IconType): name is ReactIconType => {
   return false;
 };
 
+const isImageIconType = (name: IconType): name is ImageType => {
+  if (name in imageIcons) {
+    return true;
+  }
+  return false;
+};
+
 export function Icon(props: IconProps) {
   const { className, name, dataProps = {} } = props;
   const data = getKeys(dataProps).reduce((res, key) => {
     return {
       ...res,
       [`data-${key}`]: dataProps[key],
-    }
+    };
   }, {});
   if (isReactIconType(name)) {
     const TargetComponent = reactIcons[name];
@@ -38,6 +46,9 @@ export function Icon(props: IconProps) {
         {...data}
       />
     );
+  }
+  if (isImageIconType(name)) {
+    return <img alt={name} src={imageIcons[name]} />;
   }
   const TargetComponent = svgIcons[name];
   return (

@@ -4,6 +4,7 @@ export interface ProjectLinksProps {
   url: {
     home?: string;
     link?: string;
+    storybook?: string;
     github?: string;
     googleStore?: string;
     appStore?: string;
@@ -22,6 +23,16 @@ export function ProjectLinks(props: ProjectLinksProps) {
       {url.link ? (
         <a className="w-5 h-5" href={url.link} target="_blank" rel="noreferrer">
           <Icon name={'link'} />
+        </a>
+      ) : null}
+      {url.storybook ? (
+        <a
+          className="w-5 h-5"
+          href={url.storybook}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Icon className="w-5 h-5" name={'storybook'} />
         </a>
       ) : null}
       {url.github ? (
