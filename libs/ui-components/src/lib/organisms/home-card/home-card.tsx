@@ -20,7 +20,7 @@ export function HomeCard(props: HomeCardProps) {
         </div>
       </div>
       <div className="relative mb-8 mr-auto sm:mb-0">
-        <Avatar className="w-[81px] sm:w-[176px]" alt={'profile'} />
+        <Avatar className="w-[81px] h-[81px] sm:w-[176px] sm:h-[176px]" alt={'profile'} />
       </div>
     </div>
   );
