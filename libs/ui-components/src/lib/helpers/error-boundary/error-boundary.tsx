@@ -13,7 +13,7 @@ export class ErrorBoundary extends Component<
   ErrorBoundaryProps,
   ErrorBoundaryStates
 > {
-  public states = { error: null };
+  public override state = { error: null };
 
   static getDerivedStateFromError(error: Error) {
     return { error };
