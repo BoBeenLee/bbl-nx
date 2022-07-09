@@ -40,6 +40,8 @@ declare global {
     : S['length'] | IndexOf<T, [...S, unknown]>;
 
   type AnyFunction = (...args: any[]) => any;
+
+  type AsyncFunction = (...args: any[]) => Promise<any>;
 }
 
 export {};
