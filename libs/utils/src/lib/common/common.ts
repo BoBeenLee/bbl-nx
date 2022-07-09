@@ -1,5 +1,3 @@
-type AnyFunction = (...args: any[]) => any;
-
 export function optional<Fn extends AnyFunction>(
   fn: Fn,
   errorHandler?: (e: unknown) => void

@@ -38,6 +38,8 @@ declare global {
   > = S['length'] extends T['length']
     ? never
     : S['length'] | IndexOf<T, [...S, unknown]>;
+
+  type AnyFunction = (...args: any[]) => any;
 }
 
 export {};
