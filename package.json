@@ -3,7 +3,12 @@
   "version": "2.0.0",
   "license": "MIT",
   "repository": "https://github.com/BoBeenLee/bbl-nx.git",
+  "private": true,
   "author": "bobinlee",
+  "engines": {
+    "npm": ">=7.0.0",
+    "node": ">=16.0.0"
+  },
   "scripts": {
     "start": "nx serve",
     "dev": "nx serve",
@@ -23,7 +28,6 @@
     "ui-components:build-storybook": "nx run ui-components:build-storybook",
     "images:imagemin": "imagemin 'libs/images/src/lib/assets/*.png' --plugin=pngquant --out-dir=libs/images/optimized"
   },
-  "private": true,
   "dependencies": {
     "@netlify/functions": "1.0.0",
     "@nrwl/next": "14.4.2",
