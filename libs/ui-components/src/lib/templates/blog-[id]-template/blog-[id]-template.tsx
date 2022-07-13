@@ -1,4 +1,4 @@
-import { Avatar, PageTitle, SectionTitle } from '../../atoms';
+import { Avatar, SectionTitle } from '../../atoms';
 import { DATE_TIME_FORMAT5, toDateTimeText } from '@bbl-nx/utils';
 export interface BlogIdTemplateProps {
   id: string;
