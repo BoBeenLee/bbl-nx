@@ -1,4 +1,4 @@
-import { Avatar, PageTitle } from '../../atoms';
+import { Avatar, PageTitle, SectionTitle } from '../../atoms';
 import { DATE_TIME_FORMAT5, toDateTimeText } from '@bbl-nx/utils';
 export interface BlogIdTemplateProps {
   id: string;
@@ -12,7 +12,7 @@ export function BlogIdTemplate(props: BlogIdTemplateProps) {
 
   return (
     <div className="flex flex-col items-start flex-1 w-full max-w-2xl mx-auto mb-8 border-gray-200 sm:mb-12 dark:border-gray-700">
-      <PageTitle>{title}</PageTitle>
+      <SectionTitle className="pb-2">{title}</SectionTitle>
       <div className="flex flex-row items-center justify-between w-full mt-2">
         <div className="flex flex-row items-center">
           <Avatar width={'24'} />

@@ -1,6 +1,6 @@
 import { useCallback, useState, useTransition } from 'react';
 import { BlogItem } from '@bbl-nx/interfaces';
-import { PageTitle } from '../../atoms';
+import { PageTitle, SectionTitle } from '../../atoms';
 import BlogCard from '../../organisms/blog-card/blog-card';
 import { SearchInput } from '../../molecules/search-input/search-input';
 
@@ -25,7 +25,7 @@ export function BlogTemplate(props: BlogTemplateProps) {
 
   return (
     <div className="flex flex-col items-start flex-1 w-full max-w-2xl mx-auto mb-8 border-gray-200 sm:mb-12 dark:border-gray-700">
-      <PageTitle className="pb-4">All Blogs</PageTitle>
+      <SectionTitle className="pb-4">All Blogs</SectionTitle>
       <SearchInput className="w-full mb-12" onSearch={onSearch} />
       <div className="w-full space-y-12">
         {filteredBlogs.map((item) => {
