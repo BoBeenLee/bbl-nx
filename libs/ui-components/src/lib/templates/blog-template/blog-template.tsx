@@ -1,6 +1,6 @@
 import { useCallback, useState, useTransition } from 'react';
 import { BlogItem } from '@bbl-nx/interfaces';
-import { PageTitle, SectionTitle } from '../../atoms';
+import { SectionTitle } from '../../atoms';
 import BlogCard from '../../organisms/blog-card/blog-card';
 import { SearchInput } from '../../molecules/search-input/search-input';
 
