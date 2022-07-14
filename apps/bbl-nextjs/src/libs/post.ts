@@ -15,14 +15,14 @@ export type PostItem = {
 };
 
 // Add markdown files in `src/posts`
-const postsDirectory = join(
+const getPostsDirectory = () => join(
   process.cwd(),
   'posts'
 );
 
 export function getPostBySlug(slug: string): PostItem {
   const realSlug = slug.replace(/\.md$/, '');
-  const fullPath = join(postsDirectory, `${realSlug}.md`);
+  const fullPath = join(getPostsDirectory(), `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const { data, content } = matter(fileContents);
 
@@ -34,7 +34,7 @@ export function getPostBySlug(slug: string): PostItem {
 }
 
 export function getAllPosts() {
-  const slugs = fs.readdirSync(postsDirectory);
+  const slugs = fs.readdirSync(getPostsDirectory());
   const posts = slugs.map((slug) => getPostBySlug(slug));
 
   return posts;
