@@ -132,6 +132,7 @@
     "eslint-plugin-storybook": "^0.5.11",
     "husky": "4.2.5",
     "jest": "^27.5.1",
+    "msw": "^0.44.0",
     "nx": "14.4.2",
     "plop": "^3.1.1",
     "postcss": "^8.4.14",
