@@ -9,7 +9,7 @@ import { waitFor } from 'xstate/lib/waitFor';
 import { blogServiceWithConfig } from '../../machines/blog-service-machine';
 import { BlogItem } from '@bbl-nx/interfaces';
 
-interface BlogPageProps {
+export interface BlogPageProps {
   allBlogs: BlogItem[];
 }
 
