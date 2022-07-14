@@ -29,5 +29,10 @@
     "**/*.stories.jsx",
     "**/*.stories.tsx",
     "node_modules"
+  ],
+  "references": [
+    {
+      "path": "./.storybook/tsconfig.json"
+    }
   ]
 }
