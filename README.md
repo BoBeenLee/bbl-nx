@@ -80,16 +80,15 @@ npm run test:affected
 - Deploy to Storybook
   - github action master 브랜치 기준 github pages로 배포 진행합니다.
   - ui-components: https://bobeenlee.github.io/bbl-nx/ui-components/
+  - pages: https://bobeenlee.github.io/bbl-nx/bbl-nextjs/
 - Deploy to Vercel
   - https://bbl-nx.vercel.app/
 
-## Understand your workspace
+## Dependencies of Graph
 
-Run `nx graph` to see a diagram of the dependencies of your projects.
-
-## Further help
-
-Visit the [Nx Documentation](https://nx.dev) to learn more.
+```
+npx nx graph
+```
 
 ### Generate UI-Components
 
