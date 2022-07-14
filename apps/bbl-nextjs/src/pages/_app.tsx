@@ -5,8 +5,8 @@ import Head from 'next/head';
 import { getMetadata } from '@bbl-nx/constants';
 import { ThemeProvider } from 'next-themes';
 import Script from 'next/script';
-import './styles.css';
 import { env } from '../libs/env';
+import '../styles/styles.css';
 
 type NextPageWithLayout = NextPage & {
   getLayout?: (page: React.ReactElement) => React.ReactNode;
