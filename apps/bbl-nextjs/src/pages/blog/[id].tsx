@@ -1,9 +1,7 @@
 import Layout from '../../components/layout';
-import remark from 'remark';
-import html from 'remark-html';
 import React from 'react';
 import { GetStaticPaths, GetStaticProps } from 'next';
-import { getPostBySlug, getAllPosts, PostItem } from '../../libs/post';
+import { getAllPosts, PostItem, getPostById } from '../../libs/post';
 import { BlogIdTemplate } from '@bbl-nx/ui-components';
 
 const BlogByIdPage = (props: PostItem) => {
@@ -24,22 +22,15 @@ const BlogByIdPage = (props: PostItem) => {
 export const getStaticProps: GetStaticProps<PostItem, { id: string }> = async ({
   params,
 }) => {
-  const post = getPostBySlug(params?.id ?? '');
-  const markdown = await remark()
-    .use(html)
-    .process(post.content || '');
-  const content = markdown.toString();
-
+  const post = await getPostById(params?.id ?? '');
+  
   return {
-    props: {
-      ...post,
-      content,
-    },
+    props: post,
   };
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const posts = getAllPosts();
+  const posts = await getAllPosts();
 
   return {
     paths: posts.map((post) => {
