@@ -4,8 +4,8 @@ import {
   teamPortfolios,
 } from '@bbl-nx/constants';
 import { SectionTitle, Seperator } from '../../atoms';
-import ProjectCard from '../../organisms/project-card/project-card';
-import ProjectLinks from '../../molecules/project-links/project-links';
+import { ProjectCard } from '../../organisms';
+import { ProjectLinks } from '../../molecules';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface ProjectTemplateProps {}
