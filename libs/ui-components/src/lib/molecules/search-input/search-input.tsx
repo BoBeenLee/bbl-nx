@@ -1,5 +1,5 @@
 import { ChangeEvent, useCallback } from 'react';
-import Icon from '../../atoms/icon/icon';
+import { Icon } from '../../atoms';
 import cn from 'classnames';
 
 export interface SearchInputProps {

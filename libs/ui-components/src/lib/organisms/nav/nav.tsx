@@ -1,6 +1,6 @@
 import cn from 'classnames';
 import { useCallback } from 'react';
-import DarkModeButton from '../../molecules/dark-mode-button/dark-mode-button';
+import { DarkModeButton } from '../../molecules';
 import MobileNav from '../mobile-nav/mobile-nav';
 
 export interface NavItemProps {
