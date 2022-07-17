@@ -1,6 +1,9 @@
 import { Story, Meta } from '@storybook/react';
 import { within } from '@storybook/testing-library';
-import BlogPage, { BlogPageProps } from '../../src/pages/blog/index';
+import BlogPage, {
+  getStaticProps,
+  BlogPageProps,
+} from '../../src/pages/blog/index';
 
 export default {
   component: BlogPage,
@@ -8,12 +11,24 @@ export default {
   argTypes: {},
 } as Meta;
 
-const Template: Story<BlogPageProps> = (args) => <BlogPage {...args} />;
+const Template: Story<BlogPageProps> = (args, {loaded}) => {
+  return <BlogPage {...args} allBlogs={loaded.allBlogs} />;
+};
 
 export const Primary = Template.bind({});
 Primary.args = {
   allBlogs: [],
 };
+Primary.loaders = [
+  async () => {
+    const context = {};
+    const data = await getStaticProps(context);
+    if ('props' in data) {
+      return data.props;
+    }
+    return {};
+  },
+];
 
 Primary.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement);
@@ -22,7 +37,7 @@ Primary.play = async ({ canvasElement }) => {
 
 Primary.parameters = {
   nextRouter: {
-    path: '/project',
-    asPath: '/project',
+    path: '/blog',
+    asPath: '/blog',
   },
 };

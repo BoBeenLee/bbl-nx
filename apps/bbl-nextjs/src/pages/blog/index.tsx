@@ -26,7 +26,7 @@ const makeBlogState = async () => {
   return doneState;
 };
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getStaticProps: GetStaticProps<BlogPageProps> = async () => {
   const blogMachineState = await makeBlogState();
 
   return {
