@@ -2,6 +2,7 @@
 import matter from 'gray-matter';
 import fs from 'fs';
 import { join } from 'path';
+import { isBrowser } from "@bbl-nx/utils";
 
 export type PostItem = {
   slug: string;
@@ -34,6 +35,9 @@ export function getPostBySlug(slug: string): PostItem {
 }
 
 export function getAllPosts() {
+  if(isBrowser) {
+    return [];
+  }
   const slugs = fs.readdirSync(getPostsDirectory());
   const posts = slugs.map((slug) => getPostBySlug(slug));
 
