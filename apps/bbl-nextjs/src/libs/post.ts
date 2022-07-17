@@ -2,7 +2,8 @@
 import matter from 'gray-matter';
 import fs from 'fs';
 import { join } from 'path';
-import { isBrowser } from "@bbl-nx/utils";
+import { isBrowser } from '@bbl-nx/utils';
+import axios from 'axios';
 
 export type PostItem = {
   slug: string;
@@ -16,10 +17,7 @@ export type PostItem = {
 };
 
 // Add markdown files in `src/posts`
-const getPostsDirectory = () => join(
-  process.cwd(),
-  'posts'
-);
+const getPostsDirectory = () => join(process.cwd(), 'posts');
 
 export function getPostBySlug(slug: string): PostItem {
   const realSlug = slug.replace(/\.md$/, '');
@@ -34,12 +32,12 @@ export function getPostBySlug(slug: string): PostItem {
   };
 }
 
-export function getAllPosts() {
-  if(isBrowser) {
-    return [];
+export const getAllPosts = async () => {
+  if (isBrowser) {
+    const response = await axios.get('https://localhost:3000/api/posts');
+    return response.data;
   }
   const slugs = fs.readdirSync(getPostsDirectory());
   const posts = slugs.map((slug) => getPostBySlug(slug));
-
   return posts;
-}
+};

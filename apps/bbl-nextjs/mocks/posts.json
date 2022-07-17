@@ -1,0 +1,134 @@
+[
+  {
+    "slug": "async-generator",
+    "frontmatter": {
+      "path": "/blog/async-generator",
+      "title": "Async Generator And Redux Saga",
+      "published": false,
+      "date": "2018-03-24"
+    },
+    "content": "\n## Redux Saga\n\n## Async Generator\n\n### Example\n\n- OberserableHQ\n"
+  },
+  {
+    "slug": "debounce-throttle",
+    "frontmatter": {
+      "path": "/blog/react-debounce-and-throttle",
+      "title": "React Debounce and Throttle",
+      "published": false,
+      "date": "2018-03-12"
+    },
+    "content": "\n╥━━━━━━━━╭━━┳\n╢\\ / \\ ┣\n╢ ) ( ') ┣\n╢( / ) ┣\n╢ \\(\\_\\_\\_)| ┣\n╨━━━━━━━━━━━┻\n"
+  },
+  {
+    "slug": "files-are-imported-from-their-absolute-paths-instead-of-their-relative-paths",
+    "frontmatter": {
+      "path": "/blog/files-are-imported-from-their-absolute-paths-instead-of-their-relative-paths",
+      "title": "React 상대경로 -> 절대경로 변경",
+      "date": "2018-04-04",
+      "published": true,
+      "tags": ["javascript"]
+    },
+    "content": "\n## 상대경로 설정 시 문제점\n\n```javascript\nimport utils from '../../../../utils/my-utils';\n```\n\n와 같이 패키지 구조가 깊어질 경우 임포트하기 번거로워지게 된다.\n\n```\nimport utils from 'utils/my-utils';\n```\n\n와 같이 간단하게 임포트할 수 없을까?\n\n## 지정된 절대경로로 임포트하기\n\n#### 상대경로를 지정된 절대경로로 바꾸는 방법은 세가지 정도 있는듯하다.\n\n- Babel\n- Webpack, Fusebox, ... ( module bundlers )\n- create-react-app, create-react-app-ts\n\n### Babel\n\n- React Native, React <br/>\n  - [babel플러그인](https://github.com/tleunen/babel-plugin-module-resolver)을 이용하여 설정을 하면 간단하게 해결할 수 있다. <br/>\n    ```\n    \"plugins\": [\n        \"transform-react-jsx-source\",\n        [\n          \"module-resolver\",\n          {\n            \"alias\": {\n              \"~/*\": \"./src\"\n            },\n            \"cwd\": \"babelrc\"\n          }\n        ]\n      ]\n    ```\n    위와같이 .babelrc 설정을 해주면 src폴더 기준 '~/utils/my-utils'가 가능하다.<br/>\n    babel을 이용하는 프로젝트라면 리액트가 아니더라도 사용가능하여 가장 간단한 해결방안인듯 싶다.\n  - [샘플소스](https://github.com/BoBeenLee/absolute-sample/tree/2-react-native-ts)\n\n### Webpack, Fusebox\n\n- Webpack\n  - webpack.config.js 설정\n  ```\n   resolve: {\n     modules: [\n       path.join(__dirname, \"src\"),\n       \"node_modules\"\n     ]\n   }\n  ```\n  - [샘플소스](https://github.com/BoBeenLee/absolute-sample/tree/4-webpack)\n- Fusebox\n  - fuse.js에 homeDir 설정\n  ```\n   FuseBox.init({\n     homeDir: \"src\",\n     ...\n  ```\n  처럼 homeDir만 지정해주면 homeDirectory기준 '~/utils/my-utils'가 가능하다.\n  - [샘플소스](https://github.com/BoBeenLee/absolute-sample/tree/3-fusebox-ts)\n\n### create-react-app, create-react-app-ts\n\n- .env파일에 NODE_PATH=src/ 설정만 하면 끝.\n- [샘플소스](https://github.com/BoBeenLee/absolute-sample/tree/1-create-react-app)\n\n## [VSCode path 설정](https://code.visualstudio.com/docs/languages/jsconfig).\n\n자바스크립트일 경우 jsconfig.json <br/>\n타입스크립트일 경우 tsconfig.json 설정을 따로 해줘야한다.\n\n```\n{\n  \"compilerOptions\": {\n    \"baseUrl\": \".\",\n    \"paths\": {\n      \"*\": [\n        \"*\",\n        \"src/*\"\n      ]\n    }\n  }\n}\n```\n\n### Pitfall\n\n- 스토리북 tsconfig 설정 https://github.com/dividab/tsconfig-paths-webpack-plugin\n"
+  },
+  {
+    "slug": "function-compare-code",
+    "frontmatter": {
+      "path": "/blog/function-compare-code",
+      "title": "React For pure function compare",
+      "published": false,
+      "date": "2018-03-11"
+    },
+    "content": "\nFaCC(Function as Child Component) 구현시 함수를 넘겨주는 데 PureComponent로 shallow comparing하면은 함수 비교시 원하는대로 동작을 안할 것이다. <br/>\n\n그래서 함수비교 snippet코드를 작성해두려한다.\n다만 간단한 가정을 기준으로 비교한다.\n\n- Impure Function이어야한다.\n- Input(Parameter)은 동일하게 전달받는다.\n\n### [Reference](https://github.com/facebook/create-react-app/blob/next/packages/react-scripts/template/README.md#adding-custom-environment-variables)\n"
+  },
+  {
+    "slug": "list-map",
+    "frontmatter": {
+      "path": "/blog/list-map",
+      "title": "list-map",
+      "published": false,
+      "date": "2018-03-23"
+    },
+    "content": "\nlist and map.\n\n{\n\"1\" : { ... },\n\"2\" : { ... },\n\"3\" : { ... }\n}\n\nvs\n\n[{ id: 1, ... }, { id: 2, ... }, { id: 3, ... }]\n차이점.\n"
+  },
+  {
+    "slug": "micro-generator-plop",
+    "frontmatter": {
+      "path": "/blog/micro-generator-plop",
+      "title": "micro generator PLOP 란?",
+      "published": true,
+      "date": "2022-06-21",
+      "tags": ["javascript", "typescript", "plop", "generator"]
+    },
+    "content": "\n### [Plop](https://github.com/plopjs/plop)란 무엇인가?\n\n- micro generator framework라 불립니다. 우리가 자주 겪는 동일한 패턴의 구조 생성(routes, controllers, components...)을 **일관성** 있는 방법으로 생성해줍니다.\n- 그리고 또한 best practice(가장 이상적인 생성방법)라 불리는 우리 코드 베이스가 되는 방법으로 생성해주기에 best practice를 찾는 과정이나 생성하는 과정에 대한 고민을 줄여줍니다.\n- inquirer prompts, handlebar templates 베이스로 작성되어있기에 두가지에 익숙하다면 사용하는덴 크게 무리가 없을겁니다.\n\n### 사용하는 목적은?\n\n- Plop를 사용하는 목적은 정말 단순하면서 명확하게 위에서 설명했듯이 routes, controllers, components 생성에 있어 일관된 best practice 코드 생성을 함으로써 처음 코드 베이스 생성에 있는 고민을 줄여주기에 해당 부분이 가장 큰이유이지 않을까 싶습니다.\n- 그외 [내용](https://github.com/plopjs/plop#why-generators)은 여기서 볼 수 있습니다.\n  - 시간 절약, 워크플로 자동화에 대한 내용\n\n### 언제 코드 제너레이터(Plop)를 적용하는게 좋을까\n\n- 그런 이유로 해당 부분을 적용하기 좋은 타이밍은 처음 회사에 딱 들어갔을때 온보딩하면서 기존 코드 베이스 기반 생성을 처음 고민하는 그순간이 설득하고 Plop 적용하기 딱 좋은 시기가 아닐까 싶습니다.\n- 다만 적용한다면 약간?의 업무가 좀더 늘어나겠지만 그만큼 다음 사람을 위해서, 다른 개발자들을 위해 만들어두는것이 좋지 않을까\n\n### Plop 설치, 간단하게 만들어보기\n\n- [installation](https://github.com/plopjs/plop#installation)에 잘 설명되어있기에 차근차근 보고 따라하면 큰 무리없이 할 수 있습니다.\n\n### Plop를 적용 예시\n\n- 각종 형식에 따른 예시는 [여기](https://github.com/plopjs/plop/tree/main/packages/plop/tests/examples)서 볼 수 있습니다.\n- 컴포넌트 생성\n  - [나의 홈페이지 컴포넌트 생성 Plop](https://github.com/BoBeenLee/bbl-nx/commit/09ae7a72d4d032db71fe5cb83f12685934c7266b)\n\n### 나의 생각\n\n- 이전 회사에서 코드 작성할때 코드 베이스 찾는 시간이 가끔씩 오래 걸려서 그렇다고 generator를 만들자니 오래 걸릴거같고 찾아서 사용하자니 불편한 고충들이 있었습니다.\n- 제가 생각하는 자주 사용할 수 있는 라이브러리고 generator 코드를 짜는데 그렇게 어렵지도 않기에 배워두면 요긴하게 써먹고 선임분한테 이쁨받을 수 있을듯한?\n"
+  },
+  {
+    "slug": "oop-fp-pp",
+    "frontmatter": {
+      "path": "/blog/oop-ffp-pp",
+      "title": "oop-ffp-pp",
+      "published": false,
+      "date": "2018-03-23"
+    },
+    "content": "\nObject Oriented Programming\n객체 기준의 상호작용.\n\nex) Typeorm, ...?\n\nFunctional Programming\n순수함수에 대한 조작, 결합, 매핑, 리듀서, 컴포즈 등등에 쓰임.\n\nex) FOC, HOC, recompose, lodash\n\nProcedural Programming\nSide Effects 일어하는 부분 처리\nex) Redux Saga, async, async function\\* ...\n"
+  },
+  {
+    "slug": "proxy-decorator-pattern",
+    "frontmatter": {
+      "path": "/blog/proxy-decorator-pattern",
+      "title": "Proxy Decorator Pattern",
+      "published": false,
+      "date": "2018-03-13"
+    },
+    "content": "\n### Proxy\n\n### Decorator\n\n## Reference\n\n-\n\n╥━━━━━━━━╭━━┳\n╢\\ / \\ ┣\n╢ ) ( ') ┣\n╢( / ) ┣\n╢ \\(\\_\\_\\_)| ┣\n╨━━━━━━━━━━━┻\n"
+  },
+  {
+    "slug": "react-environment",
+    "frontmatter": {
+      "path": "/blog/react-environment",
+      "title": "React Custom Environment",
+      "published": true,
+      "date": "2018-02-25"
+    },
+    "content": "\n요약하면 dotenv 설정 시 crna 를 이용할 경우, <br/>.env 파일에 NODE*ENV 환경 설정 가능하고 <br/>다른 환경 변수를 설정 시엔 REACT_APP*\\* 변수로 지정하면 React 코드 환경에서 환경변수를 불러 올 수 있다. <br/>\n:warning: crna 이용하면 [dotenv](https://github.com/motdotla/dotenv)는 따로 인스톨하지 않아도 된다. <br/>\nex) `.env NODE_ENV=production REACT_APP_TOKEN=token` <br/>\n\n- 환경변수는 빌드타임에 값을 세팅한다.\n- 런타임으로 환경변수 불러오려면 서버가 필요하다.\n  <br/>\n\n## More Features\n\n- Referencing Environment Variables in the HTML\n  - `<title>%REACT_APP_TOKEN%</title>` <br/>\n    이런식으로 환경변수를 HTML 에 직접 접근 가능하다.\n- Adding Temporary Environment Variables In Your Shell\n  - [cross-env](https://github.com/kentcdodds/cross-env)로 inline 으로 환경설정하여 이용가능하다. <br/>\n    `cross-env NODE_ENV=development npm start`\n- Adding Development Environment Variables In .env\n  - [.env 외 여러 옵션이 가능하다.](https://github.com/facebook/create-react-app/blob/next/packages/react-scripts/template/README.md#adding-development-environment-variables-in-env)\n\n### [Reference](https://github.com/facebook/create-react-app/blob/next/packages/react-scripts/template/README.md#adding-custom-environment-variables)\n"
+  },
+  {
+    "slug": "react-facc-hoc",
+    "frontmatter": {
+      "path": "/blog/react-facc-hoc",
+      "title": "Function as Child Component And High Order Component",
+      "published": true,
+      "date": "2018-03-08"
+    },
+    "content": "\nHOC는 많은 사람들이 이미 알고 있고 자주 사용하기에 따로 설명은 하지 않겠다. <br />\n[공식문서](https://reactjs.org/docs/higher-order-components.html)에도 자세히 설명 되어있다. <br />\n주로 보통 HOC는 공통 기능, 횡단 관심사 분리 위해서 사용해왔었다. <br />\nex) loading, auth, logging, tracking 등등...\n\n[Render Props](https://reactjs.org/docs/render-props.html)의 예시를 참조하여 구현해보자.\n\n## High Order Component\n\n```javascript\nfunction withMouse(Component) {\n  return class extends React.Component {\n    constructor(props) {\n      super(props);\n      this.handleMouseMove = this.handleMouseMove.bind(this);\n      this.state = { x: 0, y: 0 };\n    }\n\n    handleMouseMove(event) {\n      this.setState({\n        x: event.clientX,\n        y: event.clientY,\n      });\n    }\n\n    render() {\n      return (\n        <div style={{ height: '100%' }} onMouseMove={this.handleMouseMove}>\n          <Component {...this.props} mouse={this.state} />\n        </div>\n      );\n    }\n  };\n}\n```\n\n만일 [Static Methods](https://github.com/mridgway/hoist-non-react-statics)를 카피하기 위해선 별도의 로직도 필요할 것이다.\n\n### Problem\n\n1. Duplication Props <br/>\n   Mouse, Touch기능을 같이 사용하고 싶다면\n   ```javascript\n   withMouse(withTouch(class extends React.Component { ... }));\n   or\n   @mouse\n   @touch\n   class Component extends React.Component { ... }\n   ```\n   로 구현할텐데\n   만일 withTouch와 withMouse 둘다 동일한 mouse props를 넘겨줄 경우, withMouse의 mouse props는 원하는 데로 동작을 안할 것이다.\n2. 여러개의 HOC를 사용할 경우 props의 복잡도 증가\n   ```javascript\n   compose(withMouse, withTouch, withUser, withAuth, withLoading)(...)\n   or\n   @mouse\n   @touch\n   @user\n   @auth\n   @loading\n   ...\n   ```\n   여러개의 HOC를 사용할 경우, 어떤 props가 어떤 HOC에서 넘어왔는지 명시적이지 않아 직접 구현체 HOC props를 확인해야하는 경우가 생기게 된다.\n\n### Solution\n\nFunction as Child Component으로 1, 2의 이슈를 해결할 수 있다.\n\n## Function as Child Component\n\n```javascript\nclass Mouse extends React.Component {\n  constructor(props) {\n    super(props);\n    this.handleMouseMove = this.handleMouseMove.bind(this);\n    this.state = { x: 0, y: 0 };\n  }\n\n  handleMouseMove(event) {\n    this.setState({\n      x: event.clientX,\n      y: event.clientY,\n    });\n  }\n\n  render() {\n    return (\n      <div style={{ height: '100%' }} onMouseMove={this.handleMouseMove}>\n        {this.props.children(this.state)}\n      </div>\n    );\n  }\n}\n```\n\n```javascript\n // touch, mouse implementation code ...\n render() {\n    return (<Touch>\n    {this.renderTouch}\n    </Touch>);\n }\n\n renderTouch = (touch) => (<Mouse>\n    { (mouse) => <Cat mouse={mouse} touch={touch} /> }\n    </Mouse>);\n```\n\n위와 같이 Touch FaCC를 renderTouch arrow function으로 작성하고\nMouse는 arrow function을 직접 내부에 구현하였다. <br />\n둘의 차이점은 Touch, Mouse컴포넌트 둘다 PureComponent일 경우, <br />\nMouse컴포넌트는 랜더링 될때마다 함수를 매번 생성하여 전달해줄 것이고\nrenderTouch는 한번만 호출되어 랜더링 될 것이다. <br />\n[PureComponent - Shallow Comparison](https://reactjs.org/docs/render-props.html#be-careful-when-using-render-props-with-reactpurecomponent) <br />\n위의 구현으로 HOC의 1,2번 문제가 해결될 수 있음을 확인할 수 있다.\n\n- props를 직접 전달 받지 않기에 속성이 겹치는 문제가 발생하지 않는다.\n- props, state, context을 function로 명시적으로 받아 처리하기에 어떤 속성이 어느 컴포넌트에서 넘어왔는지 알기 쉽다.\n- FaCC로 HOC구현도 쉽게 가능하다.\n  ```javascript\n  function withMouse(Component) {\n    return class extends React.Component {\n      render() {\n        return (\n          <Mouse>\n            {(mouse) => <Component {...this.props} mouse={mouse} />}\n          </Mouse>\n        );\n      }\n    };\n  }\n  ```\n\n그리고 직접적으로 말은 안했지만 Render Prop와 FaCC는 동일한 개념이고 child이냐 render props이냐 차이일뿐 동일하다.\n\n### Problem\n\n[Render Props Caveats](https://reactjs.org/docs/render-props.html#caveats) 예시와 동일하게 Mouse에 PureComponent로 했을 경우, <br />\nMouseTracker가 counter를 증가하는 랜더링을 하면 자식 Cat컴포넌트는 다시 랜더링하지 않는다. <br />\n그 이유는 Mouse컴포넌트가 render props으로 bind된 항상 같은 함수를 받아 Mouse 컴포넌트는 랜더링되지 않는다. <br />\n그래서 counter숫자가 증가되지 않는다.\n\n[![Edit ll2xq45x3q](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/ll2xq45x3q)\n\n<b>결국 Render Props나 FaCC를 사용함으로 shouldComponentUpdate로 optimize하기 어려워지는 이슈가 있다.<br/>\n(render or child로 함수를 넘겨주고 shouldComponentUpdate로 비교하기에)</b>\n\n## Conclusion\n\nHOC가 만능이 아닌 것처럼 FaCC, HOC를 사용할때 위와 같은 이슈들을 유념하면서 사용하자.<br />\n그리고 기존에 존재하는 라이브러리를 한번 참조해보고 사용해보는 것이 좋을거같다.<br />\nHOC - [React Redux(connect)](https://github.com/reactjs/react-redux), [React Router(withRouter)](https://github.com/ReactTraining/react-router), [Apollo(graphql)](https://github.com/apollographql/react-apollo) <br />\nFaCC, Render Props - [React Motion](https://github.com/chenglou/react-motion), [React Apollo(Query tag)](https://github.com/apollographql/react-apollo), [urql(Query tag)](https://github.com/FormidableLabs/urql), [React Router(render props)](https://github.com/ReactTraining/react-router)\n\n## Reference\n\n[Render Props](https://reactjs.org/docs/render-props.html) <br />\n[Michael Jackson - Never Write Another HoC](https://www.youtube.com/watch?v=BcVAq3YFiuc&index=2&list=PLXB3WIVcnsH1TZxTuF6YaiRV0eVWAJhfC&t=613s)\n"
+  },
+  {
+    "slug": "react-prod-staging-dev-환경-설정하기",
+    "frontmatter": {
+      "title": "React prod, staging, dev 환경 설정하기",
+      "date": "2018-07-08",
+      "published": false,
+      "tags": ["React", "React Native", "Environment"]
+    },
+    "content": "\nReact prod, staging, dev 환경 설정하기\n\n[crn](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#adding-custom-environment-variables), [crna](https://movie.naver.com/movie/bi/mi/basic.nhn?code=115622)에서 외부 환경 설정을 추가하는 방법에 대해 다룬다.\nprod, dev환경 별 환경변수를 받으러면\ncrn같은 경우 기본적으로 [.env.local, .env.development, .env.production, .env.test](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#what-other-env-files-can-be-used)을 제공해주는거 같고\ncrna는 각 환경에 따른 환경 설정을 하려면 [react native config](https://github.com/luggit/react-native-config)나 [react native dotenv](https://github.com/zetachang/react-native-dotenv)(.env만 사용가능함)를 이용할 수 있겠다.\n\n만일 staging 환경을 추가하고 싶다라는 고민에서 기본적으로 제공하는 문서로는 다루기가 힘든다라는 것을 알고 다른 방안을 찾아보게 되었다.\n\n- React App\n\n[package.json](https://github.com/BoBeenLee/environment-config-example/blob/react/package.json)\n\n```\n...\n \"scripts\": {\n    \"start\": \"cp ./.env.dev ./.env && react-scripts start\",\n    \"start:staging\": \"cp ./.env.staging ./.env && react-scripts start\",\n    \"start:production\": \"cp ./.env.prod ./.env && react-scripts start\",\n  }\n...\n```\n\n스크립트 단에서 실행방법을 나누고 cp로 .env에 복사 후 각 환경별로 환경변수를 받고 실행하는 방법이다. <br/>\n내가 발견한 것들 중에 가장 깔끔한? 방법인거 같고 코드에 영향도도 가장 적고 관리하는데 가장 좋은 방법이라 생각한다.\n\n- React Native App\n\n[package.json](https://github.com/BoBeenLee/environment-config-example/blob/react-native/package.json)\n\n```\n...\n\"scripts\": {\n    \"start\": \"./scripts/pre-build.sh development && react-native-scripts start\",\n    \"start:staging\": \"./scripts/pre-build.sh staging && react-native-scripts start\",\n    \"start:production\": \"./scripts/pre-build.sh production && react-native-scripts start\",\n  },\n...\n```\n\nreact native는 쉘 스크립트를 이용한 관리 방법이다.\n[pre-build.sh](https://github.com/BoBeenLee/environment-config-example/blob/react-native/scripts/pre-build.sh)는 환경별로 REACT_NATIVE_ENV키 값을 생성하여 [config.json](https://github.com/BoBeenLee/environment-config-example/blob/react-native/config.json)에 덮어씌운다.\n그리고 [environment.js](https://github.com/BoBeenLee/environment-config-example/blob/react-native/environment.js)을 만들어 환경별 필요한 변수들을 세팅하여 전달한다.\n\n### dotenv나 config라이브러리를 사용하지 않았던 이유\n\n- react native config\n  물론 getting started 보고 설정하면 원활히 동작할 수 있겠지만 관리 측면에서 react native config 호환도 유지해야한다는 점에 오히려 불편하다는 걸 알게되었다. 그런 이유로 사용하지 않았던거같다.\n- dotenv\n  crn은 내부적으로 설정 되어있지만 한정적인 설정밖에 안되어 이용하기 불편했던거같다. (ex) .env.staging 설정) <br/>\n  react native dotenv는 [.env만 사용가능](https://github.com/zetachang/react-native-dotenv)하여 제외 대상이었다.\n  물론 아래와 같은 식으로 환경변수를 .env에 전달 받는 방법도 있겠다.\n  .env\n\n```\nREACT_ENV=$REACT_ENV\n```\n\npackage.json\n\n```\n\"scripts\": {\n\t\"start\": \"REACT_ENV=staging && react-scripts start\"\n}\n```\n\n다만 react native에는 OS 환경에 환경변수 설정 후 appcenter환경에서 빌드 시엔 정상적으로 인식을 못했던거같다. ( react-native-dotenv의 이슈인지 정확히 모르겠지만 )\n\n환경별 환경변수 설정은 다양한 방법이 존재하겠지만 아직까진 위와 같은 방법이 가장 심플한 경험을 받았다.\n각 환경별 환경변수 설정 Example을 공유한다.\n\nReact\n\n- https://github.com/BoBeenLee/environment-config-example/tree/react\n\nReact Native\n\n- https://github.com/BoBeenLee/environment-config-example/tree/react-native\n\nNode\n\n- https://github.com/BoBeenLee/environment-config-example/tree/node\n"
+  },
+  {
+    "slug": "typeorm-like-jpa",
+    "frontmatter": {
+      "path": "/blog/typeorm-like-jpa",
+      "title": "Typeorm like jpa",
+      "published": false,
+      "date": "2018-03-09"
+    },
+    "content": "\n[Typeorm](http://typeorm.io/#/)을 이용해보면서 예전에 개발하던 JPA와 유사한 느낌을 받았다.\n물론 ORM을 다루는 라이브러리가 비슷할테지만 한번 JPA와 비교해보자. ex) [OnePage](https://github.com/OnePageAndroid/OnePageServer)\n\n```java\n// Page.java\nimport javax.persistence.*;\nimport java.sql.SQLException;\n\n@Getter\n@Setter\n@Builder\n@NoArgsConstructor\n@AllArgsConstructor\n@EqualsAndHashCode(of = \"id\")\n@Entity\n@Table(catalog = \"onepage\", name = \"page\")\n@Where(clause = \"deleted = 0\")\npublic class Page extends Modified {\n    @Id\n    @GeneratedValue(strategy = GenerationType.AUTO)\n    @Column(name = \"pageId\")\n    private Long id;\n    @ManyToOne(fetch = FetchType.LAZY)\n    @JoinColumn(name = \"locationId\")\n    @Where(clause = \"deleted = 0\")\n    private Location location;\n    @ManyToOne(fetch = FetchType.LAZY)\n    @JoinColumn(name = \"userId\")\n    @Where(clause = \"deleted = 0\")\n    private User user;\n    @Column\n    private String content;\n    @Column\n    private boolean deleted;\n\n    public static Page of(Location location, User user, String content) throws SQLException {\n        return Page.builder()\n            .location(location)\n            .user(user)\n            .content(content)\n            .build();\n    }\n\n    public void deleted() {\n\t\tthis.deleted = true;\n\t}\n}\n```\n\n```javascript\n// page.js\n```\n\n```java\n// User.java\nimport javax.persistence.*;\nimport javax.validation.constraints.NotNull;\nimport javax.validation.constraints.Pattern;\nimport javax.validation.constraints.Size;\n\n@Getter\n@Setter\n@Builder\n@NoArgsConstructor\n@AllArgsConstructor\n@Entity\n@Table(catalog = \"onepage\", name = \"user\")\n@Where(clause = \"deleted = 0\")\npublic class User extends Created {\n\t@Id\n\t@GeneratedValue(strategy = GenerationType.AUTO)\n\t@Column(name = \"userId\")\n\tprivate Long id;\n\t@Column\n\t@NotNull\n\t@Size(min=1,message=\"이메일을 입력하세요.\")\n\t@Pattern(regexp=\"^(\\\\w+)(((\\\\.?)(\\\\w+))*)[@](((\\\\w+)[.])+)(\\\\w{2,3})$\",message=\"이메일 형식만 가능합니다.\")\n\tprivate String email;\n\t@Column\n\tprivate boolean deleted;\n\n\tpublic static User of(String email) {\n\t\treturn User.builder()\n\t\t\t.email(email)\n\t\t\t.build();\n\t}\n}\n```\n\n```javascript\n// user.js\n```\n\n```java\n// Location.java\nimport javax.persistence.*;\n\n@Getter\n@Setter\n@Builder\n@NoArgsConstructor\n@AllArgsConstructor\n@Entity\n@Table(catalog = \"onepage\", name = \"location\")\n@Where(clause = \"deleted = 0\")\npublic class Location extends Created {\n\t@Id\n\t@GeneratedValue(strategy = GenerationType.AUTO)\n\t@Column(name = \"locationId\")\n\tprivate Long id;\n\t@Column\n\tprivate Double latitude;\n\t@Column\n\tprivate Double longitude;\n\t@Column\n\tprivate String name;\n\t@Column\n\tprivate String engName;\n\t@Column\n\tprivate String address;\n\t@Column\n\tprivate boolean deleted;\n\n\tpublic static Location of(LocationDto locationDto) {\n\t\treturn Location.builder()\n\t\t\t.latitude(locationDto.getLatitude())\n\t\t\t.longitude(locationDto.getLongitude())\n\t\t\t.name(locationDto.getName())\n\t\t\t.engName(locationDto.getEngName())\n\t\t\t.address(locationDto.getAddress()).build();\n\t}\n\n\tpublic static Location of(Double latitude, Double longitude, String name, String engName, String address) {\n\t\treturn Location.builder()\n\t\t\t.latitude(latitude)\n\t\t\t.longitude(longitude)\n\t\t\t.name(name)\n\t\t\t.engName(engName)\n\t\t\t.address(address).build();\n\t}\n}\n```\n\n```javascript\n// location.js\n```\n\n비슷한 점이 많아 흥미로운 점이 많다.\n"
+  },
+  {
+    "slug": "ui-ux",
+    "frontmatter": {
+      "path": "/blog/ui-ux",
+      "title": "ui-ux",
+      "published": false,
+      "date": "2018-03-15"
+    },
+    "content": "\n### lodash 사이트\n\n검색할 시, 검색 결과가 없을 경우 검색 글자 제한을 둠.\n\n### Facebook App\n\n로딩 중일 시 Fake 이미지를 통하여 사용자에게 안정감을 줌.\n\n### Medium\n\n이미지 로딩 시 data:...로 로딩전 이미지를 불러온 후, 이미지 로딩이 완료되면 선명한 이미지를 불러옴.\n"
+  }
+]
