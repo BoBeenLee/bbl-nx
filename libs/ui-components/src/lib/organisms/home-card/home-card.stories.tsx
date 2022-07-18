@@ -5,7 +5,7 @@ import { HomeCard, HomeCardProps } from './home-card';
 
 export default {
   component: HomeCard,
-  title: 'molecules/HomeCard',
+  title: 'organisms/HomeCard',
   argTypes: {},
 } as Meta;
 
