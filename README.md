@@ -18,34 +18,37 @@ blog & homepage project based on monorepo(nx)
 - **Tooling**: [Storybook](https://github.com/storybooks/storybook)
 - **Build System**: [Nx.dev](https://nx.dev/)
 
-## 📂 Directory structure
+## 📂 Directory Structure
 
     root
     ├── apps
     ├──── bbl-nextjs
     ├────── src
     ├──────── apis
+    ├──────── components   # components with next
     ├──────── libs
-    ├──────── machines
-    ├──────── pages        # 페이지
+    ├──────── machines     # integrating machines with an api
+    ├──────── pages        # Pages
     ├──── bbl-remix
     ├────── app
     ├──────── apis
-    ├──────── components
+    ├──────── components   # components with remix
     ├──────── libs
-    ├──────── machines
-    ├──────── routes       # remix 라우팅
+    ├──────── machines     # integrating machines with an api
+    ├──────── routes       # Routes = Pages
     ├──────── styles
     ├── libs
+    ├──── machines         # deprecated
+    ├──── interfaces       # deprecated
+    ├──── features         # all of the code for a feature and putting it in one single place (ex) authentication - login, signup, user data...)
     ├──── apis             #
+    ├──── services         # integrating with an api (ex) logging, analytics... )
     ├──── constants        #
-    ├──── hooks            # hooks
-    ├──── images           # 이미지 저장소
-    ├──── interfaces       #
-    ├──── libs             #
-    ├──── machines         #
-    ├──── ui-components    # ui 컴포넌트 (atoms, molecules, organisms, templates)
-    ├──── utils            # 사용자 정의 유틸 라이브러리 (ex) uri, browser)
+    ├──── hooks            # shared hooks
+    ├──── images           # image assets
+    ├──── libs             # third-party libraries (ex) fetch, axios, sentry...) - facade pattern을 통한 구현
+    ├──── ui-components    # general small components, presentational components (atoms, molecules, organisms, templates)
+    ├──── utils            # very small and simple functions, generally pure function (ex) uri, browser)
     ├── posts              # MD posts directory
     ├── tools
     ├──── generators       # plop-tempates 저장소
