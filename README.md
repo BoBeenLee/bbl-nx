@@ -29,7 +29,7 @@ blog & homepage project based on monorepo(nx)
     ├──────── libs
     ├──────── machines     # integrating machines with an api
     ├──────── pages        # Pages
-    ├──── bbl-remix
+    ├──── bbl-remix        # (Working in progress)
     ├────── app
     ├──────── apis
     ├──────── components   # components with remix
@@ -84,6 +84,7 @@ npm run test:affected
   - pages: https://bobeenlee.github.io/bbl-nx/bbl-nextjs/
 - Deploy to Vercel
   - https://bbl-nx.vercel.app/
+- Deploy to Netlify (Working in progress)
 
 ## Dependencies of Graph
 
