@@ -1,6 +1,6 @@
 import { useCallback, useState, useTransition } from 'react';
-import { BlogItem } from '@bbl-nx/interfaces';
 import { SectionTitle, SearchInput } from '@bbl-nx/ui-components';
+import { BlogItem } from '../../../interfaces';
 import { BlogCard } from '../../organisms';
 
 export interface BlogTemplateProps {
