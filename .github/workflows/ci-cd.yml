@@ -78,6 +78,7 @@ jobs:
       dependency_cache_key: ${{ needs.job_install_dependencies.outputs.dependency_cache_key }}
 
   test:
+    name: Test
     runs-on: ubuntu-latest
     needs: job_build
     steps:
@@ -109,6 +110,7 @@ jobs:
 
   storybook-deploy:
     if: ${{ github.ref == 'refs/heads/master' }}
+    name: Storybook Deployment
     runs-on: ubuntu-latest
     needs: job_build
     steps:
