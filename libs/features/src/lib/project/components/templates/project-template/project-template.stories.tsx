@@ -1,6 +1,6 @@
 import { Story, Meta } from '@storybook/react';
 import { within } from '@storybook/testing-library';
-import LayoutTemplate from '../layout-template/layout-template';
+import { LayoutTemplate } from '@bbl-nx/ui-components';
 import { ProjectTemplate, ProjectTemplateProps } from './project-template';
 
 export default {

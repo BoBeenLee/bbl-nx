@@ -38,11 +38,8 @@ blog & homepage project based on monorepo(nx)
     ├──────── routes       # Routes = Pages
     ├──────── styles
     ├── libs
-    ├──── machines         # deprecated
-    ├──── interfaces       # deprecated
     ├──── features         # all of the code for a feature and putting it in one single place (ex) authentication - login, signup, user data...)
     ├──── apis             #
-    ├──── services         # integrating with an api (ex) logging, analytics... )
     ├──── constants        #
     ├──── hooks            # shared hooks
     ├──── images           # image assets
