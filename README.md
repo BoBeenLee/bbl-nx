@@ -80,6 +80,7 @@ npm run test:affected
 - Deploy to Storybook
   - github action master 브랜치 기준 github pages로 배포 진행합니다.
   - ui-components: https://bobeenlee.github.io/bbl-nx/ui-components/
+  - features: https://bobeenlee.github.io/bbl-nx/features/
   - pages: https://bobeenlee.github.io/bbl-nx/bbl-nextjs/
 - Deploy to Vercel
   - https://bbl-nx.vercel.app/
