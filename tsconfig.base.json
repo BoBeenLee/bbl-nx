@@ -21,6 +21,7 @@
       "@bbl-nextjs/*": ["./apps/bbl-nextjs/src/*"],
       "@bbl-nx/apis": ["libs/apis/src/index.ts"],
       "@bbl-nx/constants": ["libs/constants/src/index.ts"],
+      "@bbl-nx/features": ["libs/features/src/index.ts"],
       "@bbl-nx/hooks": ["libs/hooks/src/index.ts"],
       "@bbl-nx/images": ["libs/images/src/index.ts"],
       "@bbl-nx/interfaces": ["libs/interfaces/src/index.ts"],

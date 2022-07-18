@@ -6,6 +6,7 @@
     "bbl-nextjs": "apps/bbl-nextjs",
     "bbl-remix": "apps/bbl-remix",
     "constants": "libs/constants",
+    "features": "libs/features",
     "hooks": "libs/hooks",
     "images": "libs/images",
     "interfaces": "libs/interfaces",

@@ -1,5 +1,5 @@
 import Layout from '../../components/layout';
-import { AboutTemplate } from '@bbl-nx/ui-components';
+import { AboutTemplate } from '@bbl-nx/features';
 
 const AboutPage = () => {
   return (

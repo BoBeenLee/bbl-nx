@@ -2,7 +2,7 @@ import Layout from '../../components/layout';
 import React from 'react';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { getAllPosts, PostItem, getPostById } from '../../libs/post';
-import { BlogIdTemplate } from '@bbl-nx/ui-components';
+import { BlogIdTemplate } from '@bbl-nx/features';
 
 const BlogByIdPage = (props: PostItem) => {
   const { slug, frontmatter, content } = props;

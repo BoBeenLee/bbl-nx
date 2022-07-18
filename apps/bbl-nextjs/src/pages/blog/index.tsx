@@ -3,11 +3,10 @@ import React from 'react';
 import { GetStaticProps } from 'next';
 
 import Layout from '../../components/layout';
-import { BlogTemplate } from '@bbl-nx/ui-components';
+import { BlogTemplate, BlogItem } from '@bbl-nx/features';
 import { interpret } from 'xstate';
 import { waitFor } from 'xstate/lib/waitFor';
 import { blogServiceWithConfig } from '../../machines/blog-service-machine';
-import { BlogItem } from '@bbl-nx/interfaces';
 
 export interface BlogPageProps {
   allBlogs: BlogItem[];
