@@ -5,6 +5,7 @@
 ![GitHub deployments](https://img.shields.io/github/deployments/BoBeenLee/bbl-nx/production?label=vercel&logo=vercel&logoColor=white)
 [![CodeFactor](https://www.codefactor.io/repository/github/bobeenlee/bbl-nx/badge)](https://www.codefactor.io/repository/github/bobeenlee/bbl-nx)
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
+![lastUpdated](https://img.shields.io/github/last-commit/BoBeenLee/bbl-nx/master)
 
 blog & homepage project based on monorepo(nx)
 
