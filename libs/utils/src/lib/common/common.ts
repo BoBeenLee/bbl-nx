@@ -10,3 +10,5 @@ export function optional<Fn extends AnyFunction>(
     }
   };
 }
+
+export const identity = <T>(x: T): T => x;

@@ -5,6 +5,7 @@ import {
 } from '@bbl-nx/constants';
 import { ProjectCard } from '../../organisms';
 import { SectionTitle, Seperator, ProjectLinks } from '@bbl-nx/ui-components';
+import { deepMemoized } from '@bbl-nx/utils';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface ProjectTemplateProps {}
@@ -29,6 +30,13 @@ export function ProjectTemplate() {
             googleStoreUrl,
             appStoreUrl,
           } = item;
+          const links = deepMemoized({
+            home: homeUrl,
+            link: linkUrl,
+            github: githubUrl,
+            googleStore: googleStoreUrl,
+            appStore: appStoreUrl,
+          });
           return (
             <ProjectCard
               key={id}
@@ -36,17 +44,7 @@ export function ProjectTemplate() {
               period={period}
               techStacks={skills}
               summary={summary}
-              IconComponent={
-                <ProjectLinks
-                  url={{
-                    home: homeUrl,
-                    link: linkUrl,
-                    github: githubUrl,
-                    googleStore: googleStoreUrl,
-                    appStore: appStoreUrl,
-                  }}
-                />
-              }
+              IconComponent={<ProjectLinks url={links} />}
             />
           );
         })}
@@ -67,6 +65,11 @@ export function ProjectTemplate() {
             homeUrl,
             storybookUrl,
           } = item;
+          const links = deepMemoized({
+            home: homeUrl,
+            github: githubUrl,
+            storybook: storybookUrl,
+          });
           return (
             <ProjectCard
               key={id}
@@ -74,15 +77,7 @@ export function ProjectTemplate() {
               period={period}
               techStacks={skills}
               summary={summary}
-              IconComponent={
-                <ProjectLinks
-                  url={{
-                    home: homeUrl,
-                    github: githubUrl,
-                    storybook: storybookUrl,
-                  }}
-                />
-              }
+              IconComponent={<ProjectLinks url={links} />}
             />
           );
         })}
@@ -105,6 +100,13 @@ export function ProjectTemplate() {
             appStoreUrl,
             storybookUrl,
           } = item;
+          const links = deepMemoized({
+            home: homeUrl,
+            github: githubUrl,
+            googleStore: googleStoreUrl,
+            appStore: appStoreUrl,
+            storybook: storybookUrl,
+          });
           return (
             <ProjectCard
               key={id}
@@ -112,17 +114,7 @@ export function ProjectTemplate() {
               period={period}
               techStacks={skills}
               summary={summary}
-              IconComponent={
-                <ProjectLinks
-                  url={{
-                    home: homeUrl,
-                    github: githubUrl,
-                    googleStore: googleStoreUrl,
-                    appStore: appStoreUrl,
-                    storybook: storybookUrl,
-                  }}
-                />
-              }
+              IconComponent={<ProjectLinks url={links} />}
             />
           );
         })}

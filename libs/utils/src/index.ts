@@ -4,3 +4,4 @@ export * from './lib/navigator';
 export * from './lib/object';
 export * from './lib/string';
 export * from './lib/json';
+export * from './lib/memoize/memoize';
