@@ -1,5 +1,4 @@
 import { Story, Meta } from '@storybook/react';
-import { within } from '@storybook/testing-library';
 import { BlogCard, BlogCardProps } from './blog-card';
 
 export default {

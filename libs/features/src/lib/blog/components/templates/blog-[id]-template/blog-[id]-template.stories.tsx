@@ -1,6 +1,5 @@
 import { action } from '@storybook/addon-actions';
 import { Story, Meta } from '@storybook/react';
-import { within } from '@storybook/testing-library';
 import { mockBlogId } from '../../../__mocks__/blog';
 import { LayoutTemplate } from '@bbl-nx/ui-components';
 import { BlogIdTemplate, BlogIdTemplateProps } from './blog-[id]-template';

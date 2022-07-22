@@ -1,5 +1,4 @@
 import { Story, Meta } from '@storybook/react';
-import { within } from '@storybook/testing-library';
 import { DarkModeButton, DarkModeButtonProps } from './dark-mode-button';
 
 export default {

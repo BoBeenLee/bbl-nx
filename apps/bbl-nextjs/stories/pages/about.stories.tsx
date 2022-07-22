@@ -1,5 +1,4 @@
 import { Story, Meta } from '@storybook/react';
-import { within } from '@storybook/testing-library';
 import AboutPage from '../../src/pages/about/index';
 
 export default {
