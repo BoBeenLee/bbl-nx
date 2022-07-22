@@ -121,7 +121,7 @@ export default function (plop) {
       const layerFolder = data.layerFolder;
 
       const componentDir = `libs/${location}/src/lib${
-        featuresFolder ? `/${featuresFolder}` : ``
+        featuresFolder ? `/${featuresFolder}/components` : ``
       }/${layerFolder}/${componentFileName}`;
       const layerDir = `libs/${location}/src/lib${
         featuresFolder ? `/${featuresFolder}` : ``
