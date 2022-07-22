@@ -1,5 +1,5 @@
 import { experiences } from '@bbl-nx/constants';
-import ExperienceCard from '../../components/organisms/experience-card/experience-card';
+import ExperienceCard from '../experience-card/experience-card';
 
 export function Experiences() {
   return (

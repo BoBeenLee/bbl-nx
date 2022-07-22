@@ -1,6 +1,6 @@
 import cn from 'classnames';
 import { useCallback } from 'react';
-import styles from './menu-list.module.css';
+import styles from './menus.module.css';
 
 export interface MenuItemProps {
   href: string;
