@@ -137,6 +137,7 @@
     "eslint-plugin-react": "7.30.1",
     "eslint-plugin-react-hooks": "4.6.0",
     "eslint-plugin-storybook": "^0.5.11",
+    "eslint-plugin-unused-imports": "^2.0.0",
     "husky": "4.2.5",
     "jest": "^27.5.1",
     "msw": "^0.44.0",
