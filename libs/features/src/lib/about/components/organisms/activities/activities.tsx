@@ -1,5 +1,5 @@
 import { activity } from '@bbl-nx/constants';
-import ActivityCard from '../../components/organisms/activity-card/activity-card';
+import ActivityCard from '../activity-card/activity-card';
 
 export function Activities() {
   return (
