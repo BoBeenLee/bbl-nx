@@ -1,10 +1,10 @@
 import { useCallback, useEffect, useState } from 'react';
 import { MenuButton } from '../../molecules';
-import MenuList, { MenuItemProps, MenuListProps } from '../menu-list/menu-list';
+import Menus, { MenuItemProps, MenusProps } from '../menus/menus';
 
 export interface MobileNavProps {
   data: Omit<MenuItemProps, 'transitionDelay'>[];
-  onNavigate: MenuListProps['onNavigate'];
+  onNavigate: MenusProps['onNavigate'];
 }
 
 export function MobileNav(props: MobileNavProps) {
@@ -30,7 +30,7 @@ export function MobileNav(props: MobileNavProps) {
   return (
     <>
       <MenuButton open={isMenuOpen} onToggleMenu={onToggleMenu} />
-      <MenuList open={isMenuOpen} data={data} onNavigate={onNavigate} />
+      <Menus open={isMenuOpen} data={data} onNavigate={onNavigate} />
     </>
   );
 }

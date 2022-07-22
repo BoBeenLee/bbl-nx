@@ -1,15 +1,15 @@
 import { Story, Meta } from '@storybook/react';
 import { within } from '@storybook/testing-library';
-import { MenuList, MenuListProps } from './menu-list';
+import { Menus, MenusProps } from './menus';
 import { nav } from '@bbl-nx/constants';
 
 export default {
-  component: MenuList,
-  title: 'organisms/MenuList',
+  component: Menus,
+  title: 'organisms/Menus',
   argTypes: {},
 } as Meta;
 
-const Template: Story<MenuListProps> = (args) => <MenuList {...args} />;
+const Template: Story<MenusProps> = (args) => <Menus {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
