@@ -18,14 +18,11 @@
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["libs/constants/**/*.ts"]
-      }
-    },
-    "lint-fix": {
-      "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["libs/constants/**/*.ts"],
-        "fix": true
+      },
+      "configurations": {
+        "fix": {
+          "fix": true
+        }
       }
     },
     "test": {

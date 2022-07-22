@@ -29,14 +29,11 @@
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["libs/ui-components/**/*.{ts,tsx,js,jsx}"]
-      }
-    },
-    "lint-fix": {
-      "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["libs/ui-components/**/*.{ts,tsx,js,jsx}"],
-        "fix": true
+      },
+      "configurations": {
+        "fix": {
+          "fix": true
+        }
       }
     },
     "test": {

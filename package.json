@@ -17,7 +17,7 @@
     "build": "nx run-many --target=build --all",
     "build:affected:all": "nx affected --target=build --all",
     "eslint": "nx run-many --target=lint --all",
-    "eslint:fix": "nx run-many --target=lint-fix --all",
+    "eslint:fix": "nx run-many --target=lint --configuration=fix --all",
     "test": "npm run test:all",
     "test:all": "nx run-many --target=test --all",
     "test:affected": "nx affected --target=test --base=master~1 --head=master",
