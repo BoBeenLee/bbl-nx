@@ -1,6 +1,5 @@
 import moment from 'moment/moment';
 import { Moment } from 'moment';
-import _ from 'lodash';
 import { DATE_TIME_FORMAT, DATE_TIME_FORMAT1 } from "./datetime-format";
 
 export type DateTimeFormatModule = typeof import("./datetime-format");

@@ -1,6 +1,5 @@
 import { action } from '@storybook/addon-actions';
 import { Story, Meta } from '@storybook/react';
-import { within } from '@storybook/testing-library';
 import { LayoutTemplate, LayoutTemplateProps } from './layout-template';
 
 export default {

@@ -1,5 +1,4 @@
 import { Story, Meta } from '@storybook/react';
-import { within } from '@storybook/testing-library';
 import { TechStackCard, TechStackCardProps } from './tech-stack-card';
 
 export default {
