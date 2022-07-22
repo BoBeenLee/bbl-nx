@@ -1,4 +1,8 @@
-import { activity, experiences, categorySkills } from '@bbl-nx/constants';
+import {
+  activity,
+  experiences,
+  categorySkillArray,
+} from '@bbl-nx/constants';
 import { SectionTitle, Seperator } from '@bbl-nx/ui-components';
 import { ActivityCard, ExperienceCard, TechStackCard } from '../../organisms';
 
@@ -57,7 +61,7 @@ export function AboutTemplate() {
         <SectionTitle className="pb-2" href={'#tech-stack'}>
           Tech Stack
         </SectionTitle>
-        {Object.values(categorySkills).map((item) => {
+        {categorySkillArray.map((item) => {
           const { name, skills } = item;
           return <TechStackCard key={name} groupName={name} items={skills} />;
         })}

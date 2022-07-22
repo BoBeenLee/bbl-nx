@@ -148,3 +148,5 @@ export const categorySkills: Record<string, CategorySkillsItem> = {
     skills: ['Github Action'],
   },
 };
+
+export const categorySkillArray = Object.values(categorySkills);
