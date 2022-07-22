@@ -1,11 +1,11 @@
 import { render } from '@testing-library/react';
 
-import MenuList from './menu-list';
+import Menus from './menus';
 
-describe('MenuList', () => {
+describe('Menus', () => {
   it('should render successfully', () => {
     const { baseElement } = render(
-      <MenuList
+      <Menus
         open={true}
         data={[]}
         onNavigate={() => {

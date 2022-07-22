@@ -9,7 +9,7 @@ export interface MenuItemProps {
   transitionDelay: number;
 }
 
-export interface MenuListProps {
+export interface MenusProps {
   open: boolean;
   data: Omit<MenuItemProps, 'transitionDelay'>[];
   onNavigate: ({ href }: { href: string }) => void;
@@ -23,7 +23,7 @@ function MenuItem({
   text,
   transitionDelay,
   onNavigate,
-}: MenuItemProps & { onNavigate: MenuListProps['onNavigate'] }) {
+}: MenuItemProps & { onNavigate: MenusProps['onNavigate'] }) {
   const onNavigateItem = useCallback(() => {
     onNavigate({ href });
   }, [href, onNavigate]);
@@ -43,7 +43,7 @@ function MenuItem({
   );
 }
 
-export function MenuList(props: MenuListProps) {
+export function Menus(props: MenusProps) {
   const { open, data, onNavigate } = props;
   return (
     <ul
@@ -72,4 +72,4 @@ export function MenuList(props: MenuListProps) {
   );
 }
 
-export default MenuList;
+export default Menus;
