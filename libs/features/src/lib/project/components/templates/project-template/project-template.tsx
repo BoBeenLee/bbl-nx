@@ -1,14 +1,10 @@
 import {
-  companyPortfolios,
   personalPortforlios,
   teamPortfolios,
 } from '@bbl-nx/constants';
-import { ProjectCard } from '../../organisms';
+import { CompanyPortfolios, ProjectCard } from '../../organisms';
 import { SectionTitle, Seperator, ProjectLinks } from '@bbl-nx/ui-components';
 import { deepMemoized } from '@bbl-nx/utils';
-
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
-export interface ProjectTemplateProps {}
 
 export function ProjectTemplate() {
   return (
@@ -17,37 +13,7 @@ export function ProjectTemplate() {
         <SectionTitle className="pb-2" href="#company">
           Company
         </SectionTitle>
-        {companyPortfolios.map((item) => {
-          const {
-            id,
-            name,
-            period,
-            skills,
-            summary,
-            homeUrl,
-            githubUrl,
-            linkUrl,
-            googleStoreUrl,
-            appStoreUrl,
-          } = item;
-          const links = deepMemoized({
-            home: homeUrl,
-            link: linkUrl,
-            github: githubUrl,
-            googleStore: googleStoreUrl,
-            appStore: appStoreUrl,
-          });
-          return (
-            <ProjectCard
-              key={id}
-              name={name}
-              period={period}
-              techStacks={skills}
-              summary={summary}
-              IconComponent={<ProjectLinks url={links} />}
-            />
-          );
-        })}
+        <CompanyPortfolios />
         <Seperator />
       </div>
       <div className="w-full mt-16 space-y-8">
