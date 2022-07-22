@@ -1,5 +1,5 @@
 import { useCallback, useState, useTransition } from 'react';
-import { SectionTitle, SearchInput } from '@bbl-nx/ui-components';
+import { SectionTitle, SearchInput, ALink } from '@bbl-nx/ui-components';
 import { BlogItem } from '../../../interfaces';
 import { BlogCard } from '../../organisms';
 
@@ -31,12 +31,9 @@ export function BlogTemplate(props: BlogTemplateProps) {
           const { id, title, createdAt, url, isExternal } = item;
           return (
             <div key={id}>
-              <a
-                href={url}
-                {...(isExternal ? { target: '_blank', rel: 'noreferrer' } : {})}
-              >
+              <ALink href={url} isExternal={isExternal}>
                 <BlogCard title={title} createdAt={createdAt} />
-              </a>
+              </ALink>
             </div>
           );
         })}
