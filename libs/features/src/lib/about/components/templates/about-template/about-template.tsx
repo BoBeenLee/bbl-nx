@@ -1,7 +1,5 @@
-import { activity, categorySkillArray } from '@bbl-nx/constants';
 import { SectionTitle, Seperator } from '@bbl-nx/ui-components';
-import { Activities, Experiences } from '../../../organisms';
-import { ActivityCard, TechStackCard } from '../../organisms';
+import { Activities, Experiences, TeckStacks } from '../../organisms';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface AboutTemplateProps {}
@@ -27,10 +25,7 @@ export function AboutTemplate() {
         <SectionTitle className="pb-2" href={'#tech-stack'}>
           Tech Stack
         </SectionTitle>
-        {categorySkillArray.map((item) => {
-          const { name, skills } = item;
-          return <TechStackCard key={name} groupName={name} items={skills} />;
-        })}
+        <TeckStacks />
         <Seperator />
       </div>
       <div className="w-full mt-16 space-y-8">
