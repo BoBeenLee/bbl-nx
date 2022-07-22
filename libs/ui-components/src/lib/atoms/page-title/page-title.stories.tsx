@@ -14,8 +14,3 @@ export const Primary = Template.bind({});
 Primary.args = {
   children: <div>Hello World</div>,
 };
-
-Primary.play = async ({ canvasElement }) => {
-  const canvas = within(canvasElement);
-  // TODO SOMETHING
-};

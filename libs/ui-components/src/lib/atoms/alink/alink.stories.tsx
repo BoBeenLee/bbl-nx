@@ -16,8 +16,3 @@ Primary.args = {
   isExternal: true,
   children: 'Example',
 };
-
-Primary.play = async ({ canvasElement }) => {
-  const canvas = within(canvasElement);
-  // TODO SOMETHING
-};

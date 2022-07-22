@@ -20,8 +20,3 @@ export const Primary = Template.bind({});
 Primary.args = {
   name: 'facebook',
 };
-
-Primary.play = async ({ canvasElement }) => {
-  const canvas = within(canvasElement);
-  // TODO SOMETHING
-};

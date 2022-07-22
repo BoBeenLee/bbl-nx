@@ -13,13 +13,12 @@ const Template: Story<NavProps> = (args) => <Nav {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  data: nav.map((item) => ({ text: item.text, href: item.href, isActive: false })),
+  data: nav.map((item) => ({
+    text: item.text,
+    href: item.href,
+    isActive: false,
+  })),
   onNavigate: () => {
     // SOMETHING
   },
-};
-
-Primary.play = async ({ canvasElement }) => {
-  const canvas = within(canvasElement);
-  // TODO SOMETHING
 };

@@ -8,12 +8,9 @@ export default {
   argTypes: {},
 } as Meta;
 
-const Template: Story<DarkModeButtonProps> = (args) => <DarkModeButton {...args} />;
+const Template: Story<DarkModeButtonProps> = (args) => (
+  <DarkModeButton {...args} />
+);
 
 export const Primary = Template.bind({});
 Primary.args = {};
-
-Primary.play = async ({ canvasElement }) => {
-  const canvas = within(canvasElement);
-  // TODO SOMETHING
-};

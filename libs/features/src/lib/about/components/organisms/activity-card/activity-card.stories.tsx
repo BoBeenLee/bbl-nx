@@ -15,8 +15,3 @@ Primary.args = {
   title: 'Test',
   caption: 'Test',
 };
-
-Primary.play = async ({ canvasElement }) => {
-  const canvas = within(canvasElement);
-  // TODO SOMETHING
-};

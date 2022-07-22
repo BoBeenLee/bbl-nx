@@ -1,9 +1,7 @@
 import { Story, Meta } from '@storybook/react';
 import { within } from '@storybook/testing-library';
-import BlogByIdPage, {
-  getStaticProps,
-} from '../../src/pages/blog/[id]';
-import { PostItem } from "../../src/libs/post";
+import BlogByIdPage, { getStaticProps } from '../../src/pages/blog/[id]';
+import { PostItem } from '../../src/libs/post';
 
 export default {
   component: BlogByIdPage,
@@ -11,14 +9,12 @@ export default {
   argTypes: {},
 } as Meta;
 
-const Template: Story<PostItem> = (args, {loaded}) => {
+const Template: Story<PostItem> = (args, { loaded }) => {
   return <BlogByIdPage {...args} {...loaded} />;
 };
 
 export const Primary = Template.bind({});
-Primary.args = {
-  
-};
+Primary.args = {};
 Primary.loaders = [
   async () => {
     const context = {};
@@ -29,11 +25,6 @@ Primary.loaders = [
     return {};
   },
 ];
-
-Primary.play = async ({ canvasElement }) => {
-  const canvas = within(canvasElement);
-  // TODO SOMETHING
-};
 
 Primary.parameters = {
   nextRouter: {

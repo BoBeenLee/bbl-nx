@@ -11,7 +11,7 @@ export default {
   argTypes: {},
 } as Meta;
 
-const Template: Story<BlogPageProps> = (args, {loaded}) => {
+const Template: Story<BlogPageProps> = (args, { loaded }) => {
   return <BlogPage {...args} allBlogs={loaded.allBlogs} />;
 };
 
@@ -29,11 +29,6 @@ Primary.loaders = [
     return {};
   },
 ];
-
-Primary.play = async ({ canvasElement }) => {
-  const canvas = within(canvasElement);
-  // TODO SOMETHING
-};
 
 Primary.parameters = {
   nextRouter: {

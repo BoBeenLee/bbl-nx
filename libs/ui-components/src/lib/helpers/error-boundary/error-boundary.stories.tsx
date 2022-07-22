@@ -16,8 +16,3 @@ export const Primary = Template.bind({});
 Primary.args = {
   FallbackComponent: ({ error }) => <div>{error.message}</div>,
 };
-
-Primary.play = async ({ canvasElement }) => {
-  const canvas = within(canvasElement);
-  // TODO SOMETHING
-};

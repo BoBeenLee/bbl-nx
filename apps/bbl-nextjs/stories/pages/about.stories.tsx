@@ -15,11 +15,6 @@ Primary.args = {
   asPath: '/about',
 };
 
-Primary.play = async ({ canvasElement }) => {
-  const canvas = within(canvasElement);
-  // TODO SOMETHING
-};
-
 Primary.parameters = {
   nextRouter: {
     path: '/about',

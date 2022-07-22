@@ -16,8 +16,3 @@ Primary.args = {
   createdAt: '2020-10-10',
   summary: 'summary',
 };
-
-Primary.play = async ({ canvasElement }) => {
-  const canvas = within(canvasElement);
-  // TODO SOMETHING
-};
