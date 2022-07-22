@@ -4,9 +4,7 @@ import Blogs from './blogs';
 
 describe('Blogs', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(
-      <Blogs />
-    );
+    const { baseElement } = render(<Blogs blogs={[]} />);
     expect(baseElement).toBeTruthy();
   });
 });
