@@ -73,6 +73,28 @@ export default function (plop) {
     description: 'new ui component in repo',
     prompts: [
       {
+        type: 'list',
+        name: 'location',
+        message: 'Location Folder: ',
+        choices: [
+          { name: 'features', value: 'features' },
+          { name: 'ui-components', value: 'ui-components' },
+        ],
+      },
+      {
+        type: 'list',
+        name: 'featuresFolder',
+        message: 'Features Folder: ',
+        choices: [
+          { name: 'about', value: 'about' },
+          { name: 'project', value: 'project' },
+          { name: 'blog', value: 'blog' },
+        ],
+        when(answers) {
+          return answers.location === 'features';
+        },
+      },
+      {
         type: 'input',
         name: 'componentName',
         message: 'Component Name: ',
@@ -91,14 +113,19 @@ export default function (plop) {
       },
     ],
     actions: (data) => {
+      const location = data.location;
+      const featuresFolder = data.featuresFolder;
       const templateDir = 'tools/generators/plop-templates';
       const componentFileName = transformFileName(data.componentName);
       const componentName = transformComponentName(data.componentName);
-      const componentFolder = data.componentFolder;
       const layerFolder = data.layerFolder;
 
-      const componentDir = `libs/ui-components/src/lib/${layerFolder}/${componentFileName}`;
-      const layerDir = `libs/ui-components/src/lib/${layerFolder}`;
+      const componentDir = `libs/${location}/src/lib${
+        featuresFolder ? `/${featuresFolder}` : ``
+      }/${layerFolder}/${componentFileName}`;
+      const layerDir = `libs/${location}/src/lib${
+        featuresFolder ? `/${featuresFolder}` : ``
+      }/${layerFolder}`;
       const filesToAlwaysCopyOver = [
         'component.spec.txt',
         'component.stories.txt',

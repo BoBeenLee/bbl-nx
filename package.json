@@ -10,6 +10,8 @@
     "node": ">=16.0.0"
   },
   "scripts": {
+    "post:new": "plop post",
+    "components:new": "plop ui-components",
     "start": "nx serve",
     "dev": "nx serve",
     "build": "nx run-many --target=build --all",
@@ -19,7 +21,6 @@
     "test": "npm run test:all",
     "test:all": "nx run-many --target=test --all",
     "test:affected": "nx affected --target=test --base=master~1 --head=master",
-    "post:new": "plop post",
     "test-storybook": "test-storybook --url http://localhost:4400/",
     "storybook": "npm run ui-components:storybook",
     "build-storybook": "nx run-many --target=build-storybook --projects=ui-components,features,bbl-nextjs",
@@ -27,7 +28,6 @@
     "bbl-nextjs:build-storybook": "nx run bbl-nextjs:build-storybook",
     "features:storybook": "nx run features:storybook",
     "features:build-storybook": "nx run features:build-storybook",
-    "ui-components:new": "plop ui-components",
     "ui-components:storybook": "nx run ui-components:storybook",
     "ui-components:build-storybook": "nx run ui-components:build-storybook",
     "images:imagemin": "imagemin 'libs/images/src/lib/assets/*.png' --plugin=pngquant --out-dir=libs/images/optimized"
