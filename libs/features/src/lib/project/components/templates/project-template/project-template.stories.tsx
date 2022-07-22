@@ -1,7 +1,7 @@
 import { Story, Meta } from '@storybook/react';
 import { within } from '@storybook/testing-library';
 import { LayoutTemplate } from '@bbl-nx/ui-components';
-import { ProjectTemplate, ProjectTemplateProps } from './project-template';
+import { ProjectTemplate } from './project-template';
 
 export default {
   component: ProjectTemplate,
@@ -9,7 +9,7 @@ export default {
   argTypes: {},
 } as Meta;
 
-const Template: Story<ProjectTemplateProps> = (args) => (
+const Template: Story = (args) => (
   <LayoutTemplate
     {...{
       asPath: '/',
