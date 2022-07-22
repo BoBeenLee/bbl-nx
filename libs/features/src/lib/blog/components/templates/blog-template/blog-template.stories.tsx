@@ -26,8 +26,3 @@ export const Primary = Template.bind({});
 Primary.args = {
   allBlogs: mockBlogs,
 };
-
-Primary.play = async ({ canvasElement }) => {
-  const canvas = within(canvasElement);
-  // TODO SOMETHING
-};

@@ -18,8 +18,3 @@ Primary.args = {
   content: 'content',
   createdAt: String(Date.now().valueOf()),
 };
-
-Primary.play = async ({ canvasElement }) => {
-  const canvas = within(canvasElement);
-  // TODO SOMETHING
-};

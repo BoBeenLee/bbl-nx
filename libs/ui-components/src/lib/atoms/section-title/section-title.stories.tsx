@@ -8,16 +8,9 @@ export default {
   argTypes: {},
 } as Meta;
 
-const Template: Story<SectionTitleProps> = (args) => (
-  <SectionTitle {...args} />
-);
+const Template: Story<SectionTitleProps> = (args) => <SectionTitle {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  children: <div>Hello World</div>
-};
-
-Primary.play = async ({ canvasElement }) => {
-  const canvas = within(canvasElement);
-  // TODO SOMETHING
+  children: <div>Hello World</div>,
 };

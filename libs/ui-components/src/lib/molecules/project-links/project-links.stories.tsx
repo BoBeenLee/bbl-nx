@@ -20,8 +20,3 @@ Primary.args = {
     storybook: 'https://example.com',
   },
 };
-
-Primary.play = async ({ canvasElement }) => {
-  const canvas = within(canvasElement);
-  // TODO SOMETHING
-};

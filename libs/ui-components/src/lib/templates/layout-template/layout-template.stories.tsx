@@ -18,8 +18,3 @@ Primary.args = {
   children: <div>Hello World</div>,
   onNavigate: action('onNavigate'),
 };
-
-Primary.play = async ({ canvasElement }) => {
-  const canvas = within(canvasElement);
-  // TODO SOMETHING
-};

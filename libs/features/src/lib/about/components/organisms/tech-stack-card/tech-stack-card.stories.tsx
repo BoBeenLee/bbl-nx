@@ -17,8 +17,3 @@ Primary.args = {
   groupName: 'Test',
   items: ['t1', 't2', 't3'],
 };
-
-Primary.play = async ({ canvasElement }) => {
-  const canvas = within(canvasElement);
-  // TODO SOMETHING
-};

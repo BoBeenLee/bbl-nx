@@ -1,4 +1,4 @@
-import { nav } from "@bbl-nx/constants";
+import { nav } from '@bbl-nx/constants';
 import { Story, Meta } from '@storybook/react';
 import { within } from '@storybook/testing-library';
 import { NavFooter, NavFooterProps } from './nav-footer';
@@ -17,9 +17,4 @@ Primary.args = {
   onNavigate: () => {
     // SOMETHING
   },
-};
-
-Primary.play = async ({ canvasElement }) => {
-  const canvas = within(canvasElement);
-  // TODO SOMETHING
 };

@@ -29,8 +29,3 @@ Primary.args = {
   createdAt: mockBlogId.createdAt,
   content: mockBlogId.content,
 };
-
-Primary.play = async ({ canvasElement }) => {
-  const canvas = within(canvasElement);
-  // TODO SOMETHING
-};

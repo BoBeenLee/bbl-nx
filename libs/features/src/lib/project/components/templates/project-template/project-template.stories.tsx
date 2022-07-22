@@ -29,8 +29,3 @@ Primary.args = {
     // SOMETHING
   },
 };
-
-Primary.play = async ({ canvasElement }) => {
-  const canvas = within(canvasElement);
-  // TODO SOMETHING
-};
