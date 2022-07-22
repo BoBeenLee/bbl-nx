@@ -1,8 +1,9 @@
+import { personalPortforlios, teamPortfolios } from '@bbl-nx/constants';
 import {
-  personalPortforlios,
-  teamPortfolios,
-} from '@bbl-nx/constants';
-import { CompanyPortfolios, ProjectCard } from '../../organisms';
+  CompanyPortfolios,
+  PersonalPortfolios,
+  ProjectCard,
+} from '../../organisms';
 import { SectionTitle, Seperator, ProjectLinks } from '@bbl-nx/ui-components';
 import { deepMemoized } from '@bbl-nx/utils';
 
@@ -20,33 +21,7 @@ export function ProjectTemplate() {
         <SectionTitle className="pb-2" href="#company">
           Personal
         </SectionTitle>
-        {personalPortforlios.map((item) => {
-          const {
-            id,
-            name,
-            period,
-            skills,
-            summary,
-            githubUrl,
-            homeUrl,
-            storybookUrl,
-          } = item;
-          const links = deepMemoized({
-            home: homeUrl,
-            github: githubUrl,
-            storybook: storybookUrl,
-          });
-          return (
-            <ProjectCard
-              key={id}
-              name={name}
-              period={period}
-              techStacks={skills}
-              summary={summary}
-              IconComponent={<ProjectLinks url={links} />}
-            />
-          );
-        })}
+        <PersonalPortfolios />
         <Seperator />
       </div>
       <div className="w-full mt-16 space-y-8">
