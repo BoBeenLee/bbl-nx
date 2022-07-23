@@ -11,7 +11,7 @@ export function HomeCard(props: HomeCardProps) {
   return (
     <div className="flex flex-col-reverse items-start sm:flex-row">
       <div className="flex flex-col pr-8">
-        <div className="mb-1 text-3xl font-bold tracking-tight text-black sm:text-5xl dark:text-white">
+        <div className="mb-2 text-3xl font-bold tracking-tight text-black sm:text-5xl dark:text-white">
           {name}
         </div>
         <div className="pl-1 mb-4 text-gray-700 dark:text-gray-200">{roleName}</div>
