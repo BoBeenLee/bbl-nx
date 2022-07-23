@@ -1,5 +1,5 @@
 ---
-path: '/blog/react에서-참조-동일성을-비교하는-방법'
+path: '/blog/memo-for-referential-equality-comparing-in-react'
 title: 'React에서 참조 동일성을 비교하는 방법'
 published: true
 date: '2022-07-23'
@@ -14,7 +14,7 @@ tags:
 
 - React 개발을 하면서 props 전달 시, object,array,function 형식의 참조 구문으로 전달할 경우가 생긴다.
 - 컴포넌트 리렌더링 진행 시 참조 동일성을 생각하지 않고 작성했을 경우, 하위 요소들까지 매번 리렌더링이 발생하는 현상을 겪을 수 있다.
-- ex) LoginForm 컴포넌트 size object props전달 예시
+- ex) LoginForm 컴포넌트 input object props전달 예시
 
 ```ts
 export function LoginForm(props: SeperatorProps) {
