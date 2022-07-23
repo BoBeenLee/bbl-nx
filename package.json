@@ -36,6 +36,7 @@
   "dependencies": {
     "@netlify/functions": "1.0.0",
     "@nrwl/next": "14.4.2",
+    "@react-icons/all-files": "^4.1.0",
     "@remix-run/netlify": "^1.5.1",
     "@remix-run/node": "^1.5.1",
     "@remix-run/react": "^1.5.1",
@@ -61,7 +62,6 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-helmet": "^6.1.0",
-    "react-icons": "^4.4.0",
     "regenerator-runtime": "0.13.7",
     "remark": "^10.0.1",
     "remark-html": "^15.0.0",
@@ -117,7 +117,6 @@
     "@types/react": "18.0.14",
     "@types/react-dom": "18.0.5",
     "@types/react-helmet": "^5.0.8",
-    "@types/react-icons": "^3.0.0",
     "@types/react-test-renderer": "^16.9.2",
     "@typescript-eslint/eslint-plugin": "5.30.5",
     "@typescript-eslint/parser": "5.30.5",
