@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import { feednamiApi } from '@bbl-nx/apis';
 
 export interface TistoryItem {
@@ -17,8 +16,8 @@ export interface TistoryResponse {
 }
 
 export const getFeednamiTistories = async (rssUrl: string) => {
-  const response = await feednamiApi(rssUrl) as TistoryResponse;
-  const tistories = _.map(response.feed.entries, (article) => ({
+  const response = (await feednamiApi(rssUrl)) as TistoryResponse;
+  const tistories = (response.feed.entries ?? []).map((article) => ({
     guid: article.guid,
     title: article.title,
     link: article.link,

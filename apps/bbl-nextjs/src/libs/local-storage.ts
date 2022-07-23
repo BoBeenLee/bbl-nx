@@ -1,5 +1,4 @@
-import { isJSON } from '@bbl-nx/utils';
-import _ from 'lodash';
+import { isEmpty, isNaN, isJSON, once } from '@bbl-nx/utils';
 
 type StorageType = string;
 
@@ -14,7 +13,7 @@ function storageFactory(
   ): string => {
     try {
       const itemString = getItem(key);
-      return _.isEmpty(itemString) ? defaultItem : itemString;
+      return isEmpty(itemString) ? defaultItem : itemString;
     } catch (error) {
       return defaultItem;
     }
@@ -26,7 +25,7 @@ function storageFactory(
   ): boolean => {
     try {
       const itemString = getItem(key);
-      return _.isEmpty(itemString) ? defaultItem : itemString === 'true';
+      return isEmpty(itemString) ? defaultItem : itemString === 'true';
     } catch (error) {
       return defaultItem;
     }
@@ -39,7 +38,7 @@ function storageFactory(
     try {
       const itemString = getItem(key);
       const num = Number(itemString);
-      return !_.isNaN(num) ? num : defaultItem;
+      return !isNaN(num) ? num : defaultItem;
     } catch (error) {
       return defaultItem;
     }
@@ -74,7 +73,7 @@ function storageFactory(
   };
 }
 
-export const storage = _.once(() => {
+export const storage = once(() => {
   const setItem = (key: string, value: string) => {
     localStorage.setItem(key, value);
   };

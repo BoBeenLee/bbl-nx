@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import React from 'react';
 import { GetStaticProps } from 'next';
 
@@ -7,6 +6,7 @@ import { BlogTemplate, BlogItem } from '@bbl-nx/features';
 import { interpret } from 'xstate';
 import { waitFor } from 'xstate/lib/waitFor';
 import { blogServiceWithConfig } from '../../machines/blog-service-machine';
+import { defaultDESC, sortBy } from '@bbl-nx/utils';
 
 export interface BlogPageProps {
   allBlogs: BlogItem[];
@@ -37,7 +37,7 @@ export const getStaticProps: GetStaticProps<BlogPageProps> = async () => {
 
 const BlogPage = (props: BlogPageProps) => {
   const { allBlogs } = props;
-  const blogsByDESC = _.orderBy(allBlogs, ['createdAt'], ['desc']);
+  const blogsByDESC = sortBy(allBlogs, 'createdAt', defaultDESC);
   const filterPublished = blogsByDESC.filter((item) => item.published);
 
   return (

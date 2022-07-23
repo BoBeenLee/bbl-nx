@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import { images } from '@bbl-nx/images';
 
 export const companyPortfolios = [
@@ -211,7 +210,7 @@ export const personalPortforlios = [
     githubUrl: 'https://github.com/BoBeenLee/SkhuApp',
     homeUrl:
       'https://play.google.com/store/apps/details?id=com.skhu.bobinlee.skhuapp&hl=ko',
-    images: _.values(images.portfolio.skhualarm),
+    images: Object.values(images.portfolio.skhualarm),
   },
 ];
 
@@ -257,7 +256,7 @@ export const teamPortfolios = [
     summary: '셰프와 게스트 연결해주는 서비스',
     githubUrl: 'https://github.com/Nexters/inhousekitchen',
     homeUrl: '',
-    images: _.values(images.portfolio.house),
+    images: Object.values(images.portfolio.house),
   },
   {
     id: 'flass',
@@ -316,7 +315,7 @@ export const teamPortfolios = [
     githubUrl: 'https://github.com/BoBeenLee/map',
     homeUrl:
       'https://play.google.com/store/apps/details?id=com.nexters.intersection.intersectionapp',
-    images: _.values(images.portfolio.intersection),
+    images: Object.values(images.portfolio.intersection),
   },
   {
     id: 'competition',
@@ -336,7 +335,7 @@ export const teamPortfolios = [
     summary: 'Sungkonghoe University Competition Site',
     githubUrl: 'https://github.com/BoBeenLee/SkhuCompetition.Server',
     homeUrl: '',
-    images: _.values(images.portfolio.competition),
+    images: Object.values(images.portfolio.competition),
   },
   {
     id: 'softhome',
@@ -347,7 +346,7 @@ export const teamPortfolios = [
     summary: 'Sungkonghoe University Software Engineering Department Site',
     githubUrl: 'https://github.com/BoBeenLee/swhome',
     homeUrl: '',
-    images: _.values(images.portfolio.softhome),
+    images: Object.values(images.portfolio.softhome),
   },
 ];
 
