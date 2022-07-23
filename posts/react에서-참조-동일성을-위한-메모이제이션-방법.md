@@ -34,7 +34,7 @@ tags:
 
     ```ts
     import memoizeOne from 'memoize-one';
-    import { isEqual } from 'lodash';
+    import isEqual from 'lodash.isequal';
 
     export const identity = <T>(x: T): T => x;
 
