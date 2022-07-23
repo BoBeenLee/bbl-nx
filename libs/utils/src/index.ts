@@ -5,3 +5,7 @@ export * from './lib/object';
 export * from './lib/string';
 export * from './lib/json';
 export * from './lib/memoize/memoize';
+export * from './lib/function';
+export * from './lib/lang/lang';
+export * from './lib/number/number';
+export * from './lib/array/array';

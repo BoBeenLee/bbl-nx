@@ -1,12 +1,12 @@
 import firebase from 'firebase/app';
 import 'firebase/analytics';
 import 'firebase/remote-config';
-import _ from 'lodash';
 import { Event, SendEvent, firebaseAnalyticsFactory } from '@bbl-nx/libs';
 
 import { env } from '../libs/env';
+import { once } from "@bbl-nx/utils";
 
-export const firebaseInstance = _.once(() => {
+export const firebaseInstance = once(() => {
   if (!env.FIREBASE_CONFIG) {
     throw new Error('not exists firebase configs');
   }
@@ -14,7 +14,7 @@ export const firebaseInstance = _.once(() => {
   return firebase.initializeApp(firebaseConfig);
 });
 
-export const firebaseAnalytics = _.once(() => {
+export const firebaseAnalytics = once(() => {
   const logEvent: SendEvent = ([type, payload]) => {
     const instance = firebaseInstance();
     if (!instance) {

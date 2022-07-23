@@ -1,11 +1,11 @@
 import firebase from 'firebase/app';
 import 'firebase/analytics';
 import 'firebase/remote-config';
-import _ from 'lodash';
 
 import env from './env';
+import { once } from "@bbl-nx/utils";
 
-export const firebaseInstance = _.once(() => {
+export const firebaseInstance = once(() => {
   if (typeof document === 'undefined') {
     return;
   }
