@@ -1,4 +1,4 @@
-import { DATE_TIME_FORMAT5, toDateTimeText } from '@bbl-nx/utils';
+import { DATE_TIME_FORMAT5, transformDateTimeStrToText } from '@bbl-nx/utils';
 import cn from 'classnames';
 
 export interface BlogCardProps {
@@ -17,7 +17,7 @@ export function BlogCard(props: BlogCardProps) {
           {title}
         </h4>
         <p className="mb-0 text-sm text-right text-gray-500">
-          {toDateTimeText(createdAt, DATE_TIME_FORMAT5)}
+          {transformDateTimeStrToText(createdAt, DATE_TIME_FORMAT5)}
         </p>
       </div>
       {summary ? (

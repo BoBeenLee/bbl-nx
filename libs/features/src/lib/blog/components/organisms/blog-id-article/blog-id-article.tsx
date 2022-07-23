@@ -1,5 +1,8 @@
 import { Avatar, SectionTitle } from '@bbl-nx/ui-components';
-import { DATE_TIME_FORMAT5, toDateTimeText } from '@bbl-nx/utils';
+import {
+  DATE_TIME_FORMAT5,
+  transformDateTimeStrToText,
+} from '@bbl-nx/utils';
 
 export interface BlogIdArticleProps {
   className?: string;
@@ -22,7 +25,7 @@ export function BlogIdArticle(props: BlogIdArticleProps) {
           </p>
         </div>
         <p className="text-sm text-gray-600 dark:text-gray-400">
-          {toDateTimeText(createdAt, DATE_TIME_FORMAT5)}
+          {transformDateTimeStrToText(createdAt, DATE_TIME_FORMAT5)}
         </p>
       </div>
       <article
