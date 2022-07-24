@@ -25,11 +25,11 @@ export default function Layout(props: LayoutProps) {
   );
 
   useEffect(() => {
-    nav.forEach((item) => {
-      if (item.href === asPath) {
-        return;
-      }
-      window.requestIdleCallback(() => {
+    window.requestIdleCallback(() => {
+      nav.forEach((item) => {
+        if (item.href === asPath) {
+          return;
+        }
         router.prefetch(item.href);
       });
     });
