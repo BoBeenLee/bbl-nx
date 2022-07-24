@@ -1,42 +1,9 @@
-import cn from 'classnames';
-import { useCallback } from 'react';
-import { DarkModeButton } from '../../molecules';
+import { DarkModeButton, NavItem, NavItemProps } from '../../molecules';
 import MobileNav from '../mobile-nav/mobile-nav';
 
-export interface NavItemProps {
-  href: string;
-  text: string;
-  isActive: boolean;
-}
-
 export interface NavProps {
-  data: NavItemProps[];
+  data: Omit<NavItemProps, 'onNavigate'>[];
   onNavigate: ({ href }: { href: string }) => void;
-}
-
-function NavItem({
-  href,
-  text,
-  isActive,
-  onNavigate,
-}: NavItemProps & { onNavigate: NavProps['onNavigate'] }) {
-  const onNavigateItem = useCallback(() => {
-    onNavigate({ href });
-  }, [href, onNavigate]);
-
-  return (
-    <button
-      className={cn(
-        isActive
-          ? 'font-semibold text-gray-800 dark:text-gray-200'
-          : 'font-normal text-gray-600 dark:text-gray-400',
-        'hidden md:inline-block p-1 sm:px-3 sm:py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-all'
-      )}
-      onClick={onNavigateItem}
-    >
-      <span className="capsize">{text}</span>
-    </button>
-  );
 }
 
 export function Nav(props: NavProps) {
