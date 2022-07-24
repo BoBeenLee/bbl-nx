@@ -6,27 +6,27 @@ export const camelize = (str) => {
     .replace(/\s+/g, '');
 };
 
-export const capitalizeFirstLetter = (str) => {
+export const toUppercaseFirstLetter = (str) => {
   return str.charAt(0).toUpperCase() + str.slice(1);
 };
 
-export const transformFileName = (str) => {
+export const toKebabCase = (str) => {
   return str.toLowerCase().replace(/ /g, '-');
 };
 
-export const transformComponentName = (str) => {
-  return capitalizeFirstLetter(camelize(str));
+export const toCamelizeWIthUppercaseFirstLetter = (str) => {
+  return toUppercaseFirstLetter(camelize(str));
 };
 
-export const transformFileTxtToTsx = (str) => {
+export const toExtensionTxtToTsx = (str) => {
   return str.toLowerCase().replace(/txt/g, 'tsx');
 };
 
-export const transformComponentFileName = (
+export const toFileNameWithExtensionTsx = (
   componentFileName,
   componentName
 ) => {
-  return transformFileTxtToTsx(componentFileName).replace(
+  return toExtensionTxtToTsx(componentFileName).replace(
     `component`,
     componentName
   );

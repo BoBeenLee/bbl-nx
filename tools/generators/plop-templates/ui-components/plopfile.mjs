@@ -1,7 +1,7 @@
 import {
-  transformFileName,
-  transformComponentName,
-  transformComponentFileName,
+  toKebabCase,
+  toCamelizeWIthUppercaseFirstLetter,
+  toFileNameWithExtensionTsx,
 } from '../../utils/index.mjs';
 
 export function uiComponentsPlop(plop) {
@@ -49,13 +49,10 @@ export function uiComponentsPlop(plop) {
       },
     ],
     actions: (data) => {
+      const templateDir = 'tools/generators/plop-templates';
       const location = data.location;
       const featuresFolder = data.featuresFolder;
-      const templateDir = 'tools/generators/plop-templates';
-      const componentFileName = transformFileName(data.componentName);
-      const componentName = transformComponentName(data.componentName);
       const layerFolder = data.layerFolder;
-
       const componentDir = `libs/${location}/src/lib${
         featuresFolder ? `/${featuresFolder}/components` : ``
       }/${layerFolder}/${componentFileName}`;
@@ -67,13 +64,17 @@ export function uiComponentsPlop(plop) {
         'component.stories.txt',
         'component.txt',
       ];
-      const actions = [];
+      const componentFileName = toKebabCase(data.componentName);
+      const componentName = toCamelizeWIthUppercaseFirstLetter(
+        data.componentName
+      );
 
+      const actions = [];
       // Copy over basic files
       filesToAlwaysCopyOver.forEach((file) => {
         actions.push({
           type: 'add',
-          path: `${componentDir}/${transformComponentFileName(
+          path: `${componentDir}/${toFileNameWithExtensionTsx(
             file,
             componentFileName
           )}`,
@@ -85,7 +86,7 @@ export function uiComponentsPlop(plop) {
       filesToAlwaysCopyOver.forEach((file) => {
         actions.push({
           type: 'modify',
-          path: `${componentDir}/${transformComponentFileName(
+          path: `${componentDir}/${toFileNameWithExtensionTsx(
             file,
             componentFileName
           )}`,
@@ -94,7 +95,7 @@ export function uiComponentsPlop(plop) {
         });
         actions.push({
           type: 'modify',
-          path: `${componentDir}/${transformComponentFileName(
+          path: `${componentDir}/${toFileNameWithExtensionTsx(
             file,
             componentFileName
           )}`,
@@ -103,7 +104,7 @@ export function uiComponentsPlop(plop) {
         });
         actions.push({
           type: 'modify',
-          path: `${componentDir}/${transformComponentFileName(
+          path: `${componentDir}/${toFileNameWithExtensionTsx(
             file,
             componentFileName
           )}`,
