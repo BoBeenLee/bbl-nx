@@ -14,7 +14,7 @@ export const toKebabCase = (str) => {
   return str.toLowerCase().replace(/ /g, '-');
 };
 
-export const toCamelizeWIthUppercaseFirstLetter = (str) => {
+export const toPascalCase = (str) => {
   return toUppercaseFirstLetter(camelize(str));
 };
 

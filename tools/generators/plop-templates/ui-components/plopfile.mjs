@@ -1,6 +1,6 @@
 import {
   toKebabCase,
-  toCamelizeWIthUppercaseFirstLetter,
+  toPascalCase,
   toFileNameWithExtensionTsx,
 } from '../../utils/index.mjs';
 
@@ -65,7 +65,7 @@ export function uiComponentsPlop(plop) {
         'component.txt',
       ];
       const componentFileName = toKebabCase(data.componentName);
-      const componentName = toCamelizeWIthUppercaseFirstLetter(
+      const componentName = toPascalCase(
         data.componentName
       );
 
