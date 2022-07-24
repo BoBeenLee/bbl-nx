@@ -53,6 +53,11 @@ export function uiComponentsPlop(plop) {
       const location = data.location;
       const featuresFolder = data.featuresFolder;
       const layerFolder = data.layerFolder;
+      
+      const componentFileName = toKebabCase(data.componentName);
+      const componentName = toPascalCase(
+        data.componentName
+      );
       const componentDir = `libs/${location}/src/lib${
         featuresFolder ? `/${featuresFolder}/components` : ``
       }/${layerFolder}/${componentFileName}`;
@@ -64,10 +69,7 @@ export function uiComponentsPlop(plop) {
         'component.stories.txt',
         'component.txt',
       ];
-      const componentFileName = toKebabCase(data.componentName);
-      const componentName = toPascalCase(
-        data.componentName
-      );
+      
 
       const actions = [];
       // Copy over basic files
