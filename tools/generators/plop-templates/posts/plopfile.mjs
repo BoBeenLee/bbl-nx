@@ -1,4 +1,4 @@
-import { transformFileName } from '../../utils/index.mjs';
+import { toKebabCase } from '../../utils/index.mjs';
 
 export function postsPlop(plop) {
   plop.setGenerator('post', {
@@ -12,26 +12,27 @@ export function postsPlop(plop) {
     ],
     actions: (data) => {
       const templateDir = 'tools/generators/plop-templates';
-      const postFileName = transformFileName(data.postName);
       const postDir = `posts`;
+      const postFileName = toKebabCase(data.postName);
+
       const actions = [];
 
       actions.push({
         type: 'add',
-        path: `${postDir}/${transformFileName(postFileName)}.md`,
+        path: `${postDir}/${toKebabCase(postFileName)}.md`,
         templateFile: `${templateDir}/posts/article.md`,
       });
 
       actions.push({
         type: 'modify',
-        path: `${postDir}/${transformFileName(postFileName)}.md`,
+        path: `${postDir}/${toKebabCase(postFileName)}.md`,
         pattern: /(-- PLOP TITLE PATH HERE --)/gi,
         template: `${postFileName}`,
       });
 
       actions.push({
         type: 'modify',
-        path: `${postDir}/${transformFileName(postFileName)}.md`,
+        path: `${postDir}/${toKebabCase(postFileName)}.md`,
         pattern: /(-- PLOP TITLE NAME HERE --)/gi,
         template: `${data.postName}`,
       });
