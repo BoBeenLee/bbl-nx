@@ -21,6 +21,14 @@ module.exports = withBundleAnalyzer(
       publicRuntimeConfig: {
         staticFolder: '/public',
       },
+      async headers() {
+        return [
+          {
+            source: '/(.*)',
+            headers: securityHeaders,
+          },
+        ];
+      },
       webpack(config, { isServer }) {
         if (!isServer) {
           // don't resolve 'fs' module on the client to prevent this error on build --> Error: Can't resolve 'fs'
@@ -34,3 +42,32 @@ module.exports = withBundleAnalyzer(
     })
   )
 );
+
+// https://nextjs.org/docs/advanced-features/security-headers#options
+const securityHeaders = [
+  {
+    key: 'Strict-Transport-Security',
+    value: 'max-age=31536000; includeSubDomains; preload',
+  },
+  {
+    key: 'X-DNS-Prefetch-Control',
+    value: 'on',
+  },
+  {
+    key: 'X-Frame-Options',
+    value: 'SAMEORIGIN'
+  },
+  {
+    key: 'X-Content-Type-Options',
+    value: 'nosniff'
+  },
+  // https://scotthelme.co.uk/a-new-security-header-referrer-policy/
+  {
+    key: 'Referrer-Policy',
+    value: 'strict-origin-when-cross-origin'
+  },
+  {
+    key: 'Permissions-Policy',
+    value: 'camera=(), microphone=(), geolocation=()'
+  }
+];
