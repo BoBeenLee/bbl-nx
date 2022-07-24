@@ -29,7 +29,9 @@ export default function Layout(props: LayoutProps) {
       if (item.href === asPath) {
         return;
       }
-      router.prefetch(item.href);
+      window.requestIdleCallback(() => {
+        router.prefetch(item.href);
+      });
     });
   }, [asPath, router]);
 
