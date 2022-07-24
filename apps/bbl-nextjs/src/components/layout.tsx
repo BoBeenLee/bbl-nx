@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { useCallback } from 'react';
 import { LayoutTemplate } from '@bbl-nx/ui-components';
 import Head from 'next/head';
 import { getMetadata } from '@bbl-nx/constants';
+import { nav } from '@bbl-nx/constants';
 
 interface LayoutProps {
   title?: string;
@@ -14,6 +15,7 @@ export default function Layout(props: LayoutProps) {
   const metadata = getMetadata();
   const { title = metadata.title, children } = props;
   const router = useRouter();
+  const { asPath } = router;
 
   const onNavigate = useCallback(
     ({ href }: { href: string }) => {
@@ -21,6 +23,15 @@ export default function Layout(props: LayoutProps) {
     },
     [router]
   );
+
+  useEffect(() => {
+    nav.forEach((item) => {
+      if (item.href === asPath) {
+        return;
+      }
+      router.prefetch(item.href);
+    });
+  }, [asPath, router]);
 
   return (
     <>
@@ -40,7 +51,7 @@ export default function Layout(props: LayoutProps) {
           <meta property="article:published_time" content={meta.date} />
         )} */}
       </Head>
-      <LayoutTemplate asPath={router.asPath} onNavigate={onNavigate}>
+      <LayoutTemplate asPath={asPath} onNavigate={onNavigate}>
         {children}
       </LayoutTemplate>
     </>
