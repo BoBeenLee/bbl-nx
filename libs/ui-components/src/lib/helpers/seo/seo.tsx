@@ -1,4 +1,5 @@
 import { metadataItem } from '@bbl-nx/constants';
+import Head from 'next/head';
 
 export interface SEOProps extends Partial<typeof metadataItem> {
   asPath: string;
@@ -20,7 +21,7 @@ export function SEO(props: SEOProps) {
     : meta.title;
 
   return (
-    <>
+    <Head>
       <title>{meta.title}</title>
       {/* PWA 용 <link href="/favicons/site.webmanifest" rel="manifest" /> */}
       <meta name="robots" content={meta.robots} />
@@ -64,8 +65,8 @@ export function SEO(props: SEOProps) {
         name="msapplication-TileImage"
         content="/favicons/ms-icon-144x144.png"
       />
-      <meta name="theme-color" content={"#111827"} />
-    </>
+      <meta name="theme-color" content={'#111827'} />
+    </Head>
   );
 }
 

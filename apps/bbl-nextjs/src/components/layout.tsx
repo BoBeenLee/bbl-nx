@@ -3,7 +3,6 @@ import { useRouter } from 'next/router';
 import { useCallback } from 'react';
 import { LayoutTemplate, SEO, SEOProps } from '@bbl-nx/ui-components';
 import { nav } from '@bbl-nx/constants';
-import Head from 'next/head';
 
 interface LayoutProps {
   seoProps?: Omit<SEOProps, 'asPath'>;
@@ -35,9 +34,7 @@ export default function Layout(props: LayoutProps) {
 
   return (
     <>
-      <Head>
         <SEO asPath={asPath} {...seoProps} />
-      </Head>
       <LayoutTemplate asPath={asPath} onNavigate={onNavigate}>
         {children}
       </LayoutTemplate>
