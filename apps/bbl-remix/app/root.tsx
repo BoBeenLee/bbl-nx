@@ -7,7 +7,7 @@ import {
   ScrollRestoration,
 } from '@remix-run/react';
 import { LinksFunction, MetaFunction } from '@remix-run/react/routeModules';
-import { getMetadata } from '@bbl-nx/constants';
+import { metadataItem } from '@bbl-nx/constants';
 import globalStylesUrl from './styles/global.css';
 
 export const links: LinksFunction = () => {
@@ -20,7 +20,7 @@ export const links: LinksFunction = () => {
 };
 
 export const meta: MetaFunction = (args) => {
-  const { title, description, url, keywords } = getMetadata();
+  const { title, description, url, keywords } = metadataItem;
   const metaTitle = title;
   const metaDescription = description;
   const metaUrl = url;
