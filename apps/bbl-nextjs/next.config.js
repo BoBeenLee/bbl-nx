@@ -41,6 +41,7 @@ module.exports = withBundleAnalyzer(
         return {
           ...config,
           optimization: {
+            ...config.optimization,
             providedExports: true,
             sideEffects: 'flag',
           },
