@@ -37,7 +37,14 @@ module.exports = withBundleAnalyzer(
             path: false,
           };
         }
-        return config;
+
+        return {
+          ...config,
+          optimization: {
+            providedExports: true,
+            sideEffects: 'flag',
+          },
+        };
       },
     })
   )
