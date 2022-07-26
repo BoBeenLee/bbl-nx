@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import { useCallback } from 'react';
 import { LayoutTemplate, SEO, SEOProps } from '@bbl-nx/ui-components';
 import { nav } from '@bbl-nx/constants';
+import { identity } from 'lodash';
 
 interface LayoutProps {
   seoProps?: Omit<SEOProps, 'asPath'>;
@@ -22,7 +23,8 @@ export default function Layout(props: LayoutProps) {
   );
 
   useEffect(() => {
-    window.requestIdleCallback(() => {
+    const requestIdleCallback = window?.requestIdleCallback ?? identity;
+    requestIdleCallback(() => {
       nav.forEach((item) => {
         if (item.href === asPath) {
           return;
@@ -34,7 +36,7 @@ export default function Layout(props: LayoutProps) {
 
   return (
     <>
-        <SEO asPath={asPath} {...seoProps} />
+      <SEO asPath={asPath} {...seoProps} />
       <LayoutTemplate asPath={asPath} onNavigate={onNavigate}>
         {children}
       </LayoutTemplate>
