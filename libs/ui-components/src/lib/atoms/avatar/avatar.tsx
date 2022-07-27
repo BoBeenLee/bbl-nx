@@ -1,4 +1,4 @@
-import { images, webpImages } from '@bbl-nx/images';
+import { logoImages } from '@bbl-nx/images';
 import cn from 'classnames';
 export interface AvatarProps {
   className?: string;
@@ -10,12 +10,12 @@ export function Avatar(props: AvatarProps) {
   const { className, alt, width } = props;
   return (
     <picture>
-      <source srcSet={webpImages.quokka} type="image/webp" />
+      <source srcSet={logoImages.quokkaWebp} type="image/webp" />
       <img
         className={cn(className, 'rounded-full')}
         alt={alt}
         width={width}
-        src={images.quokka}
+        src={logoImages.quokkaPng}
       />
     </picture>
   );
