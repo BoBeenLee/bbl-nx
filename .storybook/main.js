@@ -8,6 +8,14 @@ module.exports = {
   addons: [
     'storybook-addon-tailwindcss-dark-mode',
     '@storybook/addon-essentials',
+    {
+      name: '@storybook/addon-postcss',
+      options: {
+        postcssLoaderOptions: {
+          implementation: require('postcss'),
+        },
+      },
+    },
   ],
   typescript: { reactDocgen: false },
   // uncomment the property below if you want to apply some webpack config globally
