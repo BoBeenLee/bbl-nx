@@ -55,19 +55,20 @@ React hooks, React.memo, React.PureComponent, shouldComponentUpdate에 대해선
 
   - 위 경우는 React내부, 컴포넌트에서 props를 비교하여 memoized하거나 비교하여 리렌더링 여부를 결정해준다.
   - React외부 호출에서 object,array,function를 재생성하는 경우가 있을 것이다. 이럴 경우 shallow compare로는 [lodash memoize](https://lodash.com/docs/4.17.15#memoize)를 이용할 수 있고 아래와 같이 deep한 비교를 위해서 만들어 작성한다면 React외부 호출을 유지한채 참조 동일성에서 발생한 리렌더링을 방지할 수 있을 것이다.
-    - ex) React외부 함수 호출 중 Response 내부에서 컨버팅하면서 발생하는 object, array
-  - 준비물
-    - [isEquals](https://lodash.com/docs/4.17.15#isEqual)
-      - deepEquals를 하기위한 용도
-    - memoize 함수
-      - ex) https://github.com/alexreardon/memoize-one
-  - 구현 예시
+  - ex) React외부 함수 호출 중 Response 내부에서 컨버팅하면서 발생하는 object, array
 
-    ```ts
-    import memoizeOne from 'memoize-one';
-    import isEqual from 'lodash.isequal';
+- 준비물
+  - [isEquals](https://lodash.com/docs/4.17.15#isEqual)
+    - deepEquals를 하기위한 용도
+- memoize 함수
+  - ex) [memoise-one](https://github.com/alexreardon/memoize-one)
+- 구현 예시
 
-    export const identity = <T>(x: T): T => x;
+  ```ts
+  import memoizeOne from 'memoize-one';
+  import isEqual from 'lodash.isequal';
 
-    export const deepMemoized = memoizeOne(identity, isEqual) as <T>(x: T) => T;
-    ```
+  export const identity = <T>(x: T): T => x;
+
+  export const deepMemoized = memoizeOne(identity, isEqual) as <T>(x: T) => T;
+  ```
