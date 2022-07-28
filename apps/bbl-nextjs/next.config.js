@@ -15,9 +15,6 @@ module.exports = withBundleAnalyzer(
         // See: https://github.com/gregberge/svgr
         svgr: false,
       },
-      images: {
-        disableStaticImages: true,
-      },
       publicRuntimeConfig: {
         staticFolder: '/public',
       },
