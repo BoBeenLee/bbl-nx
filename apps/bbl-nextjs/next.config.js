@@ -57,7 +57,7 @@ const ContentSecurityPolicy = `
     img-src * blob: data:;
     media-src *;
     connect-src *;
-    font-src 'self';
+    font-src 'self' *.gstatic.com;
 `;
 
 // https://nextjs.org/docs/advanced-features/security-headers#options
