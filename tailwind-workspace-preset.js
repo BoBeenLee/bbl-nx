@@ -3,6 +3,9 @@ const { spacing, fontFamily } = require('tailwindcss/defaultTheme');
 module.exports = {
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Roboto', ...fontFamily.sans]
+      },
       typography: (theme) => ({
         DEFAULT: {
           css: {
