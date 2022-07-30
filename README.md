@@ -99,6 +99,10 @@ npx nx graph
 npm run ui-components:new
 ```
 
+## Supported browsers
+
+- [defaults](https://github.com/browserslist/browserslist#full-list): Browserslist’s default browsers (> 0.5%, last 2 versions, Firefox ESR, not dead).
+
 ## Contributors
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
