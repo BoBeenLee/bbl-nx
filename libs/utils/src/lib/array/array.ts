@@ -16,3 +16,12 @@ export const sortBy = <T>(
   const sort = compare ?? defaultASC;
   return arr.concat().sort(sort(key));
 };
+
+export const chunk = <T>(arr: T[], size: number) => {
+  const res = [];
+  for (let i = 0; i < arr.length; i += size) {
+    const chunkSlice = arr.slice(i, i + size);
+    res.push(chunkSlice);
+  }
+  return res;
+};
