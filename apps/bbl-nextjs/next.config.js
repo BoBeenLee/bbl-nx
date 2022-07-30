@@ -6,6 +6,9 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: ANALYZE === 'true',
 });
 
+/**
+ * @type {import('next').NextConfig}
+ */
 module.exports = withBundleAnalyzer(
   withNx(
     withImages({
@@ -17,6 +20,10 @@ module.exports = withBundleAnalyzer(
       },
       publicRuntimeConfig: {
         staticFolder: '/public',
+      },
+      experimental: {
+        legacyBrowsers: false,
+        browsersListForSwc: true,
       },
       async headers() {
         return [
