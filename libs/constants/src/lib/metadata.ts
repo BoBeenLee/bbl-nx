@@ -10,7 +10,7 @@ export const metadataItem = {
    * large-og image
    * path: /public/images/large-og.png
    */
-  image: 'https://via.placeholder.com/1600x630.png',
+  image: 'https://bbl-nx.vercel.app/assets/quokka.webp',
   twitter: {
     site: '@BoBeenLee', // ex) twiiterId @BoBeenLee
   },
