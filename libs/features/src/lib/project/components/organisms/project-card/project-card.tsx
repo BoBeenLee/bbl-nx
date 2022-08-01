@@ -11,7 +11,7 @@ export function ProjectCard(props: ProjectCardProps) {
   return (
     <div className="flex flex-col">
       <div className="flex flex-row items-start justify-between mb-2">
-        <div className="flex flex-row items-center">
+        <div className="flex flex-row items-center min-w-0">
           <p className="pr-4 mb-0 font-medium text-gray-900 truncate dark:text-gray-100">
             {name}
           </p>
