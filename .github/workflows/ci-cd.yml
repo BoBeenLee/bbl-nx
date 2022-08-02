@@ -90,11 +90,6 @@ jobs:
           submodules: recursive
           fetch-depth: 0
 
-      - name: Derive appropriate SHAs for base and head for `nx affected` commands
-        uses: nrwl/nx-set-shas@v2
-        with:
-          main-branch-name: 'develop'
-
       - uses: actions/setup-node@v1
         with:
           node-version: '16'
