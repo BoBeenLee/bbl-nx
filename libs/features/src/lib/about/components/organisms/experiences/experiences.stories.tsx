@@ -10,4 +10,6 @@ export default {
 const Template: Story = (args) => <Experiences {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = {};
+Primary.args = {
+  className: 'w-full',
+};
