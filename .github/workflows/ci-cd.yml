@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - master
+  pull_request:
+    types: [opened, reopened]
 
 env:
   NX_CLOUD_DISTRIBUTED_EXECUTION: false
