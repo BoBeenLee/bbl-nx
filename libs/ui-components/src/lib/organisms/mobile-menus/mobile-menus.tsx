@@ -1,6 +1,6 @@
 import cn from 'classnames';
 import { useCallback } from 'react';
-import styles from './menus.module.css';
+import styles from './mobile-menus.module.css';
 
 export interface MenuItemProps {
   href: string;
@@ -43,7 +43,7 @@ function MenuItem({
   );
 }
 
-export function Menus(props: MenusProps) {
+export function MobileMenus(props: MenusProps) {
   const { open, data, onNavigate } = props;
   return (
     <ul
@@ -72,4 +72,4 @@ export function Menus(props: MenusProps) {
   );
 }
 
-export default Menus;
+export default MobileMenus;

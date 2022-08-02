@@ -1,11 +1,11 @@
 import { render } from '@testing-library/react';
 
-import Menus from './menus';
+import MobileMenus from './mobile-menus';
 
-describe('Menus', () => {
+describe('MobileMenus', () => {
   it('should render successfully', () => {
     const { baseElement } = render(
-      <Menus
+      <MobileMenus
         open={true}
         data={[]}
         onNavigate={() => {

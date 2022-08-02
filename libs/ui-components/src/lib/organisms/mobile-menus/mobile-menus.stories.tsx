@@ -1,14 +1,15 @@
 import { Story, Meta } from '@storybook/react';
-import { Menus, MenusProps } from './menus';
+import { MobileMenus, MenusProps } from './mobile-menus';
 import { nav } from '@bbl-nx/constants';
+import { action } from '@storybook/addon-actions';
 
 export default {
-  component: Menus,
-  title: 'organisms/Menus',
+  component: MobileMenus,
+  title: 'organisms/MobileMenus',
   argTypes: {},
 } as Meta;
 
-const Template: Story<MenusProps> = (args) => <Menus {...args} />;
+const Template: Story<MenusProps> = (args) => <MobileMenus {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
@@ -18,7 +19,5 @@ Primary.args = {
     href: item.href,
     isActive: false,
   })),
-  onNavigate: () => {
-    // SOMETHING
-  },
+  onNavigate: action('onNavigate'),
 };
