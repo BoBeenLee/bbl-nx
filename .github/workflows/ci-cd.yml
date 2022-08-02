@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - master
+      - develop
   pull_request:
-    types: [opened, reopened]
 
 env:
   NX_CLOUD_DISTRIBUTED_EXECUTION: false
@@ -92,6 +92,8 @@ jobs:
 
       - name: Derive appropriate SHAs for base and head for `nx affected` commands
         uses: nrwl/nx-set-shas@v2
+        with:
+          main-branch-name: 'master'
 
       - uses: actions/setup-node@v1
         with:
@@ -108,7 +110,7 @@ jobs:
         with:
           path: ${{ env.CACHED_BUILD_PATHS }}
           key: ${{ env.BUILD_CACHE_KEY }}
-      - run: npm run test:affected
+      - run: npx nx affected --target=test
 
   storybook-deploy:
     if: ${{ github.ref == 'refs/heads/master' }}
@@ -173,3 +175,4 @@ jobs:
         uses: chromaui/action@v1
         with:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          storybookBuildDir: dist/storybook/ui-components
