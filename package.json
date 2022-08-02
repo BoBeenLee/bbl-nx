@@ -2,9 +2,14 @@
   "name": "bbl-nx",
   "version": "2.0.0",
   "license": "MIT",
-  "repository": "https://github.com/BoBeenLee/bbl-nx.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BoBeenLee/bbl-nx.git"
+  },
   "private": true,
-  "author": "bobinlee",
+  "author": {
+    "name": "bobinlee"
+  },
   "engines": {
     "npm": ">=7.0.0",
     "node": ">=16.0.0"
@@ -31,7 +36,8 @@
     "features:build-storybook": "nx run features:build-storybook",
     "ui-components:storybook": "nx run ui-components:storybook",
     "ui-components:build-storybook": "nx run ui-components:build-storybook",
-    "images:imagemin": "imagemin 'libs/images/src/lib/assets/*.png' --plugin=pngquant --out-dir=libs/images/optimized"
+    "images:imagemin": "imagemin 'libs/images/src/lib/assets/*.png' --plugin=pngquant --out-dir=libs/images/optimized",
+    "chromatic": "npx chromatic --project-token=CHROMATIC_PROJECT_TOKEN -d=dist/storybook/ui-components"
   },
   "dependencies": {
     "@netlify/functions": "1.0.0",
@@ -126,6 +132,7 @@
     "babel-loader": "^8.2.5",
     "babel-plugin-lodash": "^3.3.4",
     "babel-plugin-module-resolver": "^4.0.0",
+    "chromatic": "^6.7.3",
     "concurrently": "^5.2.0",
     "css-loader": "^6.7.1",
     "cypress": "^9.1.0",
@@ -162,5 +169,11 @@
   "resolutions": {
     "@types/react": "17.0.2",
     "@types/react-dom": "17.0.2"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/BoBeenLee/bbl-nx/issues"
+  },
+  "readme": "ERROR: No README data found!",
+  "homepage": "https://github.com/BoBeenLee/bbl-nx#readme",
+  "_id": "bbl-nx@2.0.0"
 }
