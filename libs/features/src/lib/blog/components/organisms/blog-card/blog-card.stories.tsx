@@ -3,7 +3,7 @@ import { BlogCard, BlogCardProps } from './blog-card';
 
 export default {
   component: BlogCard,
-  title: 'organisms/BlogCard',
+  title: 'organisms/Blogs/BlogCard',
   argTypes: {},
 } as Meta;
 

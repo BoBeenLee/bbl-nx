@@ -3,7 +3,7 @@ import { ExperienceCard, ExperienceCardProps } from './experience-card';
 
 export default {
   component: ExperienceCard,
-  title: 'organisms/ExperienceCard',
+  title: 'organisms/Experiences/ExperienceCard',
   argTypes: {},
 } as Meta;
 

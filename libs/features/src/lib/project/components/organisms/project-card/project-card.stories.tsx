@@ -3,7 +3,7 @@ import { ProjectCard, ProjectCardProps } from './project-card';
 
 export default {
   component: ProjectCard,
-  title: 'organisms/ProjectCard',
+  title: 'organisms/CompanyPortfolios/ProjectCard',
   argTypes: {},
 } as Meta;
 

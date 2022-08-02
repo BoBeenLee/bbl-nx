@@ -3,7 +3,7 @@ import { TeamPortfolios } from './team-portfolios';
 
 export default {
   component: TeamPortfolios,
-  title: 'organisms/TeamPortfolios',
+  title: 'organisms/PersonalPortfolios/TeamPortfolios',
   argTypes: {},
 } as Meta;
 

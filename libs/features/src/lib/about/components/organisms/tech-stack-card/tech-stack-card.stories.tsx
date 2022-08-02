@@ -3,7 +3,7 @@ import { TechStackCard, TechStackCardProps } from './tech-stack-card';
 
 export default {
   component: TechStackCard,
-  title: 'organisms/TechStackCard',
+  title: 'organisms/TeckStacks/TechStackCard',
   argTypes: {},
 } as Meta;
 

@@ -6,7 +6,16 @@ const storybookStyles = document.createElement('style');
 storybookStyles.innerHTML = tailwindCss;
 document.body.appendChild(storybookStyles);
 
-export const parameters = { layout: 'fullscreen' };
+export const parameters = {
+  layout: 'fullscreen',
+  options: {
+    storySort: {
+      method: 'alphabetical',
+      order: [],
+      locales: '',
+    },
+  },
+};
 
 export const decorators = [
   (Story) => (

@@ -1,5 +1,5 @@
 import { Story, Meta } from '@storybook/react';
-import { TeckStacks, TeckStacksProps } from './teckstacks';
+import { TeckStacks } from './teckstacks';
 
 export default {
   component: TeckStacks,
@@ -7,7 +7,7 @@ export default {
   argTypes: {},
 } as Meta;
 
-const Template: Story<TeckStacksProps> = (args) => <TeckStacks {...args} />;
+const Template: Story = (args) => <TeckStacks {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {};
