@@ -25,7 +25,7 @@
     "eslint:fix": "nx run-many --target=lint --configuration=fix --all",
     "test": "npm run test:all",
     "test:all": "nx run-many --target=test --all",
-    "test:affected": "nx affected --target=test --base=master",
+    "test:affected": "nx affected --target=test --base=master --head=HEAD",
     "test-storybook": "test-storybook --url http://localhost:4400/",
     "storybook": "npm run ui-components:storybook",
     "build-storybook": "nx run-many --target=build-storybook --projects=ui-components,features,bbl-nextjs",
