@@ -7,8 +7,16 @@ export default {
   argTypes: {},
 } as Meta;
 
+
+function ErrorComponent() {
+  throw new Error("Error: Error Testing");
+  return <div />
+}
+
 const Template: Story<ErrorBoundaryProps> = (args) => (
-  <ErrorBoundary {...args} />
+  <ErrorBoundary {...args} >
+    <ErrorComponent />
+  </ErrorBoundary>
 );
 
 export const Primary = Template.bind({});
