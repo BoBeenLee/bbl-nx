@@ -1,3 +1,4 @@
+import cn from 'classnames';
 import { ALink } from '@bbl-nx/ui-components';
 import { BlogItem } from '../../../interfaces';
 import BlogCard from '../blog-card/blog-card';
@@ -10,7 +11,7 @@ export interface BlogsProps {
 export function Blogs(props: BlogsProps) {
   const { className, blogs } = props;
   return (
-    <div className={className}>
+    <div className={cn(className, 'space-y-12')}>
       {blogs.map((item) => {
         const { id, title, createdAt, url, isExternal } = item;
         return (
