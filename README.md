@@ -9,7 +9,14 @@
 blog & homepage project based on monorepo(nx)
 
 - bbl-nextjs
-- bbl-remix
+- bbl-remix (working in progress)
+
+## Links
+
+- Homepage
+  - https://bbl-nx.vercel.app/
+- Storybook
+  - https://bobeenlee.github.io/bbl-nx/ui-components/
 
 ## Feature
 
