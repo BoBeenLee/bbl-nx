@@ -26,7 +26,7 @@ export function BlogTemplate(props: BlogTemplateProps) {
     <div className="flex flex-col items-start flex-1 w-full max-w-2xl mx-auto mb-8 border-gray-200 sm:mb-12 dark:border-gray-700">
       <SectionTitle className="pb-4">All Blogs</SectionTitle>
       <SearchInput className="w-full mb-12" onSearch={onSearch} />
-      <Blogs className="w-full space-y-12" blogs={filteredBlogs} />
+      <Blogs className="w-full" blogs={filteredBlogs} />
     </div>
   );
 }
