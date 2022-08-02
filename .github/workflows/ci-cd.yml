@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - master
+      - develop
   pull_request:
-    types: [opened, reopened]
 
 env:
   NX_CLOUD_DISTRIBUTED_EXECUTION: false
@@ -89,6 +89,11 @@ jobs:
         with:
           submodules: recursive
           fetch-depth: 0
+
+      - name: Derive appropriate SHAs for base and head for `nx affected` commands
+        uses: nrwl/nx-set-shas@v2
+        with:
+          main-branch-name: 'develop'
 
       - uses: actions/setup-node@v1
         with:
