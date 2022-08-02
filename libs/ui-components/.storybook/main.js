@@ -13,7 +13,7 @@ module.exports = {
     '../src/lib/**/*.stories.@(js|jsx|ts|tsx)',
   ],
   addons: [...rootMain.addons, '@nrwl/react/plugins/storybook'],
-  staticDirs: ['../../images/src/lib/public'],
+  staticDirs: [{ from: '../../images/src/lib/public', to: '/' }, '../../images/src/lib/public'],
   webpackFinal: async (config, { configType }) => {
     // apply any global webpack configs that might have been specified in .storybook/main.js
     if (rootMain.webpackFinal) {
