@@ -13,7 +13,11 @@ export default {
   },
 } as Meta;
 
-const Template: Story<IconProps> = (args) => <Icon {...args} />;
+const Template: Story<IconProps> = (args) => (
+  <div className="w-20 h-20">
+    <Icon {...args} />
+  </div>
+);
 
 export const Primary = Template.bind({});
 Primary.args = {

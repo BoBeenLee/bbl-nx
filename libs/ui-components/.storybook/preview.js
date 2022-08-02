@@ -6,6 +6,8 @@ const storybookStyles = document.createElement('style');
 storybookStyles.innerHTML = tailwindCss;
 document.body.appendChild(storybookStyles);
 
+export const parameters = { layout: 'fullscreen' };
+
 export const decorators = [
   (Story) => (
     <ThemeProvider>

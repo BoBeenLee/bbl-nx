@@ -4,7 +4,7 @@ import { Nav, NavProps } from './nav';
 
 export default {
   component: Nav,
-  title: 'molecules/Nav',
+  title: 'organisms/Nav',
   argTypes: {},
 } as Meta;
 

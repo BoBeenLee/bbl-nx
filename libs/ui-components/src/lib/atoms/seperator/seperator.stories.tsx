@@ -9,4 +9,6 @@ export default {
 const Template: Story<SeperatorProps> = (args) => <Seperator {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = {};
+Primary.args = {
+  className: "mt-5"
+};

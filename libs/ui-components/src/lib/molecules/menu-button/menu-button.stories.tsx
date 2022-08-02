@@ -1,3 +1,4 @@
+import { action } from '@storybook/addon-actions';
 import { Story, Meta } from '@storybook/react';
 import { MenuButton, MenuButtonProps } from './menu-button';
 
@@ -12,7 +13,5 @@ const Template: Story<MenuButtonProps> = (args) => <MenuButton {...args} />;
 export const Primary = Template.bind({});
 Primary.args = {
   open: true,
-  onToggleMenu: () => {
-    // SOMETHING
-  },
+  onToggleMenu: action('onToggleMenu'),
 };

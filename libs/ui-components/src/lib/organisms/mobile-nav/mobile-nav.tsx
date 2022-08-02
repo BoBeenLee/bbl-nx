@@ -29,7 +29,11 @@ export function MobileNav(props: MobileNavProps) {
 
   return (
     <>
-      <MenuButton open={isMenuOpen} onToggleMenu={onToggleMenu} />
+      <MenuButton
+        className="visible md:hidden absolute top-[1.8rem]"
+        open={isMenuOpen}
+        onToggleMenu={onToggleMenu}
+      />
       <Menus open={isMenuOpen} data={data} onNavigate={onNavigate} />
     </>
   );

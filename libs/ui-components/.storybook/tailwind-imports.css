@@ -13,6 +13,12 @@ body {
   min-height: 100vh;
 }
 
+#root,
+body {
+  background-color: #fff;
+  padding: 2em;
+}
+
 .dark #root,
 body {
   --tw-bg-opacity: 1;

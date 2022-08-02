@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { useCallback } from 'react';
 import { LayoutTemplate, SEO, SEOProps } from '@bbl-nx/ui-components';
 import { nav } from '@bbl-nx/constants';
-import { identity } from "@bbl-nx/utils";
+import { identity } from '@bbl-nx/utils';
 
 interface LayoutProps {
   seoProps?: Omit<SEOProps, 'asPath'>;

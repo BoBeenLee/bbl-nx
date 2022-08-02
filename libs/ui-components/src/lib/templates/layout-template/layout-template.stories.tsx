@@ -14,6 +14,6 @@ const Template: Story<LayoutTemplateProps> = (args) => (
 
 export const Primary = Template.bind({});
 Primary.args = {
-  children: <div>Hello World</div>,
+  children: <div className="pb-4 m-auto">Hello World</div>,
   onNavigate: action('onNavigate'),
 };
