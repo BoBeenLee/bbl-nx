@@ -1,6 +1,6 @@
 import cn from 'classnames';
 import { companyPortfolios } from '@bbl-nx/constants';
-import { ProjectCard } from '../../organisms';
+import { ProjectCard } from '../../organisms/project-card/project-card';
 import { ProjectLinks, SectionTitle } from '@bbl-nx/ui-components';
 import { deepMemoized } from '@bbl-nx/utils';
 
