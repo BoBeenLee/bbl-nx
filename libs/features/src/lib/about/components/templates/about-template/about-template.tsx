@@ -8,23 +8,14 @@ export function AboutTemplate() {
   return (
     <div className="flex flex-col items-start w-full max-w-2xl mx-auto mb-8 border-gray-200 sm:mb-12 dark:border-gray-700">
       <div className="w-full space-y-8">
-        <SectionTitle className="pb-2" href={'#experience'}>
-          Experience
-        </SectionTitle>
         <Experiences />
         <Seperator />
       </div>
       <div className="w-full mt-16 space-y-8">
-        <SectionTitle className="pb-2" href={'#activity'}>
-          Activity
-        </SectionTitle>
         <Activities />
         <Seperator />
       </div>
       <div className="w-full mt-16 space-y-8">
-        <SectionTitle className="pb-2" href={'#tech-stack'}>
-          Tech Stack
-        </SectionTitle>
         <TeckStacks />
         <Seperator />
       </div>

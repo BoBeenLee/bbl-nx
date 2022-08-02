@@ -1,11 +1,20 @@
+import cn from 'classnames';
 import { teamPortfolios } from '@bbl-nx/constants';
-import { ProjectLinks } from '@bbl-nx/ui-components';
+import { ProjectLinks, SectionTitle } from '@bbl-nx/ui-components';
 import { deepMemoized } from '@bbl-nx/utils';
 import ProjectCard from '../project-card/project-card';
 
-export function TeamPortfolios() {
+interface TeamPortfoliosProps {
+  className?: string;
+}
+
+export function TeamPortfolios(props: TeamPortfoliosProps) {
+  const { className } = props;
   return (
-    <>
+    <div className={cn(className, 'space-y-8')}>
+      <SectionTitle className="pb-2" href="#team">
+        Team
+      </SectionTitle>
       {teamPortfolios.map((item) => {
         const {
           id,
@@ -37,7 +46,7 @@ export function TeamPortfolios() {
           />
         );
       })}
-    </>
+    </div>
   );
 }
 
