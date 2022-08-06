@@ -1,5 +1,4 @@
-import { useCallback } from 'react';
-import { Seperator } from '../../atoms';
+import { ALink, Seperator } from '../../atoms';
 
 export interface NavFooterItemProps {
   href: string;
@@ -8,30 +7,18 @@ export interface NavFooterItemProps {
 
 export interface NavFooterProps {
   data: NavFooterItemProps[];
-  onNavigate: ({ href }: { href: string }) => void;
 }
 
-function NavFooterItem({
-  href,
-  text,
-  onNavigate,
-}: NavFooterItemProps & { onNavigate: NavFooterProps['onNavigate'] }) {
-  const onNavigateItem = useCallback(() => {
-    onNavigate({ href });
-  }, [href, onNavigate]);
-
+function NavFooterItem({ href, text }: NavFooterItemProps) {
   return (
-    <button
-      className="text-gray-500 transition hover:text-gray-600"
-      onClick={onNavigateItem}
-    >
+    <ALink className="text-gray-500 transition hover:text-gray-600" href={href}>
       {text}
-    </button>
+    </ALink>
   );
 }
 
 export function NavFooter(props: NavFooterProps) {
-  const { data, onNavigate } = props;
+  const { data } = props;
   return (
     <footer className="flex flex-col px-8">
       <div className="flex flex-col items-start justify-center w-full max-w-2xl mx-auto mb-8">
@@ -40,14 +27,7 @@ export function NavFooter(props: NavFooterProps) {
           <div className="flex flex-col items-start space-y-4">
             {data.map((item) => {
               const { href, text } = item;
-              return (
-                <NavFooterItem
-                  key={href}
-                  href={href}
-                  text={text}
-                  onNavigate={onNavigate}
-                />
-              );
+              return <NavFooterItem key={href} href={href} text={text} />;
             })}
           </div>
           <div className="flex flex-col space-y-4">

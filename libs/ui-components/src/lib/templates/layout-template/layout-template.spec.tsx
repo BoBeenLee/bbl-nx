@@ -5,9 +5,7 @@ import LayoutTemplate from './layout-template';
 describe('LayoutTemplate', () => {
   it('should render successfully', () => {
     const { baseElement } = render(
-      <LayoutTemplate asPath="" onNavigate={() => {
-        // SOMETHING
-      }}>
+      <LayoutTemplate>
         <div>hello</div>
       </LayoutTemplate>
     );

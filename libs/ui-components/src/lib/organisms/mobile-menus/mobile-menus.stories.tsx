@@ -19,5 +19,4 @@ Primary.args = {
     href: item.href,
     isActive: false,
   })),
-  onNavigate: action('onNavigate'),
 };

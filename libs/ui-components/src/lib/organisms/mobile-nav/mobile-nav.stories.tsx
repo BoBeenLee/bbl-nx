@@ -13,7 +13,4 @@ const Template: Story<MobileNavProps> = (args) => <MobileNav {...args} />;
 export const Primary = Template.bind({});
 Primary.args = {
   data: nav.map((item) => ({ ...item, isActive: false })),
-  onNavigate: () => {
-    // SOMETHING
-  },
 };

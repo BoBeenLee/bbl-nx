@@ -11,11 +11,7 @@ describe('Nav', () => {
           data: nav.map((item) => ({
             text: item.text,
             href: item.href,
-            isActive: false,
           })),
-          onNavigate: () => {
-            // SOMETHING
-          },
         }}
       />
     );

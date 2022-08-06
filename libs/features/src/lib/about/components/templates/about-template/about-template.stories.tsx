@@ -10,12 +10,7 @@ export default {
 } as Meta;
 
 const Template: Story<AboutTemplateProps> = (args) => (
-  <LayoutTemplate
-    {...{
-      asPath: '/',
-      onNavigate: action('onNavigate'),
-    }}
-  >
+  <LayoutTemplate>
     <AboutTemplate {...args} />
   </LayoutTemplate>
 );

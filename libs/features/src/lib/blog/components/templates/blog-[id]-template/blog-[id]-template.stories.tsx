@@ -1,4 +1,3 @@
-import { action } from '@storybook/addon-actions';
 import { Story, Meta } from '@storybook/react';
 import { mockBlogId } from '../../../__mocks__/blog';
 import { LayoutTemplate } from '@bbl-nx/ui-components';
@@ -11,12 +10,7 @@ export default {
 } as Meta;
 
 const Template: Story<BlogIdTemplateProps> = (args) => (
-  <LayoutTemplate
-    {...{
-      asPath: '/',
-      onNavigate: action('onNavigate'),
-    }}
-  >
+  <LayoutTemplate>
     <BlogIdTemplate {...args} />
   </LayoutTemplate>
 );
