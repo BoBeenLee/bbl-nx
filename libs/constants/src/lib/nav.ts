@@ -4,3 +4,7 @@ export const nav = [
   { text: 'Project', href: '/project' },
   { text: 'Blog', href: '/blog' },
 ];
+
+export const getBlogById = (id: string) => {
+  return `/blog/${id}`;
+};

@@ -9,22 +9,10 @@ export default {
 } as Meta;
 
 const Template: Story = (args) => (
-  <LayoutTemplate
-    {...{
-      asPath: '/',
-      onNavigate: () => {
-        // SOMETHING
-      },
-    }}
-  >
+  <LayoutTemplate>
     <ProjectTemplate {...args} />
   </LayoutTemplate>
 );
 
 export const Primary = Template.bind({});
-Primary.args = {
-  asPath: '/',
-  onNavigate: () => {
-    // SOMETHING
-  },
-};
+Primary.args = {};

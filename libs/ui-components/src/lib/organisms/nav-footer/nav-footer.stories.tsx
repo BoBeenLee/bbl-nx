@@ -13,7 +13,4 @@ const Template: Story<NavFooterProps> = (args) => <NavFooter {...args} />;
 export const Primary = Template.bind({});
 Primary.args = {
   data: nav.map((item) => ({ text: item.text, href: item.href })),
-  onNavigate: () => {
-    // SOMETHING
-  },
 };

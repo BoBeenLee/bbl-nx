@@ -9,9 +9,6 @@ describe('NavFooter', () => {
       <NavFooter
         {...{
           data: nav.map((item) => ({ text: item.text, href: item.href })),
-          onNavigate: () => {
-            // SOMETHING
-          },
         }}
       />
     );

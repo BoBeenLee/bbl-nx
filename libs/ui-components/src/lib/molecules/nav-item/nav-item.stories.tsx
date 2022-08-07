@@ -18,12 +18,8 @@ const item = nav[0];
 Inactive.args = {
   href: item?.href ?? '',
   text: item?.text ?? '',
-  isActive: false,
-  onNavigate: action('onNavigate'),
 };
 Active.args = {
   href: item?.href ?? '',
   text: item?.text ?? '',
-  isActive: true,
-  onNavigate: action('onNavigate'),
 };

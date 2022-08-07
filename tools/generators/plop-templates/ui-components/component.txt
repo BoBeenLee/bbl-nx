@@ -1,8 +1,11 @@
 
-export interface -- PLOP COMPONENT NAME HERE --Props {}
+export interface -- PLOP COMPONENT NAME HERE --Props {
+  className?: string;
+}
 
 export function -- PLOP COMPONENT NAME HERE --(props: -- PLOP COMPONENT NAME HERE --Props) {
-  return <div>hello world</div>;
+  const { className } = props;
+  return <div className={className}>hello world</div>;
 }
 
 export default -- PLOP COMPONENT NAME HERE --;
