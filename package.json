@@ -48,7 +48,7 @@
     "@remix-run/react": "^1.5.1",
     "@remix-run/serve": "^1.5.1",
     "@xstate/react": "^3.0.0",
-    "axios": "0.24.0",
+    "axios": "^0.27.2",
     "chroma-js": "^2.4.2",
     "classnames": "^2.3.1",
     "core-js": "^3.6.5",

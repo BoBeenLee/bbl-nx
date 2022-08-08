@@ -193,7 +193,7 @@ export const personalPortforlios = [
     ],
     summary: '나의 기록용, 블로그겸 홈페이지',
     githubUrl: 'https://github.com/BoBeenLee/bbl-nx',
-    storybookUrl: 'https://bobeenlee.github.io/bbl-nx/ui-components/',
+    storybookUrl: 'https://62e8cb96780e4059ce3a88b5-zcknntuzly.chromatic.com/',
     homeUrl: 'https://bbl-nx.vercel.app/',
     images: [],
   },
