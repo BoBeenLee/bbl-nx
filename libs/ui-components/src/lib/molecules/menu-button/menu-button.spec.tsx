@@ -1,4 +1,5 @@
 import { render } from '@testing-library/react';
+import { identity } from "lodash";
 
 import MenuButton from './menu-button';
 
@@ -7,9 +8,7 @@ describe('MenuButton', () => {
     const { baseElement } = render(
       <MenuButton
         open={true}
-        onToggleMenu={() => {
-          // SOMETHING
-        }}
+        onToggleMenu={identity}
       />
     );
     expect(baseElement).toBeTruthy();
