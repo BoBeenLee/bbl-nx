@@ -114,7 +114,7 @@ npm run ui-components:new
 ## Document
 
 - [XState Machines](./MACHINES.md)
-- [Analytics Report](./MACHINES.md)
+- [Analytics Report](./ANALYTICS.md)
 
 ## Contributors
 
