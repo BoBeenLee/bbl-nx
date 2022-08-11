@@ -1,16 +1,17 @@
+import { NavKey } from '@bbl-nx/constants';
 import cn from 'classnames';
 import { ALink } from '../../atoms';
 import styles from './mobile-menus.module.css';
+import { nav } from '@bbl-nx/constants';
 
 export interface MenuItemProps {
-  href: string;
+  href: NavKey;
   text: string;
   transitionDelay: number;
 }
 
 export interface MenusProps {
   open: boolean;
-  data: Omit<MenuItemProps, 'transitionDelay'>[];
 }
 
 const DEFAULT_TRANSITION_DELAY = 150;
@@ -24,7 +25,7 @@ function MenuItem({ href, text, transitionDelay }: MenuItemProps) {
       )}
       style={{ transitionDelay: `${transitionDelay}ms` }}
     >
-      <ALink className="flex w-auto py-4" href={href}>
+      <ALink className="flex w-auto py-4" urlPath={href}>
         {text}
       </ALink>
     </li>
@@ -32,7 +33,7 @@ function MenuItem({ href, text, transitionDelay }: MenuItemProps) {
 }
 
 export function MobileMenus(props: MenusProps) {
-  const { open, data } = props;
+  const { open } = props;
   return (
     <ul
       className={cn(
@@ -41,7 +42,7 @@ export function MobileMenus(props: MenusProps) {
         open && styles['menuRendered']
       )}
     >
-      {data.map((item, index) => {
+      {nav.map((item, index) => {
         const { href, text } = item;
         return (
           <MenuItem

@@ -25,7 +25,7 @@ export const companyPortfolios = [
       'i18next',
     ],
     summary: `국내 주요 은행, 가상자산 거래소, 핀테크 회사, 가상자산 
-수탁업체가 Henesis로 가상자산 서비스`,
+수탁업체가 Henesis로 가상자산 관리하는 서비스`,
     githubUrl: '',
     linkUrl: 'https://henesis.io/',
     homeUrl: 'https://app.wallet.henesis.io/account/login',

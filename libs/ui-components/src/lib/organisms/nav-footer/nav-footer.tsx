@@ -1,31 +1,31 @@
+import { NavKey } from '@bbl-nx/constants';
 import { ALink, Seperator } from '../../atoms';
+import { nav } from '@bbl-nx/constants';
 
 export interface NavFooterItemProps {
-  href: string;
+  href: NavKey;
   text: string;
-}
-
-export interface NavFooterProps {
-  data: NavFooterItemProps[];
 }
 
 function NavFooterItem({ href, text }: NavFooterItemProps) {
   return (
-    <ALink className="text-gray-500 transition hover:text-gray-600" href={href}>
+    <ALink
+      className="text-gray-500 transition hover:text-gray-600"
+      urlPath={href}
+    >
       {text}
     </ALink>
   );
 }
 
-export function NavFooter(props: NavFooterProps) {
-  const { data } = props;
+export function NavFooter() {
   return (
     <footer className="flex flex-col px-8">
       <div className="flex flex-col items-start justify-center w-full max-w-2xl mx-auto mb-8">
         <Seperator className="mb-8" />
         <div className="grid w-full max-w-2xl grid-cols-2 gap-4 pb-16">
           <div className="flex flex-col items-start space-y-4">
-            {data.map((item) => {
+            {nav.map((item) => {
               const { href, text } = item;
               return <NavFooterItem key={href} href={href} text={text} />;
             })}

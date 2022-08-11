@@ -2,24 +2,42 @@ import Link, { LinkProps } from 'next/link';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import cn from 'classnames';
+import { NavRouter } from '@bbl-nx/constants';
+import { makePathname } from '@bbl-nx/utils';
 
-export interface ALinkProps extends LinkProps {
+export type ALinkProps<F extends keyof NavRouter> = Omit<LinkProps, 'href'> & {
   className?: string;
   activeClassName?: string;
-  isExternal?: boolean;
   children: React.ReactNode;
-}
+  urlPath: F;
+  urlPathValues?: NavRouter[F]['path'];
+};
 
-export function ALink(props: ALinkProps) {
+/**
+urlPathValues 값이 never이 아닐 경우에만 노출하고 싶을때,
+{
+  [key in F as key extends infer K extends keyof NavRouter
+    ? NavRouter[K] extends { urlPathValues: never }
+      ? never
+      : 'urlPathValues'
+    : never]?: NavRouter[key]['urlPathValues'];
+};
+ */
+
+
+
+export function ALink<F extends keyof NavRouter>(props: ALinkProps<F>) {
   const {
     className: childClassName,
     activeClassName,
-    isExternal,
     children,
+    urlPath,
+    urlPathValues,
     ...rest
   } = props;
   const { asPath, isReady } = useRouter();
   const [className, setClassName] = useState(childClassName);
+  const href = makePathname(urlPath, urlPathValues ?? {});
 
   useEffect(() => {
     // Check if the router fields are updated client-side
@@ -27,7 +45,7 @@ export function ALink(props: ALinkProps) {
       // Dynamic route will be matched via props.as
       // Static route will be matched via props.href
       const linkPathname = new URL(
-        (props.as || props.href) as string,
+        (props.as || href) as string,
         window.location.href
       ).pathname;
 
@@ -47,7 +65,7 @@ export function ALink(props: ALinkProps) {
     asPath,
     isReady,
     props.as,
-    props.href,
+    href,
     childClassName,
     activeClassName,
     setClassName,
@@ -55,10 +73,7 @@ export function ALink(props: ALinkProps) {
   ]);
 
   return (
-    <Link
-      {...rest}
-      {...(isExternal ? { target: '_blank', rel: 'noreferrer' } : {})}
-    >
+    <Link {...rest} href={href}>
       <a className={className}>{children}</a>
     </Link>
   );

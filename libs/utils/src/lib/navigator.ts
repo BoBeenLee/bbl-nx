@@ -17,10 +17,3 @@ export const isIE = () => {
   const md = new MobileDetect(window.navigator.userAgent);
   return !!md.version('IE');
 };
-
-export const isHome = (url: string) => {
-  if (url === '/') {
-    return true;
-  }
-  return false;
-};

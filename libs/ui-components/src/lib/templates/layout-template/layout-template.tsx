@@ -1,4 +1,3 @@
-import { nav } from '@bbl-nx/constants';
 import { NavFooter, Nav } from '../../organisms';
 
 export interface LayoutTemplateProps {
@@ -10,11 +9,11 @@ export function LayoutTemplate(props: LayoutTemplateProps) {
 
   return (
     <div className="flex flex-col flex-1 bg-white dark:bg-gray-900">
-      <Nav data={nav} />
+      <Nav />
       <main className="flex flex-col justify-center flex-1 px-8 bg-white dark:bg-gray-900">
         {children}
       </main>
-      <NavFooter data={nav} />
+      <NavFooter />
     </div>
   );
 }

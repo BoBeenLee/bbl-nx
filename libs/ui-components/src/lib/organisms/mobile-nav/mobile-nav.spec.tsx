@@ -4,7 +4,7 @@ import MobileNav from './mobile-nav';
 
 describe('MobileNav', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<MobileNav data={[]} />);
+    const { baseElement } = render(<MobileNav />);
     expect(baseElement).toBeTruthy();
   });
 });
