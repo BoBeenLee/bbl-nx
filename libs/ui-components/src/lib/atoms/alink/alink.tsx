@@ -17,10 +17,10 @@ export type ALinkProps<F extends keyof NavRouter> = Omit<LinkProps, 'href'> & {
 urlPathValues 값이 never이 아닐 경우에만 노출하고 싶을때,
 {
   [key in F as key extends infer K extends keyof NavRouter
-    ? NavRouter[K] extends { path: never }
+    ? NavRouter[K] extends { urlPathValues: never }
       ? never
-      : 'path'
-    : never]?: NavRouter[key]['path'];
+      : 'urlPathValues'
+    : never]?: NavRouter[key]['urlPathValues'];
 };
  */
 
