@@ -7,11 +7,11 @@ export default {
   argTypes: {},
 } as Meta;
 
-const Template: Story<ALinkProps> = (args) => <ALink {...args} />;
+const Template: Story<ALinkProps<'/'>> = (args) => <ALink {...args} href="/" />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  href: 'http://example.com',
-  isExternal: true,
-  children: 'Example',
+  className: 'text-gray-500',
+  urlPath: '/',
+  children: 'Home',
 };

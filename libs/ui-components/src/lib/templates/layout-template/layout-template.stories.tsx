@@ -1,4 +1,3 @@
-import { action } from '@storybook/addon-actions';
 import { Story, Meta } from '@storybook/react';
 import { LayoutTemplate, LayoutTemplateProps } from './layout-template';
 

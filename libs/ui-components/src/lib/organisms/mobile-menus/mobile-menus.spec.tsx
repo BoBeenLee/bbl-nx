@@ -4,7 +4,7 @@ import MobileMenus from './mobile-menus';
 
 describe('MobileMenus', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<MobileMenus open={true} data={[]} />);
+    const { baseElement } = render(<MobileMenus open={true} />);
     expect(baseElement).toBeTruthy();
   });
 });

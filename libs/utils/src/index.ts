@@ -10,3 +10,4 @@ export * from './lib/function';
 export * from './lib/lang/lang';
 export * from './lib/number/number';
 export * from './lib/array/array';
+export * from './lib/router/router';
