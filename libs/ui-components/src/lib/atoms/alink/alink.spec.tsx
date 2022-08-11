@@ -4,11 +4,7 @@ import ALink from './alink';
 
 describe('ALink', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(
-      <ALink href="http://example.com" isExternal={false}>
-        Example
-      </ALink>
-    );
+    const { baseElement } = render(<ALink urlPath="/">Example</ALink>);
     expect(baseElement).toBeTruthy();
   });
 });

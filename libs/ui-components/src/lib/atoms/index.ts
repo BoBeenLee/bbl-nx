@@ -4,3 +4,4 @@ export * from './icon/icon';
 export * from './page-title/page-title';
 export * from './section-title/section-title';
 export * from './alink/alink';
+export * from './external-link/external-link';
