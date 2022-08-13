@@ -2,42 +2,33 @@ import Link, { LinkProps } from 'next/link';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import cn from 'classnames';
-import { NavRouter } from '@bbl-nx/constants';
+import { NavRouter, NavRouterKey } from '@bbl-nx/constants';
 import { makePathname } from '@bbl-nx/utils';
 
-export type ALinkProps<F extends keyof NavRouter> = Omit<LinkProps, 'href'> & {
+export type ALinkProps<F extends NavRouterKey> = Omit<LinkProps, 'href'> & {
   className?: string;
   activeClassName?: string;
   children: React.ReactNode;
   urlPath: F;
-  urlPathValues?: NavRouter[F]['path'];
-};
-
-/**
-urlPathValues 값이 never이 아닐 경우에만 노출하고 싶을때,
-{
-  [key in F as key extends infer K extends keyof NavRouter
-    ? NavRouter[K] extends { urlPathValues: never }
+} & {
+  [key in F as key extends infer K extends NavRouterKey
+    ? NavRouter[K] extends { path: never }
       ? never
       : 'urlPathValues'
-    : never]?: NavRouter[key]['urlPathValues'];
+    : never]: NavRouter[key]['path'];
 };
- */
 
-
-
-export function ALink<F extends keyof NavRouter>(props: ALinkProps<F>) {
+export function ALink<F extends NavRouterKey>(props: ALinkProps<F>) {
   const {
     className: childClassName,
     activeClassName,
     children,
     urlPath,
-    urlPathValues,
     ...rest
   } = props;
   const { asPath, isReady } = useRouter();
   const [className, setClassName] = useState(childClassName);
-  const href = makePathname(urlPath, urlPathValues ?? {});
+  const href = makePathname(urlPath, (props as any).urlPathValues ?? {});
 
   useEffect(() => {
     // Check if the router fields are updated client-side

@@ -11,6 +11,7 @@ const Template: Story<ExternalLinkProps> = (args) => <ExternalLink {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
+  className: 'text-gray-500',
   href: 'http://example.com',
   children: 'example',
 };
