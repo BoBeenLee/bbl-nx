@@ -105,7 +105,7 @@ export const companyPortfolios = [
   {
     id: 'COSMEE',
     name: 'COSMEE',
-    period: '2017.4 - 2019.3',
+    period: '2018.4 - 2019.3',
     githubRepoName: [],
     skills: [
       'react-native',
