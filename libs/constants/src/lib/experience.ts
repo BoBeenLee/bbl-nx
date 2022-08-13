@@ -9,7 +9,7 @@ export const experiences = [
   {
     title: 'Blended',
     titleUri: 'https://www.rocketpunch.com/companies/trillionaire',
-    period: '2018.4 - 2019.12',
+    period: '2018.4 - 2020.01',
     role: 'React, React Native Developer',
   },
   {
