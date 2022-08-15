@@ -19,6 +19,7 @@ export function SearchInput(props: SearchInputProps) {
   return (
     <div className={cn(className, 'relative flex flex-row items-center')}>
       <input
+        role="search"
         className="block w-full px-4 py-2 text-gray-900 bg-white border border-gray-200 rounded-md dark:border-gray-900 dark:focus:ring-blue-500 dark:focus:border-blue-500 focus:ring-gray-800 focus:border-gray-800 dark:bg-gray-800 dark:text-gray-100"
         aria-label="Search articles"
         type="text"
