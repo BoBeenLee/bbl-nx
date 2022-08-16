@@ -1,11 +1,8 @@
-import _ from "lodash";
 import { getFeednamiTistories, TistoryItem } from '../libs/tistory';
 import { getAllPosts, PostItem as MDPostItem } from '../libs/post';
 
-const mapRemarkToBlogs = (allMarkdownRemark: MDPostItem[]) => {
-    const posts = allMarkdownRemark;
-    return _.map(
-        posts,
+const mapRemarkToBlogs = (allMarkdownRemark: MDPostItem[] = []) => {
+    return allMarkdownRemark.map(
         ({ slug, frontmatter: { title, date, path, published } }) => {
             return {
                 createdAt: date,
@@ -19,8 +16,8 @@ const mapRemarkToBlogs = (allMarkdownRemark: MDPostItem[]) => {
     );
 };
 
-const mapTistoryToBlogs = (tistories: TistoryItem[]) => {
-    return _.map(tistories, (item) => ({
+const mapTistoryToBlogs = (tistories: TistoryItem[] = []) => {
+    return tistories.map((item) => ({
         createdAt: item.date,
         id: item.guid,
         title: item.title,
