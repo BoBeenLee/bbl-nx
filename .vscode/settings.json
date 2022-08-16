@@ -1,0 +1,16 @@
+{
+  "search.exclude": {
+    "**/.yarn": true,
+    "**/.pnp.*": true,
+    "**/dist": true,
+    "**/node_modules": true,
+    "**/tsconfig.tsbuildinfo": true,
+    ".eslintcache": true
+  },
+  "jest.jestCommandLine": "yarn test",
+  "jest.autoRun": {
+    "watch": false,
+    "onStartup": ["all-tests"],
+    "onSave": "test-file"
+  }
+}
