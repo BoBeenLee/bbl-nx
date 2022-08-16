@@ -8,7 +8,7 @@ describe('MenuButton', () => {
     const { baseElement } = render(
       <MenuButton
         open={true}
-        onToggleMenu={identity}
+        onToggleMenu={identity as any}
       />
     );
     expect(baseElement).toBeTruthy();
