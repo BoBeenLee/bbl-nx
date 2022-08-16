@@ -67,13 +67,13 @@ blog & homepage project based on monorepo(nx)
 ## Installing / Getting started
 
 ```shell
-npm i --legacy-peer-deps
+yarn install
 ```
 
 ### Setting up Dev
 
 ```shell
-npm start
+yarn start
 ```
 
 ## Tests
@@ -81,7 +81,7 @@ npm start
 ### Running unit tests
 
 ```shell
-npm run test:affected
+yarn test:affected
 ```
 
 ## Deployment
@@ -98,13 +98,13 @@ npm run test:affected
 ## Dependencies of Graph
 
 ```
-npx nx graph
+yarn nx graph
 ```
 
 ### Generate UI-Components
 
 ```
-npm run ui-components:new
+yarn ui-components:new
 ```
 
 ## Supported browsers
