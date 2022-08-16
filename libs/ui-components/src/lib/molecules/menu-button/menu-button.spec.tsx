@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import { identity } from "lodash";
+import { identity } from "@bbl-nx/utils";
 
 import MenuButton from './menu-button';
 
