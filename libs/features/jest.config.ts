@@ -1,3 +1,4 @@
+/* eslint-disable */
 import rootMain from '../../jest.config.base';
 
 /* eslint-disable */

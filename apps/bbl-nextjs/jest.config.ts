@@ -1,3 +1,4 @@
+/* eslint-disable */
 module.exports = {
   displayName: 'bbl-nextjs',
   preset: '../../jest.preset.js',
