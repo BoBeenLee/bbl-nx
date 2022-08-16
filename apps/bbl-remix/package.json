@@ -20,7 +20,6 @@
     "axios": "0.24.0",
     "date-fns": "^2.25.0",
     "front-matter": "^4.0.2",
-    "lodash": "^4.17.10",
     "marked": "^4.0.12",
     "mobile-detect": "^1.4.1",
     "react": "18.1.0",
