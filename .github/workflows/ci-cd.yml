@@ -8,6 +8,7 @@ on:
   pull_request:
 
 env:
+  NX_CACHE_PROJECT_GRAPH: false
   NX_CLOUD_DISTRIBUTED_EXECUTION: false
   CACHED_DEPENDENCY_PATHS: ${{ github.workspace }}/node_modules
   CACHED_BUILD_PATHS: ${{ github.workspace }}/.next
