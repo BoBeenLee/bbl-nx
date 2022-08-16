@@ -1693,6 +1693,54 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@bbl-nx/apis@workspace:libs/apis":
+  version: 0.0.0-use.local
+  resolution: "@bbl-nx/apis@workspace:libs/apis"
+  languageName: unknown
+  linkType: soft
+
+"@bbl-nx/constants@workspace:libs/constants":
+  version: 0.0.0-use.local
+  resolution: "@bbl-nx/constants@workspace:libs/constants"
+  languageName: unknown
+  linkType: soft
+
+"@bbl-nx/features@workspace:libs/features":
+  version: 0.0.0-use.local
+  resolution: "@bbl-nx/features@workspace:libs/features"
+  languageName: unknown
+  linkType: soft
+
+"@bbl-nx/hooks@workspace:libs/hooks":
+  version: 0.0.0-use.local
+  resolution: "@bbl-nx/hooks@workspace:libs/hooks"
+  languageName: unknown
+  linkType: soft
+
+"@bbl-nx/images@workspace:libs/images":
+  version: 0.0.0-use.local
+  resolution: "@bbl-nx/images@workspace:libs/images"
+  languageName: unknown
+  linkType: soft
+
+"@bbl-nx/libs@workspace:libs/libs":
+  version: 0.0.0-use.local
+  resolution: "@bbl-nx/libs@workspace:libs/libs"
+  languageName: unknown
+  linkType: soft
+
+"@bbl-nx/ui-components@workspace:libs/ui-components":
+  version: 0.0.0-use.local
+  resolution: "@bbl-nx/ui-components@workspace:libs/ui-components"
+  languageName: unknown
+  linkType: soft
+
+"@bbl-nx/utils@workspace:libs/utils":
+  version: 0.0.0-use.local
+  resolution: "@bbl-nx/utils@workspace:libs/utils"
+  languageName: unknown
+  linkType: soft
+
 "@bcoe/v8-coverage@npm:^0.2.3":
   version: 0.2.3
   resolution: "@bcoe/v8-coverage@npm:0.2.3"
@@ -3033,7 +3081,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@netlify/functions@npm:^1.1.0":
+"@netlify/functions@npm:^1.0.0, @netlify/functions@npm:^1.1.0":
   version: 1.1.0
   resolution: "@netlify/functions@npm:1.1.0"
   dependencies:
@@ -9601,6 +9649,12 @@ __metadata:
   languageName: node
   linkType: hard
 
+"bbl-nextjs@workspace:apps/bbl-nextjs":
+  version: 0.0.0-use.local
+  resolution: "bbl-nextjs@workspace:apps/bbl-nextjs"
+  languageName: unknown
+  linkType: soft
+
 "bbl-nx@workspace:.":
   version: 0.0.0-use.local
   resolution: "bbl-nx@workspace:."
@@ -9732,6 +9786,34 @@ __metadata:
     tslib: ^2.3.0
     typescript: 4.7.4
     url-loader: ^3.0.0
+    xstate: ^4.32.1
+  languageName: unknown
+  linkType: soft
+
+"bbl-remix@workspace:apps/bbl-remix":
+  version: 0.0.0-use.local
+  resolution: "bbl-remix@workspace:apps/bbl-remix"
+  dependencies:
+    "@netlify/functions": ^1.0.0
+    "@react-icons/all-files": ^4.1.0
+    "@remix-run/dev": ^1.5.1
+    "@remix-run/netlify": ^1.5.1
+    "@remix-run/node": ^1.5.1
+    "@remix-run/react": ^1.5.1
+    "@remix-run/serve": ^1.5.1
+    "@types/date-fns": ^2.6.0
+    "@types/react": 18.0.14
+    "@types/react-dom": 18.0.5
+    axios: ^0.27.2
+    date-fns: ^2.29.1
+    front-matter: ^4.0.2
+    marked: ^4.0.12
+    mobile-detect: ^1.4.1
+    react: 18.2.0
+    react-dom: 18.2.0
+    remix: ^1.5.1
+    remix-utils: ^3.3.0
+    typescript: 4.7.4
     xstate: ^4.32.1
   languageName: unknown
   linkType: soft
@@ -16883,6 +16965,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"intl-parse-accept-language@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "intl-parse-accept-language@npm:1.0.0"
+  checksum: c1dcc0f520cb85be391f1cf4b5f691ab19183e5d8e8f5277c0d2210a78a6d01ee907b9bb70f7425c4a8d5a9ed86f8b18a8d53f089025772d89f5cbe39282f266
+  languageName: node
+  linkType: hard
+
 "ioredis@npm:^4.27.9":
   version: 4.28.5
   resolution: "ioredis@npm:4.28.5"
@@ -16899,6 +16988,13 @@ __metadata:
     redis-parser: ^3.0.0
     standard-as-callback: ^2.1.0
   checksum: a8793c3324cd69fa55b4baacbda118ce6724e574260157761276b31411dd3e168c75490f7155c6ce34d79e01488efa98e0cdb162991970fd56da7cbcdafb8fb8
+  languageName: node
+  linkType: hard
+
+"ip-regex@npm:^4.0.0":
+  version: 4.3.0
+  resolution: "ip-regex@npm:4.3.0"
+  checksum: 7ff904b891221b1847f3fdf3dbb3e6a8660dc39bc283f79eb7ed88f5338e1a3d1104b779bc83759159be266249c59c2160e779ee39446d79d4ed0890dfd06f08
   languageName: node
   linkType: hard
 
@@ -17374,6 +17470,15 @@ __metadata:
   version: 2.0.0
   resolution: "is-interactive@npm:2.0.0"
   checksum: e8d52ad490bed7ae665032c7675ec07732bbfe25808b0efbc4d5a76b1a1f01c165f332775c63e25e9a03d319ebb6b24f571a9e902669fc1e40b0a60b5be6e26c
+  languageName: node
+  linkType: hard
+
+"is-ip@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "is-ip@npm:3.1.0"
+  dependencies:
+    ip-regex: ^4.0.0
+  checksum: da2c2b282407194adf2320bade0bad94be9c9d0bdab85ff45b1b62d8185f31c65dff3884519d57bf270277e5ea2046c7916a6e5a6db22fe4b7ddcdd3760f23eb
   languageName: node
   linkType: hard
 
@@ -24781,6 +24886,30 @@ __metadata:
   languageName: node
   linkType: hard
 
+"remix-utils@npm:^3.3.0":
+  version: 3.3.0
+  resolution: "remix-utils@npm:3.3.0"
+  dependencies:
+    intl-parse-accept-language: ^1.0.0
+    is-ip: ^3.1.0
+    schema-dts: ^1.1.0
+    type-fest: ^2.5.2
+    uuid: ^8.3.2
+  peerDependencies:
+    "@remix-run/react": ^1.1.1
+    "@remix-run/server-runtime": ^1.1.1
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+  checksum: 478322e0f0982f7c9e75175e3a52347d5f97e7e4b2f06b58b111cf6c0e74ac321ad66c65f95e7482beb0b7ba5db7eb5f6a34068e6481cb2c75b43260b02a1d0b
+  languageName: node
+  linkType: hard
+
+"remix@npm:^1.5.1":
+  version: 1.6.8
+  resolution: "remix@npm:1.6.8"
+  checksum: 2cc11f0702821ec9cd911eb8414b0c14461c2a10f1b74342d3e72f436bc42c64f659bdd540bc36cd19438e9b9017b92430494ea3731f3061fdebb9347826b66c
+  languageName: node
+  linkType: hard
+
 "remove-trailing-separator@npm:^1.0.1":
   version: 1.1.0
   resolution: "remove-trailing-separator@npm:1.1.0"
@@ -25450,6 +25579,15 @@ __metadata:
   dependencies:
     loose-envify: ^1.1.0
   checksum: d79192eeaa12abef860c195ea45d37cbf2bbf5f66e3c4dcd16f54a7da53b17788a70d109ee3d3dde1a0fd50e6a8fc171f4300356c5aee4fc0171de526bf35f8a
+  languageName: node
+  linkType: hard
+
+"schema-dts@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "schema-dts@npm:1.1.0"
+  peerDependencies:
+    typescript: ">=4.1.0"
+  checksum: 546af6d8707790d666f64665b755a683166675c11195406e78e2ac875e7b6f1f550b4306449c8b00a5ef0384a487a7837eac7b8b3f00c2ca2c8f231d931507d4
   languageName: node
   linkType: hard
 
@@ -27891,7 +28029,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"type-fest@npm:^2.17.0":
+"type-fest@npm:^2.17.0, type-fest@npm:^2.5.2":
   version: 2.18.0
   resolution: "type-fest@npm:2.18.0"
   checksum: 0737128d9d77b93793c6ee443e304462a792f5b723a6be035d6cb488c5610a8baa00522805421341c04324c80efba9849885bbfbc5a9623d0672fe8712969f62
