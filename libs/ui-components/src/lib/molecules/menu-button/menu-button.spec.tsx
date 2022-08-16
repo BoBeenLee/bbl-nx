@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import { identity } from "lodash";
+import { identity } from "@bbl-nx/utils";
 
 import MenuButton from './menu-button';
 
@@ -8,7 +8,7 @@ describe('MenuButton', () => {
     const { baseElement } = render(
       <MenuButton
         open={true}
-        onToggleMenu={identity}
+        onToggleMenu={identity as any}
       />
     );
     expect(baseElement).toBeTruthy();
