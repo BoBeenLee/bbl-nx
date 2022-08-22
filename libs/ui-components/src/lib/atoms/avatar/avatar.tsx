@@ -1,5 +1,7 @@
 import { logoImages } from '@bbl-nx/images';
 import cn from 'classnames';
+import Image from 'next/image';
+
 export interface AvatarProps {
   className?: string;
   alt?: string;
@@ -9,15 +11,15 @@ export interface AvatarProps {
 export function Avatar(props: AvatarProps) {
   const { className, alt, width } = props;
   return (
-    <picture>
-      <source srcSet={logoImages.quokkaWebp} type="image/webp" />
-      <img
-        className={cn(className, 'rounded-full')}
+    <div className={cn(className, 'relative rounded-full overflow-hidden')}>
+      <Image
         alt={alt}
         width={width}
+        layout={'fill'}
         src={logoImages.quokkaPng}
+        priority={true}
       />
-    </picture>
+    </div>
   );
 }
 

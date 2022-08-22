@@ -12,7 +12,10 @@
         "outputPath": "dist/apps/bbl-nextjs"
       },
       "configurations": {
-        "production": {}
+        "production": {},
+        "development": {
+          "outputPath": "apps/bbl-nextjs"
+        }
       }
     },
     "serve": {
@@ -38,7 +41,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/apps/bbl-nextjs"],
       "options": {
-        "jestConfig": "apps/bbl-nextjs/jest.config.js",
+        "jestConfig": "apps/bbl-nextjs/jest.config.ts",
         "passWithNoTests": true
       }
     },
