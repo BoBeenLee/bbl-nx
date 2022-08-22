@@ -13,7 +13,10 @@ module.exports = {
     '../src/lib/**/*.stories.@(js|jsx|ts|tsx)',
   ],
   addons: [...rootMain.addons, '@nrwl/react/plugins/storybook'],
-  staticDirs: ['../../images/src/lib/public'],
+  staticDirs: [
+    '../../images/src/lib/public',
+    { from: '../../images/src/lib/public', to: '/' },
+  ],
   webpackFinal: async (config, { configType }) => {
     config.resolve.alias[`next/router`] = require.resolve(
       `./__mocks__/next/router.js`
