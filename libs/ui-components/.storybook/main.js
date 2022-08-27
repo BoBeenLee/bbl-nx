@@ -14,8 +14,7 @@ module.exports = {
   ],
   addons: [...rootMain.addons, '@nrwl/react/plugins/storybook'],
   staticDirs: [
-    '../../images/src/lib/public',
-    { from: '../../images/src/lib/public', to: '/' },
+    '../../images/src/lib/public'
   ],
   webpackFinal: async (config, { configType }) => {
     config.resolve.alias[`next/router`] = require.resolve(
