@@ -4,6 +4,7 @@ import { ThemeProvider } from 'next-themes';
 import tailwindCss from '!style-loader!css-loader!postcss-loader!../src/styles/styles.css';
 import { setImagePrefixPath } from '@bbl-nx/images';
 import { initialize as initializeMSW, mswDecorator } from 'msw-storybook-addon';
+import { getHostname } from '@bbl-nx/utils';
 
 const STORYBOOK_PREFIX_PATH = process.env.STORYBOOK_PREFIX_PATH;
 
@@ -18,7 +19,7 @@ initializeMSW({
   ...(STORYBOOK_PREFIX_PATH
     ? {
         serviceWorker: {
-          url: `/${getPrefix()}/mockServiceWorker.js`,
+          url: `${getHostname()}/${getPrefix()}/mockServiceWorker.js`,
         },
       }
     : {}),
