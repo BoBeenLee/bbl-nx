@@ -13,9 +13,7 @@ module.exports = {
     '../src/lib/**/*.stories.@(js|jsx|ts|tsx)',
   ],
   addons: [...rootMain.addons, '@nrwl/react/plugins/storybook'],
-  staticDirs: [
-    '../../images/src/lib/public'
-  ],
+  staticDirs: ['../../images/src/lib/public'],
   webpackFinal: async (config, { configType }) => {
     // apply any global webpack configs that might have been specified in .storybook/main.js
     if (rootMain.webpackFinal) {
@@ -23,6 +21,15 @@ module.exports = {
     }
 
     // add your own webpack tweaks if needed
+    config.resolve.alias[`next/router`] = require.resolve(
+      `../../../.storybook/__mocks__/next/router.js`
+    );
+    config.resolve.alias[`next/link`] = require.resolve(
+      `../../../.storybook/__mocks__/next/link.js`
+    );
+    config.resolve.alias[`next/image`] = require.resolve(
+      `../../../.storybook/__mocks__/next/image.js`
+    );
 
     return config;
   },

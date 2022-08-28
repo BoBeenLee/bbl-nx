@@ -32,6 +32,16 @@ module.exports = {
     }
 
     // add your own webpack tweaks if needed
+    config.resolve.alias[`next/router`] = require.resolve(
+      `../../../.storybook/__mocks__/next/router.js`
+    );
+    config.resolve.alias[`next/link`] = require.resolve(
+      `../../../.storybook/__mocks__/next/link.js`
+    );
+    config.resolve.alias[`next/image`] = require.resolve(
+      `../../../.storybook/__mocks__/next/image.js`
+    );
+
     config.resolve.fallback = {
       fs: false,
       assert: false,

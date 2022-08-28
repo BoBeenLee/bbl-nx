@@ -16,8 +16,7 @@ blog & homepage project based on monorepo(nx)
 - Homepage
   - https://bbl-nx.vercel.app/
 - Storybook
-  - Component: https://bobeenlee.github.io/bbl-nx/ui-components/
-  - Features: https://bobeenlee.github.io/bbl-nx/features/
+  - Component, Features: https://bobeenlee.github.io/bbl-nx/ui-components/
   - Pages: https://bobeenlee.github.io/bbl-nx/bbl-nextjs
 
 ## Feature
