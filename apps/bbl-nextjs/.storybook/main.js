@@ -31,6 +31,10 @@ module.exports = {
       config = await rootMain.webpackFinal(config, { configType });
     }
 
+    config.resolve.alias[`next/image`] = require.resolve(
+      `../../../.storybook/__mocks__/next/image.js`
+    );
+
     // add your own webpack tweaks if needed
     config.resolve.fallback = {
       fs: false,
