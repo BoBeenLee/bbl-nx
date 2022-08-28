@@ -15,15 +15,7 @@ const getPrefix = () => {
 if (STORYBOOK_PREFIX_PATH) {
   setImagePrefixPath(getPrefix());
 }
-initializeMSW({
-  ...(STORYBOOK_PREFIX_PATH
-    ? {
-        serviceWorker: {
-          url: `${getHostname()}/${getPrefix()}/mockServiceWorker.js`,
-        },
-      }
-    : {}),
-});
+initializeMSW();
 
 const storybookStyles = document.createElement('style');
 storybookStyles.innerHTML = tailwindCss;
