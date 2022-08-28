@@ -24,7 +24,7 @@ module.exports = {
     //   },
     // },
   ],
-  staticDirs: ['../../../libs/images/src/lib/public'],
+  staticDirs: ['../../../libs/images/src/lib/public', '../public'],
   webpackFinal: async (config, { configType }) => {
     // apply any global webpack configs that might have been specified in .storybook/main.js
     if (rootMain.webpackFinal) {
@@ -32,16 +32,6 @@ module.exports = {
     }
 
     // add your own webpack tweaks if needed
-    config.resolve.alias[`next/router`] = require.resolve(
-      `../../../.storybook/__mocks__/next/router.js`
-    );
-    config.resolve.alias[`next/link`] = require.resolve(
-      `../../../.storybook/__mocks__/next/link.js`
-    );
-    config.resolve.alias[`next/image`] = require.resolve(
-      `../../../.storybook/__mocks__/next/image.js`
-    );
-
     config.resolve.fallback = {
       fs: false,
       assert: false,

@@ -4649,7 +4649,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/addons@npm:6.5.10, @storybook/addons@npm:^6.4.10":
+"@storybook/addons@npm:6.5.10, @storybook/addons@npm:^6.0.0, @storybook/addons@npm:^6.4.10":
   version: 6.5.10
   resolution: "@storybook/addons@npm:6.5.10"
   dependencies:
@@ -9776,7 +9776,8 @@ __metadata:
     marked: ^4.0.12
     memoize-one: ^6.0.0
     mobile-detect: ^1.4.1
-    msw: ^0.44.0
+    msw: ^0.45.0
+    msw-storybook-addon: ^1.6.3
     next: 12.2.3
     next-images: 1.8.4
     next-themes: ^0.2.0
@@ -15837,13 +15838,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"graphql@npm:^16.3.0":
-  version: 16.5.0
-  resolution: "graphql@npm:16.5.0"
-  checksum: a82a926d085818934d04fdf303a269af170e79de943678bd2726370a96194f9454ade9d6d76c2de69afbd7b9f0b4f8061619baecbbddbe82125860e675ac219e
-  languageName: node
-  linkType: hard
-
 "gray-matter@npm:^4.0.3":
   version: 4.0.3
   resolution: "gray-matter@npm:4.0.3"
@@ -21007,9 +21001,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"msw@npm:^0.44.0":
-  version: 0.44.2
-  resolution: "msw@npm:0.44.2"
+"msw-storybook-addon@npm:^1.6.3":
+  version: 1.6.3
+  resolution: "msw-storybook-addon@npm:1.6.3"
+  dependencies:
+    "@storybook/addons": ^6.0.0
+    is-node-process: ^1.0.1
+  peerDependencies:
+    msw: ">=0.35.0 <1.0.0"
+  checksum: 04f71af6defdb80c57cc824b73419fbc5a355c82c40bfde1a274d771f51b0ed24131a1665608545a353af32b3b9aea0ff39115631c2a59d105acc1c165d5708d
+  languageName: node
+  linkType: hard
+
+"msw@npm:^0.45.0":
+  version: 0.45.0
+  resolution: "msw@npm:0.45.0"
   dependencies:
     "@mswjs/cookies": ^0.2.2
     "@mswjs/interceptors": ^0.17.2
@@ -21019,7 +21025,6 @@ __metadata:
     chalk: 4.1.1
     chokidar: ^3.4.2
     cookie: ^0.4.2
-    graphql: ^16.3.0
     headers-polyfill: ^3.0.4
     inquirer: ^8.2.0
     is-node-process: ^1.0.1
@@ -21032,13 +21037,16 @@ __metadata:
     type-fest: ^1.2.2
     yargs: ^17.3.1
   peerDependencies:
+    graphql: ^15.0.0 || ^16.0.0
     typescript: ">= 4.2.x <= 4.7.x"
   peerDependenciesMeta:
+    graphql:
+      optional: true
     typescript:
       optional: true
   bin:
     msw: cli/index.js
-  checksum: 739d536ee09d1c0a2cbc9dbe917f167c42115a6548f99780850ce9a63a5e7c377cf9b5f1a3b497e85ce7304025ab22966e997fe73adbd8d2ab968b8685f15a24
+  checksum: a615d77d1c754ffddefc888237d6adcf362c495859b3c6ae43437de88be837ffabb55e11893a4290d304383262e19c80d86b2d33ded123a5bfc5c9e97d8f4884
   languageName: node
   linkType: hard
 
