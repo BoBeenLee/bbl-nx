@@ -14,10 +14,10 @@ import MdSearch from '@react-icons/all-files/md/MdSearch';
 import MdMenu from '@react-icons/all-files/md/MdMenu';
 import MdClose from '@react-icons/all-files/md/MdClose';
 
-import { iconImages } from '@bbl-nx/images';
+import { getImages } from '@bbl-nx/images';
 
 export const imageIcons = {
-  storybook: iconImages.storybook,
+  storybook: getImages().iconImages.storybook,
 } as const;
 
 export const svgIcons = {

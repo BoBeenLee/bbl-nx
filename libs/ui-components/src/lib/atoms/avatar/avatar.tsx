@@ -1,4 +1,4 @@
-import { logoImages } from '@bbl-nx/images';
+import { getImages } from '@bbl-nx/images';
 import cn from 'classnames';
 import Image from 'next/image';
 
@@ -16,7 +16,7 @@ export function Avatar(props: AvatarProps) {
         alt={alt}
         width={width}
         layout={'fill'}
-        src={logoImages.quokkaPng}
+        src={getImages().logoImages.quokkaPng}
         priority={true}
       />
     </div>
