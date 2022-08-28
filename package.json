@@ -30,6 +30,7 @@
     "test-storybook": "yarn test-storybook --url http://localhost:4400/",
     "storybook": "npm run ui-components:storybook",
     "build-storybook": "yarn nx run-many --target=build-storybook --projects=ui-components,features,bbl-nextjs",
+    "build-storybook:github": "env-cmd -f ./apps/bbl-nextjs/.github.env yarn nx run-many --target=build-storybook --projects=ui-components,features,bbl-nextjs",
     "bbl-nextjs:analyze": "env-cmd -f ./apps/bbl-nextjs/.analyze.env yarn nx run bbl-nextjs:serve",
     "bbl-nextjs:storybook": "yarn nx run bbl-nextjs:storybook",
     "bbl-nextjs:build-storybook": "yarn nx run bbl-nextjs:build-storybook",
