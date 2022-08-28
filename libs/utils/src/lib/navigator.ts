@@ -2,6 +2,13 @@ import MobileDetect from 'mobile-detect';
 
 export const isBrowser = typeof window !== 'undefined';
 
+export const getHostname = () => {
+  if (typeof window !== 'undefined') {
+    return `https://${window.location.hostname}`;
+  }
+  return ``;
+};
+
 export const isMobile = () => {
   if (!isBrowser) {
     return false;

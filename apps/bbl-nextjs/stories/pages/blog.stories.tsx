@@ -6,6 +6,7 @@ import BlogPage, {
 import { rest } from 'msw';
 import feedsJSON from '../../__mocks__/feeds.json';
 import postsJSON from '../../__mocks__/posts.json';
+import { getHostname } from '@bbl-nx/utils';
 
 export default {
   component: BlogPage,
@@ -45,7 +46,7 @@ Primary.parameters = {
           return res(ctx.json(feedsJSON));
         }
       ),
-      rest.get('https://localhost:3000/api/posts', (req, res, ctx) => {
+      rest.get(`${getHostname()}/api/posts`, (req, res, ctx) => {
         return res(ctx.json(postsJSON));
       }),
     ],
