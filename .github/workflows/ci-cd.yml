@@ -138,7 +138,7 @@ jobs:
           key: ${{ env.BUILD_CACHE_KEY }}
 
       - name: Storybook Build
-        run: npm run build-storybook
+        run: npm run build-storybook:github
 
       - name: Publish to Storybook
         uses: peaceiris/actions-gh-pages@v3
