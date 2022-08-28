@@ -11,6 +11,7 @@ export interface MenuItemProps {
 }
 
 export interface MenusProps {
+  className?: string;
   open: boolean;
 }
 
@@ -33,10 +34,11 @@ function MenuItem({ href, text, transitionDelay }: MenuItemProps) {
 }
 
 export function MobileMenus(props: MenusProps) {
-  const { open } = props;
+  const { className, open } = props;
   return (
     <ul
       className={cn(
+        className,
         styles['menu'],
         'flex flex-col absolute bg-white dark:bg-gray-900 left-0 visible md:hidden',
         open && styles['menuRendered']
