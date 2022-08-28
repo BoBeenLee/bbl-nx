@@ -5,12 +5,24 @@ import tailwindCss from '!style-loader!css-loader!postcss-loader!../src/styles/s
 import { setImagePrefixPath } from '@bbl-nx/images';
 import { initialize as initializeMSW, mswDecorator } from 'msw-storybook-addon';
 
-initializeMSW();
-
 const STORYBOOK_PREFIX_PATH = process.env.STORYBOOK_PREFIX_PATH;
+
+const getPrefix = () => {
+  return `${STORYBOOK_PREFIX_PATH}/bbl-nextjs`;
+};
+
 if (STORYBOOK_PREFIX_PATH) {
-  setImagePrefixPath(`${STORYBOOK_PREFIX_PATH}/bbl-nextjs`);
+  setImagePrefixPath(getPrefix());
 }
+initializeMSW({
+  ...(STORYBOOK_PREFIX_PATH
+    ? {
+        serviceWorker: {
+          url: `/${getPrefix()}/mockServiceWorker.js`,
+        },
+      }
+    : {}),
+});
 
 const storybookStyles = document.createElement('style');
 storybookStyles.innerHTML = tailwindCss;
