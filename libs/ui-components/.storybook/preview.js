@@ -5,7 +5,7 @@ import { setImagePrefixPath } from '@bbl-nx/images';
 
 const STORYBOOK_PREFIX_PATH = process.env.STORYBOOK_PREFIX_PATH;
 if (STORYBOOK_PREFIX_PATH) {
-  setImagePrefixPath(`${STORYBOOK_PREFIX_PATH}ui-components/`);
+  setImagePrefixPath(`${STORYBOOK_PREFIX_PATH}/ui-components`);
 }
 
 const storybookStyles = document.createElement('style');

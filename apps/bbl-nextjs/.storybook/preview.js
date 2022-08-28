@@ -7,7 +7,7 @@ import { setImagePrefixPath } from '@bbl-nx/images';
 
 const STORYBOOK_PREFIX_PATH = process.env.STORYBOOK_PREFIX_PATH;
 if (STORYBOOK_PREFIX_PATH) {
-  setImagePrefixPath(`${STORYBOOK_PREFIX_PATH}bbl-nextjs/`);
+  setImagePrefixPath(`${STORYBOOK_PREFIX_PATH}/bbl-nextjs`);
 }
 
 const storybookStyles = document.createElement('style');
