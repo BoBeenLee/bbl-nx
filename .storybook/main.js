@@ -46,6 +46,16 @@ module.exports = {
       include: path.resolve(__dirname, './'),
     });
 
+    config.resolve.alias[`next/router`] = require.resolve(
+      `./__mocks__/next/router.js`
+    );
+    config.resolve.alias[`next/link`] = require.resolve(
+      `./__mocks__/next/link.js`
+    );
+    config.resolve.alias[`next/image`] = require.resolve(
+      `./__mocks__/next/image.js`
+    );
+
     return config;
   },
 };
