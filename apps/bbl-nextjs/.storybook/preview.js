@@ -20,6 +20,7 @@ initializeMSW({
     ? {
         serviceWorker: {
           url: `${getHostname()}/${getPrefix()}/mockServiceWorker.js`,
+          scope: `/${getPrefix()}`,
         },
       }
     : {}),
