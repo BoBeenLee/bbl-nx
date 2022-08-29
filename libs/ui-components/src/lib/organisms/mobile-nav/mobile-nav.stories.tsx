@@ -5,6 +5,11 @@ export default {
   component: MobileNav,
   title: 'organisms/MobileNav',
   argTypes: {},
+  parameters: {
+    viewport: {
+      defaultViewport: 'sm',
+    },
+  },
 } as Meta;
 
 const Template: Story = (args) => <MobileNav {...args} />;

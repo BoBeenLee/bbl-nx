@@ -4622,7 +4622,34 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/addons@npm:6.5.10, @storybook/addons@npm:^6.4.10":
+"@storybook/addon-viewport@npm:^6.5.10":
+  version: 6.5.10
+  resolution: "@storybook/addon-viewport@npm:6.5.10"
+  dependencies:
+    "@storybook/addons": 6.5.10
+    "@storybook/api": 6.5.10
+    "@storybook/client-logger": 6.5.10
+    "@storybook/components": 6.5.10
+    "@storybook/core-events": 6.5.10
+    "@storybook/theming": 6.5.10
+    core-js: ^3.8.2
+    global: ^4.4.0
+    memoizerific: ^1.11.3
+    prop-types: ^15.7.2
+    regenerator-runtime: ^0.13.7
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+  peerDependenciesMeta:
+    react:
+      optional: true
+    react-dom:
+      optional: true
+  checksum: 6cbd32053d2b4947942b0bab0ab016817988192d52361b4f2e08420f6d94128174974a0ec9b7ee4167de8f7cb91b3a3a8c8336a398a21cb567ba633efbf9e2cf
+  languageName: node
+  linkType: hard
+
+"@storybook/addons@npm:6.5.10, @storybook/addons@npm:^6.0.0, @storybook/addons@npm:^6.4.10":
   version: 6.5.10
   resolution: "@storybook/addons@npm:6.5.10"
   dependencies:
@@ -9683,6 +9710,7 @@ __metadata:
     "@storybook/addon-knobs": 6.4.0
     "@storybook/addon-links": 6.5.9
     "@storybook/addon-postcss": 2.0.0
+    "@storybook/addon-viewport": ^6.5.10
     "@storybook/addons": 6.5.9
     "@storybook/builder-webpack5": 6.5.9
     "@storybook/core": ^6.5.9
@@ -9727,6 +9755,7 @@ __metadata:
     cypress: ^9.1.0
     date-fns: ^2.29.1
     dotenv: ^16.0.1
+    env-cmd: ^10.1.0
     eslint: 8.15.0
     eslint-config-next: 12.2.3
     eslint-config-prettier: 8.1.0
@@ -9747,7 +9776,8 @@ __metadata:
     marked: ^4.0.12
     memoize-one: ^6.0.0
     mobile-detect: ^1.4.1
-    msw: ^0.44.0
+    msw: ^0.45.0
+    msw-storybook-addon: ^1.6.3
     next: 12.2.3
     next-images: 1.8.4
     next-themes: ^0.2.0
@@ -11247,7 +11277,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commander@npm:^4.0.1, commander@npm:^4.1.1":
+"commander@npm:^4.0.0, commander@npm:^4.0.1, commander@npm:^4.1.1":
   version: 4.1.1
   resolution: "commander@npm:4.1.1"
   checksum: d7b9913ff92cae20cb577a4ac6fcc121bd6223319e54a40f51a14740a681ad5c574fd29a57da478a5f234a6fa6c52cbf0b7c641353e03c648b1ae85ba670b977
@@ -13146,6 +13176,18 @@ __metadata:
   version: 4.3.1
   resolution: "entities@npm:4.3.1"
   checksum: e8f6d2bac238494b2355e90551893882d2675142be7e7bdfcb15248ed0652a630678ba0e3a8dc750693e736cb6011f504c27dabeb4cd3330560092e88b105090
+  languageName: node
+  linkType: hard
+
+"env-cmd@npm:^10.1.0":
+  version: 10.1.0
+  resolution: "env-cmd@npm:10.1.0"
+  dependencies:
+    commander: ^4.0.0
+    cross-spawn: ^7.0.0
+  bin:
+    env-cmd: bin/env-cmd.js
+  checksum: efef55074250f14cfc0b80c98dd98f1f056a80e1f3c7db14097ceefdd2d56c766bbb83b54c22932112707f41b36ce2e923f8015d69e62a75c12d98640b972e75
   languageName: node
   linkType: hard
 
@@ -15793,13 +15835,6 @@ __metadata:
   version: 4.2.10
   resolution: "graceful-fs@npm:4.2.10"
   checksum: 3f109d70ae123951905d85032ebeae3c2a5a7a997430df00ea30df0e3a6c60cf6689b109654d6fdacd28810a053348c4d14642da1d075049e6be1ba5216218da
-  languageName: node
-  linkType: hard
-
-"graphql@npm:^16.3.0":
-  version: 16.5.0
-  resolution: "graphql@npm:16.5.0"
-  checksum: a82a926d085818934d04fdf303a269af170e79de943678bd2726370a96194f9454ade9d6d76c2de69afbd7b9f0b4f8061619baecbbddbe82125860e675ac219e
   languageName: node
   linkType: hard
 
@@ -20966,9 +21001,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"msw@npm:^0.44.0":
-  version: 0.44.2
-  resolution: "msw@npm:0.44.2"
+"msw-storybook-addon@npm:^1.6.3":
+  version: 1.6.3
+  resolution: "msw-storybook-addon@npm:1.6.3"
+  dependencies:
+    "@storybook/addons": ^6.0.0
+    is-node-process: ^1.0.1
+  peerDependencies:
+    msw: ">=0.35.0 <1.0.0"
+  checksum: 04f71af6defdb80c57cc824b73419fbc5a355c82c40bfde1a274d771f51b0ed24131a1665608545a353af32b3b9aea0ff39115631c2a59d105acc1c165d5708d
+  languageName: node
+  linkType: hard
+
+"msw@npm:^0.45.0":
+  version: 0.45.0
+  resolution: "msw@npm:0.45.0"
   dependencies:
     "@mswjs/cookies": ^0.2.2
     "@mswjs/interceptors": ^0.17.2
@@ -20978,7 +21025,6 @@ __metadata:
     chalk: 4.1.1
     chokidar: ^3.4.2
     cookie: ^0.4.2
-    graphql: ^16.3.0
     headers-polyfill: ^3.0.4
     inquirer: ^8.2.0
     is-node-process: ^1.0.1
@@ -20991,13 +21037,16 @@ __metadata:
     type-fest: ^1.2.2
     yargs: ^17.3.1
   peerDependencies:
+    graphql: ^15.0.0 || ^16.0.0
     typescript: ">= 4.2.x <= 4.7.x"
   peerDependenciesMeta:
+    graphql:
+      optional: true
     typescript:
       optional: true
   bin:
     msw: cli/index.js
-  checksum: 739d536ee09d1c0a2cbc9dbe917f167c42115a6548f99780850ce9a63a5e7c377cf9b5f1a3b497e85ce7304025ab22966e997fe73adbd8d2ab968b8685f15a24
+  checksum: a615d77d1c754ffddefc888237d6adcf362c495859b3c6ae43437de88be837ffabb55e11893a4290d304383262e19c80d86b2d33ded123a5bfc5c9e97d8f4884
   languageName: node
   linkType: hard
 

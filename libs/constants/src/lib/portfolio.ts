@@ -118,7 +118,7 @@ export const companyPortfolios = [
       'storybook',
       'appcenter',
     ],
-    summary: '보상을 통한 뷰티 커뮤니티',
+    summary: '블록체인 보상을 통한 뷰티 커뮤니티',
     githubUrl: '',
     linkUrl:
       'https://medium.com/@Cosmochain/cosmee-app-now-available-on-google-play-store-f80149a2fa4c',

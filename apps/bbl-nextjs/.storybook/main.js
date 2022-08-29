@@ -16,7 +16,7 @@ module.exports = {
     ...rootMain.addons,
     '@nrwl/react/plugins/storybook',
     'storybook-addon-swc',
-    "storybook-addon-next-router",
+    'storybook-addon-next-router',
     // {
     //   name: 'storybook-addon-next',
     //   options: {
@@ -24,11 +24,16 @@ module.exports = {
     //   },
     // },
   ],
+  staticDirs: ['../../../libs/images/src/lib/public', '../public'],
   webpackFinal: async (config, { configType }) => {
     // apply any global webpack configs that might have been specified in .storybook/main.js
     if (rootMain.webpackFinal) {
       config = await rootMain.webpackFinal(config, { configType });
     }
+
+    config.resolve.alias[`next/image`] = require.resolve(
+      `../../../.storybook/__mocks__/next/image.js`
+    );
 
     // add your own webpack tweaks if needed
     config.resolve.fallback = {
@@ -59,5 +64,4 @@ module.exports = {
     };
     return config;
   },
-  staticDirs: ['../public'],
 };

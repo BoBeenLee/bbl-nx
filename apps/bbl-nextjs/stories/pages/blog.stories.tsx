@@ -3,6 +3,10 @@ import BlogPage, {
   getStaticProps,
   BlogPageProps,
 } from '../../src/pages/blog/index';
+import { rest } from 'msw';
+import feedsJSON from '../../__mocks__/feeds.json';
+import postsJSON from '../../__mocks__/posts.json';
+import { getHostname } from '@bbl-nx/utils';
 
 export default {
   component: BlogPage,
@@ -33,5 +37,18 @@ Primary.parameters = {
   nextRouter: {
     path: '/blog',
     asPath: '/blog',
+  },
+  msw: {
+    handlers: [
+      rest.get(
+        'https://api.feednami.com/api/v1/feeds/load',
+        (req, res, ctx) => {
+          return res(ctx.json(feedsJSON));
+        }
+      ),
+      rest.get(`${getHostname()}/api/posts`, (req, res, ctx) => {
+        return res(ctx.json(postsJSON));
+      }),
+    ],
   },
 };
