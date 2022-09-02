@@ -1,10 +1,8 @@
-import { action } from '@storybook/addon-actions';
 import { Story, Meta } from '@storybook/react';
 import { LayoutTemplate } from '@bbl-nx/ui-components';
 import { mockBlogs } from '../../../__mocks__/blog';
 import { BlogTemplate, BlogTemplateProps } from './blog-template';
-import { within, userEvent, findByRole } from '@storybook/testing-library';
-import { expect } from '@storybook/jest';
+import { within, userEvent } from '@storybook/testing-library';
 
 export default {
   component: BlogTemplate,
