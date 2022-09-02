@@ -1,3 +1,5 @@
+import { makePathname } from '@bbl-nx/utils';
+
 export type NavRouter = {
   '/': {
     path: never;
@@ -13,6 +15,19 @@ export type NavRouter = {
 };
 
 export type NavRouterKey = keyof NavRouter;
+
+export type RouterEvent = <Path extends NavRouterKey>([
+  path,
+  pathValues,
+]: NavRouter[Path] extends { path: infer TPath }
+  ? TPath extends Record<string, unknown>
+    ? [path: Path, pathValues: TPath]
+    : [path: Path, pathValues: undefined]
+  : [path: Path, pathValues: undefined]) => void;
+
+export const getRouterPath: RouterEvent = ([path, pathValues]) => {
+  return makePathname(path, pathValues ?? {});
+};
 
 export const nav = [
   { text: 'Home', href: '/' },
