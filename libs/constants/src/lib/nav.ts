@@ -16,16 +16,17 @@ export type NavRouter = {
 
 export type NavRouterKey = keyof NavRouter;
 
-export type NavRouterPath = <Path extends NavRouterKey>([
+export type NavRouterParam<Path extends NavRouterKey> =
+  NavRouter[Path] extends { path: infer TPath }
+    ? TPath extends Record<string, unknown>
+      ? [Path, TPath]
+      : [Path, undefined]
+    : [Path, undefined];
+
+export const getNavRouterPath = <Path extends NavRouterKey>([
   path,
   pathValues,
-]: NavRouter[Path] extends { path: infer TPath }
-  ? TPath extends Record<string, unknown>
-    ? [path: Path, pathValues: TPath]
-    : [path: Path, pathValues: undefined]
-  : [path: Path, pathValues: undefined]) => string;
-
-export const getRouterPath: NavRouterPath = ([path, pathValues]) => {
+]: NavRouterParam<Path>) => {
   return makePathname(path, pathValues ?? {});
 };
 
