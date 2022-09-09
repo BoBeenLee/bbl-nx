@@ -21,12 +21,39 @@ Primary.args = {
   allBlogs: mockBlogs,
 };
 
-Primary.play = async ({ canvasElement }) => {
+export const SearchReact = Template.bind({});
+SearchReact.args = {
+  allBlogs: mockBlogs,
+};
+
+SearchReact.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement);
   const searchInput = await canvas.findByRole('search');
 
   searchInput.focus();
-  userEvent.type(searchInput, "React");
-  userEvent.clear(searchInput);
-  userEvent.type(searchInput, "React 아무나");
+  userEvent.type(searchInput, 'React');
+};
+
+export const SearchReactSomething = Template.bind({});
+SearchReactSomething.args = {
+  allBlogs: mockBlogs,
+};
+
+SearchReactSomething.play = async ({ canvasElement }) => {
+  const canvas = within(canvasElement);
+  const searchInput = await canvas.findByRole('search');
+  searchInput.focus();
+  userEvent.type(searchInput, 'React 아무나');
+};
+
+export const SearchEmpty = Template.bind({});
+SearchEmpty.args = {
+  allBlogs: mockBlogs,
+};
+
+SearchEmpty.play = async ({ canvasElement }) => {
+  const canvas = within(canvasElement);
+  const searchInput = await canvas.findByRole('search');
+  searchInput.focus();
+  userEvent.type(searchInput, '');
 };
