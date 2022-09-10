@@ -84,7 +84,7 @@
     "@babel/runtime": "^7.18.9",
     "@commitlint/cli": "8.0.0",
     "@commitlint/config-conventional": "8.0.0",
-    "@netlify/plugin-nextjs": "^4.7.0",
+    "@netlify/plugin-nextjs": "^4.23.1",
     "@next/bundle-analyzer": "^12.2.3",
     "@nrwl/cli": "14.5.6",
     "@nrwl/cypress": "14.5.6",
