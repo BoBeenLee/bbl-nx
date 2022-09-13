@@ -10,10 +10,10 @@ export type Event =
 export type SendEvent = <Type extends Event['type']>([
   eventType,
   payload,
-]: Extract<Event, { type: Type }> extends { payload: infer TPayload }
-  ? TPayload extends Record<string, unknown>
-    ? [type: Type, payload: TPayload]
-    : [type: Type, payload: undefined]
+]: Extract<Event, { type: Type }> extends {
+  payload: infer TPayload extends Record<string, unknown>;
+}
+  ? [type: Type, payload: TPayload]
   : [type: Type, payload: undefined]) => void;
 
 export function firebaseAnalyticsFactory(methods: {

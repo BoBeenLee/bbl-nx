@@ -17,10 +17,8 @@ export type NavRouter = {
 export type NavRouterKey = keyof NavRouter;
 
 export type NavRouterParam<Path extends NavRouterKey> =
-  NavRouter[Path] extends { path: infer TPath }
-    ? TPath extends Record<string, unknown>
-      ? [Path, TPath]
-      : [Path, undefined]
+  NavRouter[Path] extends { path: infer TPath extends Record<string, string> }
+    ? [Path, TPath]
     : [Path, undefined];
 
 export const getNavRouterPath = <Path extends NavRouterKey>([
