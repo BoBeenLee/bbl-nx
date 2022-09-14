@@ -1,8 +1,5 @@
 import { Avatar, SectionTitle } from '@bbl-nx/ui-components';
-import {
-  DATE_TIME_FORMAT5,
-  transformDateTimeStrToText,
-} from '@bbl-nx/utils';
+import { DATE_TIME_FORMAT5, transformDateTimeStrToText } from '@bbl-nx/utils';
 
 export interface BlogIdArticleProps {
   className?: string;
@@ -19,7 +16,7 @@ export function BlogIdArticle(props: BlogIdArticleProps) {
       <SectionTitle className="pb-2">{title}</SectionTitle>
       <div className="flex flex-row items-center justify-between w-full mt-2">
         <div className="flex flex-row items-center">
-          <Avatar width={'24'} />
+          <Avatar className="w-6 h-6" />
           <p className="ml-2 text-sm text-gray-600 dark:text-gray-400">
             {'BoBeen Lee'}
           </p>

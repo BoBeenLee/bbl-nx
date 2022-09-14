@@ -7,8 +7,8 @@ describe('Avatar', () => {
     const { baseElement } = render(
       <Avatar
         {...{
+          className: 'w-6 h-6',
           alt: 'avatar',
-          width: '100px',
           avatarUrl: 'https://avatars0.githubusercontent.com/u/1489321?v=4',
         }}
       />
