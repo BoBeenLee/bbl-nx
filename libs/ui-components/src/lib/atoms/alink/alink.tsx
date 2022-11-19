@@ -24,11 +24,21 @@ export function ALink<F extends NavRouterKey>(props: ALinkProps<F>) {
     activeClassName,
     children,
     urlPath,
-    ...rest
+    ...restWithURLPathValues
   } = props;
   const { asPath, isReady } = useRouter();
   const [className, setClassName] = useState(childClassName);
-  const href = makePathname(urlPath, (props as any).urlPathValues ?? {});
+  const getRestWithPathValues = () => {
+    if('urlPathValues' in restWithURLPathValues) {
+      return {
+        ...restWithURLPathValues,
+        urlPathValues: (restWithURLPathValues as any).urlPathValues
+      } 
+    }
+    return { ...restWithURLPathValues, urlPathValues: {} }
+  }
+  const { urlPathValues, ...rest } = getRestWithPathValues()
+  const href = makePathname(urlPath, urlPathValues);
 
   useEffect(() => {
     // Check if the router fields are updated client-side
@@ -64,8 +74,8 @@ export function ALink<F extends NavRouterKey>(props: ALinkProps<F>) {
   ]);
 
   return (
-    <Link {...rest} href={href}>
-      <a className={className}>{children}</a>
+    <Link {...rest} className={className} href={href}>
+      {children}
     </Link>
   );
 }

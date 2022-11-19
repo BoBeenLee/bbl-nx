@@ -12,10 +12,8 @@ const NotFoundPage = () => {
           {`I'm guessing you spelled something wrong. Can you double check
           that URL?`}
         </div>
-        <Link href="/">
-          <a className="w-64 p-1 mx-auto font-bold text-center text-black bg-gray-200 rounded-md sm:p-4 dark:bg-gray-800 dark:text-white">
-            Home
-          </a>
+        <Link className="w-64 p-1 mx-auto font-bold text-center text-black bg-gray-200 rounded-md sm:p-4 dark:bg-gray-800 dark:text-white" href="/">
+          Home
         </Link>
       </div>
     </Layout>
