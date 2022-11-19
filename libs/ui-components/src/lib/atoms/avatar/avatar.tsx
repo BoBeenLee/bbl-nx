@@ -12,8 +12,8 @@ export function Avatar(props: AvatarProps) {
   return (
     <div className={cn(className, 'relative rounded-full overflow-hidden')}>
       <Image
-        alt={alt}
-        layout={'fill'}
+        alt={alt ?? "avatar"}
+        fill={true}
         src={getImages().logoImages.quokkaPng}
         priority={true}
       />
