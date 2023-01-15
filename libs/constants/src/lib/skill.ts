@@ -101,6 +101,7 @@ export const categorySkills: Record<string, CategorySkillsItem> = {
   statemanagement: {
     name: 'State Management',
     skills: [
+      'Recoil',
       'Mobx',
       'Mobx State Tree',
       'XState',
