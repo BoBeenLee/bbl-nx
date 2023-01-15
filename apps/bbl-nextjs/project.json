@@ -63,9 +63,7 @@
       "options": {
         "uiFramework": "@storybook/react",
         "port": 4400,
-        "config": {
-          "configFolder": "apps/bbl-nextjs/.storybook"
-        }
+        "configDir": "apps/bbl-nextjs/.storybook"
       },
       "configurations": {
         "ci": {
@@ -75,13 +73,11 @@
     },
     "build-storybook": {
       "executor": "@nrwl/storybook:build",
-      "outputs": ["{options.outputPath}"],
+      "outputs": ["{options.outputDir}"],
       "options": {
         "uiFramework": "@storybook/react",
-        "outputPath": "dist/storybook/bbl-nextjs",
-        "config": {
-          "configFolder": "apps/bbl-nextjs/.storybook"
-        }
+        "configDir": "apps/bbl-nextjs/.storybook",
+        "outputDir": "dist/storybook/bbl-nextjs"
       },
       "configurations": {
         "ci": {
