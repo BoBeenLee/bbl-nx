@@ -8,6 +8,26 @@ import {
 
 export const companyPortfolios = [
   {
+    id: 'Naver',
+    name: 'Naver',
+    period: '2022.10 - ',
+    githubRepoName: [],
+    skills: [
+      'react',
+      'recoil',
+      'nextjs',
+      'typescript',
+      'storybook',
+      'i18next',
+    ],
+    summary: `네이버 쇼핑 라이브`,
+    githubUrl: '',
+    homeUrl: 'https://shoppinglive.naver.com/home/',
+    googleStoreUrl: '',
+    appStoreUrl: '',
+    images: [],
+  },
+  {
     id: 'Henesis',
     name: 'Henesis',
     period: '2020.5 - 2022.5',

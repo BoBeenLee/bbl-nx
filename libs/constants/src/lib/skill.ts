@@ -50,6 +50,9 @@ export const skills: Record<string, { uri: string }> = {
   MOBX: {
     uri: 'https://github.com/mobxjs/mobx',
   },
+  RECOIL: {
+    uri: 'https://recoiljs.org/',
+  },
   REACT_NATIVE_NAVIGATION_V2: {
     uri: 'https://wix.github.io/react-native-navigation/v2/#/',
   },
