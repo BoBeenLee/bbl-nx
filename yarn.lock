@@ -10418,7 +10418,7 @@ __metadata:
     react-helmet: ^6.1.0
     react-refresh: ^0.10.0
     react-test-renderer: 18.2.0
-    regenerator-runtime: 0.13.7
+    regenerator-runtime: 0.13.11
     remark: ^10.0.1
     remark-html: ^15.0.0
     storybook-addon-next: ^1.6.6
@@ -25205,10 +25205,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"regenerator-runtime@npm:0.13.7":
-  version: 0.13.7
-  resolution: "regenerator-runtime@npm:0.13.7"
-  checksum: 52b66e6669152c0b1bccd95c8e11aabbfe67bb97bdf00e223bdf723b0f0052d4da5c02001d4c4bef576bdc5bcdc38a20496d1b5363b65c950c8434ed5071d9e0
+"regenerator-runtime@npm:0.13.11":
+  version: 0.13.11
+  resolution: "regenerator-runtime@npm:0.13.11"
+  checksum: 27481628d22a1c4e3ff551096a683b424242a216fee44685467307f14d58020af1e19660bf2e26064de946bad7eff28950eae9f8209d55723e2d9351e632bbb4
   languageName: node
   linkType: hard
 
