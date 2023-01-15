@@ -8,8 +8,8 @@ import {
 
 export const companyPortfolios = [
   {
-    id: 'Naver',
-    name: 'Naver',
+    id: 'ShoppingLive',
+    name: 'Shopping Live',
     period: '2022.10 - ',
     githubRepoName: [],
     skills: [
@@ -18,6 +18,7 @@ export const companyPortfolios = [
       'nextjs',
       'typescript',
       'storybook',
+      'sass',
       'i18next',
     ],
     summary: `네이버 쇼핑 라이브`,
