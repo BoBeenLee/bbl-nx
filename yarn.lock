@@ -1911,31 +1911,33 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/cli@npm:8.0.0":
-  version: 8.0.0
-  resolution: "@commitlint/cli@npm:8.0.0"
+"@commitlint/cli@npm:8.3.6":
+  version: 8.3.6
+  resolution: "@commitlint/cli@npm:8.3.6"
   dependencies:
-    "@commitlint/format": ^8.0.0
-    "@commitlint/lint": ^8.0.0
-    "@commitlint/load": ^8.0.0
-    "@commitlint/read": ^8.0.0
+    "@commitlint/format": ^8.3.6
+    "@commitlint/lint": ^8.3.6
+    "@commitlint/load": ^8.3.6
+    "@commitlint/read": ^8.3.6
     babel-polyfill: 6.26.0
-    chalk: 2.3.1
+    chalk: 2.4.2
     get-stdin: 7.0.0
-    lodash: 4.17.11
+    lodash: 4.17.21
     meow: 5.0.0
     resolve-from: 5.0.0
     resolve-global: 1.0.0
   bin:
     commitlint: ./lib/cli.js
-  checksum: d39a6d5ba705e8e4c1f7c7014e089ffd3dbd3034da54046c8386e448c60c227aad566f09031bff2f1298c03b188bcbf33aacc5f32009f786e82e3078738bf289
+  checksum: 682e5957bdfd942d25c70b8dfd308af17d3041e32c9363413edc68e8a61f9f2e92db03f476ad7378356f7f89a005d0146d0ee2b1fe85f866e042c817276de22b
   languageName: node
   linkType: hard
 
-"@commitlint/config-conventional@npm:8.0.0":
-  version: 8.0.0
-  resolution: "@commitlint/config-conventional@npm:8.0.0"
-  checksum: 4a33d30514f06644871ae1524b5c0d661414207702ffeb6ef4e1da2673629bacf63a64ceb31ecad105bf8feb034972b2987a2d24361be3573d601919114253f9
+"@commitlint/config-conventional@npm:8.3.6":
+  version: 8.3.6
+  resolution: "@commitlint/config-conventional@npm:8.3.6"
+  dependencies:
+    conventional-changelog-conventionalcommits: 4.2.1
+  checksum: dc6bfa2faf7405953f84ca85ebe856fccdb2d3909ba0d94cb655d909c12a83699a53c8b9db7b894b187c08c91bda3bcdf08a16baa8fc0a2af724e4366b16ae6b
   languageName: node
   linkType: hard
 
@@ -1955,7 +1957,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/format@npm:^8.0.0":
+"@commitlint/format@npm:^8.3.6":
   version: 8.3.6
   resolution: "@commitlint/format@npm:8.3.6"
   dependencies:
@@ -1973,7 +1975,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/lint@npm:^8.0.0":
+"@commitlint/lint@npm:^8.3.6":
   version: 8.3.6
   resolution: "@commitlint/lint@npm:8.3.6"
   dependencies:
@@ -1986,7 +1988,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/load@npm:^8.0.0":
+"@commitlint/load@npm:^8.3.6":
   version: 8.3.6
   resolution: "@commitlint/load@npm:8.3.6"
   dependencies:
@@ -2019,7 +2021,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/read@npm:^8.0.0":
+"@commitlint/read@npm:^8.3.6":
   version: 8.3.6
   resolution: "@commitlint/read@npm:8.3.6"
   dependencies:
@@ -10305,8 +10307,8 @@ __metadata:
     "@babel/preset-react": ^7.14.5
     "@babel/preset-typescript": 7.17.12
     "@babel/runtime": ^7.18.9
-    "@commitlint/cli": 8.0.0
-    "@commitlint/config-conventional": 8.0.0
+    "@commitlint/cli": 8.3.6
+    "@commitlint/config-conventional": 8.3.6
     "@netlify/functions": 1.0.0
     "@netlify/plugin-nextjs": ^4.7.0
     "@next/bundle-analyzer": ^12.2.3
@@ -11261,17 +11263,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chalk@npm:2.3.1":
-  version: 2.3.1
-  resolution: "chalk@npm:2.3.1"
-  dependencies:
-    ansi-styles: ^3.2.0
-    escape-string-regexp: ^1.0.5
-    supports-color: ^5.2.0
-  checksum: 3374aae49517fb155283657c18f9836cbcf0a6890e00ea87b8385086a61e82ebfb0c5d61ba485bf36308faa9958af7859be419daf0b800a619e9142eec3e5e30
-  languageName: node
-  linkType: hard
-
 "chalk@npm:2.4.2, chalk@npm:^2.0.0, chalk@npm:^2.0.1, chalk@npm:^2.4.1, chalk@npm:^2.4.2":
   version: 2.4.2
   resolution: "chalk@npm:2.4.2"
@@ -12156,6 +12147,17 @@ __metadata:
     compare-func: ^1.3.1
     q: ^1.5.1
   checksum: 14b6644d5ba8e792897f1ada32c615d544cbc6c6092295caedf81b71c1af631d25b370847efb3e49d2e4ba836a7bbbd0edb4a437a66e2e117130b6413032bad2
+  languageName: node
+  linkType: hard
+
+"conventional-changelog-conventionalcommits@npm:4.2.1":
+  version: 4.2.1
+  resolution: "conventional-changelog-conventionalcommits@npm:4.2.1"
+  dependencies:
+    compare-func: ^1.3.1
+    lodash: ^4.2.1
+    q: ^1.5.1
+  checksum: f40f462bc4f34bd0ae619740cb0d3fff114ae557c30bf184837ff95456b831a9e27a44054abc9c4c35967b30734ebe02e12b2f3aa2addb61d587aa2f14a2195f
   languageName: node
   linkType: hard
 
@@ -20108,14 +20110,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash@npm:4.17.11":
-  version: 4.17.11
-  resolution: "lodash@npm:4.17.11"
-  checksum: 0611590f43371f1dc93f8ad6d73feab7e301417ff7bbd4f7af4421def41d7b3210230539ae952884a0c7b944ba3266dd2723c02b79f36a7906e8d9e2e280a498
-  languageName: node
-  linkType: hard
-
-"lodash@npm:4.17.21, lodash@npm:^4.17.10, lodash@npm:^4.17.11, lodash@npm:^4.17.14, lodash@npm:^4.17.15, lodash@npm:^4.17.19, lodash@npm:^4.17.20, lodash@npm:^4.17.21":
+"lodash@npm:4.17.21, lodash@npm:^4.17.10, lodash@npm:^4.17.11, lodash@npm:^4.17.14, lodash@npm:^4.17.15, lodash@npm:^4.17.19, lodash@npm:^4.17.20, lodash@npm:^4.17.21, lodash@npm:^4.2.1":
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
   checksum: eb835a2e51d381e561e508ce932ea50a8e5a68f4ebdd771ea240d3048244a8d13658acbd502cd4829768c56f2e16bdd4340b9ea141297d472517b83868e677f7
@@ -27725,7 +27720,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"supports-color@npm:^5.2.0, supports-color@npm:^5.3.0":
+"supports-color@npm:^5.3.0":
   version: 5.5.0
   resolution: "supports-color@npm:5.5.0"
   dependencies:
