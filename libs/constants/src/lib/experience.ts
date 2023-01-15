@@ -2,7 +2,7 @@
 export const experiences = [
   {
     title: 'Naver',
-    titleUri: '',
+    titleUri: 'https://www.navercorp.com/',
     period: '2022.10 - ',
     role: 'Frontend Developer',
   },
