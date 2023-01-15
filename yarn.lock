@@ -7935,21 +7935,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:18.0.5":
-  version: 18.0.5
-  resolution: "@types/react-dom@npm:18.0.5"
+"@types/react-dom@npm:18.0.10":
+  version: 18.0.10
+  resolution: "@types/react-dom@npm:18.0.10"
   dependencies:
     "@types/react": "*"
-  checksum: cd48b81950f499b52a3f0c08261f00046f9b7c96699fa249c9664e257e820daf6ecac815cd1028cebc9d105094adc39d047d1efd79214394b8b2d515574c0787
-  languageName: node
-  linkType: hard
-
-"@types/react-dom@npm:18.0.9":
-  version: 18.0.9
-  resolution: "@types/react-dom@npm:18.0.9"
-  dependencies:
-    "@types/react": "*"
-  checksum: e744e3feba25fc43733289d4df4d9c0e59fcca7f34e8c89d75f81a339accb2bd70236d69382d47d2c0ad06a1529b2e56aa6171fe175854d60e07156ddceedfcb
+  checksum: ff8282d5005a0b1cd95fb65bf79d3d8485e4cfe2aaf052129033a178684b940014a3f4536bc20d573f8a01cf4c6f4770c74988cef7c2b5cac3041d9f172647e3
   languageName: node
   linkType: hard
 
@@ -10359,7 +10350,7 @@ __metadata:
     "@types/node": 18.11.9
     "@types/qs": ^6.5.2
     "@types/react": 18.0.26
-    "@types/react-dom": 18.0.9
+    "@types/react-dom": 18.0.10
     "@types/react-helmet": ^5.0.8
     "@types/react-test-renderer": ^16.9.2
     "@typescript-eslint/eslint-plugin": 5.43.0
@@ -10454,7 +10445,7 @@ __metadata:
     "@remix-run/serve": ^1.5.1
     "@types/date-fns": ^2.6.0
     "@types/react": 18.0.26
-    "@types/react-dom": 18.0.5
+    "@types/react-dom": 18.0.10
     axios: ^0.27.2
     date-fns: ^2.29.1
     front-matter: ^4.0.2
