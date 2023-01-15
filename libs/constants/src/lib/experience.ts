@@ -1,6 +1,12 @@
 
 export const experiences = [
   {
+    title: 'Naver',
+    titleUri: '',
+    period: '2022.10 - ',
+    role: 'Frontend Developer',
+  },
+  {
     title: 'Haechi Labs',
     titleUri: 'https://haechi.io/ko',
     period: '2020.2 - 2022.5',
