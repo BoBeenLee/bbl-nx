@@ -1,9 +1,11 @@
 import { AppProps } from 'next/app';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { NextPage } from 'next';
 import Head from 'next/head';
 import { ThemeProvider } from 'next-themes';
 import Script from 'next/script';
+import { useRouter } from 'next/router';
+import { isMobile, isSafari } from '@bbl-nx/utils';
 import { env } from '../libs/env';
 import '../styles/styles.css';
 
@@ -18,6 +20,21 @@ type Props = AppProps & {
 const MyApp = (props: Props) => {
   const { Component, pageProps } = props;
   const TargetComponent = Component;
+  const router = useRouter();
+
+  useEffect(() => {
+    const handleScrollTop = () => {
+      if (isSafari() && isMobile()) {
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+        }, 10);
+      }
+    };
+    router.events.on('hashChangeComplete', handleScrollTop);
+    return () => {
+      router.events.off('hashChangeComplete', handleScrollTop);
+    };
+  }, [router.events]);
 
   return (
     <React.Fragment>
