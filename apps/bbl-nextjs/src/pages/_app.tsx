@@ -27,12 +27,12 @@ const MyApp = (props: Props) => {
       if (isSafari() && isMobile()) {
         setTimeout(() => {
           window.scrollTo(0, 0);
-        }, 10);
+        }, 0);
       }
     };
-    router.events.on('hashChangeComplete', handleScrollTop);
+    router.events.on('routeChangeComplete', handleScrollTop);
     return () => {
-      router.events.off('hashChangeComplete', handleScrollTop);
+      router.events.off('routeChangeComplete', handleScrollTop);
     };
   }, [router.events]);
 
