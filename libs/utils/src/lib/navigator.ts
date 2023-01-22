@@ -17,6 +17,14 @@ export const isMobile = () => {
   return !!md.mobile();
 };
 
+export const isSafari = () => {
+  if (!isBrowser) {
+    return false;
+  }
+  const md = new MobileDetect(window.navigator.userAgent);
+  return md.userAgent() === 'Safari';
+};
+
 export const isIE = () => {
   if (!isBrowser) {
     return false;
