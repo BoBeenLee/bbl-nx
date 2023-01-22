@@ -1,4 +1,7 @@
-import { getKeys } from '@bbl-nx/utils';
+
+function getKeys<T extends object>(obj: T): (keyof T)[] {
+  return Object.keys(obj) as (keyof T)[];
+}
 
 let prefix = '';
 
