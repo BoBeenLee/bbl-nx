@@ -1,4 +1,4 @@
-import { AppProps } from 'next/app';
+import { AppProps, NextWebVitalsMetric } from 'next/app';
 import React, { useEffect } from 'react';
 import { NextPage } from 'next';
 import Head from 'next/head';
@@ -7,6 +7,7 @@ import Script from 'next/script';
 import { useRouter } from 'next/router';
 import { isMobile, isSafari } from '@bbl-nx/utils';
 import { env } from '../libs/env';
+import { sendToGTagWebVitals } from "../libs/gtag";
 import '../styles/styles.css';
 
 type NextPageWithLayout = NextPage & {
@@ -64,5 +65,14 @@ gtag('config', '${env.GTM_ID}');
     </React.Fragment>
   );
 };
+
+export function reportWebVitals(metric: NextWebVitalsMetric) {
+  sendToGTagWebVitals({
+    category: metric.label,
+    name: metric.name,
+    delta: metric.value,
+    id: metric.id,
+  })
+}
 
 export default MyApp;
