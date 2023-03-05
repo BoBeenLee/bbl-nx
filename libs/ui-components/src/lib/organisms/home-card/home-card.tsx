@@ -1,4 +1,4 @@
-import { Avatar } from '../../atoms';
+import { Avatar } from '../../atoms/avatar/avatar';
 
 export interface HomeCardProps {
   name: string;
