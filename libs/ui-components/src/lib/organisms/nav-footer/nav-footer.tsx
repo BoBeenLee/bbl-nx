@@ -1,7 +1,6 @@
-import { NavKey } from '@bbl-nx/constants';
+import { NavKey, nav } from '@bbl-nx/constants';
 import { ALink } from '../../atoms/alink/alink';
 import { Seperator } from '../../atoms/seperator/seperator';
-import { nav } from '@bbl-nx/constants';
 
 export interface NavFooterItemProps {
   href: NavKey;

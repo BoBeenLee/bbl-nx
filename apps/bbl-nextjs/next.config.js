@@ -23,8 +23,9 @@ module.exports = withBundleAnalyzer(
       },
       experimental: {
         appDir: true,
+        typedRoutes: true,
         legacyBrowsers: false,
-        browsersListForSwc: true,
+        transpilePackages: ['@bbl-nx']
       },
       async headers() {
         return [

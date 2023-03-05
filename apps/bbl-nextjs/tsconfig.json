@@ -22,7 +22,8 @@
     "**/*.js",
     "**/*.jsx",
     "next-env.d.ts",
-    "../../dist/apps/bbl-nextjs/.next/types/**/*.ts"
+    "../../dist/apps/bbl-nextjs/.next/types/**/*.ts",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "**/*.spec.ts",
