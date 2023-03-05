@@ -1,6 +1,7 @@
 import React from 'react';
-import { useRouter } from 'next/router';
-import { LayoutTemplate, SEO, SEOProps } from '@bbl-nx/ui-components';
+import { usePathname } from 'next/navigation';
+import { LayoutTemplate } from '@bbl-nx/ui-components/templates/layout-template/layout-template';
+import { SEO, SEOProps } from '@bbl-nx/ui-components/helpers/seo/seo';
 
 interface LayoutProps {
   seoProps?: Omit<SEOProps, 'asPath'>;
@@ -9,12 +10,11 @@ interface LayoutProps {
 
 export default function Layout(props: LayoutProps) {
   const { seoProps, children } = props;
-  const router = useRouter();
-  const { asPath } = router;
+  const pathname = usePathname()
 
   return (
     <>
-      <SEO asPath={asPath} {...seoProps} />
+      <SEO asPath={pathname} {...seoProps} />
       <LayoutTemplate>{children}</LayoutTemplate>
     </>
   );

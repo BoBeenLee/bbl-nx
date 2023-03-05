@@ -2,6 +2,7 @@ import Head from "next/head";
 import Script from "next/script";
 import { env } from "../src/libs/env"
 import { ThemeProvider } from "./theme-provider";
+import './globals.css';
 
 export default function RootLayout({
     // Layouts must accept a children prop.
