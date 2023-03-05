@@ -19,7 +19,6 @@ module.exports = {
   ],
   staticDirs: [
     '../../images/src/lib/public',
-    { from: '../../images/src/lib/public', to: '/' },
   ],
   webpackFinal: async (config, { configType }) => {
     // apply any global webpack configs that might have been specified in .storybook/main.js
