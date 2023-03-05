@@ -1,5 +1,5 @@
 import { Story, Meta } from '@storybook/react';
-import ProjectPage from '../../src/pages/project/index';
+import ProjectPage from '../../src/_pages/project/index';
 
 export default {
   component: ProjectPage,

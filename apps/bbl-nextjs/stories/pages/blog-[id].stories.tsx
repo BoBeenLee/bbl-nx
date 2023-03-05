@@ -1,5 +1,5 @@
 import { Story, Meta } from '@storybook/react';
-import BlogByIdPage, { getStaticProps } from '../../src/pages/blog/[id]';
+import BlogByIdPage, { getStaticProps } from '../../src/_pages/blog/[id]';
 import { PostItem } from '../../src/libs/post';
 import { rest } from 'msw';
 import feedsJSON from '../../__mocks__/feeds.json';

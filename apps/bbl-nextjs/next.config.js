@@ -22,6 +22,7 @@ module.exports = withBundleAnalyzer(
         staticFolder: '/public',
       },
       experimental: {
+        appDir: true,
         legacyBrowsers: false,
         browsersListForSwc: true,
       },
