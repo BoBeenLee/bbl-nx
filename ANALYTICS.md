@@ -6,12 +6,15 @@
 - https://leerob.io/
 - https://vercel.com/
 
+### nextjs13 버젼
+- https://www.webpagetest.org/result/230305_BiDcC7_5V2/1/details/#waterfall_view_step1
+
 ### 이후 현재 결과
 - https://www.webpagetest.org/result/220808_BiDcGW_7HZ/
 
-<img width="1447" alt="Screen Shot 2022-08-08 at 8 50 02 PM" src="https://user-images.githubusercontent.com/1489321/183411647-6012c141-36dc-450f-9197-8ac43787be77.png">
+<img width="400" alt="Screen Shot 2022-08-08 at 8 50 02 PM" src="https://user-images.githubusercontent.com/1489321/183411647-6012c141-36dc-450f-9197-8ac43787be77.png">
 
-<img width="1280" alt="Screen Shot 2022-08-08 at 8 50 15 PM" src="https://user-images.githubusercontent.com/1489321/183411672-3910b2cc-3b78-476d-a7ae-917e8be333d5.png">
+<img width="400" alt="Screen Shot 2022-08-08 at 8 50 15 PM" src="https://user-images.githubusercontent.com/1489321/183411672-3910b2cc-3b78-476d-a7ae-917e8be333d5.png">
 
 
 ## Bundle Diet
