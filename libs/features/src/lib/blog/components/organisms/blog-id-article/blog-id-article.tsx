@@ -1,4 +1,5 @@
-import { Avatar, SectionTitle } from '@bbl-nx/ui-components';
+import { Avatar } from '@bbl-nx/ui-components/atoms/avatar/avatar';
+import { SectionTitle } from '@bbl-nx/ui-components/atoms/section-title/section-title';
 import { DATE_TIME_FORMAT5, transformDateTimeStrToText } from '@bbl-nx/utils';
 
 export interface BlogIdArticleProps {
