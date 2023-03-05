@@ -42,7 +42,7 @@
     "chromatic": "pnpm chromatic --project-token=CHROMATIC_PROJECT_TOKEN -d=dist/storybook/ui-components"
   },
   "dependencies": {
-    "@netlify/functions": "1.0.0",
+    "@netlify/functions": "1.4.0",
     "@nrwl/next": "15.8.5",
     "@react-icons/all-files": "^4.1.0",
     "@remix-run/netlify": "^1.5.1",
