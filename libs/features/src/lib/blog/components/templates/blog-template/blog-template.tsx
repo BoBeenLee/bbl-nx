@@ -1,5 +1,6 @@
 import { useCallback, useState, useTransition } from 'react';
-import { SectionTitle, SearchInput } from '@bbl-nx/ui-components';
+import { SectionTitle } from '@bbl-nx/ui-components/atoms/section-title/section-title';
+import { SearchInput } from '@bbl-nx/ui-components/molecules/search-input/search-input';
 import { BlogItem } from '../../../interfaces';
 import { Blogs } from '../../organisms';
 

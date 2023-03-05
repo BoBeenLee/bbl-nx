@@ -12,7 +12,11 @@ module.exports = {
     '../src/lib/**/*.stories.mdx',
     '../src/lib/**/*.stories.@(js|jsx|ts|tsx)',
   ],
-  addons: [...rootMain.addons, '@nrwl/react/plugins/storybook'],
+  addons: [
+    '@storybook/addon-essentials',
+    ...rootMain.addons,
+    '@nrwl/react/plugins/storybook',
+  ],
   staticDirs: [
     '../../images/src/lib/public',
     { from: '../../images/src/lib/public', to: '/' },

@@ -1,7 +1,8 @@
 import cn from 'classnames';
 import { personalPortforlios } from '@bbl-nx/constants';
 import { ProjectCard } from '../../organisms/project-card/project-card';
-import { ProjectLinks, SectionTitle } from '@bbl-nx/ui-components';
+import { SectionTitle } from '@bbl-nx/ui-components/atoms/section-title/section-title';
+import { ProjectLinks } from '@bbl-nx/ui-components/molecules/project-links/project-links';
 import { deepMemoized } from '@bbl-nx/utils';
 
 interface PersonalPortfoliosProps {

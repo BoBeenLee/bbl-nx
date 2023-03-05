@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/react';
 import BlogPage, {
   getStaticProps,
   BlogPageProps,
-} from '../../src/pages/blog/index';
+} from '../../src/_pages/blog/index';
 import { rest } from 'msw';
 import feedsJSON from '../../__mocks__/feeds.json';
 import postsJSON from '../../__mocks__/posts.json';

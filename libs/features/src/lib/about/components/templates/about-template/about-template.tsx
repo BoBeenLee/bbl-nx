@@ -1,4 +1,5 @@
-import { SectionTitle, Seperator } from '@bbl-nx/ui-components';
+import { SectionTitle } from "@bbl-nx/ui-components/atoms/section-title/section-title";
+import { Seperator } from "@bbl-nx/ui-components/atoms/seperator/seperator";
 import { Activities, Experiences, TeckStacks } from '../../organisms';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface

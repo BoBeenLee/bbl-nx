@@ -58,7 +58,7 @@ export function SEO(props: SEOProps) {
       )}
       {/* Favicons */}
       {favicons.map((linkProps) => (
-        <link key={linkProps.href} {...linkProps} />
+        <link key={linkProps.url} {...linkProps} />
       ))}
       <meta name="msapplication-TileColor" content="#ffffff" />
       <meta
@@ -70,44 +70,36 @@ export function SEO(props: SEOProps) {
   );
 }
 
-type Favicons = {
-  rel: string;
-  href: string;
-  color?: string;
-  sizes?: string;
-  type?: string;
-};
-
 // you can generate your own from https://www.favicon-generator.org/
-const favicons: Array<Favicons> = [
+export const favicons = [
   {
     rel: 'shortcut icon',
-    href: '/favicons/favicon.ico',
+    url: '/favicons/favicon.ico',
   },
   {
     rel: 'apple-touch-icon',
     sizes: '180x180',
-    href: '/favicons/apple-icon-180x180.png',
+    url: '/favicons/apple-icon-180x180.png',
   },
   {
     rel: 'icon',
     type: 'image/png',
     sizes: '32x32',
-    href: '/favicons/favicon-32x32.png',
+    url: '/favicons/favicon-32x32.png',
   },
   {
     rel: 'icon',
     type: 'image/png',
     sizes: '16x16',
-    href: '/favicons/favicon-16x16.png',
+    url: '/favicons/favicon-16x16.png',
   },
   {
     rel: 'manifest',
-    href: '/favicons/manifest.json',
+    url: '/favicons/manifest.json',
   },
   {
-    color: '#fff',
-    href: '/static/favicons/favicon.svg',
+    // color: '#fff',
+    url: '/static/favicons/favicon.svg',
     rel: 'mask-icon',
   },
 ];

@@ -1,6 +1,6 @@
 import cn from "classnames";
 import { categorySkillArray } from '@bbl-nx/constants';
-import { SectionTitle } from '@bbl-nx/ui-components';
+import { SectionTitle } from '@bbl-nx/ui-components/atoms/section-title/section-title';
 import TechStackCard from '../tech-stack-card/tech-stack-card';
 
 interface TeckStacksProps {

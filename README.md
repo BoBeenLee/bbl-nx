@@ -67,13 +67,13 @@ blog & homepage project based on monorepo(nx)
 ## Installing / Getting started
 
 ```shell
-yarn install
+pnpm install
 ```
 
 ### Setting up Dev
 
 ```shell
-yarn start
+pnpm start
 ```
 
 ## Tests
@@ -81,7 +81,7 @@ yarn start
 ### Running unit tests
 
 ```shell
-yarn test:affected
+pnpm test:affected
 ```
 
 ## Deployment
@@ -98,13 +98,13 @@ yarn test:affected
 ## Dependencies of Graph
 
 ```
-yarn nx graph
+pnpm nx graph
 ```
 
 ### Generate UI-Components
 
 ```
-yarn ui-components:new
+pnpm ui-components:new
 ```
 
 ## Supported browsers

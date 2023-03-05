@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import { Icon } from '../../atoms';
+import { Icon } from '../../atoms/icon/icon';
 import styles from './menu-button.module.css';
 
 export interface MenuButtonProps {

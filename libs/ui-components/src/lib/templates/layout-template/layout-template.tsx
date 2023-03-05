@@ -1,4 +1,5 @@
-import { NavFooter, Nav } from '../../organisms';
+import { Nav } from '../../organisms/nav/nav';
+import { NavFooter } from '../../organisms/nav-footer/nav-footer';
 
 export interface LayoutTemplateProps {
   children: React.ReactNode;

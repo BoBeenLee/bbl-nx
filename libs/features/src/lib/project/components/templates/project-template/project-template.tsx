@@ -3,7 +3,7 @@ import {
   PersonalPortfolios,
   TeamPortfolios,
 } from '../../organisms';
-import { Seperator } from '@bbl-nx/ui-components';
+import { Seperator } from '@bbl-nx/ui-components/atoms/seperator/seperator';
 
 export function ProjectTemplate() {
   return (

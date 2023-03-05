@@ -1,6 +1,7 @@
 import cn from 'classnames';
 import { teamPortfolios } from '@bbl-nx/constants';
-import { ProjectLinks, SectionTitle } from '@bbl-nx/ui-components';
+import { SectionTitle } from '@bbl-nx/ui-components/atoms/section-title/section-title';
+import { ProjectLinks } from '@bbl-nx/ui-components/molecules/project-links/project-links';
 import { deepMemoized } from '@bbl-nx/utils';
 import ProjectCard from '../project-card/project-card';
 

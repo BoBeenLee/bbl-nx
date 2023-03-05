@@ -1,11 +1,12 @@
-import Link, { LinkProps } from 'next/link';
-import { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
+import Link from 'next/link';
+import { useMemo } from 'react';
+import { usePathname } from 'next/navigation';
 import cn from 'classnames';
 import { NavRouter, NavRouterKey } from '@bbl-nx/constants';
 import { makePathname } from '@bbl-nx/utils';
 
-export type ALinkProps<F extends NavRouterKey> = Omit<LinkProps, 'href'> & {
+export type ALinkProps<F extends NavRouterKey> = {
+  as?: string;
   className?: string;
   activeClassName?: string;
   children: React.ReactNode;
@@ -26,55 +27,39 @@ export function ALink<F extends NavRouterKey>(props: ALinkProps<F>) {
     urlPath,
     ...restWithURLPathValues
   } = props;
-  const { asPath, isReady } = useRouter();
-  const [className, setClassName] = useState(childClassName);
+  const pathname = usePathname();
   const getRestWithPathValues = () => {
-    if('urlPathValues' in restWithURLPathValues) {
+    if ('urlPathValues' in restWithURLPathValues) {
       return {
         ...restWithURLPathValues,
-        urlPathValues: (restWithURLPathValues as any).urlPathValues
-      } 
+        urlPathValues: (restWithURLPathValues as any).urlPathValues,
+      };
     }
-    return { ...restWithURLPathValues, urlPathValues: {} }
-  }
-  const { urlPathValues, ...rest } = getRestWithPathValues()
+    return { ...restWithURLPathValues, urlPathValues: {} };
+  };
+  const { urlPathValues, ...rest } = getRestWithPathValues();
   const href = makePathname(urlPath, urlPathValues);
+  const className = useMemo(() => {
+    // Dynamic route will be matched via props.as
+    // Static route will be matched via props.href
+    const linkPathname = props.as || href
 
-  useEffect(() => {
-    // Check if the router fields are updated client-side
-    if (isReady) {
-      // Dynamic route will be matched via props.as
-      // Static route will be matched via props.href
-      const linkPathname = new URL(
-        (props.as || href) as string,
-        window.location.href
-      ).pathname;
+    // Using URL().pathname to get rid of query and hash
+    const activePathname = pathname;
 
-      // Using URL().pathname to get rid of query and hash
-      const activePathname = new URL(asPath, window.location.href).pathname;
+    const newClassName =
+      linkPathname === activePathname
+        ? cn(childClassName, activeClassName)
+        : childClassName;
 
-      const newClassName =
-        linkPathname === activePathname
-          ? cn(childClassName, activeClassName)
-          : childClassName;
-
-      if (newClassName !== className) {
-        setClassName(newClassName);
-      }
+    if (newClassName !== childClassName) {
+      return newClassName;
     }
-  }, [
-    asPath,
-    isReady,
-    props.as,
-    href,
-    childClassName,
-    activeClassName,
-    setClassName,
-    className,
-  ]);
+    return childClassName;
+  }, [activeClassName, childClassName, href, pathname, props.as]);
 
   return (
-    <Link {...rest} className={className} href={href}>
+    <Link {...rest} className={className} href={href as any}>
       {children}
     </Link>
   );
