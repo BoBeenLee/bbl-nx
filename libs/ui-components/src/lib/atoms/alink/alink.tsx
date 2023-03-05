@@ -59,7 +59,7 @@ export function ALink<F extends NavRouterKey>(props: ALinkProps<F>) {
   }, [activeClassName, childClassName, href, pathname, props.as]);
 
   return (
-    <Link {...rest} className={className} href={href}>
+    <Link {...rest} className={className} href={href as any}>
       {children}
     </Link>
   );
