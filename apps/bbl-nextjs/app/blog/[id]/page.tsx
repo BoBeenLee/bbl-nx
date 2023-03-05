@@ -22,7 +22,6 @@ const BlogByIdPage = async (props: Props) => {
 
 export async function generateStaticParams() {
   const posts = await getAllPosts();
-  console.log(posts);
   return posts.map((post) => {
     return {
       id: post.slug,

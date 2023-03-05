@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react';
 import { usePathname } from 'next/navigation';
 import { LayoutTemplate } from '@bbl-nx/ui-components/templates/layout-template/layout-template';
