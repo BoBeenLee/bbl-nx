@@ -4,6 +4,7 @@ module.exports = {
   features: {
     interactionsDebugger: true,
   },
+  stories: [],
 
   addons: [
     'storybook-addon-tailwindcss-dark-mode',
