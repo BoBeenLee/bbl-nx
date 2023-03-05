@@ -9,9 +9,8 @@
 ### nextjs13 버젼 이후
 - https://www.webpagetest.org/result/230305_BiDcC7_5V2/1/details/#waterfall_view_step1
 
-<img width="400" alt="Screen Shot 2023-03-05 at 11 30 50 PM" src="https://user-images.githubusercontent.com/1489321/222966736-04b61f04-5c1e-4011-b4c3-9195634f1e08.png">
 <img width="400" alt="Screen Shot 2023-03-05 at 11 30 42 PM" src="https://user-images.githubusercontent.com/1489321/222966742-4b68743a-89d0-46bc-ba7c-f9cbb170f838.png">
-
+<img width="400" alt="Screen Shot 2023-03-05 at 11 30 50 PM" src="https://user-images.githubusercontent.com/1489321/222966736-04b61f04-5c1e-4011-b4c3-9195634f1e08.png">
 
 ### nextjs13 버젼 이전
 - https://www.webpagetest.org/result/220808_BiDcGW_7HZ/
