@@ -75,7 +75,7 @@
     "remark": "^10.0.1",
     "remark-html": "^15.0.0",
     "tslib": "^2.3.0",
-    "xstate": "^4.32.1"
+    "xstate": "^4.37.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.10",

@@ -139,7 +139,7 @@ specifiers:
   url-loader: ^4.1.1
   webpack: ^5.75.0
   webpack-merge: ^5.8.0
-  xstate: ^4.32.1
+  xstate: ^4.37.0
 
 dependencies:
   '@netlify/functions': 1.0.0
@@ -149,7 +149,7 @@ dependencies:
   '@remix-run/node': 1.13.0
   '@remix-run/react': 1.13.0_biqbaboplfbrettd7655fr4n2y
   '@remix-run/serve': 1.13.0
-  '@xstate/react': 3.2.1_gtag2pdc6ctwabmisrelzywdam
+  '@xstate/react': 3.2.1_7ldedhq65n2n63dxu54z7lcb2q
   axios: 1.2.2
   chroma-js: 2.4.2
   classnames: 2.3.2
@@ -175,7 +175,7 @@ dependencies:
   remark: 10.0.1
   remark-html: 15.0.2
   tslib: 2.5.0
-  xstate: 4.36.0
+  xstate: 4.37.0
 
 devDependencies:
   '@babel/cli': 7.20.7_@babel+core@7.20.12
@@ -8552,7 +8552,7 @@ packages:
     engines: {node: '>=10.0.0'}
     dev: true
 
-  /@xstate/react/3.2.1_gtag2pdc6ctwabmisrelzywdam:
+  /@xstate/react/3.2.1_7ldedhq65n2n63dxu54z7lcb2q:
     resolution: {integrity: sha512-L/mqYRxyBWVdIdSaXBHacfvS8NKn3sTKbPb31aRADbE9spsJ1p+tXil0GVQHPlzrmjGeozquLrxuYGiXsFNU7g==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/@xstate/react/-/react-3.2.1.tgz}
     peerDependencies:
       '@xstate/fsm': ^2.0.0
@@ -8567,7 +8567,7 @@ packages:
       react: 18.2.0
       use-isomorphic-layout-effect: 1.1.2_3stiutgnnbnfnf3uowm5cip22i
       use-sync-external-store: 1.2.0_react@18.2.0
-      xstate: 4.36.0
+      xstate: 4.37.0
     transitivePeerDependencies:
       - '@types/react'
     dev: false
@@ -24295,7 +24295,7 @@ packages:
     dev: false
 
   /use-sync-external-store/1.2.0_react@18.2.0:
-    resolution: {integrity: sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/use-sync-external-store/-/use-sync-external-store-1.2.0.tgz}
+    resolution: {integrity: sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
@@ -25121,8 +25121,8 @@ packages:
       cssfilter: 0.0.10
     dev: true
 
-  /xstate/4.36.0:
-    resolution: {integrity: sha512-AUI+KPgyy3g4PDpZWzUy/5ubd8VymbqikNmrJx5AQfqh+AQnemkBiabGROno+am1wUl2yeuT3UDrzUTSidfa6g==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/xstate/-/xstate-4.36.0.tgz}
+  /xstate/4.37.0:
+    resolution: {integrity: sha512-YC+JCerRclKS9ixQTuw8l3vs3iFqWzNzOGR0ID5XsSlieMXIV9nNPE43h9CGr7VdxA1QYhMwhCZA0EdpOd17Bg==}
     dev: false
 
   /xtend/4.0.2:
