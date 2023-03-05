@@ -1,7 +1,7 @@
-import { DarkModeButton, NavItem } from '../../molecules';
+import { DarkModeButton } from '../../molecules/dark-mode-button/dark-mode-button';
+import { NavItem } from '../../molecules/nav-item/nav-item';
 import MobileNav from '../mobile-nav/mobile-nav';
 import { nav } from '@bbl-nx/constants';
-
 
 export function Nav() {
   return (

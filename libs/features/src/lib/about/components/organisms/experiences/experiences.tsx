@@ -1,6 +1,6 @@
 import cn from 'classnames';
 import { experiences } from '@bbl-nx/constants';
-import { SectionTitle } from '@bbl-nx/ui-components';
+import { SectionTitle } from '@bbl-nx/ui-components/atoms/section-title/section-title';
 import ExperienceCard from '../experience-card/experience-card';
 
 interface ExperiencesProps {

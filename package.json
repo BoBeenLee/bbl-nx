@@ -12,7 +12,7 @@
   },
   "engines": {
     "npm": ">=7.0.0",
-    "node": ">=16.0.0"
+    "node": ">=16.15.1"
   },
   "scripts": {
     "post:new": "pnpm plop post",
@@ -75,7 +75,7 @@
     "remark": "^10.0.1",
     "remark-html": "^15.0.0",
     "tslib": "^2.3.0",
-    "xstate": "^4.32.1"
+    "xstate": "^4.37.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.10",
@@ -147,7 +147,7 @@
     "dotenv": "^16.0.1",
     "env-cmd": "^10.1.0",
     "eslint": "8.32.0",
-    "eslint-config-next": "13.1.6",
+    "eslint-config-next": "13.2.3",
     "eslint-config-prettier": "8.6.0",
     "eslint-plugin-cypress": "^2.10.3",
     "eslint-plugin-import": "2.27.5",

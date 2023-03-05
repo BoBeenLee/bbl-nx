@@ -22,9 +22,11 @@ module.exports = withBundleAnalyzer(
         staticFolder: '/public',
       },
       experimental: {
+        appDir: true,
+        typedRoutes: true,
         legacyBrowsers: false,
-        browsersListForSwc: true,
       },
+      transpilePackages: ['@bbl-nx'],
       async headers() {
         return [
           {

@@ -1,6 +1,6 @@
 import cn from 'classnames';
 import { activity } from '@bbl-nx/constants';
-import { SectionTitle } from '@bbl-nx/ui-components';
+import { SectionTitle } from '@bbl-nx/ui-components/atoms/section-title/section-title';
 import ActivityCard from '../activity-card/activity-card';
 
 interface ActivitiesProps {

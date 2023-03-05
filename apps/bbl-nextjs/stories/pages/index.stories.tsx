@@ -1,5 +1,5 @@
 import { Story, Meta } from '@storybook/react';
-import IndexPage from '../../src/pages/index';
+import IndexPage from '../../src/_pages/index';
 
 export default {
   component: IndexPage,

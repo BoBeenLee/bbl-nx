@@ -1,5 +1,6 @@
 import cn from 'classnames';
-import { ALink, ExternalLink } from '@bbl-nx/ui-components';
+import { ALink } from '@bbl-nx/ui-components/atoms/alink/alink';
+import { ExternalLink } from '@bbl-nx/ui-components/atoms/external-link/external-link';
 import { BlogItem } from '../../../interfaces';
 import BlogCard from '../blog-card/blog-card';
 
