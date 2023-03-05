@@ -4,10 +4,10 @@ module.exports = {
   features: {
     interactionsDebugger: true,
   },
-  stories: [],
+
   addons: [
     'storybook-addon-tailwindcss-dark-mode',
-    '@storybook/addon-essentials',
+
     '@storybook/addon-interactions',
     {
       name: '@storybook/addon-postcss',

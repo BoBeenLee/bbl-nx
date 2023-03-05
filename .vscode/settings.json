@@ -7,7 +7,7 @@
     "**/tsconfig.tsbuildinfo": true,
     ".eslintcache": true
   },
-  "jest.jestCommandLine": "yarn test",
+  "jest.jestCommandLine": "pnpm test",
   "jest.autoRun": {
     "watch": false,
     "onStartup": ["all-tests"],
