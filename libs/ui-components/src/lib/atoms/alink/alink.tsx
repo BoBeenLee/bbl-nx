@@ -1,11 +1,12 @@
-import Link, { LinkProps } from 'next/link';
+import Link from 'next/link';
 import { useMemo } from 'react';
 import { usePathname } from 'next/navigation';
 import cn from 'classnames';
 import { NavRouter, NavRouterKey } from '@bbl-nx/constants';
 import { makePathname } from '@bbl-nx/utils';
 
-export type ALinkProps<F extends NavRouterKey> = Omit<LinkProps, 'href'> & {
+export type ALinkProps<F extends NavRouterKey> = {
+  as?: string;
   className?: string;
   activeClassName?: string;
   children: React.ReactNode;
