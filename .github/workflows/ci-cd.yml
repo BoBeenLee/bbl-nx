@@ -13,6 +13,7 @@ env:
   CACHED_DEPENDENCY_PATHS: ${{ github.workspace }}/node_modules
   CACHED_BUILD_PATHS: ${{ github.workspace }}/.next
   BUILD_CACHE_KEY: ${{ github.sha }}
+  PNPM_VERSION: 7.27.1
 
 jobs:
   job_install_dependencies:
@@ -22,6 +23,11 @@ jobs:
     steps:
       - name: Check out current commit (${{ github.sha }})
         uses: actions/checkout@v2
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: ${{ env.PNPM_VERSION }}
 
       - name: Set up Node
         uses: actions/setup-node@v1
@@ -55,6 +61,11 @@ jobs:
     steps:
       - name: Check out current commit (${{ github.sha }})
         uses: actions/checkout@v2
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: ${{ env.PNPM_VERSION }}
 
       - name: Set up Node
         uses: actions/setup-node@v1
@@ -91,6 +102,11 @@ jobs:
           submodules: recursive
           fetch-depth: 0
 
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: ${{ env.PNPM_VERSION }}
+
       - name: Derive appropriate SHAs for base and head for `nx affected` commands
         uses: nrwl/nx-set-shas@v2
         with:
@@ -125,6 +141,11 @@ jobs:
           submodules: recursive
           fetch-depth: 0
 
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: ${{ env.PNPM_VERSION }}
+
       - name: Check dependency cache
         uses: actions/cache@v2
         with:
@@ -156,6 +177,11 @@ jobs:
         with:
           submodules: recursive
           fetch-depth: 0
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: ${{ env.PNPM_VERSION }}
 
       - name: Check dependency cache
         uses: actions/cache@v2

@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Script from 'next/script';
 import { env } from '../src/libs/env';
 import { ThemeProvider } from './theme-provider';
-import Layout from '../src/components/layout';
+import Layout from '../src/components/ui/layout';
 import { metadataItem } from '@bbl-nx/constants';
 
 import './globals.css';
@@ -38,7 +38,9 @@ export async function generateMetadata(): Promise<Metadata> {
     themeColor: '#111827',
     icons: {
       icon: favicons,
-    }
+    },
+    viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no',
+    
   };
 }
 
@@ -52,13 +54,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <Head>
-        <title>{'BoBeen Lee'}</title>
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
         <link
           rel="preconnect"
           href="https://fonts.googleapis.com"

@@ -9,7 +9,7 @@ module.exports = {
       __dirname,
       '{app,src,pages,components}/**/*!(*.stories|*.spec).{ts,tsx,html}'
     ),
-    ...createGlobPatternsForDependencies(__dirname),
+    'libs/**/*!(*.stories|*.spec).{tsx,jsx,js,html}',
   ],
   darkMode: "class",
   theme: {
