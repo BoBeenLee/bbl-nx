@@ -8,7 +8,7 @@ specifiers:
   '@babel/runtime': ^7.18.9
   '@commitlint/cli': 8.0.0
   '@commitlint/config-conventional': 8.0.0
-  '@netlify/functions': 1.0.0
+  '@netlify/functions': 1.4.0
   '@netlify/plugin-nextjs': ^4.7.0
   '@next/bundle-analyzer': ^12.2.3
   '@nrwl/cli': 15.8.5
@@ -142,10 +142,10 @@ specifiers:
   xstate: ^4.37.0
 
 dependencies:
-  '@netlify/functions': 1.0.0
+  '@netlify/functions': 1.4.0
   '@nrwl/next': 15.8.5_2v4iqcocegdwsnyfimhljyudmi
   '@react-icons/all-files': 4.1.0_react@18.2.0
-  '@remix-run/netlify': 1.13.0_@netlify+functions@1.0.0
+  '@remix-run/netlify': 1.13.0_@netlify+functions@1.4.0
   '@remix-run/node': 1.13.0
   '@remix-run/react': 1.13.0_biqbaboplfbrettd7655fr4n2y
   '@remix-run/serve': 1.13.0
@@ -3361,19 +3361,11 @@ packages:
       '@netlify/esbuild-windows-arm64': 0.14.39
     dev: true
 
-  /@netlify/functions/1.0.0:
-    resolution: {integrity: sha512-7fnJv3vr8uyyyOYPChwoec6MjzsCw1CoRUO2DhQ1BD6bOyJRlD4DUaOOGlMILB2LCT8P24p5LexEGx8AJb7xdA==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/@netlify/functions/-/functions-1.0.0.tgz}
-    engines: {node: '>=8.3.0'}
-    dependencies:
-      is-promise: 4.0.0
-    dev: false
-
   /@netlify/functions/1.4.0:
-    resolution: {integrity: sha512-gy7ULTIRroc2/jyFVGx1djCmmBMVisIwrvkqggq5B6iDcInRSy2Tpkm+V5C63hKJVkNRskKWtLQKm9ecCaQTjA==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/@netlify/functions/-/functions-1.4.0.tgz}
+    resolution: {integrity: sha512-gy7ULTIRroc2/jyFVGx1djCmmBMVisIwrvkqggq5B6iDcInRSy2Tpkm+V5C63hKJVkNRskKWtLQKm9ecCaQTjA==}
     engines: {node: '>=8.3.0'}
     dependencies:
       is-promise: 4.0.0
-    dev: true
 
   /@netlify/ipx/1.3.3:
     resolution: {integrity: sha512-2rDdCGPDPW7cyJr57rwfvpouOJx34CLDgfa2yfqTKvPzqCMOqkCi1PN/rHGuvJ/k5trZ8rxmWnnZyEbeQaZcqA==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/@netlify/ipx/-/ipx-1.3.3.tgz}
@@ -4465,13 +4457,13 @@ packages:
       '@remix-run/node': 1.13.0
       express: 4.18.2
 
-  /@remix-run/netlify/1.13.0_@netlify+functions@1.0.0:
+  /@remix-run/netlify/1.13.0_@netlify+functions@1.4.0:
     resolution: {integrity: sha512-pTNr+RDXXVfpDcLZDRR6/TyJrnN6pIehmZg6NciJntNLxl4WqGh4zGmhUWkyV8esCvA7hQsTIB0RJkOx3llGfA==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/@remix-run/netlify/-/netlify-1.13.0.tgz}
     engines: {node: '>=14'}
     peerDependencies:
       '@netlify/functions': ^0.10.0 || ^0.11.0 || ^1.0.0
     dependencies:
-      '@netlify/functions': 1.0.0
+      '@netlify/functions': 1.4.0
       '@remix-run/node': 1.13.0
     dev: false
 
@@ -15484,7 +15476,7 @@ packages:
     dev: true
 
   /is-promise/4.0.0:
-    resolution: {integrity: sha512-hvpoI6korhJMnej285dSg6nu1+e6uxs7zG3BYAm5byqDsgJNWwxzM6z6iZiAgQR4TJ30JmBTOwqZUw3WlyH3AQ==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/is-promise/-/is-promise-4.0.0.tgz}
+    resolution: {integrity: sha512-hvpoI6korhJMnej285dSg6nu1+e6uxs7zG3BYAm5byqDsgJNWwxzM6z6iZiAgQR4TJ30JmBTOwqZUw3WlyH3AQ==}
 
   /is-reference/1.2.1:
     resolution: {integrity: sha512-U82MsXXiFIrjCK4otLT+o2NA2Cd2g5MLoOVXUZjIOhLurrRxpEXzI8O0KZHr3IjLvlAH1kTPYSuqer5T9ZVBKQ==}
