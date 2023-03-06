@@ -30,7 +30,7 @@ jobs:
           version: ${{ env.PNPM_VERSION }}
 
       - name: Set up Node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: '16'
 
@@ -68,7 +68,7 @@ jobs:
           version: ${{ env.PNPM_VERSION }}
 
       - name: Set up Node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: '16'
 
@@ -112,7 +112,7 @@ jobs:
         with:
           main-branch-name: 'master'
 
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v3
         with:
           node-version: '16'
 
