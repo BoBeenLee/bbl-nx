@@ -128,7 +128,7 @@ specifiers:
   storybook-addon-swc: ^1.1.7
   storybook-addon-tailwindcss-dark-mode: 0.0.9
   style-loader: ^3.3.0
-  stylus: ^0.55.0
+  stylus: ^0.59.0
   stylus-loader: ^7.1.0
   tailwindcss: 3.2.7
   ts-jest: 29.0.5
@@ -273,8 +273,8 @@ devDependencies:
   storybook-addon-swc: 1.1.9_webpack@5.75.0
   storybook-addon-tailwindcss-dark-mode: 0.0.9_uwzxf2kmksmihi4as2vrfuw5na
   style-loader: 3.3.1_webpack@5.75.0
-  stylus: 0.55.0
-  stylus-loader: 7.1.0_irl2hmhzopg6urv44vymn74p4e
+  stylus: 0.59.0
+  stylus-loader: 7.1.0_577zv5myo6oqbmxnic7hzxwylm
   tailwindcss: 3.2.7_v776zzvn44o7tpgzieipaairwm
   ts-jest: 29.0.5_nzu2yxgzfscwilozzizjpzzz7a
   ts-node: 10.9.1_w6ufic3jqylcjznzspnj4wjqfe
@@ -287,7 +287,7 @@ devDependencies:
 packages:
 
   /@adobe/css-tools/4.1.0:
-    resolution: {integrity: sha512-mMVJ/j/GbZ/De4ZHWbQAQO1J6iVnjtZLc9WEdkUQb8S/Bu2cAF2bETXUgMAdvMG3/ngtKmcNBe+Zms9bg6jnQQ==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/@adobe/css-tools/-/css-tools-4.1.0.tgz}
+    resolution: {integrity: sha512-mMVJ/j/GbZ/De4ZHWbQAQO1J6iVnjtZLc9WEdkUQb8S/Bu2cAF2bETXUgMAdvMG3/ngtKmcNBe+Zms9bg6jnQQ==}
     dev: true
 
   /@ampproject/remapping/2.2.0:
@@ -11233,6 +11233,7 @@ packages:
       inherits: 2.0.4
       source-map: 0.6.1
       source-map-resolve: 0.6.0
+    dev: false
 
   /cssesc/3.0.0:
     resolution: {integrity: sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==}
@@ -11451,7 +11452,7 @@ packages:
       ms: 2.0.0
 
   /debug/3.1.0:
-    resolution: {integrity: sha512-OX8XqP7/1a9cqkxYw2yXss15f26NKWBpDXQd0/uK/KPqdQhxbPa994hnzjcE2VqQpDslf55723cKPUOGSmMY3g==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/debug/-/debug-3.1.0.tgz}
+    resolution: {integrity: sha512-OX8XqP7/1a9cqkxYw2yXss15f26NKWBpDXQd0/uK/KPqdQhxbPa994hnzjcE2VqQpDslf55723cKPUOGSmMY3g==}
     peerDependencies:
       supports-color: '*'
     peerDependenciesMeta:
@@ -11459,6 +11460,7 @@ packages:
         optional: true
     dependencies:
       ms: 2.0.0
+    dev: false
 
   /debug/3.2.7:
     resolution: {integrity: sha512-CFjzYYAi4ThfiQvizrFQevTTXHtnCqWfe7x1AhgEscTz6ZbLbfoLRLPugTQyBth6f8ZERVUSyWHFD/7Wu4t1XQ==}
@@ -21916,7 +21918,7 @@ packages:
     dev: false
 
   /sax/1.2.4:
-    resolution: {integrity: sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/sax/-/sax-1.2.4.tgz}
+    resolution: {integrity: sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==}
 
   /saxes/6.0.0:
     resolution: {integrity: sha512-xAg7SOnEhrm5zI3puOOKyy1OMcMlIJZYNJY7xLBwSze0UjhPLnWfj2GF2EpT0jmzaJKIWKHLsaSSajf35bcYnA==}
@@ -22425,6 +22427,7 @@ packages:
     dependencies:
       atob: 2.1.2
       decode-uri-component: 0.2.2
+    dev: false
 
   /source-map-support/0.5.13:
     resolution: {integrity: sha512-SHSKFHadjVA5oR4PPqhtAVdcBWwRYVd6g6cAXnIbRiIwc2EhPrTuKUBdSLvlEKyIP3GCf89fltvcZiP9MMFA1w==}
@@ -23088,6 +23091,20 @@ packages:
       postcss: 8.4.19
       postcss-selector-parser: 6.0.11
 
+  /stylus-loader/7.1.0_577zv5myo6oqbmxnic7hzxwylm:
+    resolution: {integrity: sha512-gNUEjjozR+oZ8cuC/Fx4LVXqZOgDKvpW9t2hpXHcxjfPYqSjQftaGwZUK+wL9B0QJ26uS6p1EmoWHmvld1dF7g==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/stylus-loader/-/stylus-loader-7.1.0.tgz}
+    engines: {node: '>= 14.15.0'}
+    peerDependencies:
+      stylus: '>=0.52.4'
+      webpack: ^5.0.0
+    dependencies:
+      fast-glob: 3.2.12
+      klona: 2.0.6
+      normalize-path: 3.0.0
+      stylus: 0.59.0
+      webpack: 5.75.0
+    dev: true
+
   /stylus-loader/7.1.0_irl2hmhzopg6urv44vymn74p4e:
     resolution: {integrity: sha512-gNUEjjozR+oZ8cuC/Fx4LVXqZOgDKvpW9t2hpXHcxjfPYqSjQftaGwZUK+wL9B0QJ26uS6p1EmoWHmvld1dF7g==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/stylus-loader/-/stylus-loader-7.1.0.tgz}
     engines: {node: '>= 14.15.0'}
@@ -23100,9 +23117,10 @@ packages:
       normalize-path: 3.0.0
       stylus: 0.55.0
       webpack: 5.75.0
+    dev: false
 
   /stylus/0.55.0:
-    resolution: {integrity: sha512-MuzIIVRSbc8XxHH7FjkvWqkIcr1BvoMZoR/oFuAJDlh7VSaNJzrB4uJ38GRQa+mWjLXODAMzeDe0xi9GYbGwnw==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/stylus/-/stylus-0.55.0.tgz}
+    resolution: {integrity: sha512-MuzIIVRSbc8XxHH7FjkvWqkIcr1BvoMZoR/oFuAJDlh7VSaNJzrB4uJ38GRQa+mWjLXODAMzeDe0xi9GYbGwnw==}
     hasBin: true
     dependencies:
       css: 3.0.0
@@ -23115,6 +23133,20 @@ packages:
       source-map: 0.7.4
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  /stylus/0.59.0:
+    resolution: {integrity: sha512-lQ9w/XIOH5ZHVNuNbWW8D822r+/wBSO/d6XvtyHLF7LW4KaCIDeVbvn5DF8fGCJAUCwVhVi/h6J0NUcnylUEjg==}
+    hasBin: true
+    dependencies:
+      '@adobe/css-tools': 4.1.0
+      debug: 4.3.4
+      glob: 7.2.3
+      sax: 1.2.4
+      source-map: 0.7.4
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
 
   /supports-color/5.5.0:
     resolution: {integrity: sha512-QjVjwdXIt408MIiAqCX4oUKsgU2EqAGzs2Ppkm4aQYbjm+ZEWEcW4SfFNTr4uMNZma0ey4f5lgLrkB0aX0QMow==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/supports-color/-/supports-color-5.5.0.tgz}
