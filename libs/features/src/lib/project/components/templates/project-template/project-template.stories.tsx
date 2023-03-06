@@ -1,5 +1,5 @@
 import { Story, Meta } from '@storybook/react';
-import { LayoutTemplate } from '@bbl-nx/ui-components';
+import { LayoutTemplate } from '@bbl-nx/ui-components/templates';
 import { ProjectTemplate } from './project-template';
 
 export default {

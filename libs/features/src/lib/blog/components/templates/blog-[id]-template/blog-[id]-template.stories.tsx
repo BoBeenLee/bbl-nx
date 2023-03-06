@@ -1,6 +1,6 @@
 import { Story, Meta } from '@storybook/react';
 import { mockBlogId } from '../../../__mocks__/blog';
-import { LayoutTemplate } from '@bbl-nx/ui-components';
+import { LayoutTemplate } from '@bbl-nx/ui-components/templates';
 import { BlogIdTemplate, BlogIdTemplateProps } from './blog-[id]-template';
 
 export default {

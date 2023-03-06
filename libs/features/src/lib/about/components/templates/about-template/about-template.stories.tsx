@@ -1,6 +1,5 @@
-import { action } from '@storybook/addon-actions';
 import { Story, Meta } from '@storybook/react';
-import { LayoutTemplate } from '@bbl-nx/ui-components';
+import { LayoutTemplate } from '@bbl-nx/ui-components/templates';
 import { AboutTemplate, AboutTemplateProps } from './about-template';
 
 export default {

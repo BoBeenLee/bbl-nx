@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Script from 'next/script';
 import { env } from '../src/libs/env';
 import { ThemeProvider } from './theme-provider';
-import Layout from '../src/components/layout';
+import Layout from '../src/components/ui/layout';
 import { metadataItem } from '@bbl-nx/constants';
 
 import './globals.css';

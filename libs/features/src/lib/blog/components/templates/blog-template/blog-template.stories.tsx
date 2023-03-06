@@ -1,5 +1,5 @@
 import { Story, Meta } from '@storybook/react';
-import { LayoutTemplate } from '@bbl-nx/ui-components';
+import { LayoutTemplate } from '@bbl-nx/ui-components/templates';
 import { mockBlogs } from '../../../__mocks__/blog';
 import { BlogTemplate, BlogTemplateProps } from './blog-template';
 import { within, userEvent } from '@storybook/testing-library';
