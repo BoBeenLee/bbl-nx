@@ -22,7 +22,7 @@ jobs:
     timeout-minutes: 15
     steps:
       - name: Check out current commit (${{ github.sha }})
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Set up pnpm
         uses: pnpm/action-setup@v2
@@ -60,7 +60,7 @@ jobs:
     timeout-minutes: 15
     steps:
       - name: Check out current commit (${{ github.sha }})
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Set up pnpm
         uses: pnpm/action-setup@v2
@@ -97,7 +97,7 @@ jobs:
     needs: job_build
     steps:
       - name: Checkout the repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           submodules: recursive
           fetch-depth: 0
@@ -136,7 +136,7 @@ jobs:
     needs: job_build
     steps:
       - name: Checkout the repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           submodules: recursive
           fetch-depth: 0
@@ -173,7 +173,7 @@ jobs:
     needs: job_build
     steps:
       - name: Checkout the repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           submodules: recursive
           fetch-depth: 0
