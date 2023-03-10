@@ -39,7 +39,7 @@ jobs:
         run: echo "::set-output name=hash::${{ hashFiles('pnpm-lock.yaml') }}"
 
       - name: Check dependency cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         id: cache_dependencies
         with:
           path: ${{ env.CACHED_DEPENDENCY_PATHS }}
@@ -73,13 +73,13 @@ jobs:
           node-version: '16'
 
       - name: Check dependency cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ${{ env.CACHED_DEPENDENCY_PATHS }}
           key: ${{ needs.job_install_dependencies.outputs.dependency_cache_key }}
 
       - name: Check build cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         id: cache_built_packages
         with:
           path: ${{ env.CACHED_BUILD_PATHS }}
@@ -117,13 +117,13 @@ jobs:
           node-version: '16'
 
       - name: Check dependency cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ${{ env.CACHED_DEPENDENCY_PATHS }}
           key: ${{ needs.job_build.outputs.dependency_cache_key }}
 
       - name: Check build cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ${{ env.CACHED_BUILD_PATHS }}
           key: ${{ env.BUILD_CACHE_KEY }}
@@ -147,13 +147,13 @@ jobs:
           version: ${{ env.PNPM_VERSION }}
 
       - name: Check dependency cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ${{ env.CACHED_DEPENDENCY_PATHS }}
           key: ${{ needs.job_build.outputs.dependency_cache_key }}
 
       - name: Check build cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ${{ env.CACHED_BUILD_PATHS }}
           key: ${{ env.BUILD_CACHE_KEY }}
@@ -184,13 +184,13 @@ jobs:
           version: ${{ env.PNPM_VERSION }}
 
       - name: Check dependency cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ${{ env.CACHED_DEPENDENCY_PATHS }}
           key: ${{ needs.job_build.outputs.dependency_cache_key }}
 
       - name: Check build cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ${{ env.CACHED_BUILD_PATHS }}
           key: ${{ env.BUILD_CACHE_KEY }}
