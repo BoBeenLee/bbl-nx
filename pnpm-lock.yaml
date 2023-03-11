@@ -85,7 +85,7 @@ specifiers:
   env-cmd: ^10.1.0
   eslint: 8.32.0
   eslint-config-next: 13.2.3
-  eslint-config-prettier: 8.6.0
+  eslint-config-prettier: 8.7.0
   eslint-plugin-cypress: ^2.10.3
   eslint-plugin-import: 2.27.5
   eslint-plugin-jsx-a11y: 6.7.1
@@ -189,7 +189,7 @@ devDependencies:
   '@next/bundle-analyzer': 12.3.4
   '@nrwl/cli': 15.8.5
   '@nrwl/cypress': 15.8.5_xyfsa2f3fohf6wbywlnsa3g3mu
-  '@nrwl/eslint-plugin-nx': 15.8.5_nf3p5rnf4oc22ckbsqrff5zb6q
+  '@nrwl/eslint-plugin-nx': 15.8.5_5mdjx5og4irkuvaa77j6ayeady
   '@nrwl/jest': 15.8.5_imo72c57ycjmfscox7gdpneyke
   '@nrwl/js': 15.8.5_pnzcqtp32afl7kejcus445d57e
   '@nrwl/linter': 15.8.5_pnzcqtp32afl7kejcus445d57e
@@ -248,7 +248,7 @@ devDependencies:
   env-cmd: 10.1.0
   eslint: 8.32.0
   eslint-config-next: 13.2.3_et5x32uxl7z5ldub3ye5rhlyqm
-  eslint-config-prettier: 8.6.0_eslint@8.32.0
+  eslint-config-prettier: 8.7.0_eslint@8.32.0
   eslint-plugin-cypress: 2.12.1_eslint@8.32.0
   eslint-plugin-import: 2.27.5_op65hrlmg4esunydfgass5vyay
   eslint-plugin-jsx-a11y: 6.7.1_eslint@8.32.0
@@ -3677,7 +3677,7 @@ packages:
     transitivePeerDependencies:
       - typescript
 
-  /@nrwl/eslint-plugin-nx/15.8.5_nf3p5rnf4oc22ckbsqrff5zb6q:
+  /@nrwl/eslint-plugin-nx/15.8.5_5mdjx5og4irkuvaa77j6ayeady:
     resolution: {integrity: sha512-gfUD++6LhGPr6QtcFant41geZGyC5d9i2NZX7+vk4AQEttMiLgMu9t7hb1RUE8CUXX3UxsL0xM45YnJdxCIGww==}
     peerDependencies:
       '@typescript-eslint/parser': ^5.29.0
@@ -3691,7 +3691,7 @@ packages:
       '@typescript-eslint/utils': 5.52.0_et5x32uxl7z5ldub3ye5rhlyqm
       chalk: 4.1.2
       confusing-browser-globals: 1.0.11
-      eslint-config-prettier: 8.6.0_eslint@8.32.0
+      eslint-config-prettier: 8.7.0_eslint@8.32.0
       semver: 7.3.4
     transitivePeerDependencies:
       - eslint
@@ -12308,8 +12308,8 @@ packages:
       - supports-color
     dev: true
 
-  /eslint-config-prettier/8.6.0_eslint@8.32.0:
-    resolution: {integrity: sha512-bAF0eLpLVqP5oEVUFKpMA+NnRFICwn9X8B5jrR9FcqnYBuPbqWEjTEspPWMj5ye6czoSLDweCzSo3Ko7gGrZaA==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/eslint-config-prettier/-/eslint-config-prettier-8.6.0.tgz}
+  /eslint-config-prettier/8.7.0_eslint@8.32.0:
+    resolution: {integrity: sha512-HHVXLSlVUhMSmyW4ZzEuvjpwqamgmlfkutD53cYXLikh4pt/modINRcCIApJ84czDxM4GZInwUrromsDdTImTA==}
     hasBin: true
     peerDependencies:
       eslint: '>=7.0.0'
