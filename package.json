@@ -21,6 +21,7 @@
     "start": "nx serve",
     "dev": "nx serve",
     "build": "nx run-many --target=build --all",
+    "build:nextjs:prod": "nx build bbl-nextjs --prod",
     "build:affected:all": "nx affected --target=build --all",
     "eslint": "nx run-many --target=lint --all",
     "eslint:fix": "nx run-many --target=lint --configuration=fix --all",
