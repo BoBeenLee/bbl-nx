@@ -53,7 +53,7 @@ importers:
       '@storybook/testing-library': ^0.0.13
       '@svgr/webpack': ^6.1.2
       '@tailwindcss/typography': ^0.5.9
-      '@testing-library/react': 13.4.0
+      '@testing-library/react': 14.0.0
       '@types/chroma-js': ^2.1.3
       '@types/date-fns': ^2.6.0
       '@types/dotenv': ^6.1.0
@@ -221,7 +221,7 @@ importers:
       '@storybook/testing-library': 0.0.13_biqbaboplfbrettd7655fr4n2y
       '@svgr/webpack': 6.5.1
       '@tailwindcss/typography': 0.5.9_tailwindcss@3.2.7
-      '@testing-library/react': 13.4.0_biqbaboplfbrettd7655fr4n2y
+      '@testing-library/react': 14.0.0_biqbaboplfbrettd7655fr4n2y
       '@types/chroma-js': 2.4.0
       '@types/date-fns': 2.6.0
       '@types/dotenv': 6.1.1
@@ -7620,6 +7620,20 @@ packages:
       pretty-format: 27.5.1
     dev: true
 
+  /@testing-library/dom/9.0.1:
+    resolution: {integrity: sha512-fTOVsMY9QLFCCXRHG3Ese6cMH5qIWwSbgxZsgeF5TNsy81HKaZ4kgehnSF8FsR3OF+numlIV2YcU79MzbnhSig==}
+    engines: {node: '>=14'}
+    dependencies:
+      '@babel/code-frame': 7.18.6
+      '@babel/runtime': 7.20.13
+      '@types/aria-query': 5.0.1
+      aria-query: 5.1.3
+      chalk: 4.1.2
+      dom-accessibility-api: 0.5.16
+      lz-string: 1.5.0
+      pretty-format: 27.5.1
+    dev: true
+
   /@testing-library/jest-dom/5.16.5:
     resolution: {integrity: sha512-N5ixQ2qKpi5OLYfwQmUb/5mSV9LneAcaUfp32pn4yCnpb8r/Yz0pXFPck21dIicKmi+ta5WRAknkZCfA8refMA==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/@testing-library/jest-dom/-/jest-dom-5.16.5.tgz}
     engines: {node: '>=8', npm: '>=6', yarn: '>=1'}
@@ -7635,15 +7649,15 @@ packages:
       redent: 3.0.0
     dev: true
 
-  /@testing-library/react/13.4.0_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-sXOGON+WNTh3MLE9rve97ftaZukN3oNf2KjDy7YTx6hcTO2uuLHuCGynMDhFwGw/jYf4OJ2Qk0i4i79qMNNkyw==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/@testing-library/react/-/react-13.4.0.tgz}
-    engines: {node: '>=12'}
+  /@testing-library/react/14.0.0_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-S04gSNJbYE30TlIMLTzv6QCTzt9AqIF5y6s6SzVFILNcNvbV/jU96GeiTPillGQo+Ny64M/5PV7klNYYgv5Dfg==}
+    engines: {node: '>=14'}
     peerDependencies:
       react: ^18.0.0
       react-dom: ^18.0.0
     dependencies:
       '@babel/runtime': 7.20.13
-      '@testing-library/dom': 8.20.0
+      '@testing-library/dom': 9.0.1
       '@types/react-dom': 18.0.11
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
@@ -10373,7 +10387,7 @@ packages:
     dev: false
 
   /chalk/2.4.2:
-    resolution: {integrity: sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/chalk/-/chalk-2.4.2.tgz}
+    resolution: {integrity: sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==}
     engines: {node: '>=4'}
     dependencies:
       ansi-styles: 3.2.1
@@ -17599,6 +17613,11 @@ packages:
 
   /lz-string/1.4.4:
     resolution: {integrity: sha512-0ckx7ZHRPqb0oUm8zNr+90mtf9DQB60H1wMCjBtfi62Kl3a7JbHob6gA2bC+xRvZoOL+1hzUK8jeuEIQE8svEQ==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/lz-string/-/lz-string-1.4.4.tgz}
+    hasBin: true
+    dev: true
+
+  /lz-string/1.5.0:
+    resolution: {integrity: sha512-h5bgJWpxJNswbU7qCrV0tIKQCaS3blPDrqKWx+QxzuzL1zGUzij9XCWLrSLsJPu5t+eWA/ycetzYAO5IOMcWAQ==}
     hasBin: true
     dev: true
 
