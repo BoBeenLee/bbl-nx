@@ -12,6 +12,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 module.exports = withBundleAnalyzer(
   withNx(
     withImages({
+      distDir: '.',
       swcMinify: true,
       nx: {
         // Set this to true if you would like to to use SVGR
