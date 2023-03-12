@@ -24,7 +24,7 @@ export function MobileNav() {
   return (
     <>
       <MenuButton
-        className="visible md:hidden absolute top-[1.8rem]"
+        className="visible md:hidden absolute top-[1.8rem] flex w-[2.5rem] h-[2.5rem]"
         open={isMenuOpen}
         onToggleMenu={onToggleMenu}
       />

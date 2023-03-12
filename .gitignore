@@ -54,3 +54,4 @@ apps/**/.cache
 
 # Next.js
 .next
+.vercel
