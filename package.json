@@ -20,6 +20,7 @@
     "start": "nx serve",
     "dev": "nx serve",
     "build": "nx run-many --target=build --all",
+    "build:nextjs:prod": "nx build bbl-nextjs --prod",
     "build:affected:all": "nx affected --target=build --all",
     "eslint": "nx run-many --target=lint --all",
     "eslint:fix": "nx run-many --target=lint --configuration=fix --all",
@@ -190,6 +191,7 @@
   "readme": "./README.md",
   "homepage": "https://github.com/BoBeenLee/bbl-nx#readme",
   "_id": "bbl-nx@2.0.0",
+  "packageManager": "pnpm@7.29.1",
   "workspaces": [
     "apps/*",
     "libs/*"

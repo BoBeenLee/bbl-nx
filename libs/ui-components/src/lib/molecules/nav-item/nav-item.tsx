@@ -1,5 +1,6 @@
 import { NavKey } from '@bbl-nx/constants';
 import { ALink } from '../../atoms';
+import cn from 'classnames'
 
 export interface NavItemProps {
   href: NavKey;
@@ -12,9 +13,11 @@ export function NavItem(props: NavItemProps) {
   return (
     <ALink
       className={
-        'p-1 sm:px-3 sm:py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-all font-normal text-gray-600 dark:text-gray-400'
+        cn('p-1 sm:px-3 sm:py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-all', 'font-normal text-gray-600 dark:text-gray-400')
       }
-      activeClassName={`font-semibold text-gray-800 dark:text-gray-200`}
+      activeClassName={
+        cn('p-1 sm:px-3 sm:py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-all', `font-semibold text-gray-800 dark:text-gray-200`)
+      }
       urlPath={href}
     >
       <span className="capsize">{text}</span>

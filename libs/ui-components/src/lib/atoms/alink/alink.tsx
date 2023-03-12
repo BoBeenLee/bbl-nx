@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { useMemo } from 'react';
 import { usePathname } from 'next/navigation';
-import cn from 'classnames';
 import { NavRouter, NavRouterKey } from '@bbl-nx/constants';
 import { makePathname } from '@bbl-nx/utils';
 
@@ -46,16 +45,13 @@ export function ALink<F extends NavRouterKey>(props: ALinkProps<F>) {
 
     // Using URL().pathname to get rid of query and hash
     const activePathname = pathname;
-
+    
     const newClassName =
       linkPathname === activePathname
-        ? cn(childClassName, activeClassName)
+        ? activeClassName
         : childClassName;
 
-    if (newClassName !== childClassName) {
-      return newClassName;
-    }
-    return childClassName;
+    return newClassName;
   }, [activeClassName, childClassName, href, pathname, props.as]);
 
   return (
