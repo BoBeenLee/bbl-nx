@@ -22,7 +22,7 @@ jobs:
     timeout-minutes: 15
     steps:
       - name: Check out current commit (${{ github.sha }})
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Set up pnpm
         uses: pnpm/action-setup@v2
@@ -30,7 +30,7 @@ jobs:
           version: ${{ env.PNPM_VERSION }}
 
       - name: Set up Node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: '16'
 
@@ -39,7 +39,7 @@ jobs:
         run: echo "::set-output name=hash::${{ hashFiles('pnpm-lock.yaml') }}"
 
       - name: Check dependency cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         id: cache_dependencies
         with:
           path: ${{ env.CACHED_DEPENDENCY_PATHS }}
@@ -60,7 +60,7 @@ jobs:
     timeout-minutes: 15
     steps:
       - name: Check out current commit (${{ github.sha }})
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Set up pnpm
         uses: pnpm/action-setup@v2
@@ -68,18 +68,18 @@ jobs:
           version: ${{ env.PNPM_VERSION }}
 
       - name: Set up Node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: '16'
 
       - name: Check dependency cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ${{ env.CACHED_DEPENDENCY_PATHS }}
           key: ${{ needs.job_install_dependencies.outputs.dependency_cache_key }}
 
       - name: Check build cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         id: cache_built_packages
         with:
           path: ${{ env.CACHED_BUILD_PATHS }}
@@ -97,7 +97,7 @@ jobs:
     needs: job_build
     steps:
       - name: Checkout the repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           submodules: recursive
           fetch-depth: 0
@@ -112,18 +112,18 @@ jobs:
         with:
           main-branch-name: 'master'
 
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v3
         with:
           node-version: '16'
 
       - name: Check dependency cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ${{ env.CACHED_DEPENDENCY_PATHS }}
           key: ${{ needs.job_build.outputs.dependency_cache_key }}
 
       - name: Check build cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ${{ env.CACHED_BUILD_PATHS }}
           key: ${{ env.BUILD_CACHE_KEY }}
@@ -136,7 +136,7 @@ jobs:
     needs: job_build
     steps:
       - name: Checkout the repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           submodules: recursive
           fetch-depth: 0
@@ -147,13 +147,13 @@ jobs:
           version: ${{ env.PNPM_VERSION }}
 
       - name: Check dependency cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ${{ env.CACHED_DEPENDENCY_PATHS }}
           key: ${{ needs.job_build.outputs.dependency_cache_key }}
 
       - name: Check build cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ${{ env.CACHED_BUILD_PATHS }}
           key: ${{ env.BUILD_CACHE_KEY }}
@@ -173,7 +173,7 @@ jobs:
     needs: job_build
     steps:
       - name: Checkout the repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           submodules: recursive
           fetch-depth: 0
@@ -184,13 +184,13 @@ jobs:
           version: ${{ env.PNPM_VERSION }}
 
       - name: Check dependency cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ${{ env.CACHED_DEPENDENCY_PATHS }}
           key: ${{ needs.job_build.outputs.dependency_cache_key }}
 
       - name: Check build cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ${{ env.CACHED_BUILD_PATHS }}
           key: ${{ env.BUILD_CACHE_KEY }}
