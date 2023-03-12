@@ -6,12 +6,18 @@
 - https://leerob.io/
 - https://vercel.com/
 
-### 이후 현재 결과
+### nextjs13 버젼 이후
+- https://www.webpagetest.org/result/230305_BiDcC7_5V2/1/details/#waterfall_view_step1
+
+<img width="400" alt="Screen Shot 2023-03-05 at 11 30 42 PM" src="https://user-images.githubusercontent.com/1489321/222966742-4b68743a-89d0-46bc-ba7c-f9cbb170f838.png">
+<img width="400" alt="Screen Shot 2023-03-05 at 11 30 50 PM" src="https://user-images.githubusercontent.com/1489321/222966736-04b61f04-5c1e-4011-b4c3-9195634f1e08.png">
+
+### nextjs13 버젼 이전
 - https://www.webpagetest.org/result/220808_BiDcGW_7HZ/
 
-<img width="1447" alt="Screen Shot 2022-08-08 at 8 50 02 PM" src="https://user-images.githubusercontent.com/1489321/183411647-6012c141-36dc-450f-9197-8ac43787be77.png">
+<img width="400" alt="Screen Shot 2022-08-08 at 8 50 02 PM" src="https://user-images.githubusercontent.com/1489321/183411647-6012c141-36dc-450f-9197-8ac43787be77.png">
 
-<img width="1280" alt="Screen Shot 2022-08-08 at 8 50 15 PM" src="https://user-images.githubusercontent.com/1489321/183411672-3910b2cc-3b78-476d-a7ae-917e8be333d5.png">
+<img width="400" alt="Screen Shot 2022-08-08 at 8 50 15 PM" src="https://user-images.githubusercontent.com/1489321/183411672-3910b2cc-3b78-476d-a7ae-917e8be333d5.png">
 
 
 ## Bundle Diet
