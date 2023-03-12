@@ -159,12 +159,8 @@ jobs:
             path: ${{ env.CACHED_BUILD_PATHS }}
             key: ${{ env.BUILD_CACHE_KEY }}
             
-        - name: Install Vercel CLI
-          run: npm install --global vercel@latest
-        - name: Build Project Artifacts
-          run: npm run build
         - name: Deploy Project Artifacts to Vercel
-          run: vercel --yes --prod --token=${{ secrets.VERCEL_TOKEN }}
+          run: npx vercel --yes --token=${{ secrets.VERCEL_TOKEN }}
 
   storybook-deploy:
     if: ${{ github.ref == 'refs/heads/develop' }}
