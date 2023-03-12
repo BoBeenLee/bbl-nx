@@ -7,12 +7,13 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 });
 
 /**
- * @type {import('next').NextConfig}
- */
+ * @type {import('@nrwl/next/plugins/with-nx').WithNxOptions}
+ **/
 module.exports = withBundleAnalyzer(
   withNx(
     withImages({
-      distDir: '.',
+      reactStrictMode: true,
+      cleanDistDir: true,
       swcMinify: true,
       nx: {
         // Set this to true if you would like to to use SVGR
