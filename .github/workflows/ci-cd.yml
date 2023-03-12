@@ -164,7 +164,7 @@ jobs:
         - name: Build Project Artifacts
           run: npm run build
         - name: Deploy Project Artifacts to Vercel
-          run: vercel deploy --prod --token=${{ secrets.VERCEL_TOKEN }}
+          run: vercel --yes --prod --token=${{ secrets.VERCEL_TOKEN }}
 
   storybook-deploy:
     if: ${{ github.ref == 'refs/heads/develop' }}
