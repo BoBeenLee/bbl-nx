@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { useMemo } from 'react';
 import { usePathname } from 'next/navigation';
-import cn from 'classnames';
 import { NavRouter, NavRouterKey } from '@bbl-nx/constants';
 import { makePathname } from '@bbl-nx/utils';
 
