@@ -11,6 +11,7 @@
     "name": "bobinlee"
   },
   "engines": {
+    "pnpm": ">=7",
     "npm": ">=7.0.0",
     "node": ">=16.15.1"
   },
