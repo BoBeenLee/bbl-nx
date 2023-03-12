@@ -159,13 +159,14 @@ jobs:
             path: ${{ env.CACHED_BUILD_PATHS }}
             key: ${{ env.BUILD_CACHE_KEY }}
             
-        - uses: amondnet/vercel-action@v20 #deploy
-          with:
-            vercel-token: ${{ secrets.VERCEL_TOKEN }} # Required
-            github-token: ${{ secrets.GITHUB_TOKEN }} #Optional 
-            vercel-args: '--prod' #Optional
-            vercel-org-id: bobeenlee  #Required
-            vercel-project-id: prj_6go5kffApbjUnxcTlff4POe4gHFe #Required 
+        - name: Install Vercel CLI
+          run: npm install --global vercel@latest
+        - name: Pull Vercel Environment Information
+          run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+        - name: Build Project Artifacts
+          run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+        - name: Deploy Project Artifacts to Vercel
+          run: vercel deploy --prod --token=${{ secrets.VERCEL_TOKEN }}
 
   storybook-deploy:
     if: ${{ github.ref == 'refs/heads/develop' }}
