@@ -72,7 +72,7 @@ importers:
       autoprefixer: 10.4.13
       axios: 1.2.2
       babel-jest: 29.5.0
-      babel-loader: ^8.2.5
+      babel-loader: ^9.0.0
       babel-plugin-lodash: ^3.3.4
       babel-plugin-module-resolver: ^4.0.0
       chroma-js: ^2.4.2
@@ -238,7 +238,7 @@ importers:
       '@typescript-eslint/parser': 5.54.0_et5x32uxl7z5ldub3ye5rhlyqm
       autoprefixer: 10.4.13_postcss@8.4.19
       babel-jest: 29.5.0_@babel+core@7.21.0
-      babel-loader: 8.3.0_qoaxtqicpzj5p3ubthw53xafqm
+      babel-loader: 9.1.2_qoaxtqicpzj5p3ubthw53xafqm
       babel-plugin-lodash: 3.3.4
       babel-plugin-module-resolver: 4.1.0
       chromatic: 6.17.0
@@ -10032,10 +10032,9 @@ packages:
         optional: true
     dependencies:
       ajv: 8.12.0
-    dev: false
 
   /ajv-keywords/3.5.2_ajv@6.12.6:
-    resolution: {integrity: sha512-5p6WTN0DdTGVQk6VjcEju19IgaHudalcfabD7yhDGeA6bcQnmL+CpveLJq/3hvfwd1aof6L386Ougkx6RfyMIQ==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/ajv-keywords/-/ajv-keywords-3.5.2.tgz}
+    resolution: {integrity: sha512-5p6WTN0DdTGVQk6VjcEju19IgaHudalcfabD7yhDGeA6bcQnmL+CpveLJq/3hvfwd1aof6L386Ougkx6RfyMIQ==}
     peerDependencies:
       ajv: ^6.9.1
     dependencies:
@@ -10048,7 +10047,6 @@ packages:
     dependencies:
       ajv: 8.12.0
       fast-deep-equal: 3.1.3
-    dev: false
 
   /ajv/6.12.6:
     resolution: {integrity: sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/ajv/-/ajv-6.12.6.tgz}
@@ -10557,7 +10555,7 @@ packages:
     dev: true
 
   /babel-loader/8.3.0_idmflsbzmivcz6fnnmcaipezqe:
-    resolution: {integrity: sha512-H8SvsMF+m9t15HNLMipppzkC+Y2Yq+v3SonZyU70RBL/h1gxPkH08Ot8pEE9Z4Kd+czyWJClmFS8qzIP9OZ04Q==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/babel-loader/-/babel-loader-8.3.0.tgz}
+    resolution: {integrity: sha512-H8SvsMF+m9t15HNLMipppzkC+Y2Yq+v3SonZyU70RBL/h1gxPkH08Ot8pEE9Z4Kd+czyWJClmFS8qzIP9OZ04Q==}
     engines: {node: '>= 8.9'}
     peerDependencies:
       '@babel/core': ^7.0.0
@@ -10572,7 +10570,7 @@ packages:
     dev: true
 
   /babel-loader/8.3.0_qoaxtqicpzj5p3ubthw53xafqm:
-    resolution: {integrity: sha512-H8SvsMF+m9t15HNLMipppzkC+Y2Yq+v3SonZyU70RBL/h1gxPkH08Ot8pEE9Z4Kd+czyWJClmFS8qzIP9OZ04Q==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/babel-loader/-/babel-loader-8.3.0.tgz}
+    resolution: {integrity: sha512-H8SvsMF+m9t15HNLMipppzkC+Y2Yq+v3SonZyU70RBL/h1gxPkH08Ot8pEE9Z4Kd+czyWJClmFS8qzIP9OZ04Q==}
     engines: {node: '>= 8.9'}
     peerDependencies:
       '@babel/core': ^7.0.0
@@ -10597,7 +10595,6 @@ packages:
       find-cache-dir: 3.3.2
       schema-utils: 4.0.0
       webpack: 5.75.0
-    dev: false
 
   /babel-plugin-add-react-displayname/0.0.5:
     resolution: {integrity: sha512-LY3+Y0XVDYcShHHorshrDbt4KFWL4bSeniCtl4SYZbask+Syngk1uMPCeN9+nSiZo6zX5s0RTq/J9Pnaaf/KHw==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/babel-plugin-add-react-displayname/-/babel-plugin-add-react-displayname-0.0.5.tgz}
@@ -11877,7 +11874,7 @@ packages:
     engines: {node: '>=4.0.0'}
 
   /commondir/1.0.1:
-    resolution: {integrity: sha512-W9pAhw0ja1Edb5GVdIF1mjZw/ASI0AlShXM83UUGe2DVr5TdAPEA1OA8m/g8zWp9x6On7gqufY+FatDbC3MDQg==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/commondir/-/commondir-1.0.1.tgz}
+    resolution: {integrity: sha512-W9pAhw0ja1Edb5GVdIF1mjZw/ASI0AlShXM83UUGe2DVr5TdAPEA1OA8m/g8zWp9x6On7gqufY+FatDbC3MDQg==}
 
   /compare-func/2.0.0:
     resolution: {integrity: sha512-zHig5N+tPWARooBnb0Zx1MFcdfpyJrfTJ3Y5L+IFvUm8rM74hHz66z0gw0x4tijh5CorKkKUCnW82R2vmpeCRA==}
@@ -14437,7 +14434,7 @@ packages:
     dev: true
 
   /find-cache-dir/2.1.0:
-    resolution: {integrity: sha512-Tq6PixE0w/VMFfCgbONnkiQIVol/JJL7nRMi20fqzA4NRs9AfeqMGeRdPi3wIhYkxjeBaWh2rxwapn5Tu3IqOQ==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/find-cache-dir/-/find-cache-dir-2.1.0.tgz}
+    resolution: {integrity: sha512-Tq6PixE0w/VMFfCgbONnkiQIVol/JJL7nRMi20fqzA4NRs9AfeqMGeRdPi3wIhYkxjeBaWh2rxwapn5Tu3IqOQ==}
     engines: {node: '>=6'}
     dependencies:
       commondir: 1.0.1
@@ -14446,7 +14443,7 @@ packages:
     dev: true
 
   /find-cache-dir/3.3.2:
-    resolution: {integrity: sha512-wXZV5emFEjrridIgED11OoUKLxiYjAcqot/NJdAkOhlJ+vGzwhOAfcG5OX1jP+S0PcjEn8bdMJv+g2jwQ3Onig==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/find-cache-dir/-/find-cache-dir-3.3.2.tgz}
+    resolution: {integrity: sha512-wXZV5emFEjrridIgED11OoUKLxiYjAcqot/NJdAkOhlJ+vGzwhOAfcG5OX1jP+S0PcjEn8bdMJv+g2jwQ3Onig==}
     engines: {node: '>=8'}
     dependencies:
       commondir: 1.0.1
@@ -18662,7 +18659,7 @@ packages:
       semver: 5.7.1
 
   /make-dir/3.1.0:
-    resolution: {integrity: sha512-g3FeP20LNwhALb/6Cz6Dd4F2ngze0jz7tbzrD2wAV+o9FeNHe4rL+yK2md0J/fiSf1sa1ADhXqi5+oVwOM/eGw==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/make-dir/-/make-dir-3.1.0.tgz}
+    resolution: {integrity: sha512-g3FeP20LNwhALb/6Cz6Dd4F2ngze0jz7tbzrD2wAV+o9FeNHe4rL+yK2md0J/fiSf1sa1ADhXqi5+oVwOM/eGw==}
     engines: {node: '>=8'}
     dependencies:
       semver: 6.3.0
@@ -23142,7 +23139,7 @@ packages:
     dev: false
 
   /schema-utils/1.0.0:
-    resolution: {integrity: sha512-i27Mic4KovM/lnGsy8whRCHhc7VicJajAjTrYg11K9zfZXnYIt4k5F+kZkwjnrhKzLic/HLU4j11mjsz2G/75g==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/schema-utils/-/schema-utils-1.0.0.tgz}
+    resolution: {integrity: sha512-i27Mic4KovM/lnGsy8whRCHhc7VicJajAjTrYg11K9zfZXnYIt4k5F+kZkwjnrhKzLic/HLU4j11mjsz2G/75g==}
     engines: {node: '>= 4'}
     dependencies:
       ajv: 6.12.6
@@ -23151,7 +23148,7 @@ packages:
     dev: true
 
   /schema-utils/2.7.0:
-    resolution: {integrity: sha512-0ilKFI6QQF5nxDZLFn2dMjvc4hjg/Wkg7rHd3jK6/A4a1Hl9VFdQWvgB1UMGoU94pad1P/8N7fMcEnLnSiju8A==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/schema-utils/-/schema-utils-2.7.0.tgz}
+    resolution: {integrity: sha512-0ilKFI6QQF5nxDZLFn2dMjvc4hjg/Wkg7rHd3jK6/A4a1Hl9VFdQWvgB1UMGoU94pad1P/8N7fMcEnLnSiju8A==}
     engines: {node: '>= 8.9.0'}
     dependencies:
       '@types/json-schema': 7.0.11
@@ -23160,7 +23157,7 @@ packages:
     dev: true
 
   /schema-utils/2.7.1:
-    resolution: {integrity: sha512-SHiNtMOUGWBQJwzISiVYKu82GiV4QYGePp3odlY1tuKO7gPtphAT5R/py0fA6xtbgLL/RvtJZnU9b8s0F1q0Xg==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/schema-utils/-/schema-utils-2.7.1.tgz}
+    resolution: {integrity: sha512-SHiNtMOUGWBQJwzISiVYKu82GiV4QYGePp3odlY1tuKO7gPtphAT5R/py0fA6xtbgLL/RvtJZnU9b8s0F1q0Xg==}
     engines: {node: '>= 8.9.0'}
     dependencies:
       '@types/json-schema': 7.0.11
@@ -23184,7 +23181,6 @@ packages:
       ajv: 8.12.0
       ajv-formats: 2.1.1
       ajv-keywords: 5.1.0_ajv@8.12.0
-    dev: false
 
   /section-matter/1.0.0:
     resolution: {integrity: sha512-vfD3pmTzGpufjScBh50YHKzEu2lxBWhVEHsNGoEXmCmn2hKGfeNLYMzCJpe8cD7gqX7TJluOVpBkAequ6dgMmA==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/section-matter/-/section-matter-1.0.0.tgz}
