@@ -64,7 +64,7 @@ importers:
       '@types/qs': ^6.5.2
       '@types/react': 18.0.28
       '@types/react-dom': 18.0.11
-      '@types/react-helmet': ^5.0.8
+      '@types/react-helmet': ^6.0.0
       '@types/react-test-renderer': ^18.0.0
       '@typescript-eslint/eslint-plugin': 5.54.0
       '@typescript-eslint/parser': 5.54.0
@@ -232,7 +232,7 @@ importers:
       '@types/qs': 6.9.7
       '@types/react': 18.0.28
       '@types/react-dom': 18.0.11
-      '@types/react-helmet': 5.0.21
+      '@types/react-helmet': 6.1.6
       '@types/react-test-renderer': 18.0.0
       '@typescript-eslint/eslint-plugin': 5.54.0_kfyz2y6ibx5q22pdsikxez2g7q
       '@typescript-eslint/parser': 5.54.0_et5x32uxl7z5ldub3ye5rhlyqm
@@ -9071,8 +9071,8 @@ packages:
       '@types/react': 18.0.28
     dev: true
 
-  /@types/react-helmet/5.0.21:
-    resolution: {integrity: sha512-zmDn+GZGvvtULGOr7QU8vIaKSC64kLtRGH7+86U5k1r85fn32n2kHr5VaqtkUaU78+P71VH6Wk5gfV2qMFXKXg==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/@types/react-helmet/-/react-helmet-5.0.21.tgz}
+  /@types/react-helmet/6.1.6:
+    resolution: {integrity: sha512-ZKcoOdW/Tg+kiUbkFCBtvDw0k3nD4HJ/h/B9yWxN4uDO8OkRksWTO+EL+z/Qu3aHTeTll3Ro0Cc/8UhwBCMG5A==}
     dependencies:
       '@types/react': 18.0.28
     dev: true
