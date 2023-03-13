@@ -13,7 +13,6 @@ module.exports = withBundleAnalyzer(
   withNx(
     withImages({
       reactStrictMode: true,
-      cleanDistDir: true,
       swcMinify: true,
       nx: {
         // Set this to true if you would like to to use SVGR
