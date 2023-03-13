@@ -87,7 +87,7 @@
     "@commitlint/cli": "17.4.4",
     "@commitlint/config-conventional": "17.4.4",
     "@netlify/plugin-nextjs": "^4.7.0",
-    "@next/bundle-analyzer": "^12.2.3",
+    "@next/bundle-analyzer": "^13.0.0",
     "@nrwl/cli": "15.8.6",
     "@nrwl/cypress": "15.8.6",
     "@nrwl/eslint-plugin-nx": "15.8.6",
