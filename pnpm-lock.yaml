@@ -100,7 +100,7 @@ importers:
       firebase: ^7.8.0
       front-matter: ^4.0.2
       gray-matter: ^4.0.3
-      husky: 4.3.8
+      husky: 8.0.3
       jest: 29.5.0
       jest-environment-jsdom: 29.5.0
       lodash.isequal: ^4.5.0
@@ -257,7 +257,7 @@ importers:
       eslint-plugin-react-hooks: 4.6.0_eslint@8.32.0
       eslint-plugin-storybook: 0.6.10_et5x32uxl7z5ldub3ye5rhlyqm
       eslint-plugin-unused-imports: 2.0.0_7c6igczkapmdlazht653uwzt7y
-      husky: 4.3.8
+      husky: 8.0.3
       jest: 29.5.0_odkjkoia5xunhxkdrka32ib6vi
       jest-environment-jsdom: 29.5.0
       msw: 0.49.3_typescript@4.9.5
@@ -11863,10 +11863,6 @@ packages:
       dot-prop: 5.3.0
     dev: true
 
-  /compare-versions/3.6.0:
-    resolution: {integrity: sha512-W6Af2Iw1z4CB7q4uU4hv646dW9GQuBM+YpC0UvUCWSD8w90SJjp+ujJuXaEMtAXBtSqGfMPuFOVn4/+FlaqfBA==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/compare-versions/-/compare-versions-3.6.0.tgz}
-    dev: true
-
   /component-emitter/1.3.0:
     resolution: {integrity: sha512-Rd3se6QB+sO1TwqZjscQrurpEPIfO0/yYnSin6Q/rD3mOutHvUrCAhJub3r90uNb+SESBuE0QYoB90YdfatsRg==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/component-emitter/-/component-emitter-1.3.0.tgz}
     dev: true
@@ -14475,13 +14471,6 @@ packages:
       locate-path: 6.0.0
       path-exists: 4.0.0
 
-  /find-versions/4.0.0:
-    resolution: {integrity: sha512-wgpWy002tA+wgmO27buH/9KzyEOQnKsG/R0yrcjPT9BOFm0zRBVQbZ95nRGXWMywS8YR5knRbpohio0bcJABxQ==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/find-versions/-/find-versions-4.0.0.tgz}
-    engines: {node: '>=10'}
-    dependencies:
-      semver-regex: 3.1.4
-    dev: true
-
   /findup-sync/5.0.0:
     resolution: {integrity: sha512-MzwXju70AuyflbgeOhzvQWAvvQdo1XL0A9bVvlXsYcFEBM87WR4OakL4OfZq+QRmr+duJubio+UtNQCPsVESzQ==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/findup-sync/-/findup-sync-5.0.0.tgz}
     engines: {node: '>= 10.13.0'}
@@ -15967,22 +15956,10 @@ packages:
     resolution: {integrity: sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==}
     engines: {node: '>=10.17.0'}
 
-  /husky/4.3.8:
-    resolution: {integrity: sha512-LCqqsB0PzJQ/AlCgfrfzRe3e3+NvmefAdKQhRYpxS4u6clblBoDdzzvHi8fmxKRzvMxPY/1WZWzomPZww0Anow==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/husky/-/husky-4.3.8.tgz}
-    engines: {node: '>=10'}
+  /husky/8.0.3:
+    resolution: {integrity: sha512-+dQSyqPh4x1hlO1swXBiNb2HzTDN1I2IGLQx1GrBuiqFJfoMrnZWwVmatvSiO+Iz8fBUnf+lekwNo4c2LlXItg==}
+    engines: {node: '>=14'}
     hasBin: true
-    requiresBuild: true
-    dependencies:
-      chalk: 4.1.2
-      ci-info: 2.0.0
-      compare-versions: 3.6.0
-      cosmiconfig: 7.1.0
-      find-versions: 4.0.0
-      opencollective-postinstall: 2.0.3
-      pkg-dir: 5.0.0
-      please-upgrade-node: 3.2.0
-      slash: 3.0.0
-      which-pm-runs: 1.1.0
     dev: true
 
   /iconv-lite/0.4.24:
@@ -20222,11 +20199,6 @@ packages:
       is-docker: 2.2.1
       is-wsl: 2.2.0
 
-  /opencollective-postinstall/2.0.3:
-    resolution: {integrity: sha512-8AV/sCtuzUeTo8gQK5qDZzARrulB3egtLzFgteqB2tcT4Mw7B8Kt7JcDHmltjz6FOAHsvTevk70gZEbhM4ZS9Q==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/opencollective-postinstall/-/opencollective-postinstall-2.0.3.tgz}
-    hasBin: true
-    dev: true
-
   /opener/1.5.2:
     resolution: {integrity: sha512-ur5UIdyw5Y7yEj9wLzhqXiy6GZ3Mwx0yGI+5sMn2r0N0v3cKJvUmFH5yPP+WXh9e0xfyzyJX95D8l088DNFj7A==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/opener/-/opener-1.5.2.tgz}
     hasBin: true
@@ -20856,12 +20828,6 @@ packages:
     requiresBuild: true
     dependencies:
       playwright-core: 1.30.0
-    dev: true
-
-  /please-upgrade-node/3.2.0:
-    resolution: {integrity: sha512-gQR3WpIgNIKwBMVLkpMUeR3e1/E1y42bqDQZfql+kDeXd8COYfM8PQA4X6y7a8u9Ua9FHmsrrmirW2vHs45hWg==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/please-upgrade-node/-/please-upgrade-node-3.2.0.tgz}
-    dependencies:
-      semver-compare: 1.0.0
     dev: true
 
   /plop/3.1.2:
@@ -23108,15 +23074,6 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       node-forge: 1.3.1
-
-  /semver-compare/1.0.0:
-    resolution: {integrity: sha512-YM3/ITh2MJ5MtzaM429anh+x2jiLVjqILF4m4oyQB18W7Ggea7BfqdH/wGMK7dDiMghv/6WG7znWMwUDzJiXow==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/semver-compare/-/semver-compare-1.0.0.tgz}
-    dev: true
-
-  /semver-regex/3.1.4:
-    resolution: {integrity: sha512-6IiqeZNgq01qGf0TId0t3NvKzSvUsjcpdEO3AQNeIjR6A2+ckTnQlDpl4qu1bjRv0RzN3FP9hzFmws3lKqRWkA==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/semver-regex/-/semver-regex-3.1.4.tgz}
-    engines: {node: '>=8'}
-    dev: true
 
   /semver/5.7.1:
     resolution: {integrity: sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ==}
@@ -26031,11 +25988,6 @@ packages:
 
   /which-module/2.0.0:
     resolution: {integrity: sha512-B+enWhmw6cjfVC7kS8Pj9pCrKSc5txArRyaYGe088shv/FGWH+0Rjx/xPgtsWfsUtS27FkP697E4DDhgrgoc0Q==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/which-module/-/which-module-2.0.0.tgz}
-    dev: true
-
-  /which-pm-runs/1.1.0:
-    resolution: {integrity: sha512-n1brCuqClxfFfq/Rb0ICg9giSZqCS+pLtccdag6C2HyufBrh3fBOiy9nb6ggRMvWOVH5GrdJskj5iGTZNxd7SA==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/which-pm-runs/-/which-pm-runs-1.1.0.tgz}
-    engines: {node: '>=4'}
     dev: true
 
   /which-typed-array/1.1.9:
