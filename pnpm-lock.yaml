@@ -74,7 +74,7 @@ importers:
       babel-jest: 29.5.0
       babel-loader: ^8.2.5
       babel-plugin-lodash: ^3.3.4
-      babel-plugin-module-resolver: ^4.0.0
+      babel-plugin-module-resolver: ^5.0.0
       chroma-js: ^2.4.2
       chromatic: ^6.7.3
       classnames: ^2.3.1
@@ -240,7 +240,7 @@ importers:
       babel-jest: 29.5.0_@babel+core@7.21.0
       babel-loader: 8.3.0_qoaxtqicpzj5p3ubthw53xafqm
       babel-plugin-lodash: 3.3.4
-      babel-plugin-module-resolver: 4.1.0
+      babel-plugin-module-resolver: 5.0.0
       chromatic: 6.17.0
       concurrently: 7.6.0
       css-loader: 6.7.3_webpack@5.75.0
@@ -10691,12 +10691,12 @@ packages:
       resolve: 1.22.1
     dev: true
 
-  /babel-plugin-module-resolver/4.1.0:
-    resolution: {integrity: sha512-MlX10UDheRr3lb3P0WcaIdtCSRlxdQsB1sBqL7W0raF070bGl1HQQq5K3T2vf2XAYie+ww+5AKC/WrkjRO2knA==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/babel-plugin-module-resolver/-/babel-plugin-module-resolver-4.1.0.tgz}
-    engines: {node: '>= 8.0.0'}
+  /babel-plugin-module-resolver/5.0.0:
+    resolution: {integrity: sha512-g0u+/ChLSJ5+PzYwLwP8Rp8Rcfowz58TJNCe+L/ui4rpzE/mg//JVX0EWBUYoxaextqnwuGHzfGp2hh0PPV25Q==}
+    engines: {node: '>= 16'}
     dependencies:
-      find-babel-config: 1.2.0
-      glob: 7.2.3
+      find-babel-config: 2.0.0
+      glob: 8.1.0
       pkg-up: 3.1.0
       reselect: 4.1.7
       resolve: 1.22.1
@@ -14393,12 +14393,12 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /find-babel-config/1.2.0:
-    resolution: {integrity: sha512-jB2CHJeqy6a820ssiqwrKMeyC6nNdmrcgkKWJWmpoxpE8RKciYJXCcXRq1h2AzCo5I5BJeN2tkGEO3hLTuePRA==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/find-babel-config/-/find-babel-config-1.2.0.tgz}
-    engines: {node: '>=4.0.0'}
+  /find-babel-config/2.0.0:
+    resolution: {integrity: sha512-dOKT7jvF3hGzlW60Gc3ONox/0rRZ/tz7WCil0bqA1In/3I8f1BctpXahRnEKDySZqci7u+dqq93sZST9fOJpFw==}
+    engines: {node: '>=16.0.0'}
     dependencies:
-      json5: 0.5.1
-      path-exists: 3.0.0
+      json5: 2.2.3
+      path-exists: 4.0.0
     dev: true
 
   /find-cache-dir/2.1.0:
@@ -15118,6 +15118,17 @@ packages:
       minimatch: 3.1.2
       once: 1.4.0
       path-is-absolute: 1.0.1
+
+  /glob/8.1.0:
+    resolution: {integrity: sha512-r8hpEjiQEYlF2QU0df3dS+nxxSIreXQS1qRhMJM0Q5NDdR386C7jb7Hwwod8Fgiuex+k0GFjgft18yvxm5XoCQ==}
+    engines: {node: '>=12'}
+    dependencies:
+      fs.realpath: 1.0.0
+      inflight: 1.0.6
+      inherits: 2.0.4
+      minimatch: 5.1.6
+      once: 1.4.0
+    dev: true
 
   /global-dirs/0.1.1:
     resolution: {integrity: sha512-NknMLn7F2J7aflwFOlGdNIuCDpN3VGoSoB+aap3KABFWbHVn1TCgFC+np23J8W2BiZbjfEw3BFBycSMv1AFblg==}
@@ -18009,11 +18020,6 @@ packages:
   /json-stringify-safe/5.0.1:
     resolution: {integrity: sha512-ZClg6AaYvamvYEE82d3Iyd3vSSIjQ+odgjaTzRuO3s7toCdFKczob2i0zCh7JE8kWn17yvAWhUVxvqGwUalsRA==}
 
-  /json5/0.5.1:
-    resolution: {integrity: sha512-4xrs1aW+6N5DalkqSVA8fxh458CXvR99WU8WLKmq4v8eWAL86Xo3BVqyd3SkA9wEVjCMqyvvRRkshAdOnBp5rw==}
-    hasBin: true
-    dev: true
-
   /json5/1.0.2:
     resolution: {integrity: sha512-g1MWMLBiz8FKi1e4w0UyVL3w+iJceWAFBAaBnnGKOpNa5f8TLktkbre1+s6oICydWAm+HRUGTmI+//xv2hvXYA==}
     hasBin: true
@@ -20642,7 +20648,7 @@ packages:
     dev: true
 
   /path-exists/2.1.0:
-    resolution: {integrity: sha512-yTltuKuhtNeFJKa1PiRzfLAU5182q1y4Eb4XCJ3PBqyzEDkAZRzBrKKBct682ls9reBVHf9udYLN5Nd+K1B9BQ==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/path-exists/-/path-exists-2.1.0.tgz}
+    resolution: {integrity: sha512-yTltuKuhtNeFJKa1PiRzfLAU5182q1y4Eb4XCJ3PBqyzEDkAZRzBrKKBct682ls9reBVHf9udYLN5Nd+K1B9BQ==}
     engines: {node: '>=0.10.0'}
     dependencies:
       pinkie-promise: 2.0.1
@@ -20650,12 +20656,12 @@ packages:
     optional: true
 
   /path-exists/3.0.0:
-    resolution: {integrity: sha512-bpC7GYwiDYQ4wYLe+FA8lhRjhQCMcQGuSgGGqDkg/QerRWw9CmGRT0iSOVRSZJ29NMLZgIzqaljJ63oaL4NIJQ==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/path-exists/-/path-exists-3.0.0.tgz}
+    resolution: {integrity: sha512-bpC7GYwiDYQ4wYLe+FA8lhRjhQCMcQGuSgGGqDkg/QerRWw9CmGRT0iSOVRSZJ29NMLZgIzqaljJ63oaL4NIJQ==}
     engines: {node: '>=4'}
     dev: true
 
   /path-exists/4.0.0:
-    resolution: {integrity: sha512-ak9Qy5Q7jYb2Wwcey5Fpvg2KoAc/ZIhLSLOSBmRmygPsGwkVVt0fZa0qrtMz+m6tJTAHfZQ8FnmB4MG4LWy7/w==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/path-exists/-/path-exists-4.0.0.tgz}
+    resolution: {integrity: sha512-ak9Qy5Q7jYb2Wwcey5Fpvg2KoAc/ZIhLSLOSBmRmygPsGwkVVt0fZa0qrtMz+m6tJTAHfZQ8FnmB4MG4LWy7/w==}
     engines: {node: '>=8'}
 
   /path-is-absolute/1.0.1:
@@ -20834,7 +20840,7 @@ packages:
     dev: true
 
   /pkg-up/3.1.0:
-    resolution: {integrity: sha512-nDywThFk1i4BQK4twPQ6TA4RT8bDY96yeuCVBWL3ePARCiEKDRSrNGbFIgUJpLp+XeIR65v8ra7WuJOFUBtkMA==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/pkg-up/-/pkg-up-3.1.0.tgz}
+    resolution: {integrity: sha512-nDywThFk1i4BQK4twPQ6TA4RT8bDY96yeuCVBWL3ePARCiEKDRSrNGbFIgUJpLp+XeIR65v8ra7WuJOFUBtkMA==}
     engines: {node: '>=8'}
     dependencies:
       find-up: 3.0.0
@@ -22633,7 +22639,7 @@ packages:
     resolution: {integrity: sha512-KigOCHcocU3XODJxsu8i/j8T9tzT4adHiecwORRQ0ZZFcp7ahwXuRU1m+yuO90C5ZUyGeGfocHDI14M3L3yDAQ==}
 
   /reselect/4.1.7:
-    resolution: {integrity: sha512-Zu1xbUt3/OPwsXL46hvOOoQrap2azE7ZQbokq61BQfiXvhewsKDwhMeZjTX9sX0nvw1t/U5Audyn1I9P/m9z0A==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/reselect/-/reselect-4.1.7.tgz}
+    resolution: {integrity: sha512-Zu1xbUt3/OPwsXL46hvOOoQrap2azE7ZQbokq61BQfiXvhewsKDwhMeZjTX9sX0nvw1t/U5Audyn1I9P/m9z0A==}
     dev: true
 
   /resolve-alpn/1.2.1:
