@@ -21,7 +21,7 @@ importers:
       '@nrwl/js': 15.8.6
       '@nrwl/linter': 15.8.6
       '@nrwl/next': 15.8.6
-      '@nrwl/nx-cloud': 15.2.1
+      '@nrwl/nx-cloud': 15.3.5
       '@nrwl/react': 15.8.6
       '@nrwl/storybook': 15.8.6
       '@nrwl/tao': 15.8.6
@@ -194,7 +194,7 @@ importers:
       '@nrwl/jest': 15.8.6_ezuvkzivmvw76oncq3etdrtcia
       '@nrwl/js': 15.8.6_tqj3zkmmyrfm5246yuq2vqfav4
       '@nrwl/linter': 15.8.6_tqj3zkmmyrfm5246yuq2vqfav4
-      '@nrwl/nx-cloud': 15.2.1
+      '@nrwl/nx-cloud': 15.3.5
       '@nrwl/react': 15.8.6_tqj3zkmmyrfm5246yuq2vqfav4
       '@nrwl/storybook': 15.8.6_ohhg5mf6plcig2wx22sjhsiopm
       '@nrwl/tao': 15.8.6
@@ -4992,8 +4992,8 @@ packages:
       - webpack-cli
     dev: false
 
-  /@nrwl/nx-cloud/15.2.1:
-    resolution: {integrity: sha512-T4ycGSx77TdvS0j6tKI/6zmh6YtsPHyfB2li+wDR+BW9wjGGqOTX1QvG3gf0k2enhA3dxLgYnmeDZoEUek6MOw==}
+  /@nrwl/nx-cloud/15.3.5:
+    resolution: {integrity: sha512-JMKLY0HhdzQ/6jEvfL/EecPPdsdBIM0SyFrWAjikSJAh5MqhpFJWnr6FfTc5P57PJZ+IUNLkJ21VMuoTrA4+4w==}
     hasBin: true
     dependencies:
       axios: 0.21.4
@@ -11540,7 +11540,7 @@ packages:
       fsevents: 2.3.2
 
   /chownr/1.1.4:
-    resolution: {integrity: sha512-jJ0bqzaylmJtVnNgzTeSOs8DPavpbYgEr/b0YL8/2GO3xJEhInFmhKMUnEJQjZumK7KXGFhUy89PrsJWlakBVg==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/chownr/-/chownr-1.1.4.tgz}
+    resolution: {integrity: sha512-jJ0bqzaylmJtVnNgzTeSOs8DPavpbYgEr/b0YL8/2GO3xJEhInFmhKMUnEJQjZumK7KXGFhUy89PrsJWlakBVg==}
     dev: true
 
   /chownr/2.0.0:
@@ -14786,7 +14786,7 @@ packages:
     dev: true
 
   /fs-extra/10.1.0:
-    resolution: {integrity: sha512-oRXApq54ETRj4eMiFzGnHWGy+zo5raudjuxN0b8H7s/RU2oW0Wvsx9O0ACRN/kRq9E8Vu/ReskGB5o3ji+FzHQ==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/fs-extra/-/fs-extra-10.1.0.tgz}
+    resolution: {integrity: sha512-oRXApq54ETRj4eMiFzGnHWGy+zo5raudjuxN0b8H7s/RU2oW0Wvsx9O0ACRN/kRq9E8Vu/ReskGB5o3ji+FzHQ==}
     engines: {node: '>=12'}
     dependencies:
       graceful-fs: 4.2.10
