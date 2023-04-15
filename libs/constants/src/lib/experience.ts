@@ -28,7 +28,7 @@ export const experiences = [
     title: 'Coupang',
     titleUri: 'https://www.rocketpunch.com/companies/coupang',
     period: '2015.6 - 2017.7',
-    role: 'Fullstack Developer',
+    role: 'Full Stack Engineer',
   },
   {
     title: 'DailyHotel',
