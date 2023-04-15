@@ -118,8 +118,8 @@ pnpm ui-components:new
 
 ## Gitflow
 
-- git flow release 2.0.16 start, finish
-- git flow hotfix 2.0.16-hotfix.0 start, finish
+- git flow release start, finish 2.0.16
+- git flow hotfix start, finish 2.0.16-hotfix.0
 
 ## Contributors
 

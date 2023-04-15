@@ -1,62 +1,55 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const withNx = require('@nrwl/next/plugins/with-nx');
 const withImages = require('next-images');
-const { ANALYZE } = process.env;
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: ANALYZE === 'true',
-});
 
 /**
  * @type {import('@nrwl/next/plugins/with-nx').WithNxOptions}
  **/
-module.exports = withBundleAnalyzer(
-  withNx(
-    withImages({
-      reactStrictMode: true,
-      cleanDistDir: true,
-      swcMinify: true,
-      nx: {
-        // Set this to true if you would like to to use SVGR
-        // See: https://github.com/gregberge/svgr
-        svgr: false,
-      },
-      publicRuntimeConfig: {
-        staticFolder: '/public',
-      },
-      experimental: {
-        appDir: true,
-        typedRoutes: true,
-        legacyBrowsers: false,
-      },
-      transpilePackages: ['@bbl-nx'],
-      async headers() {
-        return [
-          {
-            source: '/(.*)',
-            headers: securityHeaders,
-          },
-        ];
-      },
-      webpack(config, { isServer }) {
-        if (!isServer) {
-          // don't resolve 'fs' module on the client to prevent this error on build --> Error: Can't resolve 'fs'
-          config.resolve.fallback = {
-            fs: false,
-            path: false,
-          };
-        }
-
-        return {
-          ...config,
-          optimization: {
-            ...config.optimization,
-            providedExports: true,
-            sideEffects: 'flag',
-          },
+module.exports = withNx(
+  withImages({
+    reactStrictMode: true,
+    swcMinify: true,
+    nx: {
+      // Set this to true if you would like to to use SVGR
+      // See: https://github.com/gregberge/svgr
+      svgr: false,
+    },
+    publicRuntimeConfig: {
+      staticFolder: '/public',
+    },
+    experimental: {
+      appDir: true,
+      typedRoutes: true,
+      legacyBrowsers: false,
+    },
+    transpilePackages: ['@bbl-nx'],
+    async headers() {
+      return [
+        {
+          source: '/(.*)',
+          headers: securityHeaders,
+        },
+      ];
+    },
+    webpack(config, { isServer }) {
+      if (!isServer) {
+        // don't resolve 'fs' module on the client to prevent this error on build --> Error: Can't resolve 'fs'
+        config.resolve.fallback = {
+          fs: false,
+          path: false,
         };
-      },
-    })
-  )
+      }
+
+      return {
+        ...config,
+        optimization: {
+          ...config.optimization,
+          providedExports: true,
+          sideEffects: 'flag',
+        },
+      };
+    },
+  })
 );
 
 // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy

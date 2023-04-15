@@ -167,7 +167,7 @@ export const companyPortfolios = [
   },
   {
     id: 'coupang',
-    name: 'Coupang Account System',
+    name: 'Coupang Financial System',
     period: '2015.6 - 2017.7',
     githubRepoName: [],
     skills: [
