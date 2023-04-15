@@ -10,6 +10,7 @@ export interface NavFooterItemProps {
 function NavFooterItem({ href, text }: NavFooterItemProps) {
   return (
     <ALink
+      activeClassName="text-gray-500"
       className="text-gray-500 transition hover:text-gray-600"
       urlPath={href}
     >
