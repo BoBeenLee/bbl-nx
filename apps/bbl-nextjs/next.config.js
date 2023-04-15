@@ -91,8 +91,8 @@ const securityHeaders = [
     key: 'Permissions-Policy',
     value: 'camera=(), microphone=(), geolocation=()',
   },
-  {
-    key: 'Content-Security-Policy',
-    value: ContentSecurityPolicy.replace(/\s{2,}/g, ' ').trim(),
-  },
+  // {
+  //   key: 'Content-Security-Policy',
+  //   value: ContentSecurityPolicy.replace(/\s{2,}/g, ' ').trim(),
+  // },
 ];

@@ -15,7 +15,7 @@
       "configurations": {
         "production": {},
         "development": {
-          "outputPath": "apps/bbl-nextjs"
+          "outputPath": "dist/apps/bbl-nextjs"
         }
       }
     },
