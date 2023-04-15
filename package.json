@@ -100,6 +100,7 @@
     "@nrwl/storybook": "15.9.2",
     "@nrwl/tao": "15.9.2",
     "@nrwl/web": "15.9.2",
+    "@nrwl/webpack": "15.9.2",
     "@nrwl/workspace": "15.9.2",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.7",
     "@remix-run/dev": "^1.5.1",
