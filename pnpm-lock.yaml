@@ -118,7 +118,7 @@ importers:
       plop: ^3.1.1
       postcss: 8.4.19
       postcss-loader: ^7.0.1
-      prettier: 2.8.4
+      prettier: 2.8.8
       qs: ^6.9.1
       react: 18.2.0
       react-dom: 18.2.0
@@ -270,7 +270,7 @@ importers:
       plop: 3.1.2
       postcss: 8.4.19
       postcss-loader: 7.0.2_upg3rk2kpasnbk27hkqapxaxfq
-      prettier: 2.8.4
+      prettier: 2.8.8
       react-refresh: 0.14.0
       react-test-renderer: 18.2.0_react@18.2.0
       storybook-addon-next: 1.7.1_ekqg5xztipjg4ulsuplmidq42y
@@ -21616,8 +21616,8 @@ packages:
     hasBin: true
     dev: true
 
-  /prettier/2.8.4:
-    resolution: {integrity: sha512-vIS4Rlc2FNh0BySk3Wkd6xmwxB0FpOndW5fisM5H8hsZSxU2VWVB5CWIkIjWvrHjIhxk2g3bfMKM87zNTrZddw==}
+  /prettier/2.8.8:
+    resolution: {integrity: sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     dev: true
