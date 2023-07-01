@@ -194,7 +194,7 @@
   "readme": "./README.md",
   "homepage": "https://github.com/BoBeenLee/bbl-nx#readme",
   "_id": "bbl-nx@2.0.0",
-  "packageManager": "pnpm@7.29.1",
+  "packageManager": "pnpm@7.33.3",
   "workspaces": [
     "apps/*",
     "libs/*"
