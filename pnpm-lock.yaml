@@ -64,8 +64,8 @@ importers:
       '@types/marked': ^4.0.3
       '@types/node': 18.11.9
       '@types/qs': ^6.5.2
-      '@types/react': 18.0.28
-      '@types/react-dom': 18.0.11
+      '@types/react': 18.2.15
+      '@types/react-dom': 18.2.7
       '@types/react-helmet': ^6.0.0
       '@types/react-test-renderer': ^18.0.0
       '@typescript-eslint/eslint-plugin': 5.54.0
@@ -153,7 +153,7 @@ importers:
       '@remix-run/node': 1.13.0
       '@remix-run/react': 1.13.0_biqbaboplfbrettd7655fr4n2y
       '@remix-run/serve': 1.13.0
-      '@xstate/react': 3.2.1_o53l3h553defh3ruq4yellezcm
+      '@xstate/react': 3.2.1_pdibuyyovp6xpswhe5e4np3h2q
       axios: 1.2.2
       chroma-js: 2.4.2
       classnames: 2.3.2
@@ -208,7 +208,7 @@ importers:
       '@remix-run/dev': 1.13.0_cfdthv2uspz5a76lrm5wf26biy
       '@storybook/addon-actions': 6.5.9_biqbaboplfbrettd7655fr4n2y
       '@storybook/addon-essentials': 6.5.15_z4lxrbhvc7e36sladflcmzkzoe
-      '@storybook/addon-interactions': 6.5.16_dc7nbg7tp5xm4mtyjwscwxpzza
+      '@storybook/addon-interactions': 6.5.16_czg4f7x5do6mkw6wxr5o35v6me
       '@storybook/addon-knobs': 6.4.0_uwzxf2kmksmihi4as2vrfuw5na
       '@storybook/addon-links': 6.5.9_biqbaboplfbrettd7655fr4n2y
       '@storybook/addon-postcss': 2.0.0_webpack@5.75.0
@@ -234,8 +234,8 @@ importers:
       '@types/marked': 4.0.8
       '@types/node': 18.11.9
       '@types/qs': 6.9.7
-      '@types/react': 18.0.28
-      '@types/react-dom': 18.0.11
+      '@types/react': 18.2.15
+      '@types/react-dom': 18.2.7
       '@types/react-helmet': 6.1.6
       '@types/react-test-renderer': 18.0.0
       '@typescript-eslint/eslint-plugin': 5.54.0_kfyz2y6ibx5q22pdsikxez2g7q
@@ -302,8 +302,8 @@ importers:
       '@remix-run/react': ^1.5.1
       '@remix-run/serve': ^1.5.1
       '@types/date-fns': ^2.6.0
-      '@types/react': 18.0.28
-      '@types/react-dom': 18.0.11
+      '@types/react': 18.2.15
+      '@types/react-dom': 18.2.7
       axios: ^0.27.2
       date-fns: ^2.29.1
       front-matter: ^4.0.2
@@ -335,8 +335,8 @@ importers:
     devDependencies:
       '@remix-run/dev': 1.13.0_@remix-run+serve@1.13.0
       '@types/date-fns': 2.6.0
-      '@types/react': 18.0.28
-      '@types/react-dom': 18.0.11
+      '@types/react': 18.2.15
+      '@types/react-dom': 18.2.7
       typescript: 4.9.5
 
   libs/apis:
@@ -3006,7 +3006,7 @@ packages:
       - supports-color
     dev: true
 
-  /@design-systems/utils/2.12.0_zula6vjvt3wdocc4mwcxqa6nzi:
+  /@design-systems/utils/2.12.0_clwdj742dood3wxkovrqay7cta:
     resolution: {integrity: sha512-Y/d2Zzr+JJfN6u1gbuBUb1ufBuLMJJRZQk+dRmw8GaTpqKx5uf7cGUYGTwN02dIb3I+Tf+cW8jcGBTRiFxdYFg==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/@design-systems/utils/-/utils-2.12.0.tgz}
     peerDependencies:
       '@types/react': '*'
@@ -3014,7 +3014,7 @@ packages:
       react-dom: '>= 16.8.6'
     dependencies:
       '@babel/runtime': 7.20.13
-      '@types/react': 18.0.28
+      '@types/react': 18.2.15
       clsx: 1.1.0
       focus-lock: 0.8.1
       react: 18.2.0
@@ -3022,15 +3022,15 @@ packages:
       react-merge-refs: 1.1.0
     dev: true
 
-  /@devtools-ds/object-inspector/1.2.1_zula6vjvt3wdocc4mwcxqa6nzi:
+  /@devtools-ds/object-inspector/1.2.1_clwdj742dood3wxkovrqay7cta:
     resolution: {integrity: sha512-nrAVVj4c4Iv9958oE4HA7Mk6T+4Mn/4xBRlFDeX4Ps6SMzsqO8bKhw/y6+bOfNyb/TYHmC0/pnPS68GDVZcg5Q==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/@devtools-ds/object-inspector/-/object-inspector-1.2.1.tgz}
     peerDependencies:
       react: '>= 16.8.6'
     dependencies:
       '@babel/runtime': 7.7.2
       '@devtools-ds/object-parser': 1.2.1
-      '@devtools-ds/themes': 1.2.1_zula6vjvt3wdocc4mwcxqa6nzi
-      '@devtools-ds/tree': 1.2.1_zula6vjvt3wdocc4mwcxqa6nzi
+      '@devtools-ds/themes': 1.2.1_clwdj742dood3wxkovrqay7cta
+      '@devtools-ds/tree': 1.2.1_clwdj742dood3wxkovrqay7cta
       clsx: 1.1.0
       react: 18.2.0
     transitivePeerDependencies:
@@ -3044,13 +3044,13 @@ packages:
       '@babel/runtime': 7.5.5
     dev: true
 
-  /@devtools-ds/themes/1.2.1_zula6vjvt3wdocc4mwcxqa6nzi:
+  /@devtools-ds/themes/1.2.1_clwdj742dood3wxkovrqay7cta:
     resolution: {integrity: sha512-4/KFsHnokGxUq8CSCchINcVBb6fQ74HtEfNtMuitGtGg3VCRV0kaVSOsz6wzShzhLEaVLd5coSRQKaZj7yx72w==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/@devtools-ds/themes/-/themes-1.2.1.tgz}
     peerDependencies:
       react: '>= 16.8.6'
     dependencies:
       '@babel/runtime': 7.5.5
-      '@design-systems/utils': 2.12.0_zula6vjvt3wdocc4mwcxqa6nzi
+      '@design-systems/utils': 2.12.0_clwdj742dood3wxkovrqay7cta
       clsx: 1.1.0
       react: 18.2.0
     transitivePeerDependencies:
@@ -3058,13 +3058,13 @@ packages:
       - react-dom
     dev: true
 
-  /@devtools-ds/tree/1.2.1_zula6vjvt3wdocc4mwcxqa6nzi:
+  /@devtools-ds/tree/1.2.1_clwdj742dood3wxkovrqay7cta:
     resolution: {integrity: sha512-2ZHG28oWJno0gD+20EoSJO0yffm6JS5r7YzYhGMkrnLGvcCRZuwXSxMmIshSPLIR0cjidiAfGCqsrigHIR4ZQA==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/@devtools-ds/tree/-/tree-1.2.1.tgz}
     peerDependencies:
       react: '>= 16.8.6'
     dependencies:
       '@babel/runtime': 7.7.2
-      '@devtools-ds/themes': 1.2.1_zula6vjvt3wdocc4mwcxqa6nzi
+      '@devtools-ds/themes': 1.2.1_clwdj742dood3wxkovrqay7cta
       clsx: 1.1.0
       react: 18.2.0
     transitivePeerDependencies:
@@ -5568,7 +5568,7 @@ packages:
     dependencies:
       '@remix-run/router': 1.3.2
       '@types/cookie': 0.4.1
-      '@types/react': 18.0.28
+      '@types/react': 18.2.15
       '@web3-storage/multipart-parser': 1.0.0
       cookie: 0.4.2
       set-cookie-parser: 2.5.1
@@ -6067,7 +6067,7 @@ packages:
       - webpack-command
     dev: true
 
-  /@storybook/addon-interactions/6.5.16_dc7nbg7tp5xm4mtyjwscwxpzza:
+  /@storybook/addon-interactions/6.5.16_czg4f7x5do6mkw6wxr5o35v6me:
     resolution: {integrity: sha512-DdTtyp3DgB/SpbM1GQgMnuSEBCkadxmj1mUcPk+Wp2iY+fDwsuoRDkr1H9Oe7IvlBKe7ciR79LEjoaABXNdw4w==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/@storybook/addon-interactions/-/addon-interactions-6.5.16.tgz}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
@@ -6078,7 +6078,7 @@ packages:
       react-dom:
         optional: true
     dependencies:
-      '@devtools-ds/object-inspector': 1.2.1_zula6vjvt3wdocc4mwcxqa6nzi
+      '@devtools-ds/object-inspector': 1.2.1_clwdj742dood3wxkovrqay7cta
       '@storybook/addons': 6.5.16_biqbaboplfbrettd7655fr4n2y
       '@storybook/api': 6.5.16_biqbaboplfbrettd7655fr4n2y
       '@storybook/client-logger': 6.5.16
@@ -8527,7 +8527,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.20.13
       '@testing-library/dom': 9.0.1
-      '@types/react-dom': 18.0.11
+      '@types/react-dom': 18.2.7
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     dev: true
@@ -8945,32 +8945,32 @@ packages:
     resolution: {integrity: sha512-EEhsLsD6UsDM1yFhAvy0Cjr6VwmpMWqFBCb9w07wVugF7w9nfajxLuVmngTIpgS6svCnm6Vaw+MZhoDCKnOfsw==}
     dev: true
 
-  /@types/react-dom/18.0.11:
-    resolution: {integrity: sha512-O38bPbI2CWtgw/OoQoY+BRelw7uysmXbWvw3nLWO21H1HSh+GOlqPuXshJfjmpNlKiiSDG9cc1JZAaMmVdcTlw==}
+  /@types/react-dom/18.2.7:
+    resolution: {integrity: sha512-GRaAEriuT4zp9N4p1i8BDBYmEyfo+xQ3yHjJU4eiK5NDa1RmUZG+unZABUTK4/Ox/M+GaHwb6Ow8rUITrtjszA==}
     dependencies:
-      '@types/react': 18.0.28
+      '@types/react': 18.2.15
     dev: true
 
   /@types/react-helmet/6.1.6:
     resolution: {integrity: sha512-ZKcoOdW/Tg+kiUbkFCBtvDw0k3nD4HJ/h/B9yWxN4uDO8OkRksWTO+EL+z/Qu3aHTeTll3Ro0Cc/8UhwBCMG5A==}
     dependencies:
-      '@types/react': 18.0.28
+      '@types/react': 18.2.15
     dev: true
 
   /@types/react-syntax-highlighter/11.0.5:
     resolution: {integrity: sha512-VIOi9i2Oj5XsmWWoB72p3KlZoEbdRAcechJa8Ztebw7bDl2YmR+odxIqhtJGp1q2EozHs02US+gzxJ9nuf56qg==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/@types/react-syntax-highlighter/-/react-syntax-highlighter-11.0.5.tgz}
     dependencies:
-      '@types/react': 18.0.28
+      '@types/react': 18.2.15
     dev: true
 
   /@types/react-test-renderer/18.0.0:
     resolution: {integrity: sha512-C7/5FBJ3g3sqUahguGi03O79b8afNeSD6T8/GU50oQrJCU0bVCCGQHaGKUbg2Ce8VQEEqTw8/HiS6lXHHdgkdQ==}
     dependencies:
-      '@types/react': 18.0.28
+      '@types/react': 18.2.15
     dev: true
 
-  /@types/react/18.0.28:
-    resolution: {integrity: sha512-RD0ivG1kEztNBdoAK7lekI9M+azSnitIn85h4iOiaLjaTrMjzslhaqCGaI4IyCJ1RljWiLCEu4jyrLLgqxBTew==}
+  /@types/react/18.2.15:
+    resolution: {integrity: sha512-oEjE7TQt1fFTFSbf8kkNuc798ahTUzn3Le67/PWjE8MAfYAD/qB7O8hSTcromLFqHCt9bcdOg5GXMokzTjJ5SA==}
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.2
@@ -9621,7 +9621,7 @@ packages:
     engines: {node: '>=10.0.0'}
     dev: true
 
-  /@xstate/react/3.2.1_o53l3h553defh3ruq4yellezcm:
+  /@xstate/react/3.2.1_pdibuyyovp6xpswhe5e4np3h2q:
     resolution: {integrity: sha512-L/mqYRxyBWVdIdSaXBHacfvS8NKn3sTKbPb31aRADbE9spsJ1p+tXil0GVQHPlzrmjGeozquLrxuYGiXsFNU7g==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/@xstate/react/-/react-3.2.1.tgz}
     peerDependencies:
       '@xstate/fsm': ^2.0.0
@@ -9634,7 +9634,7 @@ packages:
         optional: true
     dependencies:
       react: 18.2.0
-      use-isomorphic-layout-effect: 1.1.2_pmekkgnqduwlme35zpnqhenc34
+      use-isomorphic-layout-effect: 1.1.2_tznpbkknyqq5lcv5sgrl332jvu
       use-sync-external-store: 1.2.0_react@18.2.0
       xstate: 4.37.0
     transitivePeerDependencies:
@@ -14817,7 +14817,7 @@ packages:
     resolution: {integrity: sha512-oWb1Z6mkHIskLzEJ/XWX0srkpkTQ7vaopMQkyaEIoq0fmtFVxOthb8cCxeT+p3ynTdkk/RZwbgG4brR5BeWECw==}
     engines: {node: '>= 4.0'}
     os: [darwin]
-    deprecated: fsevents 1 will break on node v14+ and could be using insecure binaries. Upgrade to fsevents 2.
+    deprecated: The v1 package contains DANGEROUS / INSECURE binaries. Upgrade to safe fsevents v2
     requiresBuild: true
     dependencies:
       bindings: 1.5.0
@@ -25550,7 +25550,7 @@ packages:
       querystring: 0.2.0
     dev: true
 
-  /use-isomorphic-layout-effect/1.1.2_pmekkgnqduwlme35zpnqhenc34:
+  /use-isomorphic-layout-effect/1.1.2_tznpbkknyqq5lcv5sgrl332jvu:
     resolution: {integrity: sha512-49L8yCO3iGT/ZF9QttjwLF/ZD9Iwto5LnH5LmEdk/6cFmXddqi2ulF0edxTwjj+7mqvpVVGQWvbXZdn32wRSHA==, registry: https://registry.npmjs.cf/, tarball: https://registry.npmjs.cf/use-isomorphic-layout-effect/-/use-isomorphic-layout-effect-1.1.2.tgz}
     peerDependencies:
       '@types/react': '*'
@@ -25559,7 +25559,7 @@ packages:
       '@types/react':
         optional: true
     dependencies:
-      '@types/react': 18.0.28
+      '@types/react': 18.2.15
       react: 18.2.0
     dev: false
 
