@@ -26,7 +26,17 @@ function MenuItem({ href, text, transitionDelay }: MenuItemProps) {
       )}
       style={{ transitionDelay: `${transitionDelay}ms` }}
     >
-      <ALink className="flex w-auto py-4" urlPath={href}>
+      <ALink
+        className={cn(
+          'flex w-auto py-4',
+          'font-normal text-gray-600 dark:text-gray-400'
+        )}
+        activeClassName={cn(
+          'flex w-auto py-4',
+          `font-semibold text-gray-800 dark:text-gray-200`
+        )}
+        urlPath={href}
+      >
         {text}
       </ALink>
     </li>
