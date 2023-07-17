@@ -12,5 +12,6 @@
     "watch": false,
     "onStartup": ["all-tests"],
     "onSave": "test-file"
-  }
+  },
+  "eslint.validate": ["json"]
 }
