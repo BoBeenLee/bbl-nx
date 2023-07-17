@@ -1,4 +1,11 @@
 {
-  "presets": ["@nrwl/next/babel"],
-  "plugins": []
+  "presets": ["@nx/next/babel"],
+  "plugins": [
+    [
+      "@babel/plugin-transform-react-jsx",
+      {
+        "runtime": "automatic"
+      }
+    ]
+  ]
 }

@@ -5,22 +5,24 @@
   "projectType": "application",
   "targets": {
     "build": {
-      "executor": "@nrwl/next:build",
+      "executor": "@nx/next:build",
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "root": "apps/bbl-nextjs",
-        "outputPath": "dist/apps/bbl-nextjs"
+        "outputPath": "dist/apps/bbl-nextjs",
+        "postcssConfig": "apps/bbl-nextjs/postcss.config.js"
       },
       "configurations": {
-        "production": {},
+        "production": {
+          "outputPath": "."
+        },
         "development": {
-          "outputPath": "apps/bbl-nextjs"
+          "outputPath": "dist/apps/bbl-nextjs"
         }
       }
     },
     "serve": {
-      "executor": "@nrwl/next:server",
+      "executor": "@nx/next:server",
       "options": {
         "buildTarget": "bbl-nextjs:build",
         "dev": true
@@ -33,13 +35,13 @@
       }
     },
     "export": {
-      "executor": "@nrwl/next:export",
+      "executor": "@nx/next:export",
       "options": {
         "buildTarget": "bbl-nextjs:build:production"
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
+      "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/apps/bbl-nextjs"],
       "options": {
         "jestConfig": "apps/bbl-nextjs/jest.config.ts",
@@ -47,7 +49,7 @@
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["apps/bbl-nextjs/**/*.{ts,tsx,js,jsx}"]
@@ -59,9 +61,8 @@
       }
     },
     "storybook": {
-      "executor": "@nrwl/storybook:storybook",
+      "executor": "@nx/storybook:storybook",
       "options": {
-        "uiFramework": "@storybook/react",
         "port": 4400,
         "configDir": "apps/bbl-nextjs/.storybook"
       },
@@ -72,10 +73,9 @@
       }
     },
     "build-storybook": {
-      "executor": "@nrwl/storybook:build",
+      "executor": "@nx/storybook:build",
       "outputs": ["{options.outputDir}"],
       "options": {
-        "uiFramework": "@storybook/react",
         "configDir": "apps/bbl-nextjs/.storybook",
         "outputDir": "dist/storybook/bbl-nextjs"
       },

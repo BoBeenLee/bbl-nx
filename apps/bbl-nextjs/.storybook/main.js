@@ -15,7 +15,7 @@ module.exports = {
   addons: [
     '@storybook/addon-essentials',
     ...rootMain.addons,
-    '@nrwl/react/plugins/storybook',
+    '@nx/react/plugins/storybook',
     'storybook-addon-swc',
     'storybook-addon-next-router',
     // {

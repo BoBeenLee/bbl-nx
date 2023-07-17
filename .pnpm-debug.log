@@ -48,7 +48,7 @@
       },
       "dependencies": {
         "@netlify/functions": "1.0.0",
-        "@nrwl/next": "15.6.3",
+        "@nx/next": "15.6.3",
         "@react-icons/all-files": "^4.1.0",
         "@remix-run/netlify": "^1.5.1",
         "@remix-run/node": "^1.5.1",
@@ -93,17 +93,17 @@
         "@netlify/plugin-nextjs": "^4.7.0",
         "@next/bundle-analyzer": "^12.2.3",
         "@nrwl/cli": "15.6.3",
-        "@nrwl/cypress": "15.6.3",
-        "@nrwl/eslint-plugin-nx": "15.6.3",
-        "@nrwl/jest": "15.6.3",
-        "@nrwl/js": "15.6.3",
-        "@nrwl/linter": "15.6.3",
+        "@nx/cypress": "15.6.3",
+        "@nx/eslint-plugin": "15.6.3",
+        "@nx/jest": "15.6.3",
+        "@nx/js": "15.6.3",
+        "@nx/linter": "15.6.3",
         "@nrwl/nx-cloud": "15.0.2",
-        "@nrwl/react": "15.6.3",
-        "@nrwl/storybook": "15.6.3",
+        "@nx/react": "15.6.3",
+        "@nx/storybook": "15.6.3",
         "@nrwl/tao": "15.6.3",
-        "@nrwl/web": "15.6.3",
-        "@nrwl/workspace": "15.6.3",
+        "@nx/web": "15.6.3",
+        "@nx/workspace": "15.6.3",
         "@pmmmwh/react-refresh-webpack-plugin": "^0.5.7",
         "@remix-run/dev": "^1.5.1",
         "@storybook/addon-actions": "6.5.9",
@@ -360,15 +360,15 @@
     "status": "resolved"
   },
   "28 debug pnpm:_dependency_resolved": {
-    "resolution": "registry.npmjs.org/@nrwl/workspace/15.6.3",
+    "resolution": "registry.npmjs.org/@nx/workspace/15.6.3",
     "wanted": {
       "dependentId": ".",
-      "name": "@nrwl/workspace",
+      "name": "@nx/workspace",
       "rawSpec": "15.6.3"
     }
   },
   "29 debug pnpm:progress": {
-    "packageId": "registry.npmjs.org/@nrwl/workspace/15.6.3",
+    "packageId": "registry.npmjs.org/@nx/workspace/15.6.3",
     "requester": "/Users/bobeenlee/Desktop/mygit/bbl-nx",
     "status": "resolved"
   },
@@ -481,7 +481,7 @@
   },
   "48 debug pnpm:fetching-progress": {
     "attempt": 1,
-    "packageId": "registry.npmjs.org/@nrwl/workspace/15.6.3",
+    "packageId": "registry.npmjs.org/@nx/workspace/15.6.3",
     "size": 130342,
     "status": "started"
   },
@@ -492,7 +492,7 @@
     "status": "started"
   },
   "50 debug pnpm:progress": {
-    "packageId": "registry.npmjs.org/@nrwl/workspace/15.6.3",
+    "packageId": "registry.npmjs.org/@nx/workspace/15.6.3",
     "requester": "/Users/bobeenlee/Desktop/mygit/bbl-nx",
     "status": "fetched"
   },
@@ -540,54 +540,54 @@
     "status": "resolved"
   },
   "58 debug pnpm:_dependency_resolved": {
-    "resolution": "registry.npmjs.org/@nrwl/jest/15.6.3",
+    "resolution": "registry.npmjs.org/@nx/jest/15.6.3",
     "wanted": {
       "dependentId": ".",
-      "name": "@nrwl/jest",
+      "name": "@nx/jest",
       "rawSpec": "15.6.3"
     }
   },
   "59 debug pnpm:progress": {
-    "packageId": "registry.npmjs.org/@nrwl/jest/15.6.3",
+    "packageId": "registry.npmjs.org/@nx/jest/15.6.3",
     "requester": "/Users/bobeenlee/Desktop/mygit/bbl-nx",
     "status": "resolved"
   },
   "60 debug pnpm:_dependency_resolved": {
-    "resolution": "registry.npmjs.org/@nrwl/linter/15.6.3",
+    "resolution": "registry.npmjs.org/@nx/linter/15.6.3",
     "wanted": {
       "dependentId": ".",
-      "name": "@nrwl/linter",
+      "name": "@nx/linter",
       "rawSpec": "15.6.3"
     }
   },
   "61 debug pnpm:progress": {
-    "packageId": "registry.npmjs.org/@nrwl/linter/15.6.3",
+    "packageId": "registry.npmjs.org/@nx/linter/15.6.3",
     "requester": "/Users/bobeenlee/Desktop/mygit/bbl-nx",
     "status": "resolved"
   },
   "62 debug pnpm:_dependency_resolved": {
-    "resolution": "registry.npmjs.org/@nrwl/storybook/15.6.3",
+    "resolution": "registry.npmjs.org/@nx/storybook/15.6.3",
     "wanted": {
       "dependentId": ".",
-      "name": "@nrwl/storybook",
+      "name": "@nx/storybook",
       "rawSpec": "15.6.3"
     }
   },
   "63 debug pnpm:progress": {
-    "packageId": "registry.npmjs.org/@nrwl/storybook/15.6.3",
+    "packageId": "registry.npmjs.org/@nx/storybook/15.6.3",
     "requester": "/Users/bobeenlee/Desktop/mygit/bbl-nx",
     "status": "resolved"
   },
   "64 debug pnpm:_dependency_resolved": {
-    "resolution": "registry.npmjs.org/@nrwl/js/15.6.3",
+    "resolution": "registry.npmjs.org/@nx/js/15.6.3",
     "wanted": {
       "dependentId": ".",
-      "name": "@nrwl/js",
+      "name": "@nx/js",
       "rawSpec": "15.6.3"
     }
   },
   "65 debug pnpm:progress": {
-    "packageId": "registry.npmjs.org/@nrwl/js/15.6.3",
+    "packageId": "registry.npmjs.org/@nx/js/15.6.3",
     "requester": "/Users/bobeenlee/Desktop/mygit/bbl-nx",
     "status": "resolved"
   },
@@ -615,41 +615,41 @@
     "status": "resolved"
   },
   "70 debug pnpm:_dependency_resolved": {
-    "resolution": "registry.npmjs.org/@nrwl/cypress/15.6.3",
+    "resolution": "registry.npmjs.org/@nx/cypress/15.6.3",
     "wanted": {
       "dependentId": ".",
-      "name": "@nrwl/cypress",
+      "name": "@nx/cypress",
       "rawSpec": "15.6.3"
     }
   },
   "71 debug pnpm:progress": {
-    "packageId": "registry.npmjs.org/@nrwl/cypress/15.6.3",
+    "packageId": "registry.npmjs.org/@nx/cypress/15.6.3",
     "requester": "/Users/bobeenlee/Desktop/mygit/bbl-nx",
     "status": "resolved"
   },
   "72 debug pnpm:_dependency_resolved": {
-    "resolution": "registry.npmjs.org/@nrwl/eslint-plugin-nx/15.6.3",
+    "resolution": "registry.npmjs.org/@nx/eslint-plugin/15.6.3",
     "wanted": {
       "dependentId": ".",
-      "name": "@nrwl/eslint-plugin-nx",
+      "name": "@nx/eslint-plugin",
       "rawSpec": "15.6.3"
     }
   },
   "73 debug pnpm:progress": {
-    "packageId": "registry.npmjs.org/@nrwl/eslint-plugin-nx/15.6.3",
+    "packageId": "registry.npmjs.org/@nx/eslint-plugin/15.6.3",
     "requester": "/Users/bobeenlee/Desktop/mygit/bbl-nx",
     "status": "resolved"
   },
   "74 debug pnpm:_dependency_resolved": {
-    "resolution": "registry.npmjs.org/@nrwl/web/15.6.3",
+    "resolution": "registry.npmjs.org/@nx/web/15.6.3",
     "wanted": {
       "dependentId": ".",
-      "name": "@nrwl/web",
+      "name": "@nx/web",
       "rawSpec": "15.6.3"
     }
   },
   "75 debug pnpm:progress": {
-    "packageId": "registry.npmjs.org/@nrwl/web/15.6.3",
+    "packageId": "registry.npmjs.org/@nx/web/15.6.3",
     "requester": "/Users/bobeenlee/Desktop/mygit/bbl-nx",
     "status": "resolved"
   },
@@ -667,15 +667,15 @@
     "status": "resolved"
   },
   "78 debug pnpm:_dependency_resolved": {
-    "resolution": "registry.npmjs.org/@nrwl/react/15.6.3",
+    "resolution": "registry.npmjs.org/@nx/react/15.6.3",
     "wanted": {
       "dependentId": ".",
-      "name": "@nrwl/react",
+      "name": "@nx/react",
       "rawSpec": "15.6.3"
     }
   },
   "79 debug pnpm:progress": {
-    "packageId": "registry.npmjs.org/@nrwl/react/15.6.3",
+    "packageId": "registry.npmjs.org/@nx/react/15.6.3",
     "requester": "/Users/bobeenlee/Desktop/mygit/bbl-nx",
     "status": "resolved"
   },
@@ -804,7 +804,7 @@
   },
   "100 debug pnpm:fetching-progress": {
     "attempt": 1,
-    "packageId": "registry.npmjs.org/@nrwl/linter/15.6.3",
+    "packageId": "registry.npmjs.org/@nx/linter/15.6.3",
     "size": 49097,
     "status": "started"
   },
@@ -819,24 +819,24 @@
     "status": "fetched"
   },
   "103 debug pnpm:progress": {
-    "packageId": "registry.npmjs.org/@nrwl/linter/15.6.3",
+    "packageId": "registry.npmjs.org/@nx/linter/15.6.3",
     "requester": "/Users/bobeenlee/Desktop/mygit/bbl-nx",
     "status": "fetched"
   },
   "104 debug pnpm:fetching-progress": {
     "attempt": 1,
-    "packageId": "registry.npmjs.org/@nrwl/storybook/15.6.3",
+    "packageId": "registry.npmjs.org/@nx/storybook/15.6.3",
     "size": 54427,
     "status": "started"
   },
   "105 debug pnpm:progress": {
-    "packageId": "registry.npmjs.org/@nrwl/storybook/15.6.3",
+    "packageId": "registry.npmjs.org/@nx/storybook/15.6.3",
     "requester": "/Users/bobeenlee/Desktop/mygit/bbl-nx",
     "status": "fetched"
   },
   "106 debug pnpm:fetching-progress": {
     "attempt": 1,
-    "packageId": "registry.npmjs.org/@nrwl/js/15.6.3",
+    "packageId": "registry.npmjs.org/@nx/js/15.6.3",
     "size": 70105,
     "status": "started"
   },
@@ -854,7 +854,7 @@
     "status": "resolved"
   },
   "109 debug pnpm:progress": {
-    "packageId": "registry.npmjs.org/@nrwl/js/15.6.3",
+    "packageId": "registry.npmjs.org/@nx/js/15.6.3",
     "requester": "/Users/bobeenlee/Desktop/mygit/bbl-nx",
     "status": "fetched"
   },
@@ -911,7 +911,7 @@
   },
   "118 debug pnpm:fetching-progress": {
     "attempt": 1,
-    "packageId": "registry.npmjs.org/@nrwl/cypress/15.6.3",
+    "packageId": "registry.npmjs.org/@nx/cypress/15.6.3",
     "size": 55400,
     "status": "started"
   },
@@ -932,13 +932,13 @@
     "status": "fetched"
   },
   "122 debug pnpm:progress": {
-    "packageId": "registry.npmjs.org/@nrwl/cypress/15.6.3",
+    "packageId": "registry.npmjs.org/@nx/cypress/15.6.3",
     "requester": "/Users/bobeenlee/Desktop/mygit/bbl-nx",
     "status": "fetched"
   },
   "123 debug pnpm:fetching-progress": {
     "attempt": 1,
-    "packageId": "registry.npmjs.org/@nrwl/eslint-plugin-nx/15.6.3",
+    "packageId": "registry.npmjs.org/@nx/eslint-plugin/15.6.3",
     "size": 39754,
     "status": "started"
   },
@@ -972,13 +972,13 @@
     "status": "fetched"
   },
   "129 debug pnpm:progress": {
-    "packageId": "registry.npmjs.org/@nrwl/eslint-plugin-nx/15.6.3",
+    "packageId": "registry.npmjs.org/@nx/eslint-plugin/15.6.3",
     "requester": "/Users/bobeenlee/Desktop/mygit/bbl-nx",
     "status": "fetched"
   },
   "130 debug pnpm:fetching-progress": {
     "attempt": 1,
-    "packageId": "registry.npmjs.org/@nrwl/web/15.6.3",
+    "packageId": "registry.npmjs.org/@nx/web/15.6.3",
     "size": 38451,
     "status": "started"
   },
@@ -996,7 +996,7 @@
     "status": "resolved"
   },
   "133 debug pnpm:progress": {
-    "packageId": "registry.npmjs.org/@nrwl/web/15.6.3",
+    "packageId": "registry.npmjs.org/@nx/web/15.6.3",
     "requester": "/Users/bobeenlee/Desktop/mygit/bbl-nx",
     "status": "fetched"
   },
@@ -1063,7 +1063,7 @@
   },
   "144 debug pnpm:fetching-progress": {
     "attempt": 1,
-    "packageId": "registry.npmjs.org/@nrwl/react/15.6.3",
+    "packageId": "registry.npmjs.org/@nx/react/15.6.3",
     "size": 134592,
     "status": "started"
   },
@@ -1085,7 +1085,7 @@
     "status": "started"
   },
   "148 debug pnpm:progress": {
-    "packageId": "registry.npmjs.org/@nrwl/react/15.6.3",
+    "packageId": "registry.npmjs.org/@nx/react/15.6.3",
     "requester": "/Users/bobeenlee/Desktop/mygit/bbl-nx",
     "status": "fetched"
   },
@@ -3537,15 +3537,15 @@
     "status": "resolved"
   },
   "572 debug pnpm:_dependency_resolved": {
-    "resolution": "registry.npmjs.org/@nrwl/next/15.6.3",
+    "resolution": "registry.npmjs.org/@nx/next/15.6.3",
     "wanted": {
       "dependentId": ".",
-      "name": "@nrwl/next",
+      "name": "@nx/next",
       "rawSpec": "15.6.3"
     }
   },
   "573 debug pnpm:progress": {
-    "packageId": "registry.npmjs.org/@nrwl/next/15.6.3",
+    "packageId": "registry.npmjs.org/@nx/next/15.6.3",
     "requester": "/Users/bobeenlee/Desktop/mygit/bbl-nx",
     "status": "resolved"
   },
@@ -4814,7 +4814,7 @@
   },
   "816 debug pnpm:fetching-progress": {
     "attempt": 1,
-    "packageId": "registry.npmjs.org/@nrwl/next/15.6.3",
+    "packageId": "registry.npmjs.org/@nx/next/15.6.3",
     "size": 59941,
     "status": "started"
   },
@@ -5081,7 +5081,7 @@
     "status": "in_progress"
   },
   "869 debug pnpm:progress": {
-    "packageId": "registry.npmjs.org/@nrwl/next/15.6.3",
+    "packageId": "registry.npmjs.org/@nx/next/15.6.3",
     "requester": "/Users/bobeenlee/Desktop/mygit/bbl-nx",
     "status": "fetched"
   },
@@ -5309,7 +5309,7 @@
   },
   "912 debug pnpm:fetching-progress": {
     "attempt": 1,
-    "packageId": "registry.npmjs.org/@nrwl/jest/15.6.3",
+    "packageId": "registry.npmjs.org/@nx/jest/15.6.3",
     "size": 50188,
     "status": "started"
   },
@@ -5400,7 +5400,7 @@
     "status": "in_progress"
   },
   "930 debug pnpm:progress": {
-    "packageId": "registry.npmjs.org/@nrwl/jest/15.6.3",
+    "packageId": "registry.npmjs.org/@nx/jest/15.6.3",
     "requester": "/Users/bobeenlee/Desktop/mygit/bbl-nx",
     "status": "fetched"
   },

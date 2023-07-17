@@ -5,10 +5,7 @@
     "allowJs": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "types": [
-      "node",
-      "jest"
-    ],
+    "types": ["node", "jest"],
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
@@ -23,7 +20,8 @@
     "**/*.jsx",
     "next-env.d.ts",
     "../../dist/apps/bbl-nextjs/.next/types/**/*.ts",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "../../.next/types/**/*.ts"
   ],
   "exclude": [
     "**/*.spec.ts",
@@ -42,7 +40,7 @@
   ],
   "references": [
     {
-      "path": "./.storybook/tsconfig.json"
+      "path": "./tsconfig.storybook.json"
     }
   ]
 }
