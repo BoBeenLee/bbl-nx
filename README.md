@@ -68,6 +68,7 @@ blog & homepage project based on monorepo(nx)
 
 ```shell
 pnpm install
+pnpm install --registry=https://registry.npmjs.org/
 ```
 
 ### Setting up Dev
