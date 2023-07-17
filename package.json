@@ -171,7 +171,7 @@
     "nx": "16.5.2",
     "nx-cloud": "16.1.0",
     "plop": "^3.1.1",
-    "postcss": "8.4.19",
+    "postcss": "8.4.26",
     "postcss-loader": "^7.0.1",
     "prettier": "2.8.4",
     "react-refresh": "^0.14.0",
