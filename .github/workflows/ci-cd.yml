@@ -49,7 +49,7 @@ jobs:
         # use '.', not '[]' with hyphenated variables
         # https://github.com/nektos/act/issues/104#issuecomment-592892249
         if: steps.cache_dependencies.outputs.cache-hit == ''
-        run: pnpm install
+        run: pnpm install --no-frozen-lockfile
     outputs:
       dependency_cache_key: ${{ steps.compute_lockfile_hash.outputs.hash }}
 
