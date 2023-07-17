@@ -57,3 +57,6 @@ apps/**/.cache
 .vercel
 /public
 next.config.js
+
+
+.nx-helpers/
