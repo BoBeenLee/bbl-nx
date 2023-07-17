@@ -1,0 +1,16 @@
+.menu-button_burger__9qikg {
+}
+
+.menu-button_burger__9qikg svg {
+  opacity: 1;
+  transition: opacity 300ms ease, transform 300ms ease;
+}
+
+.menu-button_burger__9qikg svg[data-hide='true'] {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm1lbnUtYnV0dG9uLm1vZHVsZS5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTs7QUFFQTtFQUNFLFVBQVU7RUFDVixvREFBb0Q7QUFDdEQ7O0FBRUE7RUFDRSxVQUFVO0VBQ1YseUNBQXlDO0FBQzNDIiwiZmlsZSI6Im1lbnUtYnV0dG9uLm1vZHVsZS5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuYnVyZ2VyIHtcbn1cblxuLmJ1cmdlciBzdmcge1xuICBvcGFjaXR5OiAxO1xuICB0cmFuc2l0aW9uOiBvcGFjaXR5IDMwMG1zIGVhc2UsIHRyYW5zZm9ybSAzMDBtcyBlYXNlO1xufVxuXG4uYnVyZ2VyIHN2Z1tkYXRhLWhpZGU9J3RydWUnXSB7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpIHNjYWxlKDApO1xufVxuIl19 */
+
+/*# sourceMappingURL=molecules-menu-button-menu-button-stories.css.map*/
