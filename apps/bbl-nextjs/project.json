@@ -14,7 +14,7 @@
       },
       "configurations": {
         "production": {
-          "outputPath": "."
+          "outputPath": ".vercel/output"
         },
         "development": {
           "outputPath": "dist/apps/bbl-nextjs"
