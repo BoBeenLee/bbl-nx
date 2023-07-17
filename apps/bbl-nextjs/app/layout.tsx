@@ -7,16 +7,25 @@ import { metadataItem } from '@bbl-nx/constants';
 
 import './globals.css';
 import { Metadata } from 'next';
-import { favicons } from "@bbl-nx/ui-components/helpers/seo/seo";
+import { favicons } from '@bbl-nx/ui-components/helpers/seo/seo';
 
 export async function generateMetadata(): Promise<Metadata> {
-  const { title, description, robots, url, siteName, image, twitter, keywords } = metadataItem;
+  const {
+    title,
+    description,
+    robots,
+    url,
+    siteName,
+    image,
+    twitter,
+    keywords,
+  } = metadataItem;
   return {
     title,
     description,
     robots,
     alternates: {
-      canonical: url
+      canonical: url,
     },
     openGraph: {
       type: 'website',
@@ -39,8 +48,9 @@ export async function generateMetadata(): Promise<Metadata> {
     icons: {
       icon: favicons,
     },
-    viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no',
-    
+    manifest: '/manifest.json',
+    viewport:
+      'minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover',
   };
 }
 

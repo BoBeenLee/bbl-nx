@@ -1,0 +1,17 @@
+{
+  "name": "BoBeenLee",
+  "short_name": "BoBeenLee",
+  "favicons": [
+    {
+      "src": "/favicons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "theme_color": "#111827",
+  "background_color": "#111827",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait"
+}

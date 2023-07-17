@@ -9,7 +9,7 @@
 blog & homepage project based on monorepo(nx)
 
 - bbl-nextjs
-- bbl-remix (working in progress)
+- ~~bbl-remix (working in progress)~~
 
 ## Links
 
