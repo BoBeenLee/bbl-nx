@@ -13,9 +13,6 @@
         "postcssConfig": "apps/bbl-nextjs/postcss.config.js"
       },
       "configurations": {
-        "production": {
-          "outputPath": "."
-        },
         "development": {
           "outputPath": "dist/apps/bbl-nextjs"
         }
