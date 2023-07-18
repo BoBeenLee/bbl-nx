@@ -1,10 +1,10 @@
-'use client'
+'use client';
 
-import React from 'react'
-import UINav from '@bbl-nx/ui-components/organisms/nav/nav'
+import React from 'react';
+import UINav from '@bbl-nx/ui-components/organisms/nav/nav';
+import { usePathname } from 'next/navigation';
 
 export default function Nav() {
-  return (
-    <UINav />
-  )
+  const asPath = usePathname();
+  return <UINav asPath={asPath} />;
 }
