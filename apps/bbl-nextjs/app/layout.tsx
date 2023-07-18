@@ -4,6 +4,7 @@ import { env } from '../src/libs/env';
 import { ThemeProvider } from './theme-provider';
 import Layout from '../src/components/ui/layout';
 import { metadataItem } from '@bbl-nx/constants';
+import { Analytics } from '@vercel/analytics/react';
 
 import './globals.css';
 import { Metadata } from 'next';
@@ -104,6 +105,7 @@ gtag('config', '${env.GTM_ID}');
       `,
           }}
         />
+         <Analytics />
       </body>
     </html>
   );

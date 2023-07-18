@@ -52,6 +52,7 @@
     "@remix-run/react": "^1.5.1",
     "@remix-run/serve": "^1.5.1",
     "@swc/helpers": "~0.5.0",
+    "@vercel/analytics": "^1.0.1",
     "@xstate/react": "^3.0.0",
     "axios": "1.2.2",
     "chroma-js": "^2.4.2",
@@ -68,8 +69,8 @@
     "memoize-one": "^6.0.0",
     "mobile-detect": "^1.4.1",
     "next": "13.3.0",
-    "next-pwa": "5.6.0",
     "next-images": "1.8.4",
+    "next-pwa": "5.6.0",
     "next-themes": "^0.2.1",
     "qs": "^6.9.1",
     "react": "18.2.0",
@@ -84,10 +85,10 @@
   "devDependencies": {
     "@babel/cli": "^7.17.10",
     "@babel/core": "7.21.0",
+    "@babel/plugin-transform-react-jsx": "7.22.5",
     "@babel/preset-react": "^7.14.5",
     "@babel/preset-typescript": "7.21.0",
     "@babel/runtime": "^7.18.9",
-    "@babel/plugin-transform-react-jsx": "7.22.5",
     "@commitlint/cli": "17.4.4",
     "@commitlint/config-conventional": "17.4.4",
     "@netlify/plugin-nextjs": "^4.7.0",
@@ -98,8 +99,10 @@
     "@nx/jest": "16.5.2",
     "@nx/js": "16.5.2",
     "@nx/linter": "16.5.2",
+    "@nx/next": "16.5.2",
     "@nx/plugin": "16.5.2",
     "@nx/react": "16.5.2",
+    "@nx/rollup": "16.5.2",
     "@nx/storybook": "16.5.2",
     "@nx/web": "16.5.2",
     "@nx/webpack": "16.5.2",
@@ -189,9 +192,7 @@
     "typescript": "5.1.6",
     "url-loader": "^4.1.1",
     "webpack": "5.88.1",
-    "webpack-merge": "^5.8.0",
-    "@nx/rollup": "16.5.2",
-    "@nx/next": "16.5.2"
+    "webpack-merge": "^5.8.0"
   },
   "bugs": {
     "url": "https://github.com/BoBeenLee/bbl-nx/issues"

@@ -75,6 +75,7 @@ importers:
       '@types/react-test-renderer': ^18.0.0
       '@typescript-eslint/eslint-plugin': 5.62.0
       '@typescript-eslint/parser': 5.62.0
+      '@vercel/analytics': ^1.0.1
       '@xstate/react': ^3.0.0
       autoprefixer: 10.4.13
       axios: 1.2.2
@@ -159,6 +160,7 @@ importers:
       '@remix-run/react': 1.18.1_biqbaboplfbrettd7655fr4n2y
       '@remix-run/serve': 1.18.1
       '@swc/helpers': 0.5.1
+      '@vercel/analytics': 1.0.1
       '@xstate/react': 3.2.2_iqfybu26vxurkzrcms44acvjei
       axios: 1.2.2
       chroma-js: 2.4.2
@@ -10059,6 +10061,10 @@ packages:
   /@vanilla-extract/private/1.0.3:
     resolution: {integrity: sha512-17kVyLq3ePTKOkveHxXuIJZtGYs+cSoev7BlP+Lf4916qfDhk/HBjvlYDe8egrea7LNPHKwSZJK/bzZC+Q6AwQ==}
     dev: true
+
+  /@vercel/analytics/1.0.1:
+    resolution: {integrity: sha512-Ux0c9qUfkcPqng3vrR0GTrlQdqNJ2JREn/2ydrVuKwM3RtMfF2mWX31Ijqo1opSjNAq6rK76PwtANw6kl6TAow==}
+    dev: false
 
   /@vercel/node-bridge/2.2.2:
     resolution: {integrity: sha512-haGBC8noyA5BfjCRXRH+VIkHCDVW5iD5UX24P2nOdilwUxI4qWsattS/co8QBGq64XsNLRAMdM5pQUE3zxkF9Q==}
