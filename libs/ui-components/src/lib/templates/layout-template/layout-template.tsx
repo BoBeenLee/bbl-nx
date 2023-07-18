@@ -10,7 +10,7 @@ export function LayoutTemplate(props: LayoutTemplateProps) {
 
   return (
     <div className="flex flex-col flex-1 bg-white dark:bg-gray-900">
-      <Nav />
+      <Nav asPath="" />
       <main className="flex flex-col justify-center flex-1 px-8 bg-white dark:bg-gray-900">
         {children}
       </main>

@@ -1,7 +1,6 @@
 import { Story, Meta } from '@storybook/react';
 import { NavItem, NavItemProps } from './nav-item';
 import { nav } from '@bbl-nx/constants';
-import { action } from '@storybook/addon-actions';
 
 export default {
   component: NavItem,
