@@ -8,12 +8,13 @@ import {
 
 export const companyPortfolios = [
   {
-    id: 'ShoppingLive',
-    name: 'Shopping Live',
+    id: 'Shopping',
+    name: 'Naver Shopping',
     period: '2022.10 - ',
     githubRepoName: [],
     skills: [
       'react',
+      'react-query',
       'recoil',
       'nextjs',
       'typescript',
@@ -21,11 +22,11 @@ export const companyPortfolios = [
       'sass',
       'i18next',
     ],
-    summary: `네이버 쇼핑 라이브`,
+    summary: `네이버 쇼핑`,
     githubUrl: '',
-    homeUrl: 'https://shoppinglive.naver.com/home/',
-    googleStoreUrl: '',
-    appStoreUrl: '',
+    homeUrl: 'https://shopping.naver.com',
+    googleStoreUrl: 'https://play.google.com/store/apps/details?id=com.navercorp.navershopping&hl=ko',
+    appStoreUrl: 'https://apps.apple.com/kr/app/%EB%84%A4%EC%9D%B4%EB%B2%84%ED%94%8C%EB%9F%AC%EC%8A%A4%EC%8A%A4%ED%86%A0%EC%96%B4/id6738063154',
     images: [],
   },
   {
