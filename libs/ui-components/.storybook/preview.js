@@ -1,5 +1,4 @@
-import { ThemeProvider } from 'next-themes';
-// eslint-disable-next-line import/no-webpack-loader-syntax
+/* eslint-disable no-unused-vars */
 import tailwindCss from '!style-loader!css-loader!postcss-loader!./tailwind-imports.css';
 import { setImagePrefixPath } from '@bbl-nx/images';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
@@ -49,8 +48,6 @@ export const parameters = {
 
 export const decorators = [
   (Story) => (
-    <ThemeProvider>
-      <Story />
-    </ThemeProvider>
+    <Story />
   ),
 ];

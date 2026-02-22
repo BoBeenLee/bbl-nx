@@ -1,3 +1,4 @@
+/* eslint-env jest */
 window.matchMedia = jest.fn().mockImplementation((query) => {
   return {
     matches: false,
