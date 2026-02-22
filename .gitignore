@@ -60,8 +60,7 @@ next.config.js
 
 
 .nx-helpers/
-
-
+.turbo/
 # pwa
 **/public/precache.*.*.js
 **/public/sw.js

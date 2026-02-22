@@ -6,5 +6,21 @@
   },
   "browserslist": [
     "defaults"
-  ]
+  ],
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@bbl-nx/apis": "workspace:*",
+    "@bbl-nx/constants": "workspace:*",
+    "@bbl-nx/features": "workspace:*",
+    "@bbl-nx/hooks": "workspace:*",
+    "@bbl-nx/images": "workspace:*",
+    "@bbl-nx/libs": "workspace:*",
+    "@bbl-nx/ui-components": "workspace:*",
+    "@bbl-nx/utils": "workspace:*"
+  }
 }

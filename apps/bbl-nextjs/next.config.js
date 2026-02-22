@@ -1,32 +1,30 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const withNx = require('@nx/next/plugins/with-nx');
 const withImages = require('next-images');
 const withPWA = require('next-pwa')({
   dest: 'public'
 })
 
-/**
- * @type {import('@nx/next/plugins/with-nx').WithNxOptions}
- **/
-module.exports = withNx(
-  withPWA(
+/** @type {import('next').NextConfig} */
+module.exports = withPWA(
     withImages({
       reactStrictMode: true,
       swcMinify: true,
-      nx: {
-        // Set this to true if you would like to to use SVGR
-        // See: https://github.com/gregberge/svgr
-        svgr: false,
-      },
-      publicRuntimeConfig: {
-        staticFolder: '/public',
-      },
       experimental: {
         appDir: true,
         typedRoutes: true,
         legacyBrowsers: false,
       },
-      transpilePackages: ['@bbl-nx'],
+      transpilePackages: [
+        '@bbl-nx/apis',
+        '@bbl-nx/constants',
+        '@bbl-nx/features',
+        '@bbl-nx/hooks',
+        '@bbl-nx/images',
+        '@bbl-nx/libs',
+        '@bbl-nx/ui-components',
+        '@bbl-nx/utils',
+        '@bbl-nx/workspace-plugin'
+      ],
       async headers() {
         return [
           {
@@ -54,7 +52,6 @@ module.exports = withNx(
         };
       },
     })
-  )
 );
 
 // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
