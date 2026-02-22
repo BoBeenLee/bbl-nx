@@ -62,7 +62,7 @@ blog & homepage project based on monorepo(Turborepo)
 
 ## Prerequisites
 
-- node version 16.13.2
+- node version 20.18.0
 
 ## Installing / Getting started
 
