@@ -2,5 +2,11 @@
   "name": "@bbl-nx/ui-components",
   "version": "0.0.1",
   "module": "commonjs",
-  "sideEffects": false
+  "sideEffects": false,
+  "scripts": {
+    "lint": "eslint .",
+    "test": "jest"
+  },
+  "main": "src/lib/index.ts",
+  "types": "src/lib/index.ts"
 }

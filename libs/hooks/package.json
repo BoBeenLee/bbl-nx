@@ -1,5 +1,11 @@
 {
   "name": "@bbl-nx/hooks",
   "version": "0.0.1",
-  "sideEffects": false
+  "sideEffects": false,
+  "scripts": {
+    "lint": "eslint .",
+    "test": "jest"
+  },
+  "main": "src/index.ts",
+  "types": "src/index.ts"
 }
