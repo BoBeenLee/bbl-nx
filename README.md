@@ -6,7 +6,7 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 ![lastUpdated](https://img.shields.io/github/last-commit/BoBeenLee/bbl-nx/master)
 
-blog & homepage project based on monorepo(nx)
+blog & homepage project based on monorepo(Turborepo)
 
 - bbl-nextjs
 - ~~bbl-remix (working in progress)~~
@@ -25,7 +25,7 @@ blog & homepage project based on monorepo(nx)
 - **Deployment**: Vercel
 - **Styling**: Tailwind CSS
 - **Tooling**: [Storybook](https://github.com/storybooks/storybook)
-- **Build System**: [Nx.dev](https://nx.dev/)
+- **Build System**: [Turborepo](https://turbo.build/repo)
 
 ## 📂 Directory Structure
 
@@ -96,11 +96,7 @@ pnpm test:affected
   - https://bbl-nx.vercel.app/
 - Deploy to Netlify (Working in progress)
 
-## Dependencies of Graph
 
-```
-pnpm nx graph
-```
 
 ### Generate UI-Components
 
