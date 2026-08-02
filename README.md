@@ -1,27 +1,26 @@
-# bbl-nx
+# bbl
 
-![build](https://github.com/BoBeenLee/bbl-nx/actions/workflows/ci-cd.yml/badge.svg)
-![GitHub deployments](https://img.shields.io/github/deployments/BoBeenLee/bbl-nx/production?label=vercel&logo=vercel&logoColor=white)
-[![CodeFactor](https://www.codefactor.io/repository/github/bobeenlee/bbl-nx/badge)](https://www.codefactor.io/repository/github/bobeenlee/bbl-nx)
+![build](https://github.com/BoBeenLee/bbl/actions/workflows/ci-cd.yml/badge.svg)
+![GitHub deployments](https://img.shields.io/github/deployments/BoBeenLee/bbl/production?label=vercel&logo=vercel&logoColor=white)
+[![CodeFactor](https://www.codefactor.io/repository/github/bobeenlee/bbl/badge)](https://www.codefactor.io/repository/github/bobeenlee/bbl)
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
-![lastUpdated](https://img.shields.io/github/last-commit/BoBeenLee/bbl-nx/master)
+![lastUpdated](https://img.shields.io/github/last-commit/BoBeenLee/bbl/master)
 
 blog & homepage project based on monorepo(Turborepo)
 
 - bbl-nextjs
-- ~~bbl-remix (working in progress)~~
 
 ## Links
 
 - Homepage
   - https://bbl-nx.vercel.app/
 - Storybook
-  - Component, Features: https://bobeenlee.github.io/bbl-nx/ui-components/
-  - Pages: https://bobeenlee.github.io/bbl-nx/bbl-nextjs
+  - Component, Features: https://bobeenlee.github.io/bbl/ui-components/
+  - Features only: https://bobeenlee.github.io/bbl/features/
 
 ## Feature
 
-- **Framework**: Next.js, Remix
+- **Framework**: Next.js (App Router)
 - **Deployment**: Vercel
 - **Styling**: Tailwind CSS
 - **Tooling**: [Storybook](https://github.com/storybooks/storybook)
@@ -32,32 +31,24 @@ blog & homepage project based on monorepo(Turborepo)
     root
     ├── apps
     ├──── bbl-nextjs
+    ├────── app            # App Router routes
+    ├────── posts          # MD posts directory
     ├────── src
     ├──────── apis
-    ├──────── components   # components with next
+    ├──────── components   # components with next ('use client' 경계)
     ├──────── libs
     ├──────── machines     # integrating machines with an api
-    ├──────── pages        # Pages
-    ├──── bbl-remix        # (Working in progress)
-    ├────── app
-    ├──────── apis
-    ├──────── components   # components with remix
-    ├──────── libs
-    ├──────── machines     # integrating machines with an api
-    ├──────── routes       # Routes = Pages
-    ├──────── styles
     ├── libs
     ├──── features         # all of the code for a feature and putting it in one single place (ex) authentication - login, signup, user data...)
-    ├──── apis             #
-    ├──── constants        #
+    ├──── constants        # 개인 데이터(경력·활동·스킬·포트폴리오·SEO 메타)
     ├──── hooks            # shared hooks
     ├──── images           # image assets
-    ├──── libs             # third-party libraries (ex) fetch, axios, sentry...) - facade pattern을 통한 구현
+    ├──── libs             # third-party libraries (ex) fetch, sentry...) - facade pattern을 통한 구현
     ├──── ui-components    # general small components, presentational components (atoms, molecules, organisms, templates)
     ├──── utils            # very small and simple functions, generally pure function (ex) uri, browser)
-    ├── posts              # MD posts directory
     ├── tools
     ├──── generators       # plop-tempates 저장소
+    ├── AGENTS.md          # 에이전트/기여자 작업 기준 (사실의 단일 출처)
     └── README.md
 
 ## Prerequisites
@@ -74,7 +65,7 @@ pnpm install --registry=https://registry.npmjs.org/
 ### Setting up Dev
 
 ```shell
-pnpm start
+pnpm dev
 ```
 
 ## Tests
@@ -82,26 +73,24 @@ pnpm start
 ### Running unit tests
 
 ```shell
-pnpm test:affected
+pnpm test
 ```
 
 ## Deployment
 
 - Deploy to Storybook
-  - github action master 브랜치 기준 github pages로 배포 진행합니다.
-  - ui-components: https://bobeenlee.github.io/bbl-nx/ui-components/
-  - features: https://bobeenlee.github.io/bbl-nx/features/
-  - pages: https://bobeenlee.github.io/bbl-nx/bbl-nextjs/
+  - github action develop 브랜치 기준 github pages로 배포 진행합니다.
+  - ui-components: https://bobeenlee.github.io/bbl/ui-components/
+  - features: https://bobeenlee.github.io/bbl/features/
 - Deploy to Vercel
+  - master 브랜치 기준 배포합니다.
   - https://bbl-nx.vercel.app/
-- Deploy to Netlify (Working in progress)
 
+### Generate
 
-
-### Generate UI-Components
-
-```
-pnpm ui-components:new
+```shell
+pnpm components:new   # 컴포넌트 3파일 + 레이어 배럴 등록
+pnpm post:new         # apps/bbl-nextjs/posts/<slug>.md
 ```
 
 ## Supported browsers
@@ -110,6 +99,7 @@ pnpm ui-components:new
 
 ## Document
 
+- [Agent / Contributor Guide](./AGENTS.md) — 패키지 지도, 규약, 명령, 함정
 - [XState Machines](./MACHINES.md)
 - [Analytics Report](./ANALYTICS.md)
 

@@ -11,8 +11,3 @@ const storybookStyles = document.createElement('style');
 storybookStyles.innerHTML = tailwindCss;
 document.body.appendChild(storybookStyles);
 
-export const decorators = [
-  (Story) => (
-    <Story />
-  ),
-];

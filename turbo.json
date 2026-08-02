@@ -26,7 +26,8 @@
       "persistent": true
     },
     "build-storybook": {
-      "outputs": ["dist/storybook/**"]
+      "dependsOn": ["^build"],
+      "outputs": ["$TURBO_ROOT$/dist/storybook/**"]
     }
   }
 }

@@ -1,4 +1,4 @@
-name: bbl-nx-ci-cd
+name: bbl-ci-cd
 
 on:
   push:
@@ -7,156 +7,43 @@ on:
       - develop
   pull_request:
 
-env:
-  NX_CACHE_PROJECT_GRAPH: true
-  NX_CLOUD_DISTRIBUTED_EXECUTION: false
-  CACHED_DEPENDENCY_PATHS: ${{ github.workspace }}/node_modules
-  CACHED_BUILD_PATHS: ${{ github.workspace }}/.next
-  BUILD_CACHE_KEY: ${{ github.sha }}
-  PNPM_VERSION: 7.27.1
+# node 버전은 .nvmrc, pnpm 버전은 package.json 의 packageManager 가 단일 출처다.
+# 여기에 버전을 다시 적지 않는다.
 
 jobs:
-  job_install_dependencies:
-    name: Install Dependencies
+  verify:
+    name: Verify
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
-      - name: Check out current commit (${{ github.sha }})
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-      - name: Set up pnpm
-        uses: pnpm/action-setup@v2
+      - uses: pnpm/action-setup@v2
+
+      - uses: actions/setup-node@v4
         with:
-          version: ${{ env.PNPM_VERSION }}
+          node-version-file: '.nvmrc'
+          cache: 'pnpm'
 
-      - name: Set up Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16'
+      - run: pnpm install --frozen-lockfile
 
-      - name: Compute dependency cache key
-        id: compute_lockfile_hash
-        run: echo "::set-output name=hash::${{ hashFiles('pnpm-lock.yaml') }}"
+      - run: pnpm eslint
 
-      - name: Check dependency cache
-        uses: actions/cache@v3
-        id: cache_dependencies
-        with:
-          path: ${{ env.CACHED_DEPENDENCY_PATHS }}
-          key: ${{ steps.compute_lockfile_hash.outputs.hash }}
+      - run: pnpm test
 
-      - name: Install dependencies
-        # use '.', not '[]' with hyphenated variables
-        # https://github.com/nektos/act/issues/104#issuecomment-592892249
-        if: steps.cache_dependencies.outputs.cache-hit == ''
-        run: pnpm install --no-frozen-lockfile
-    outputs:
-      dependency_cache_key: ${{ steps.compute_lockfile_hash.outputs.hash }}
-
-  job_build:
-    name: Build
-    needs: job_install_dependencies
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
-    steps:
-      - name: Check out current commit (${{ github.sha }})
-        uses: actions/checkout@v3
-
-      - name: Set up pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: ${{ env.PNPM_VERSION }}
-
-      - name: Set up Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16'
-
-      - name: Check dependency cache
-        uses: actions/cache@v3
-        with:
-          path: ${{ env.CACHED_DEPENDENCY_PATHS }}
-          key: ${{ needs.job_install_dependencies.outputs.dependency_cache_key }}
-
-      - name: Check build cache
-        uses: actions/cache@v3
-        id: cache_built_packages
-        with:
-          path: ${{ env.CACHED_BUILD_PATHS }}
-          key: ${{ env.BUILD_CACHE_KEY }}
-
-      - name: Build packages
-        if: steps.cache_built_packages.outputs.cache-hit == ''
-        run: pnpm build:affected:all
-    outputs:
-      dependency_cache_key: ${{ needs.job_install_dependencies.outputs.dependency_cache_key }}
-
-  test:
-    name: Test
-    runs-on: ubuntu-latest
-    needs: job_build
-    steps:
-      - name: Checkout the repository
-        uses: actions/checkout@v3
-        with:
-          submodules: recursive
-          fetch-depth: 0
-
-      - name: Set up pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: ${{ env.PNPM_VERSION }}
-
-      - name: Derive appropriate SHAs for base and head for `nx affected` commands
-        uses: nrwl/nx-set-shas@v2
-        with:
-          main-branch-name: 'master'
-
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '16'
-
-      - name: Check dependency cache
-        uses: actions/cache@v3
-        with:
-          path: ${{ env.CACHED_DEPENDENCY_PATHS }}
-          key: ${{ needs.job_build.outputs.dependency_cache_key }}
-
-      - name: Check build cache
-        uses: actions/cache@v3
-        with:
-          path: ${{ env.CACHED_BUILD_PATHS }}
-          key: ${{ env.BUILD_CACHE_KEY }}
-      - run: pnpm test:affected:ci
+      - run: pnpm build
 
   production-deployment:
     if: ${{ github.ref == 'refs/heads/master' }}
     name: Vercel Deployment
     runs-on: ubuntu-latest
-    needs: job_build
+    needs: verify
     steps:
-      - name: Checkout the repository
-        uses: actions/checkout@v3
-        with:
-          submodules: recursive
-          fetch-depth: 0
+      - uses: actions/checkout@v4
 
-      - name: Set up pnpm
-        uses: pnpm/action-setup@v2
+      - uses: actions/setup-node@v4
         with:
-          version: ${{ env.PNPM_VERSION }}
-
-      - name: Check dependency cache
-        uses: actions/cache@v3
-        with:
-          path: ${{ env.CACHED_DEPENDENCY_PATHS }}
-          key: ${{ needs.job_build.outputs.dependency_cache_key }}
-
-      - name: Check build cache
-        uses: actions/cache@v3
-        with:
-          path: ${{ env.CACHED_BUILD_PATHS }}
-          key: ${{ env.BUILD_CACHE_KEY }}
+          node-version-file: '.nvmrc'
 
       - name: Deploy Project Artifacts to Vercel
         run: npx vercel --yes --token=${{ secrets.VERCEL_TOKEN }}
@@ -165,33 +52,28 @@ jobs:
     if: ${{ github.ref == 'refs/heads/develop' }}
     name: Storybook Deployment
     runs-on: ubuntu-latest
-    needs: job_build
+    needs: verify
     steps:
-      - name: Checkout the repository
-        uses: actions/checkout@v3
-        with:
-          submodules: recursive
-          fetch-depth: 0
+      - uses: actions/checkout@v4
 
-      - name: Set up pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: ${{ env.PNPM_VERSION }}
+      - uses: pnpm/action-setup@v2
 
-      - name: Check dependency cache
-        uses: actions/cache@v3
+      - uses: actions/setup-node@v4
         with:
-          path: ${{ env.CACHED_DEPENDENCY_PATHS }}
-          key: ${{ needs.job_build.outputs.dependency_cache_key }}
+          node-version-file: '.nvmrc'
+          cache: 'pnpm'
 
-      - name: Check build cache
-        uses: actions/cache@v3
-        with:
-          path: ${{ env.CACHED_BUILD_PATHS }}
-          key: ${{ env.BUILD_CACHE_KEY }}
+      - run: pnpm install --frozen-lockfile
 
       - name: Storybook Build
         run: pnpm build-storybook:github
+
+      # 빌드 성공(exit 0)이 산출물 존재를 뜻하지 않는다. 프리뷰 컴파일이 죽어도
+      # 매니저만 만들어진 채 exit 0 으로 끝날 수 있으므로 iframe.html 을 직접 확인한다.
+      - name: Assert storybook output
+        run: |
+          test -f dist/storybook/ui-components/iframe.html
+          test -f dist/storybook/features/iframe.html
 
       - name: Publish to Storybook
         uses: peaceiris/actions-gh-pages@v3
@@ -202,33 +84,26 @@ jobs:
   chromatic-deployment:
     name: Chromatic Deployment
     runs-on: ubuntu-latest
-    needs: job_build
+    needs: verify
     steps:
-      - name: Checkout the repository
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
-          submodules: recursive
           fetch-depth: 0
 
-      - name: Set up pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: ${{ env.PNPM_VERSION }}
+      - uses: pnpm/action-setup@v2
 
-      - name: Check dependency cache
-        uses: actions/cache@v3
+      - uses: actions/setup-node@v4
         with:
-          path: ${{ env.CACHED_DEPENDENCY_PATHS }}
-          key: ${{ needs.job_build.outputs.dependency_cache_key }}
+          node-version-file: '.nvmrc'
+          cache: 'pnpm'
 
-      - name: Check build cache
-        uses: actions/cache@v3
-        with:
-          path: ${{ env.CACHED_BUILD_PATHS }}
-          key: ${{ env.BUILD_CACHE_KEY }}
+      - run: pnpm install --frozen-lockfile
 
       - name: Storybook Build
-        run: pnpm build-storybook
+        run: pnpm ui-components:build-storybook
+
+      - name: Assert storybook output
+        run: test -f dist/storybook/ui-components/iframe.html
 
       - name: Publish to Chromatic
         uses: chromaui/action@v1

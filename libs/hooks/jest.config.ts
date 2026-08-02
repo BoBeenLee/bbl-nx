@@ -3,7 +3,12 @@ export default {
   displayName: 'hooks',
   preset: '../../jest.preset.js',
   transform: {
-    '^.+\\.[tj]sx?$': ['babel-jest', { presets: ['@babel/preset-react'] }],
+    '^.+\\.[tj]sx?$': [
+      'ts-jest',
+      {
+        tsconfig: '<rootDir>/tsconfig.spec.json',
+      },
+    ],
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   coverageDirectory: '../../coverage/libs/hooks',

@@ -7,5 +7,4 @@ export const portfolioMainImages = {
   mailImg: '/assets/portfolio/main/mail_img.svg',
   meIcon: '/assets/portfolio/main/me_icon.svg',
   portIcon: '/assets/portfolio/main/port_icon.svg',
-  tistory: '/assets/portfolio/main/tistory.png',
 };

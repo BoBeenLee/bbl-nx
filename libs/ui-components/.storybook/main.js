@@ -3,8 +3,6 @@ const rootMain = require('../../../.storybook/main');
 module.exports = {
   ...rootMain,
 
-  core: { ...rootMain.core, builder: 'webpack5' },
-
   stories: [
     ...rootMain.stories,
     '../../features/src/lib/**/*.stories.mdx',
@@ -12,11 +10,7 @@ module.exports = {
     '../src/lib/**/*.stories.mdx',
     '../src/lib/**/*.stories.@(js|jsx|ts|tsx)',
   ],
-  addons: [
-    '@storybook/addon-essentials',
-    ...rootMain.addons,
-    '@nx/react/plugins/storybook',
-  ],
+  addons: ['@storybook/addon-essentials', ...rootMain.addons],
   staticDirs: ['../../images/src/lib/public'],
   webpackFinal: async (config, { configType }) => {
     // apply any global webpack configs that might have been specified in .storybook/main.js

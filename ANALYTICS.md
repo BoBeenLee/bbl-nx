@@ -22,7 +22,7 @@
 
 ## Bundle Diet
 
-- https://github.com/BoBeenLee/bbl-nx/issues/57
+- https://github.com/BoBeenLee/bbl/issues/57
 
 ### Index Page
 

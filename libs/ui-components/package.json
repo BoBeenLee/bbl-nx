@@ -5,7 +5,9 @@
   "sideEffects": false,
   "scripts": {
     "lint": "eslint .",
-    "test": "jest"
+    "test": "jest",
+    "storybook": "storybook dev -p 4400 --disable-telemetry",
+    "build-storybook": "storybook build -o ../../dist/storybook/ui-components --disable-telemetry"
   },
   "main": "src/lib/index.ts",
   "types": "src/lib/index.ts"
