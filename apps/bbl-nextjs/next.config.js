@@ -15,15 +15,13 @@ module.exports = withPWA(
         legacyBrowsers: false,
       },
       transpilePackages: [
-        '@bbl-nx/apis',
         '@bbl-nx/constants',
         '@bbl-nx/features',
         '@bbl-nx/hooks',
         '@bbl-nx/images',
         '@bbl-nx/libs',
         '@bbl-nx/ui-components',
-        '@bbl-nx/utils',
-        '@bbl-nx/workspace-plugin'
+        '@bbl-nx/utils'
       ],
       async headers() {
         return [

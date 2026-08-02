@@ -39,7 +39,7 @@ node_modules
 /connect.lock
 /coverage
 /libpeerconnection.log
-npm-debug.log
+*-debug.log
 yarn-error.log
 testem.log
 build-storybook.log
@@ -56,11 +56,12 @@ apps/**/.cache
 .next
 .vercel
 /public
-next.config.js
+/next.config.js
 
-
-.nx-helpers/
 .turbo/
+
+# Claude Code — worktree checkouts are local copies of this repo, never commit them
+.claude/worktrees/
 # pwa
 **/public/precache.*.*.js
 **/public/sw.js

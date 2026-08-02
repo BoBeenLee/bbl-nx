@@ -1,6 +1,5 @@
 import cn from 'classnames';
 import { ALink } from '@bbl-nx/ui-components/atoms/alink/alink';
-import { ExternalLink } from '@bbl-nx/ui-components/atoms/external-link/external-link';
 import { BlogItem } from '../../../interfaces';
 import BlogCard from '../blog-card/blog-card';
 
@@ -20,16 +19,7 @@ export function Blogs(props: BlogsProps) {
         </div>
       ) : null}
       {blogs.map((item) => {
-        const { id, title, createdAt, url, isExternal } = item;
-        if (isExternal) {
-          return (
-            <div key={id}>
-              <ExternalLink href={url}>
-                <BlogCard title={title} createdAt={createdAt} />
-              </ExternalLink>
-            </div>
-          );
-        }
+        const { id, title, createdAt } = item;
         return (
           <div key={id}>
             <ALink urlPath={'/blog/[id]'} urlPathValues={{ id: id }}>

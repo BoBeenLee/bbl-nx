@@ -1,9 +1,6 @@
 {
   "name": "bbl-nextjs",
   "version": "0.0.1",
-  "msw": {
-    "workerDirectory": "public"
-  },
   "browserslist": [
     "defaults"
   ],
@@ -11,10 +8,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "jest"
   },
   "dependencies": {
-    "@bbl-nx/apis": "workspace:*",
     "@bbl-nx/constants": "workspace:*",
     "@bbl-nx/features": "workspace:*",
     "@bbl-nx/hooks": "workspace:*",

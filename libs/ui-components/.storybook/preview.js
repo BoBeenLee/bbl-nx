@@ -46,8 +46,3 @@ export const parameters = {
   },
 };
 
-export const decorators = [
-  (Story) => (
-    <Story />
-  ),
-];

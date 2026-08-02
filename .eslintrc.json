@@ -66,6 +66,7 @@
           "jsx": true
         }
       },
+      "plugins": ["import"],
       "env": {
         "jest": true,
         "node": true,

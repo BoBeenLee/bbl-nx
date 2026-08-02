@@ -1,15 +1,14 @@
 /* eslint-disable */
-import rootMain from '../../jest.config.base';
-
-/* eslint-disable */
 export default {
   displayName: 'images',
   preset: '../../jest.preset.js',
   transform: {
-    '^.+\\.[tj]sx?$': 'babel-jest',
-  },
-  moduleNameMapper: {
-    ...rootMain.moduleNameMapper,
+    '^.+\\.[tj]sx?$': [
+      'ts-jest',
+      {
+        tsconfig: '<rootDir>/tsconfig.spec.json',
+      },
+    ],
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   coverageDirectory: '../../coverage/libs/images',
